@@ -1,0 +1,119 @@
+.. Directives
+.. |note| image:: images/note.png
+.. |ubuntu| image:: images/ubuntu_logo_22x22.png
+.. |fedora| image:: images/fedora_logo_22x22.png
+.. |macosx| image:: images/apple_logo_22x22.png
+
+
+****************************
+Installing the prerequisites
+****************************
+
+The HRM requires a few prerequisites for its functions.
+
+Operating system
+================
+
+The HRM should work on any recent Linux distribution, but in the bulk of this documentation we will explicitly address |ubuntu| Ubuntu. However, since we are planning to extend support to other distributions, additional information will incrementally appear over time. In the following you will already find some sections specific to |fedora| Fedora.
+
+|note| Please notice that with release 3.1, we drop support for |macosx| Mac OS X. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
+
+Huygens Core
+============
+
+The HRM is an interface to Scientific Volume Imaging's **Huygens Core**. The Huygens Core is is a full compute engine intended to run image processing and deconvolution jobs on large 64 bit multiprocessor servers without a specific graphical interface (which is provided, in our case, by the HRM).
+
+|note| If the web and the processing server are not on the same machine, you will need an additional Huygens Core for the web server with a *reader license* (free of charge).
+
+Apache2 web server
+==================
+
+|Ubuntu| Install ``apache2``
+
+|MacOSX| The Apache2 web server is installed by default in Mac OS X. Please enable *Web sharing* in the System Preferences.
+
+Web pages can be installed globally or per-user.
+
+|Ubuntu| The Apache2 global document root is ``/var/www``. Users can put their pages in ``~/public_html``.
+
+|MacOSX| The Apache2 global document root is ``/Library/WebServer/Documents`` (although it may vary). Users can put their pages in ``~/Sites``.
+
+Apache2 access handling
+-----------------------
+
+HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to set the ``AllowOverride`` directive in ``httpd.conf`` to enable ``.htaccess`` files in the HRM on the web server (``AllowOverride All``), or at least make sure to prevent access to the subdirectories ``inc``, ``config``, ``run``, ``resources`` and ``setup``.
+
+If you are installing the HRM in your user dir, make sure to change ``AllowOverride`` to ``All`` in ``/etc/apache2/mods-available/userdir.conf`` (make sure to enable the userdir mod first by running ``sudo a2enmod userdir`` in the shell).
+
+PHP 5.2 and higher
+==================
+
+The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
+
+|note| Minimum required PHP version is *5.2*.
+
+|Ubuntu| install *libapache2-mod-php5*; *php5*; *php5-cli*; *php5-common*; *php5-mysql* (if you plan to use MySQL) or *php5-pgsql* (if you plan to use PostgreSQL; see also below); *php5-ldap* (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+
+Example (with MySQL): 
+
+::
+
+    sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-mysql, php5-ldap
+
+|Fedora| install *php*; *php-cli*; *php-common*; *php-mysql* (if you plan to use MySQL) or *php-pgsql* (if you plan to use PostgreSQL; see also below); *php-process*; *php-pdo*; *php-ldap* (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+
+Example (with MySQL):
+
+::
+
+    sudo yum install php, php-cli, php-common, php-mysql, php-process, php-pdo, php-ldap 
+
+|MacOSX| The PHP 5 module for Apache2 and the PHP 5 command line interpreter are installed by default in Mac OS X. The PHP 5 module must be activated, though: uncomment the line
+
+::
+
+    LoadModule php5_module libexec/apache2/libphp5.so
+
+in the Apache2 configuration. Use ``vi``:
+
+::
+
+    sudo vi /private/etc/apache2/httpd.conf
+
+Please also enable *Web sharing* in the System Preferences.
+
+PHP `date()` and default timezone
+---------------------------------
+
+Please make sure to set the default timezone in `php.ini` as follows:
+
+::
+
+    [Date]
+    ; Defines the default timezone used by the date functions
+    ; http://php.net/date.timezone
+    date.timezone = "Europe/Zurich"
+
+otherwise you will get following warning every time the PHP function `date()` is called within the HRM:
+
+ PHP Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. (...)
+
+The full list of supported time zones can be found `here <http://us2.php.net/manual/en/timezones.php>`_.
+
+A relational database: MySQL or PostgreSQL
+==========================================
+
+MySQL
+-----
+
+|ubuntu| install **php5-mysql**; install and configure **mysql-server**. Recommended: install **phpmyadmin**.
+
+::
+
+    sudo apt-get install php5-mysql, mysql-server
+
+|fedora| TODO!
+
+|macosx|  `Download <http://dev.mysql.com/downloads/mysql/#downloads>`_ and install the MySQL server.
+
+To grant local access see `this page <http://www.svi.nl/PostgreSQLlocalAccess>`_.
