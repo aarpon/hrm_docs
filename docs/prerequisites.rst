@@ -1,4 +1,4 @@
-.. include:: def_directives.txt
+.. include:: global_directives.inc
 
 ****************************
 Installing the prerequisites
@@ -9,21 +9,21 @@ The HRM requires a few prerequisites for its functions.
 Operating system
 ================
 
-The HRM should work on any recent Linux distribution, but in the bulk of this documentation we will explicitly address |ubuntu| Ubuntu. However, since we are planning to extend support to other distributions, additional information will incrementally appear over time. In the following you will already find some sections specific to |fedora| Fedora.
+The HRM should work on any recent Linux distribution, but in the bulk of this documentation we will explicitly address |ubuntu| **Ubuntu**. However, since we are planning to extend support to other distributions, additional information will incrementally appear over time. In the following you will already find some sections specific to |fedora| **Fedora**.
 
-|note| Please notice that with release 3.1, we drop support for |macosx| Mac OS X. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
+|note| Please notice that with release 3.1, we drop support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
 
 Huygens Core
 ============
 
-The HRM is an interface to Scientific Volume Imaging's **Huygens Core**. The Huygens Core is is a full compute engine intended to run image processing and deconvolution jobs on large 64 bit multiprocessor servers without a specific graphical interface (which is provided, in our case, by the HRM).
+The HRM is an interface to Scientific Volume Imaging's `Huygens Core <http://www.svi.nl/HuygensCore>`_. **Huygens Core** is is a full compute engine intended to run image processing and deconvolution jobs on large 64 bit multiprocessor servers without a specific graphical interface (which is provided, in our case, by the HRM).
 
 |note| If the web and the processing server are not on the same machine, you will need an additional Huygens Core for the web server with a *reader license* (free of charge).
 
 Apache2 web server
 ==================
 
-|Ubuntu| Install ``apache2``
+|Ubuntu| Install **Apache2**
 
 |MacOSX| The Apache2 web server is installed by default in Mac OS X. Please enable *Web sharing* in the System Preferences.
 
@@ -36,18 +36,20 @@ Web pages can be installed globally or per-user.
 Apache2 access handling
 -----------------------
 
-HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to set the ``AllowOverride`` directive in ``httpd.conf`` to enable ``.htaccess`` files in the HRM on the web server (``AllowOverride All``), or at least make sure to prevent access to the subdirectories ``inc``, ``config``, ``run``, ``resources`` and ``setup``.
+HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to set the ``AllowOverride`` directive in ``/etc/apache2/sites-available/default`` to enable ``.htaccess`` files in the HRM on the web server (``AllowOverride All``), or at least make sure to prevent access to the subdirectories ``inc``, ``config``, ``run``, ``resources`` and ``setup``.
 
 If you are installing the HRM in your user dir, make sure to change ``AllowOverride`` to ``All`` in ``/etc/apache2/mods-available/userdir.conf`` (make sure to enable the userdir mod first by running ``sudo a2enmod userdir`` in the shell).
+
+See also `Enabling use of Apache htaccess files <https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles>`_.
 
 PHP |ge| 5.2
 ============
 
 The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
 
-|note| Minimum required PHP version is *5.2*.
+|note| Minimum required PHP version is **5.2**.
 
-|Ubuntu| install *libapache2-mod-php5*; *php5*; *php5-cli*; *php5-common*; *php5-mysql* (if you plan to use MySQL) or *php5-pgsql* (if you plan to use PostgreSQL; see also below); *php5-ldap* (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+|Ubuntu| install **libapache2-mod-php5**; **php5**; **php5-cli**; **php5-common**; **php5-mysql** (if you plan to use MySQL) or **php5-pgsql** (if you plan to use PostgreSQL; see also below); **php5-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 
 Example (with MySQL): 
 
@@ -55,7 +57,7 @@ Example (with MySQL):
 
     sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-mysql, php5-ldap
 
-|Fedora| install *php*; *php-cli*; *php-common*; *php-mysql* (if you plan to use MySQL) or *php-pgsql* (if you plan to use PostgreSQL; see also below); *php-process*; *php-pdo*; *php-ldap* (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+|Fedora| install **php**; **php-cli**; **php-common**; **php-mysql** (if you plan to use MySQL) or **php-pgsql** (if you plan to use PostgreSQL; see also below); **php-process**; **php-pdo**; **php-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 
 Example (with MySQL):
 
@@ -63,7 +65,7 @@ Example (with MySQL):
 
     sudo yum install php, php-cli, php-common, php-mysql, php-process, php-pdo, php-ldap 
 
-|MacOSX| The PHP 5 module for Apache2 and the PHP 5 command line interpreter are installed by default in Mac OS X. The PHP 5 module must be activated, though: uncomment the line
+|MacOSX| The PHP 5 module for Apache2 and the PHP 5 command line interpreter are installed by default in Mac OS X. The PHP 5 module must be activated, though; uncomment the line:
 
 ::
 
@@ -91,12 +93,14 @@ Please make sure to set the default timezone in `php.ini` as follows:
 
 otherwise you will get following warning every time the PHP function `date()` is called within the HRM:
 
- PHP Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. (...)
+ PHP Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the ``date.timezone`` setting or the ``date_default_timezone_set()`` function. (...)
 
-The full list of supported time zones can be found `here <http://us2.php.net/manual/en/timezones.php>`_.
+Click here for the `full list of supported time zones <http://us2.php.net/manual/en/timezones.php>`_.
 
-A relational database: MySQL or PostgreSQL
-==========================================
+A relational database
+=====================
+
+The HRM officially supports two relational databases: **MySQL** and **PostgreSQL**.
 
 MySQL
 -----
