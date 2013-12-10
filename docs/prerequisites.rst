@@ -1,9 +1,4 @@
-.. Directives
-.. |note| image:: images/note.png
-.. |ubuntu| image:: images/ubuntu_logo_22x22.png
-.. |fedora| image:: images/fedora_logo_22x22.png
-.. |macosx| image:: images/apple_logo_22x22.png
-
+.. include:: def_directives.txt
 
 ****************************
 Installing the prerequisites
@@ -45,8 +40,8 @@ HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure
 
 If you are installing the HRM in your user dir, make sure to change ``AllowOverride`` to ``All`` in ``/etc/apache2/mods-available/userdir.conf`` (make sure to enable the userdir mod first by running ``sudo a2enmod userdir`` in the shell).
 
-PHP 5.2 and higher
-==================
+PHP |ge| 5.2
+============
 
 The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
 
@@ -114,6 +109,56 @@ MySQL
 
 |fedora| TODO!
 
-|macosx|  `Download <http://dev.mysql.com/downloads/mysql/#downloads>`_ and install the MySQL server.
+|macosx|  Download and install the `MySQL <http://dev.mysql.com/downloads/mysql/#downloads>`_ server.
 
 To grant local access see `this page <http://www.svi.nl/PostgreSQLlocalAccess>`_.
+
+PostgreSQL
+----------
+
+|ubuntu| install **php5-pgsql**; install and configure **postgresql**. Recommended: install **phppgadmin**.
+
+::
+
+    sudo apt-get install php5-pgsql, postgresql, phppgadmin
+
+|fedora| TODO!
+
+|macosx| Download `PostgreSQL <http://www.enterprisedb.com/products-services-training/pgdownload#osx>`_ for MacOSX. Installation instructions can be found `on this page <http://www.enterprisedb.com/resources-community/pginst-guide>`_.
+
+`This <http://www.cyberciti.biz/faq/howto-add-postgresql-user-account/>`_ is a good tutorial on how to create a user for the PostgreSQL database to use with the HRM.
+
+To grant local access for users see `this page <http://www.svi.nl/PostgreSQLlocalAccess>`_.
+
+Sendmail
+========
+
+HRM uses the PHP ``mail()`` function to notify the users: 
+
+    "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them. `Read more <http://www.php.net/mail>`_."
+
+|ubuntu| install and configure postfix.
+
+::
+
+    sudo apt-get install postfix
+
+|fedora| TODO!
+
+|macosx| mail works out of the box in Mac OS X.
+
+SSH
+===
+
+If the queue manager and the image processing server are not on the same machine (see installation instructions), HRM transfers files via ssh between the two using ``sudo``. To allow HRM to login and run commands as sudo via remote, it is necessary to comment out the line ``'Defaults requiretty'`` in the ``/etc/sudoers`` file.
+
+Compressors
+===========
+
+The HRM compresses files to be downloaded (such as deconvolution results). Several options are possible (and more can be added in the configuration files), but by default the HRM uses ``zip``.
+
+|ubuntu| install zip.
+
+|fedora| TODO!
+
+|macosX| zip is preinstalled.
