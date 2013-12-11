@@ -11,7 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   prerequisites
+   script_install
+   manual_install
 
 
 Indices and tables
