@@ -16,14 +16,20 @@ import sys, os
 # Try importing the sphinx readthedocs.org theme
 # Install it with:
 #    (sudo) pip install sphinx_rtd_theme
-try:
-    import sphinx_rtd_theme
-    found_html_theme = 'sphinx_rtd_theme'
-    found_html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-except:
-    found_html_theme = 'default'
-    found_html_theme_path = []
 
+found_html_theme = 'default'
+found_html_theme_path = []
+if os.environ.get('USE_LOCAL_SPHINX_RTD_THEME') is not None:
+    try:
+        import sphinx_rtd_theme
+        found_html_theme = 'sphinx_rtd_theme'
+        found_html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+        print("Using local sphinx RTD theme.")
+    except:
+        print("Could not import sphinx RTD theme. Using default.")
+        pass
+else:
+    print("Using default theme.")
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
