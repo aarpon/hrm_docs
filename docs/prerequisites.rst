@@ -9,7 +9,7 @@ The HRM requires a few prerequisites for its functions.
 Operating system
 ================
 
-The HRM should work on any recent Linux distribution, but in the bulk of this documentation we will explicitly address |ubuntu| **Ubuntu**. However, since we are planning to extend support to other distributions, additional information will incrementally appear over time. In the following you will already find some sections specific to |fedora| **Fedora**.
+The HRM should work on any recent Linux distribution, but in the bulk of this documentation we will explicitly address |ubuntu| **Ubuntu**. However, since we are planning to extend support to other distributions, additional information will incrementally appear over time. In the following you will already find some sections specific to |fedora| **Fedora** (that will apply to **RHEL** and **CentOS**).
 
 |note| Please notice that with release 3.1, we drop support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
 
@@ -53,7 +53,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 Example (with MySQL): 
 
-::
+.. code-block:: sh
 
     sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-mysql, php5-ldap
 
@@ -61,19 +61,19 @@ Example (with MySQL):
 
 Example (with MySQL):
 
-::
+.. code-block:: sh
 
     sudo yum install php, php-cli, php-common, php-mysql, php-process, php-pdo, php-ldap 
 
 |MacOSX| The PHP 5 module for Apache2 and the PHP 5 command line interpreter are installed by default in Mac OS X. The PHP 5 module must be activated, though; uncomment the line:
 
-::
+.. code-block:: sh
 
     LoadModule php5_module libexec/apache2/libphp5.so
 
 in the Apache2 configuration. Use ``vi``:
 
-::
+.. code-block:: sh
 
     sudo vi /private/etc/apache2/httpd.conf
 
@@ -84,7 +84,7 @@ PHP `date()` and default timezone
 
 Please make sure to set the default timezone in `php.ini` as follows:
 
-::
+.. code-block:: sh
 
     [Date]
     ; Defines the default timezone used by the date functions
@@ -93,7 +93,10 @@ Please make sure to set the default timezone in `php.ini` as follows:
 
 otherwise you will get following warning every time the PHP function `date()` is called within the HRM:
 
- PHP Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the ``date.timezone`` setting or the ``date_default_timezone_set()`` function. (...)
+::
+
+    PHP Warning: date(): It is not safe to rely on the system's timezone settings. You are
+    required to use the date.timezone setting or the date_default_timezone_set() function. (...)
 
 Click here for the `full list of supported time zones <http://us2.php.net/manual/en/timezones.php>`_.
 
@@ -107,7 +110,7 @@ MySQL
 
 |ubuntu| install **php5-mysql**; install and configure **mysql-server**. Recommended: install **phpmyadmin**.
 
-::
+.. code-block:: sh
 
     sudo apt-get install php5-mysql, mysql-server
 
@@ -122,7 +125,7 @@ PostgreSQL
 
 |ubuntu| install **php5-pgsql**; install and configure **postgresql**. Recommended: install **phppgadmin**.
 
-::
+.. code-block:: sh
 
     sudo apt-get install php5-pgsql, postgresql, phppgadmin
 
@@ -143,7 +146,7 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
 |ubuntu| install and configure postfix.
 
-::
+.. code-block:: sh
 
     sudo apt-get install postfix
 
