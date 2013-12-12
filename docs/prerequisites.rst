@@ -49,7 +49,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 |note| Minimum required PHP version is **5.2**.
 
-|Ubuntu| install **libapache2-mod-php5**; **php5**; **php5-cli**; **php5-common**; **php5-mysql** (if you plan to use MySQL) or **php5-pgsql** (if you plan to use PostgreSQL; see also below); **php5-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+|Ubuntu| Install **libapache2-mod-php5**; **php5**; **php5-cli**; **php5-common**; **php5-mysql** (if you plan to use MySQL) or **php5-pgsql** (if you plan to use PostgreSQL; see also below); **php5-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 
 Example (with MySQL): 
 
@@ -57,7 +57,7 @@ Example (with MySQL):
 
     sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-mysql, php5-ldap
 
-|Fedora| install **php**; **php-cli**; **php-common**; **php-mysql** (if you plan to use MySQL) or **php-pgsql** (if you plan to use PostgreSQL; see also below); **php-process**; **php-pdo**; **php-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+|Fedora| Install **php**; **php-cli**; **php-common**; **php-mysql** (if you plan to use MySQL) or **php-pgsql** (if you plan to use PostgreSQL; see also below); **php-process**; **php-pdo**; **php-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 
 Example (with MySQL):
 
@@ -108,7 +108,7 @@ The HRM officially supports two relational databases: **MySQL** and **PostgreSQL
 MySQL
 -----
 
-|ubuntu| install **php5-mysql**; install and configure **mysql-server**. Recommended: install **phpmyadmin**.
+|ubuntu| Install **php5-mysql**; install and configure **mysql-server**. Recommended: install **phpmyadmin**.
 
 .. code-block:: sh
 
@@ -123,7 +123,7 @@ To grant local access see `this page <http://www.svi.nl/PostgreSQLlocalAccess>`_
 PostgreSQL
 ----------
 
-|ubuntu| install **php5-pgsql**; install and configure **postgresql**. Recommended: install **phppgadmin**.
+|ubuntu| Install **php5-pgsql**; install and configure **postgresql**. Recommended: install **phppgadmin**.
 
 .. code-block:: sh
 
@@ -144,7 +144,7 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
     "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them. `Read more <http://www.php.net/mail>`_."
 
-|ubuntu| install and configure postfix.
+|ubuntu| Install and configure postfix.
 
 .. code-block:: sh
 
@@ -164,7 +164,7 @@ Compressors
 
 The HRM compresses files to be downloaded (such as deconvolution results). Several options are possible (and more can be added in the configuration files), but by default the HRM uses ``zip``.
 
-|ubuntu| install zip.
+|ubuntu| Install zip.
 
 |fedora| TODO!
 
