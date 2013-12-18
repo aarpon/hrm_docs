@@ -202,7 +202,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'HuygensRemoteManager.tex', u'Huygens Remote Manager Documentation',
-   u'Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter', 'manual'),
+   u'Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -232,7 +232,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'huygensremotemanager', u'Huygens Remote Manager Documentation',
-     [u'Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter'], 1)
+     [u'Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -246,7 +246,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'HuygensRemoteManager', u'Huygens Remote Manager Documentation',
-   u'Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter', 'HuygensRemoteManager', 'One line description of project.',
+   u'Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter', 'HuygensRemoteManager', 'One line description of project.',
    'Miscellaneous'),
 ]
 
