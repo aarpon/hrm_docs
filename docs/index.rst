@@ -11,9 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   download
    script_install
    manual_install
-
+   upgrade
 
 Indices and tables
 ==================

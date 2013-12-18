@@ -1,8 +1,8 @@
 .. include:: global_directives.inc
 
-****************************
-Installing the prerequisites
-****************************
+*************
+Prerequisites
+*************
 
 The HRM requires a few prerequisites for its functions.
 
