@@ -1,11 +1,11 @@
 .. include:: global_directives.inc
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
-*************
-Prerequisites
-*************
+*************************
+Install the prerequisites
+*************************
 
 The HRM requires a few prerequisites for its functions.
 
@@ -21,7 +21,7 @@ Huygens Core
 
 The HRM is an interface to Scientific Volume Imaging's `Huygens Core <http://www.svi.nl/HuygensCore>`_. **Huygens Core** is is a full compute engine intended to run image processing and deconvolution jobs on large 64 bit multiprocessor servers without a specific graphical interface (which is provided, in our case, by the HRM).
 
-|note| If the web and the processing server are not on the same machine, you will need an additional Huygens Core for the web server with a *reader license* (free of charge).
+|note| If the web and the processing server are not on the same machine, you will need an additional Huygens Core for the web server with a **reader license** (free of charge).
 
 Apache2 web server
 ==================
@@ -43,7 +43,7 @@ HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure
 
 If you are installing the HRM in your user dir, make sure to change ``AllowOverride`` to ``All`` in ``/etc/apache2/mods-available/userdir.conf`` (make sure to enable the userdir mod first by running ``sudo a2enmod userdir`` in the shell).
 
-See also `Enabling use of Apache htaccess files <https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles>`_.
+|ubuntu| See also `Enabling use of Apache htaccess files <https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles>`_.
 
 PHP |ge| 5.2
 ============
@@ -58,7 +58,7 @@ Example (with MySQL):
 
 .. code-block:: sh
 
-    sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-mysql, php5-ldap
+    $ sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-mysql, php5-ldap
 
 |Fedora| Install **php**; **php-cli**; **php-common**; **php-mysql** (if you plan to use MySQL) or **php-pgsql** (if you plan to use PostgreSQL; see also below); **php-process**; **php-pdo**; **php-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 
@@ -66,7 +66,7 @@ Example (with MySQL):
 
 .. code-block:: sh
 
-    sudo yum install php, php-cli, php-common, php-mysql, php-process, php-pdo, php-ldap 
+    $ sudo yum install php, php-cli, php-common, php-mysql, php-process, php-pdo, php-ldap 
 
 |MacOSX| The PHP 5 module for Apache2 and the PHP 5 command line interpreter are installed by default in Mac OS X. The PHP 5 module must be activated, though; uncomment the line:
 
@@ -78,7 +78,7 @@ in the Apache2 configuration. Use ``vi``:
 
 .. code-block:: sh
 
-    sudo vi /private/etc/apache2/httpd.conf
+    $ sudo vi /private/etc/apache2/httpd.conf
 
 Please also enable *Web sharing* in the System Preferences.
 
@@ -115,7 +115,7 @@ MySQL
 
 .. code-block:: sh
 
-    sudo apt-get install php5-mysql, mysql-server
+    $ sudo apt-get install php5-mysql, mysql-server
 
 |fedora| TODO!
 
@@ -151,7 +151,7 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
 .. code-block:: sh
 
-    sudo apt-get install postfix
+    $ sudo apt-get install postfix
 
 |fedora| TODO!
 

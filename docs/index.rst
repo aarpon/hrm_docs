@@ -9,8 +9,9 @@ Welcome to Huygens Remote Manager's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
+   conventions
    download
    script_install
    manual_install

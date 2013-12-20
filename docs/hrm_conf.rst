@@ -1,8 +1,10 @@
 .. include:: global_directives.inc
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
 *************
-Configuration
+Edit hrm.conf
 *************
+
+    Will follow.

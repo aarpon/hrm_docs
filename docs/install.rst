@@ -1,0 +1,27 @@
+.. include:: global_directives.inc
+
+.. toctree::
+   :maxdepth: 3
+
+***************
+Install the HRM
+***************
+
+Download or checkout the HRM as explained :ref:`here <download-hrm>`.
+
+Unpack the downloaded archive to web server document root directory ($ROOT). This is the directory where Apache2 finds the html and php files to serve.
+
+.. code-block:: sh
+
+    $ sudo tar xjvf hrm_3.0.3.tar.bz2 $ROOT
+
+========  ============================
+OS        $ROOT
+========  ============================
+Ubuntu    /var/www
+Fedora    /var/www/html
+SuSE      /srv/www/htdocs
+Mac OS X  /Library/WebServer/Documents
+========  ============================
+
+You can of course extract or clone the HRM somewhere else: just add the location to the Apache2 configuration (`httpd.conf`).

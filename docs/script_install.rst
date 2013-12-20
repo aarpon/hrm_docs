@@ -3,7 +3,7 @@
 .. _`script-install`:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
 
 **********************

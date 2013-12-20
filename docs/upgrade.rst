@@ -1,7 +1,7 @@
 .. include:: global_directives.inc
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
 
 ***************
@@ -10,8 +10,8 @@ Version upgrade
 
 If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (`hrm_{server|client}_config.inc`), and the database structure might have been changed.
 
-Upgrading the configuration files
-=================================
+Update the configuration files
+==============================
 
 2.1.x to 3.0
 ------------
@@ -29,32 +29,32 @@ From HRM 1.2.x to HRM 2.0, three variables were added in the configuration files
 
 ::
 
-  max_upload_limit
-  max_post_limit
-  email_list_separator
+    [+] max_upload_limit
+    [+] max_post_limit
+    [+] email_list_separator
 
 Moreover, three variables were removed:
 
 ::
 
-    resultImagesOwnedByUser
-    resultImagesRenamed
-    enable_code_for_huygens
+    [-] resultImagesOwnedByUser
+    [-] resultImagesRenamed
+    [-] enable_code_for_huygens
 
 
 |note| If you are upgrading straight from HRM 1.2.x, please notice that as of HRM 2.0 configuration and sample files were moved as per following table.
 
-======================  =======================  ======================  ======================
-**Config files (new)**  **Sample files (new)**   **Config files (1.x)**  **Sample files (1.x)**
-----------------------  -----------------------  ----------------------  ----------------------
-HRM_ROOT/config         HRM_ROOT/config/samples  HRM_ROOT/inc            HRM_ROOT/resources
-======================  =======================  ======================  ======================
+==================  ========================  ==================  ======================
+Config files (new)  Sample files (new)        Config files (1.x)  Sample files (1.x)
+==================  ========================  ==================  ======================
+$HRM_ROOT/config    $HRM_ROOT/config/samples  $HRM_ROOT/inc       $HRM_ROOT/resources
+==================  ========================  ==================  ======================
 
 
-Checking the configuration files
-================================
+Check the configuration files
+=============================
 
-An easy way to check for modifications is by running the `{HRM_ROOT}/resources/checkConfig.php` script. From the shell, run:
+An easy way to check for modifications is by running the `$HRM_ROOT/resources/checkConfig.php` script. From the shell, run:
 
 .. code-block:: sh
 
@@ -86,14 +86,14 @@ Checking the 1.2.x files with the 2.1.x `checkConfig.php` script will result in 
 
 Please make sure to fix all problems. The sample files and the :ref:`manual installation instructions <manual-install>` will help you set the correct parameters.
 
-Updating the database
-=====================
+Update the database
+===================
 
 Newer versions of the HRM might use slightly different/updated versions of the database back-end than previous ones.
 
 ===========  ================
 HRM version  Database version
------------  ----------------
+===========  ================
 1.2.3        7
 2.0          8
 2.1          9
