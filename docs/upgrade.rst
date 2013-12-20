@@ -8,7 +8,7 @@
 Version upgrade
 ***************
 
-If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files, and the database structure might have been changed.
+If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (`hrm_{server|client}_config.inc`), and the database structure might have been changed.
 
 Upgrading the configuration files
 =================================
