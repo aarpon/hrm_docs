@@ -22,7 +22,7 @@ We will use visual shortcuts to refer to the operating system families supported
 | |ubuntu|     | Ubuntu and derivatives                 | 
 +--------------+----------------------------------------+
 
-|note| Support for Mac OS X was dropped in HRM version 3.1.
+|note| Support for |macosx| Mac OS X was dropped in HRM version 3.1.
 
 Variables
 =========

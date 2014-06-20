@@ -1,10 +1,10 @@
 .. include:: global_directives.inc
 
-.. _`script-install`:
-
 .. toctree::
    :maxdepth: 3
 
+
+.. _`script-install`:
 
 **********************
 Automated installation

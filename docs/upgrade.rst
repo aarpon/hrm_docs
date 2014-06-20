@@ -3,15 +3,19 @@
 .. toctree::
    :maxdepth: 3
 
-
 ***************
 Version upgrade
 ***************
 
-If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (`hrm_{server|client}_config.inc`), and the database structure might have been changed.
+If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (``hrm_{server|client}_config.inc``), and the database structure might have been changed.
 
 Update the configuration files
 ==============================
+
+3.0.x to 3.1
+------------
+
+No changes in the configuration files.
 
 2.1.x to 3.0
 ------------
@@ -44,26 +48,32 @@ Moreover, three variables were removed:
 
 |note| If you are upgrading straight from HRM 1.2.x, please notice that as of HRM 2.0 configuration and sample files were moved as per following table.
 
-==================  ========================  ==================  ======================
-Config files (new)  Sample files (new)        Config files (1.x)  Sample files (1.x)
-==================  ========================  ==================  ======================
-$HRM_ROOT/config    $HRM_ROOT/config/samples  $HRM_ROOT/inc       $HRM_ROOT/resources
-==================  ========================  ==================  ======================
-
++----------------------+--------------------------+----------------------+----------------------+
+| Config files (new)   | Sample files (new)       | Config files (1.x)   | Sample files (1.x)   |
++======================+==========================+======================+======================+
+| $HRM_ROOT/config     | $HRM_ROOT/config/samples | $HRM_ROOT/inc        | $HRM_ROOT/resources  |
++----------------------+--------------------------+----------------------+----------------------+
 
 Check the configuration files
 =============================
 
-An easy way to check for modifications is by running the `$HRM_ROOT/resources/checkConfig.php` script. From the shell, run:
+An easy way to check for modifications is by running the ``$HRM_ROOT/resources/checkConfig.php`` script. From the shell, run:
 
 .. code-block:: sh
 
     $ cd $HRM_ROOT
     $ php resources/checkConfig.php config/hrm_server_config.inc
 
-Replace `$HRM_ROOT` with the hrm root (e.g `/var/www/hrm`).
+Replace `$HRM_ROOT` with the hrm root (e.g ``/var/www/hrm``).
 
-Checking the 2.1.x files with the 3.0 `checkConfig.php` script will result in the following output:
+Checking the 3.0.x files with the 3.1 ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+    Check against HRM v3.1.x.
+    Check completed successfully! Your configuration file is valid!
+
+Checking the 2.1.x files with the 3.0 ``checkConfig.php`` script will result in the following output:
 
 .. code-block:: sh
 
@@ -71,7 +81,7 @@ Checking the 2.1.x files with the 3.0 `checkConfig.php` script will result in th
     * * * Error: variable omero_transfers not set or empty.
     Check completed with errors! Please fix your configuration!
 
-Checking the 1.2.x files with the 2.1.x `checkConfig.php` script will result in the following output:
+Checking the 1.2.x files with the 2.1.x ``checkConfig.php`` script will result in the following output:
 
 .. code-block:: sh
 
@@ -84,25 +94,32 @@ Checking the 1.2.x files with the 2.1.x `checkConfig.php` script will result in 
     * * * Error: variable enable_code_for_huygens must be removed from the configuration files! 
     Check completed with errors! Please fix your configuration!
 
-Please make sure to fix all problems. The sample files and the :ref:`manual installation instructions <manual-install>` will help you set the correct parameters.
+Please make sure to fix all problems. The sample files and the :ref:`manual installation <manual-install>` instructions will help you set the correct parameters.
 
 Update the database
 ===================
 
 Newer versions of the HRM might use slightly different/updated versions of the database back-end than previous ones.
 
-===========  ================
-HRM version  Database version
-===========  ================
-1.2.3        7
-2.0          8
-2.1          9
-3.0          10
-===========  ================
++-------------+------------------+
+| HRM version | Database version |
++=============+==================+
+| 1.2.3       | 7                |
++-------------+------------------+
+| 2.0         | 8                |
++-------------+------------------+
+| 2.1         | 9                |
++-------------+------------------+
+| 3.0         | 10               |
++-------------+------------------+
+| 3.0.3       | 11               |
++-------------+------------------+
+| 3.1         | 12               |
++-------------+------------------+
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-|note| Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 10 in one step.
+|note| Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 12 in one step.
 
 The following describes two possible ways to update the database.
 
@@ -115,16 +132,16 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.0 is number 10.
-    Current database revision is number 9.
+    Needed database revision for HRM v3.1 is number 12.
+    Current database revision is number 11.
     Updating...
 
-    Database successfully updated to revision 10.
+    Database successfully updated to revision 12.
 
 The database is now at the latest revision.
 
 Updating from the console
 -------------------------
 
-Alternatively, the database can be updated from the console (see here). Please pay attention to what the update process will report! The output should be the same as the one listed in the previous section, but if the update fails, you might want to `report it <http://hrm.svi.nl:8080/redmine/projects/hrmdev/issues/new>`_.
+Alternatively, the database can be updated from the console (see :ref:`create or update database <create-database>`). Please pay attention to what the update process will report! The output should be the same as the one listed in the previous section, but if the update fails, you might want to `report it <http://hrm.svi.nl:8080/redmine/projects/hrmdev/issues/new>`_.
 

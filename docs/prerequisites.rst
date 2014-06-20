@@ -26,15 +26,15 @@ The HRM is an interface to Scientific Volume Imaging's `Huygens Core <http://www
 Apache2 web server
 ==================
 
-|Ubuntu| Install **Apache2**
+|ubuntu| Install **Apache2**
 
-|MacOSX| The Apache2 web server is installed by default in Mac OS X. Please enable *Web sharing* in the System Preferences.
+|macosx| The Apache2 web server is installed by default in Mac OS X. Please enable *Web sharing* in the System Preferences.
 
 Web pages can be installed globally or per-user.
 
-|Ubuntu| The Apache2 global document root is ``/var/www``. Users can put their pages in ``~/public_html``.
+|ubuntu| The Apache2 global document root is ``/var/www``, or ``/var/www/html`` in more rectent versions. Users can put their pages in ``~/public_html``.
 
-|MacOSX| The Apache2 global document root is ``/Library/WebServer/Documents`` (although it may vary). Users can put their pages in ``~/Sites``.
+|macosx| The Apache2 global document root is ``/Library/WebServer/Documents`` (although it may vary). Users can put their pages in ``~/Sites``.
 
 Apache2 access handling
 -----------------------
@@ -52,7 +52,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 |note| Minimum required PHP version is **5.2**.
 
-|Ubuntu| Install **libapache2-mod-php5**; **php5**; **php5-cli**; **php5-common**; **php5-mysql** (if you plan to use MySQL) or **php5-pgsql** (if you plan to use PostgreSQL; see also below); **php5-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+|ubuntu| Install **libapache2-mod-php5**; **php5**; **php5-cli**; **php5-common**; **php5-mysql** (if you plan to use MySQL) or **php5-pgsql** (if you plan to use PostgreSQL; see also below); **php5-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 
 Example (with MySQL): 
 
@@ -60,7 +60,7 @@ Example (with MySQL):
 
     $ sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-mysql, php5-ldap
 
-|Fedora| Install **php**; **php-cli**; **php-common**; **php-mysql** (if you plan to use MySQL) or **php-pgsql** (if you plan to use PostgreSQL; see also below); **php-process**; **php-pdo**; **php-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
+|fedora| Install **php**; **php-cli**; **php-common**; **php-mysql** (if you plan to use MySQL) or **php-pgsql** (if you plan to use PostgreSQL; see also below); **php-process**; **php-pdo**; **php-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 
 Example (with MySQL):
 
@@ -68,7 +68,7 @@ Example (with MySQL):
 
     $ sudo yum install php, php-cli, php-common, php-mysql, php-process, php-pdo, php-ldap 
 
-|MacOSX| The PHP 5 module for Apache2 and the PHP 5 command line interpreter are installed by default in Mac OS X. The PHP 5 module must be activated, though; uncomment the line:
+|macosx| The PHP 5 module for Apache2 and the PHP 5 command line interpreter are installed by default in Mac OS X. The PHP 5 module must be activated, though; uncomment the line:
 
 .. code-block:: sh
 
