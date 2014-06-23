@@ -13,15 +13,15 @@ Unpack the downloaded archive to web server document root directory ($ROOT). Thi
 
 .. code-block:: sh
 
-    $ sudo tar xjvf hrm_3.0.3.tar.bz2 $ROOT
+    $ sudo tar xjvf hrm_3.1.1.tar.bz2 $ROOT
 
 ========  ============================
 OS        $ROOT
 ========  ============================
-Ubuntu    /var/www
+Ubuntu    /var/www; /var/www/html
 Fedora    /var/www/html
 SuSE      /srv/www/htdocs
 Mac OS X  /Library/WebServer/Documents
 ========  ============================
 
-You can of course extract or clone the HRM somewhere else: just add the location to the Apache2 configuration (`httpd.conf`).
+You can of course extract or clone the HRM somewhere else: just add the location to the Apache2 configuration (``httpd.conf``).

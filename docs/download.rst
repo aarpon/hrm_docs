@@ -29,6 +29,6 @@ The HRM archive is the standard installation approach: you have full control ove
 Clone git repository
 ====================
 
-|github| If you want to follow the HRM development, you can also `clone <https://github.com/aarpon/hrm>`_ the HRM repository from github.
+|github| If you want to follow the HRM development, you can also `clone <https://github.com/aarpon/hrm>`_ the read-only HRM repository from github.
 
 |note| Please keep in mind that the latest development snapshot is **unstable software and should not be deployed on production machines!**

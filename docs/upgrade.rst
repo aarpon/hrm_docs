@@ -64,7 +64,7 @@ An easy way to check for modifications is by running the ``$HRM_ROOT/resources/c
     $ cd $HRM_ROOT
     $ php resources/checkConfig.php config/hrm_server_config.inc
 
-Replace `$HRM_ROOT` with the hrm root (e.g ``/var/www/hrm``).
+Replace ``$HRM_ROOT`` with the hrm root (e.g ``/var/www/hrm``).
 
 Checking the 3.0.x files with the 3.1 ``checkConfig.php`` script will result in the following output:
 

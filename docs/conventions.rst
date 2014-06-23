@@ -41,4 +41,4 @@ Variables
 | $SETUP       | HRM setup folder                       | $HRM_ROOT/setup                              |
 +--------------+----------------------------------------+----------------------------------------------+
 
-|note| Please notice that $ROOT is ``/var/www/html`` in |fedora| as it is in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, $ROOT used to be ``/var/www``. 
+|note| Please notice that $ROOT is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, $ROOT used to be ``/var/www``. 

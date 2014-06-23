@@ -19,7 +19,7 @@ The HRM should work on any recent Linux distribution, but in the bulk of this do
 Huygens Core
 ============
 
-The HRM is an interface to Scientific Volume Imaging's `Huygens Core <http://www.svi.nl/HuygensCore>`_. **Huygens Core** is is a full compute engine intended to run image processing and deconvolution jobs on large 64 bit multiprocessor servers without a specific graphical interface (which is provided, in our case, by the HRM).
+The HRM is an interface to Scientific Volume Imaging's `Huygens Core <http://www.svi.nl/HuygensCore>`_. **Huygens Core** is is a fully scriptable compute engine intended to run image processing and deconvolution jobs on large 64 bit multiprocessor servers in headless mode, i.e. without a specific graphical interface. The HRM provides such an interface for multi-user, batch access to Huygens Core.
 
 |note| If the web and the processing server are not on the same machine, you will need an additional Huygens Core for the web server with a **reader license** (free of charge).
 
