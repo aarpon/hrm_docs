@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _`manual-install`:
+.. _manual_install:
 
 *******************
 Manual installation

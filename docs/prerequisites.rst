@@ -14,14 +14,18 @@ Operating system
 
 The HRM should work on any recent Linux distribution, but in the bulk of this documentation we will explicitly address |ubuntu| **Ubuntu**. However, since we are planning to extend support to other distributions, additional information will incrementally appear over time. In the following you will already find some sections specific to |fedora| **Fedora** (that will apply to **RHEL** and **CentOS**).
 
-|note| Please notice that with release 3.1, we drop support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
+.. warning::
+
+    Please notice that with release 3.1, we drop support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
 
 Huygens Core
 ============
 
 The HRM is an interface to Scientific Volume Imaging's `Huygens Core <http://www.svi.nl/HuygensCore>`_. **Huygens Core** is is a fully scriptable compute engine intended to run image processing and deconvolution jobs on large 64 bit multiprocessor servers in headless mode, i.e. without a specific graphical interface. The HRM provides such an interface for multi-user, batch access to Huygens Core.
 
-|note| If the web and the processing server are not on the same machine, you will need an additional Huygens Core for the web server with a **reader license** (free of charge).
+.. note::
+
+    If the web and the processing server are not on the same machine, you will need an additional Huygens Core for the web server with a **reader license** (free of charge).
 
 Apache2 web server
 ==================
@@ -50,7 +54,9 @@ PHP |ge| 5.2
 
 The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
 
-|note| Minimum required PHP version is **5.2**.
+.. note::
+
+    Minimum required PHP version is **5.2**.
 
 |ubuntu| Install **libapache2-mod-php5**; **php5**; **php5-cli**; **php5-common**; **php5-mysql** (if you plan to use MySQL) or **php5-pgsql** (if you plan to use PostgreSQL; see also below); **php5-ldap** (optional, if you plan to use user authentication against LDAP or Microsoft's Active Directory).
 

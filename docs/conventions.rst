@@ -22,7 +22,9 @@ We will use visual shortcuts to refer to the operating system families supported
 | |ubuntu|     | Ubuntu and derivatives                 | 
 +--------------+----------------------------------------+
 
-|note| Support for |macosx| Mac OS X was dropped in HRM version 3.1.
+.. warning::
+
+    Support for |macosx| Mac OS X was dropped in HRM version 3.1.
 
 Variables
 =========
@@ -32,13 +34,23 @@ Variables
 +==============+========================================+==============================================+
 | $ROOT        | Web server document root               | /var/www/html                                |
 +--------------+----------------------------------------+----------------------------------------------+
-| $HRM_ROOT    | HRM root folder                        | $ROOT/hrm                                    |
+| $HRM_HOME    | HRM root (home) folder                 | $ROOT/hrm                                    |
 +--------------+----------------------------------------+----------------------------------------------+
-| $CONFIG      | HRM configuration folder               | $HRM_ROOT/config                             |
+| $CONFIG      | HRM configuration folder               | $HRM_HOME/config                             |
 +--------------+----------------------------------------+----------------------------------------------+
-| $RESOURCES   | HRM resources folder                   | $HRM_ROOT/resources                          |
+| $SAMPLES     | HRM configuration samples folder       | $HRM_HOME/config/samples                     |
 +--------------+----------------------------------------+----------------------------------------------+
-| $SETUP       | HRM setup folder                       | $HRM_ROOT/setup                              |
+| $RESOURCES   | HRM resources folder                   | $HRM_HOME/resources                          |
++--------------+----------------------------------------+----------------------------------------------+
+| $SETUP       | HRM setup folder                       | $HRM_HOME/setup                              |
++--------------+----------------------------------------+----------------------------------------------+
+| $BIN         | HRM binary folder                      | $HRM_HOME/bin                                |
++--------------+----------------------------------------+----------------------------------------------+
+| $USER        | HRM customization folder               | $HRM_HOME/user                               |
++--------------+----------------------------------------+----------------------------------------------+
+| $HRM_DATA    | HRM data folder                        | /data/hrm_data                               |
 +--------------+----------------------------------------+----------------------------------------------+
 
-|note| Please notice that $ROOT is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, $ROOT used to be ``/var/www``. 
+.. note::
+    
+    Please notice that $ROOT is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, $ROOT used to be ``/var/www``. 

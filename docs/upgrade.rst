@@ -22,9 +22,9 @@ No changes in the configuration files.
 
 From HRM 2.1.x to HRM 3.0, one variable was added in the configuration files.
 
-::
+.. code-block:: php
 
-  $omero_transfers={true|false}
+    $omero_transfers={true|false}
 
 1.2.x to 2.0
 ------------
@@ -51,20 +51,20 @@ Moreover, three variables were removed:
 +----------------------+--------------------------+----------------------+----------------------+
 | Config files (new)   | Sample files (new)       | Config files (1.x)   | Sample files (1.x)   |
 +======================+==========================+======================+======================+
-| $HRM_ROOT/config     | $HRM_ROOT/config/samples | $HRM_ROOT/inc        | $HRM_ROOT/resources  |
+| $HRM_HOME/config     | $HRM_HOME/config/samples | $HRM_HOME/inc        | $HRM_HOME/resources  |
 +----------------------+--------------------------+----------------------+----------------------+
 
 Check the configuration files
 =============================
 
-An easy way to check for modifications is by running the ``$HRM_ROOT/resources/checkConfig.php`` script. From the shell, run:
+An easy way to check for modifications is by running the ``$HRM_HOME/resources/checkConfig.php`` script. From the shell, run:
 
 .. code-block:: sh
 
-    $ cd $HRM_ROOT
+    $ cd $HRM_HOME
     $ php resources/checkConfig.php config/hrm_server_config.inc
 
-Replace ``$HRM_ROOT`` with the hrm root (e.g ``/var/www/hrm``).
+Replace ``$HRM_HOME`` with the hrm root (e.g ``/var/www/hrm``).
 
 Checking the 3.0.x files with the 3.1 ``checkConfig.php`` script will result in the following output:
 
@@ -94,7 +94,7 @@ Checking the 1.2.x files with the 2.1.x ``checkConfig.php`` script will result i
     * * * Error: variable enable_code_for_huygens must be removed from the configuration files! 
     Check completed with errors! Please fix your configuration!
 
-Please make sure to fix all problems. The sample files and the :ref:`manual installation <manual-install>` instructions will help you set the correct parameters.
+Please make sure to fix all problems. The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
 
 Update the database
 ===================
