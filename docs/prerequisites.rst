@@ -72,7 +72,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 .. code-block:: sh
 
-    $ sudo apt-get install libapache2-mod-php5, php5, php5-cli, php5-common, php5-json
+    $ sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json
 
 .. note::
 
@@ -82,7 +82,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 .. code-block:: sh
 
-    $ sudo yum install php, php-cli, php-common, php-process, php-json 
+    $ sudo yum install php php-cli php-common php-process php-json 
 
 A relational database
 =====================
@@ -96,13 +96,13 @@ MySQL
 
 .. code-block:: sh
 
-    $ sudo apt-get install php5-mysql, mysql-server
+    $ sudo apt-get install php5-mysql mysql-server
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install php-mysql, php-pdo, mysql-server
+    $ sudo yum install php-mysql php-pdo mysql-server
 
 .. note::
 
@@ -115,13 +115,19 @@ PostgreSQL
 
 .. code-block:: sh
 
-    sudo apt-get install php5-pgsql, postgresql
+    $ sudo apt-get install php5-pgsql postgresql
 
 |fedora|
 
 .. code-block:: sh
 
-    sudo yum install ...
+    $ sudo yum install php-pgsql postgresql-server postgresql-contrib
+
+You will need to manually enable PostgreSQL:
+
+.. code-block:: sh
+
+    $ sudo systemctl enable postgresql
 
 .. note::
 
@@ -149,8 +155,8 @@ If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ld
 
     $ sudo yum install php-ldap 
 
-Sendmail
-========
+Sendmail (postfix)
+==================
 
 HRM uses the PHP ``mail()`` function to notify the users: 
 

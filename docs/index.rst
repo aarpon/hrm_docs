@@ -3,6 +3,8 @@
 Huygens Remote Manager |HRM_VERSION| documentation
 ==================================================
 
+These are the detailed installation and administration instructions for the Huygens Remote Manager.
+
 Contents
 ========
 
