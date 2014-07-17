@@ -15,6 +15,8 @@ Unpack the downloaded archive to web server document root directory ($ROOT). Thi
 
     $ sudo tar xjvf hrm_x.y.z.tar.bz2 $ROOT
 
+where ``x.y.z`` is a placeholder for the HRM version.
+
 +----------+-------------------------------+
 | OS       | $ROOT                         |
 +==========+===============================+

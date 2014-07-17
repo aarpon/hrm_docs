@@ -59,14 +59,14 @@ If you are installing the HRM in your user dir, make sure to change ``AllowOverr
 
 |ubuntu| See also `Enabling use of Apache htaccess files <https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles>`_.
 
-PHP |ge| 5.2
+PHP |ge| 5.3
 ============
 
 The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
 
 .. note::
 
-    Minimum required PHP version is **5.2**.
+    Minimum required PHP version is **5.3**.
 
 |ubuntu|
 
