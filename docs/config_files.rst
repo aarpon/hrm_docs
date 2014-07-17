@@ -22,6 +22,7 @@ Here we will assume a one-machine installation, and we will therefore show just 
 .. code-block:: php
 
     <?php
+    ...
     // This file is part of the Huygens Remote Manager
     // Copyright and license notice: see license.txt
 
@@ -40,18 +41,17 @@ Here we will assume a one-machine installation, and we will therefore show just 
 
 .. code-block:: php
 
+    <?php
+    ...
     // The name of the database host machine (this may be localhost if it is the 
     // machine on which the web server runs)
     $db_host = "localhost";
 
-.. note::
-
-    On Mac OS X, use ``$db_host = "127.0.0.1";`` instead of ``$db_host = "localhost";`` if you get an error like: 
-    
-    mysql_connect(): [2002] No such file or directory (trying to connect via unix:///var/mysql/mysql.lock) ....
 
 .. code-block:: php
 
+    <?php
+    ...
     // The name of the database used by HRM
     $db_name = "hrm";
 
@@ -73,6 +73,8 @@ The ``$huygens_user`` is used in case the processing machine (the one where Huyg
 
 .. code-block:: php
 
+    <?php
+    ...
     // Path to a local Huygens Core executable, to handle image information and
     // thumbnails. This installatation of hucore doesn't require a full license
     // unless this is also the computation server. For image information and
@@ -113,6 +115,8 @@ This is information needed for the web interface and the queue manager to login 
 
 .. code-block:: php
 
+    <?php
+    ...
     // Allow HTTP transfer of the restored (download) images
     $allowHttpTransfer = true;
 
@@ -210,6 +214,8 @@ If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow uplo
 
 .. code-block:: php
 
+    <?php
+    ...
     //==============================================================================
     // HRM configuration parameters
     //==============================================================================
@@ -232,6 +238,8 @@ The ``$logdir`` variable points to the directory where the log files created by 
 
 .. code-block:: php
 
+    <?php
+    ...
     // Email
     $send_mail = true;
     $email_sender = "hrm@localhost";
@@ -254,6 +262,8 @@ In case one of the alternative authentication types are selected (i.e. ``ACTIVE_
 
 .. code-block:: php
 
+    <?php
+    ...
     // If true, use DES password encryption; if false, use MD5
     $useDESEncryption = false;
 
@@ -270,6 +280,8 @@ Set ``$copy_images_to_huygens_server`` to true if the files have to be copied to
 
 .. code-block:: php
 
+    <?php
+    ...
     // Thumbnails require Huygens Core 3.3.2 or higher.
 
     // Notice that despite some script executions are relatively fast (like
@@ -332,6 +344,8 @@ This is used by the queue manager to test whether the processing machine is reac
 
 .. code-block:: php
 
+    <?php
+    ...
     //==============================================================================
     // HRM + Omero 
     //==============================================================================

@@ -37,12 +37,14 @@ HRM configuration files
 
 On **Machine 1**, configure the HRM as usual (as in the single-server configuration) but set the following variables in ``$CONFIG/hrm_client_config.inc`` and ``$CONFIG/hrm_server_config.inc`` as shown:
 
-.. code:: php
+.. code-block:: php
 
-    $copy_images_to_huygens_server = true;
-    $imageProcessingIsOnQueueManager = false;
-    $huygens_user = "hrm"   // This is the user that will log in to Machine 2
-    $huygens_group = "hrm"  // And this is its group
+   <?php
+   ...
+   $copy_images_to_huygens_server = true;
+   $imageProcessingIsOnQueueManager = false;
+   $huygens_user = "hrm"   // This is the user that will log in to Machine 2
+   $huygens_group = "hrm"  // And this is its group
 
 Replace ``hrm`` with your own user name and group if different.
 

@@ -7,7 +7,7 @@ Manual installation
 *******************
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    prerequisites
    install
