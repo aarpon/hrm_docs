@@ -5,62 +5,59 @@
 
 .. _`HRMUserManual`:
 
-*`CHAPTER 1 <HRMUserManual.htm#50532372_pgfId-931907>`__* Introduction *1*
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**************************
+Chapter 1: Introduction
+**************************
 
-`What is HRM <HRMUserManual.htm#50532372_pgfId-922046>`__\ *1*
+What is HRM
 
-`Who makes HRM <HRMUserManual.htm#50532372_pgfId-950142>`__\ *1*
+Who makes HRM
 
-`Where to find HRM <HRMUserManual.htm#50532372_pgfId-924652>`__\ *1*
+Where to find HRM
 
-`Getting started <HRMUserManual.htm#50532372_pgfId-948166>`__\ *2*
+Getting started
 
-*`CHAPTER 2 <HRMUserManual.htm#50532397_pgfId-919311>`__* Advanced deconvolution in HRM *7*
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*****************************************
+Chapter 2: Advanced deconvolution in HRM
+*****************************************
 
-`The starting page <HRMUserManual.htm#50532397_pgfId-981610>`__\ *8*
+The starting page
 
-`Raw Images <HRMUserManual.htm#50532397_pgfId-977030>`__\ *8*
+Raw Images
 
-`Start a Job <HRMUserManual.htm#50532397_pgfId-962303>`__\ *9*
+Start a Job
 
-`Select images (1/5) <HRMUserManual.htm#50532397_pgfId-980755>`__\ *9*
+Select images (1/5)
 
-`The Image Parameters
-(2/5) <HRMUserManual.htm#50532397_pgfId-980597>`__\ *11*
+The Image Parameters (2/5)
 
-`The Restoration Parameters
-(3/5) <HRMUserManual.htm#50532397_pgfId-979749>`__\ *19*
+The Restoration Parameters (3/5)
 
-`Analysis parameters
-(4/5) <HRMUserManual.htm#50532397_pgfId-980981>`__\ *23*
+Analysis parameters (4/5)
 
-`Launch the job (5/5) <HRMUserManual.htm#50532397_pgfId-981337>`__\ *24*
+Launch the job (5/5)
 
-`The Queue status <HRMUserManual.htm#50532397_pgfId-933150>`__\ *25*
+The Queue status
 
-`Results <HRMUserManual.htm#50532397_pgfId-933349>`__\ *26*
+Results
 
-`Statistics <HRMUserManual.htm#50532397_pgfId-943824>`__\ *29*
+Statistics
 
-`Your account <HRMUserManual.htm#50532397_pgfId-953085>`__\ *29*
+Your account
 
-`Tips & Tricks <HRMUserManual.htm#50532397_pgfId-983051>`__\ *30*
+Tips & Tricks
 
-*`CHAPTER 3 <HRMUserManual.htm#50532368_pgfId-923766>`__* Administrator’s guide *31*
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**********************************
+Chapter 3: Administrator’s guide
+**********************************
 
-`Installation <HRMUserManual.htm#50532368_pgfId-920061>`__\ *31*
+Installation
 
-`Administrator’s
-options <HRMUserManual.htm#50532368_pgfId-919947>`__\ *31*
+Administrator’s options
 
-`How HRM communicates with Huygens
-Core <HRMUserManual.htm#50532368_pgfId-919549>`__\ *33*
+How HRM communicates with Huygens Core
 
-`Requirements and technical
-features <HRMUserManual.htm#50532368_pgfId-925010>`__\ *33*
+Requirements and technical features 
 
 Introduction
 ============
