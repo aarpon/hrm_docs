@@ -49,8 +49,9 @@ This is the content of the sample configuration file:
     HRM_LOG="/var/log/hrm"
 
     # Interaction with OMERO (if switched on in hrm/config).
-    OMERO_SERVER_USER="omero"
-    OMERO_HOME="/path/to/OMERO.server"
+    OMERO_PKG="/opt/OMERO/OMERO.server"
+    OMERO_HOSTNAME="full.qualified.name.of.omero.server"
+    OMERO_PORT="4064"
 
     # Set a custom PHP CLI binary if necessary:
     # PHP_CLI="/usr/local/php/bin/php"
@@ -63,8 +64,7 @@ Explanation
 - ``HRM_SOURCE`` and ``HRM_DEST`` are the source and destination subfolders inside the user directory (for example: ``src`` and ``dst``). The source folder for an hypothetical user 'john' would then be ``/data/hrm_data/john/src``.
 - ``SUSER`` is the Unix user that runs the Queue Manager (for example: ``hrm``).
 - ``HRM_LOG`` is the log folder for the HRM (for example: ``/var/log/hrm``)
-- (optional) ``OMERO_SERVER_USER`` is the user running the OMERO server to interface with (for example: ``omero``)
-- (optional) ``OMERO_HOME`` is the path to the OMERO.server executable (for example: ``/home/omero/omero/omero.server``)
+- (optional) ``OMERO_PKG``, ``OMERO_HOSTNAME`` and ``OMERO_PORT``: see :ref:`connector_omero` for details.
 - (optional) ``PHP_CLI`` is the path tho the php CLI executable if it is not in the path or another one should be used (for example: ``/usr/local/php/bin/php``).
 
 

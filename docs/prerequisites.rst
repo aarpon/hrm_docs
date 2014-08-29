@@ -216,3 +216,39 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 .. code-block:: sh
 
     $ sudo yum install zip
+
+
+.. _prerequisites-omero:
+
+(Optional) OMERO support
+========================
+
+If you plan to use the :ref:`connector_omero`, you will need to install the prerequisites for OMERO and download and unzip the OMERO command line client.
+
+.. note::
+
+    It is **NOT** required to do any *installation* or *configuration* of the downloaded OMERO package! The HRM just needs this package for being able to communicate with your OMERO server, which can be installed on *any* machine that you can establish a network connection to (from your HRM server).
+
+For the command line client, you need to download the "server" package from the OMERO website that matches your OMERO installation **and** the Ice version installed on your HRM system. As an example, the commands for ``OMERO 5.0.3`` and ``Ice 3.4`` are shown below, for other combinations please have a look at the `OMERO download site <http://downloads.openmicroscopy.org/omero/>`_. We recommend placing the OMERO client into a subdirectory of ``/opt/OMERO``.
+
+|ubuntu|
+
+.. code-block:: sh
+
+    $ sudo apt-get install python-zeroc-ice libicessl34
+    $ wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
+    $ sudo mkdir -pv /opt/OMERO
+    $ cd /opt/OMERO
+    $ sudo unzip /tmp/OMERO.server.zip
+    $ rm /tmp/OMERO.server.zip
+
+|fedora|
+
+.. code-block:: sh
+
+    $ # sudo yum FIXME OMERO prerequisites for Fedora!
+    $ wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
+    $ sudo mkdir -pv /opt/OMERO
+    $ cd /opt/OMERO
+    $ sudo unzip /tmp/OMERO.server.zip
+    $ rm /tmp/OMERO.server.zip

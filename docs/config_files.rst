@@ -342,19 +342,6 @@ Set ``$copy_images_to_huygens_server`` to true if the files have to be copied to
 
 This is used by the queue manager to test whether the processing machine is reachable.
 
-.. code-block:: php
-
-    <?php
-    ...
-    //==============================================================================
-    // HRM + Omero 
-    //==============================================================================
-
-    // Switch on/off (true/false) data transfers between HRM and Omero.
-    $omero_transfers = false;
-    
-Turns on/off the integration with an OMERO server running on the same machine as the web server.
-
 .. note::
 
     In HRM it is possible to use a machine for each of the components, i.e. web server, database server, one or more processing machines, file server and queue manager. Configuration files are needed only on the web server and the machine running the queue manager. Make sure to fill the various path and user fields from the perspective of the machine that hosts each of the configuration files!

@@ -26,5 +26,4 @@ Optional configuration steps
 
    customize_login
    export_data_share
-
-   
+   configure_omero
