@@ -12,6 +12,17 @@ If you have upgraded the HRM in the past, you will know that some steps must be 
 Update the configuration files
 ==============================
 
+3.1 to 3.2
+----------
+
+In version 3.2 of the HRM, the system users running the Queue Manager and the web server are expected to have direct read-write access to the data folders. If this is not the case for your setup and you rely on adding the web server user to ``/etc/sudoers``, please notice that this behavior is obsoleted in 3.2 but can still be enabled by adding:
+
+.. code-block:: php
+
+    $change_ownership=true;
+
+in (``hrm_{server|client}_config.inc`. The variable ``$change_ownership`` defaults to false if not explicitly set to true in the configuration, in compliance to the new behavior. As of HRM 3.3, this variable will be ignored and the new behavior will be enforced.
+ 
 3.0.x to 3.1
 ------------
 
