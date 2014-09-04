@@ -21,7 +21,7 @@ In version 3.2 of the HRM, the system users running the Queue Manager and the we
 
     $change_ownership=true;
 
-in (``hrm_{server|client}_config.inc`. The variable ``$change_ownership`` defaults to false if not explicitly set to true in the configuration, in compliance to the new behavior. As of HRM 3.3, this variable will be ignored and the new behavior will be enforced.
+in (``hrm_{server|client}_config.inc``. The variable ``$change_ownership`` defaults to false if not explicitly set to true in the configuration, in compliance to the new behavior. As of HRM 3.3, this variable will be ignored and the new behavior will be enforced.
  
 3.0.x to 3.1
 ------------
