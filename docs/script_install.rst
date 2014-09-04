@@ -9,3 +9,5 @@
 **********************
 Automated installation
 **********************
+
+We will release the installation scripts soon. The documentation will follow!
