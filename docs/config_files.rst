@@ -86,8 +86,14 @@ The ``$huygens_user`` is used in case the processing machine (the one where Huyg
     // estimate of the Signal-To-Noise ratio (SNR) of an image, interactively. At
     // least that same simple license is required for this to work.
     $local_huygens_core = "/usr/local/bin/hucore";
-    The web interface uses hucore for some operations on the input and result files (for example to generate image previews or estimate the SNR interactively). An additional copy of hucore needs therefore to be installed on the web server. However, since all these functions used are accessible in reader mode, only a reader license is needed (free of charge).
+    ?>
 
+The web interface uses hucore for some operations on the input and result files (for example to generate image previews or estimate the SNR interactively). An additional copy of hucore needs therefore to be installed on the web server. However, since all these functions used are accessible in reader mode, only a reader license is needed (free of charge).
+
+
+.. code-block:: php
+
+    <?php
     //==============================================================================
     // File server settings
     //==============================================================================
@@ -177,7 +183,9 @@ This is information needed for the web interface and the queue manager to login 
     $decompressBin['tgz'] = "cd %DEST% \n /usr/bin/tar xzf ";
     $decompressBin['tar'] = "cd %DEST% \n /usr//bin/tar xf ";
     $decompressBin['tar.gz'] = "cd %DEST% \n /usr/bin/tar xzf ";
-    If $allowHttpTransfer is true, the results of deconvolution can be downloaded through the web interface. If it is false, then the results can only be accessed by other means (e.g. via network shares). Downloaded files are compressed to reduce bandwidth load: $compressExt defines the type of compression (default is zip).
+    ?>
+
+If $allowHttpTransfer is true, the results of deconvolution can be downloaded through the web interface. If it is false, then the results can only be accessed by other means (e.g. via network shares). Downloaded files are compressed to reduce bandwidth load: $compressExt defines the type of compression (default is zip).
 
 .. note::
 
