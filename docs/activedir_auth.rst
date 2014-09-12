@@ -95,7 +95,7 @@ Special case: Active Directory forests
 
 In most installations, the variables ``$AD_USERNAME_SUFFIX``, ``$AD_USERNAME_SUFFIX_REPLACE_MATCH`` and ``$AD_USERNAME_SUFFIX_REPLACE_STRING`` can be left unchanged (i.e. ``""``). These are meant for the case where HRM users belong to different Active Directory subdomains, e.g.         
 
-    `user@subdoman@domain.ch`
+    `user@subdoman.domain.ch`
 
 and they log in to the HRM using:
 
@@ -112,4 +112,5 @@ Consider following example:
     $AD_USERNAME_SUFFIX = ".A.B.C";
     $AD_USERNAME_SUFFIX_REPLACE_MATCH = "@B.A.B.C"
     $AD_USERNAME_SUFFIX_REPLACE_STRING = "@A.B.C"
+    ?>
 
