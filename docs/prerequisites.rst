@@ -16,7 +16,7 @@ The HRM should work on any recent Linux distribution, but we only support |ubunt
 
 .. warning::
 
-    Please notice that with release 3.1, we drop support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks. For reference, see `the old documentation <http://huygens-rm.org/home/?q=node/16>`_.
+    Please notice that with release 3.1, we dropped support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks. For reference, see `the old documentation <http://huygens-rm.org/home/?q=node/16>`_.
 
 Huygens Core
 ============
@@ -76,7 +76,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 .. note::
 
-    JSON support for PHP was moved into a separate package ``php5-json`` in Ubuntu 14.04LTS; in older versions, JSON support is part of the core php5 package.
+    JSON support for PHP was moved into a separate package ``php5-json`` in Ubuntu 14.04LTS; in older versions, JSON support is part of the core ``php5`` package.
 
 |fedora|
 
@@ -106,7 +106,7 @@ MySQL
 
 .. note::
 
-    It is recommended to install a database manageent tool like ``phpmyadmin``.
+    It is recommended to install a database management tool like ``phpmyadmin``.
 
 PostgreSQL
 ----------
@@ -160,7 +160,7 @@ Sendmail (postfix)
 
 HRM uses the PHP ``mail()`` function to notify the users: 
 
-    "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them. `Read more <http://www.php.net/mail>`_."
+    "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them." `More... <http://www.php.net/mail>`_
 
 |ubuntu|
 
@@ -186,7 +186,7 @@ Please make sure to set the default timezone in `php.ini` as follows:
     ; http://php.net/date.timezone
     date.timezone = "Europe/Zurich"
 
-otherwise you will get following warning every time the PHP function `date()` is called within the HRM:
+Otherwise you will get the following warning every time the PHP function `date()` is called within the HRM:
 
 ::
 
