@@ -246,7 +246,7 @@ For the command line client, you need to download the "server" package from the 
 
 .. code-block:: sh
 
-    $ # sudo yum FIXME OMERO prerequisites for Fedora!
+    $ sudo yum install ice-python
     $ wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
     $ sudo mkdir -pv /opt/OMERO
     $ cd /opt/OMERO
