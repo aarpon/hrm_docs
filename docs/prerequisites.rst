@@ -34,13 +34,13 @@ Apache2 web server
 
 .. code-block:: sh
 
-    $ sudo apt-get install apache2
+    sudo apt-get install apache2
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install httpd
+    sudo yum install httpd
 
 Web pages can be installed globally or per-user.
 
@@ -72,7 +72,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 .. code-block:: sh
 
-    $ sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json
+    sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json
 
 .. note::
 
@@ -82,7 +82,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 .. code-block:: sh
 
-    $ sudo yum install php php-cli php-common php-process php-json 
+    sudo yum install php php-cli php-common php-process php-json 
 
 A relational database
 =====================
@@ -96,13 +96,13 @@ MySQL
 
 .. code-block:: sh
 
-    $ sudo apt-get install php5-mysql mysql-server
+    sudo apt-get install php5-mysql mysql-server
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install php-mysql php-pdo mysql-server
+    sudo yum install php-mysql php-pdo mysql-server
 
 .. note::
 
@@ -115,19 +115,19 @@ PostgreSQL
 
 .. code-block:: sh
 
-    $ sudo apt-get install php5-pgsql postgresql
+    sudo apt-get install php5-pgsql postgresql
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install php-pgsql postgresql-server postgresql-contrib
+    sudo yum install php-pgsql postgresql-server postgresql-contrib
 
 You will need to manually enable PostgreSQL:
 
 .. code-block:: sh
 
-    $ sudo systemctl enable postgresql
+    sudo systemctl enable postgresql
 
 .. note::
 
@@ -147,13 +147,13 @@ If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ld
 
 .. code-block:: sh
 
-    $ sudo apt-get install php5-ldap
+    sudo apt-get install php5-ldap
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install php-ldap 
+    sudo yum install php-ldap 
 
 Sendmail (postfix)
 ==================
@@ -166,13 +166,13 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
 .. code-block:: sh
 
-    $ sudo apt-get install postfix
+    sudo apt-get install postfix
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install postfix
+    sudo yum install postfix
 
 PHP `date()` and default timezone
 ---------------------------------
@@ -209,13 +209,13 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 
 .. code-block:: sh
 
-    $ sudo apt-get install zip
+    sudo apt-get install zip
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install zip
+    sudo yum install zip
 
 
 .. _prerequisites-omero:
@@ -235,23 +235,23 @@ For the command line client, you need to download the "server" package from the 
 
 .. code-block:: sh
 
-    $ sudo apt-get install python-zeroc-ice libicessl34
-    $ wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
-    $ sudo mkdir -pv /opt/OMERO
-    $ cd /opt/OMERO
-    $ sudo unzip /tmp/OMERO.server.zip
-    $ rm /tmp/OMERO.server.zip
+    sudo apt-get install python-zeroc-ice libicessl34
+    wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
+    sudo mkdir -pv /opt/OMERO
+    cd /opt/OMERO
+    sudo unzip /tmp/OMERO.server.zip
+    rm /tmp/OMERO.server.zip
 
 |fedora|
 
 .. code-block:: sh
 
-    $ sudo yum install ice-python
-    $ wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
-    $ sudo mkdir -pv /opt/OMERO
-    $ cd /opt/OMERO
-    $ sudo unzip /tmp/OMERO.server.zip
-    $ rm /tmp/OMERO.server.zip
+    sudo yum install ice-python
+    wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
+    sudo mkdir -pv /opt/OMERO
+    cd /opt/OMERO
+    sudo unzip /tmp/OMERO.server.zip
+    rm /tmp/OMERO.server.zip
 
 .. note::
 
