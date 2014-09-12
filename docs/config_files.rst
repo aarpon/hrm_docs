@@ -22,7 +22,6 @@ Here we will assume a one-machine installation, and we will therefore show just 
 .. code-block:: php
 
     <?php
-    ...
     // This file is part of the Huygens Remote Manager
     // Copyright and license notice: see license.txt
 
@@ -34,6 +33,7 @@ Here we will assume a one-machine installation, and we will therefore show just 
 
     // The database type (mysql or postgres)
     $db_type = "mysql";
+    ?>
 
 .. note::
 
@@ -46,12 +46,7 @@ Here we will assume a one-machine installation, and we will therefore show just 
     // The name of the database host machine (this may be localhost if it is the 
     // machine on which the web server runs)
     $db_host = "localhost";
-
-
-.. code-block:: php
-
-    <?php
-    ...
+    
     // The name of the database used by HRM
     $db_name = "hrm";
 
@@ -68,6 +63,7 @@ Here we will assume a one-machine installation, and we will therefore show just 
     // Huygens server default user
     $huygens_user = "huygens";
     $huygens_group = "huygens";
+    ?>
 
 The ``$huygens_user`` is used in case the processing machine (the one where Huygens Core is installed) does not have direct access to the file server (i.e. the files to be deconvolved must be copied from the file server to the processing machine via ssh). For this to work, you will need to set up password-less ssh connection between file and processing server for the ``$huygens_user`` (see for example `here <http://www.debian-administration.org/articles/152>`_) and also set the variable ``$copy_images_to_huygens_server`` to ``true`` (see below).
 
@@ -116,6 +112,7 @@ The web interface uses hucore for some operations on the input and result files 
 
     // File server base folder as seen from the Huygens server machines (with trailing /)
     $huygens_server_image_folder = "/path/to/hrm_data/";
+    ?>
     
 This is information needed for the web interface and the queue manager to login to the file server. If the file server is not on the same machine, its host name must be given.
 
@@ -195,7 +192,7 @@ If $allowHttpTransfer is true, the results of deconvolution can be downloaded th
 
 .. code-block:: sh
 
-        memory_limit = 128M
+    memory_limit = 128M
 
 If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow uploading of the files to be deconvolved through the web interface. Multi-file upload (with directory structures) is indirectly possible by first compressing the files into an archive that the HRM will automatically extract at the end upload process. Default supported formats are ``zip``, ``tgz``, ``tar`` and ``tar.gz`` (as long as the corresponding executables are installed on the system) but more can be added by extending the ``$decompressBin`` array.
 
@@ -241,6 +238,7 @@ If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow uplo
     $logdir  = "/var/log/hrm";
     $logfile = "hrm.log";
     $logfile_max_size = 100;    // maximum size of the logfile in MB
+    ?>
 
 The ``$logdir`` variable points to the directory where the log files created by the web server user and the queue manager should reside. Default (and recommended) directory for the logs is ``/var/log/hrm``. Please create this directory and make sure to grant the relevant users read/write access to it!
 
@@ -263,6 +261,7 @@ The ``$logdir`` variable points to the directory where the log files created by 
 
     // Authentication type: MYSQL, ACTIVE_DIR or LDAP
     $authenticateAgainst = "MYSQL";
+    ?>
 
 Setting the authentication mode to **MYSQL** enables the embedded user management system (independent of the actual database you are using, e.g. postgresql). Use this if you don't have any other user management system in place. Alternatively, simple authentication against **Microsoft's Active Directory** and **OpenLDAP** is possible.
 
@@ -281,6 +280,7 @@ In case one of the alternative authentication types are selected (i.e. ``ACTIVE_
 
     // If true the images are copied to the huygens server machine
     $copy_images_to_huygens_server = false;
+    ?>
 
 Set ``$imageProcessingIsOnQueueManager`` to false if the queue manager is not on the same machine as the Huygens Core that runs deconvolution.
 
@@ -347,6 +347,7 @@ Set ``$copy_images_to_huygens_server`` to true if the files have to be copied to
     // The parameter for the ping command after the hostname
     $ping_parameter = '';           // use this on linux systems
     //$ping_parameter = '56 4'; // use this on cygwin
+    ?>
 
 This is used by the queue manager to test whether the processing machine is reachable.
 
