@@ -252,3 +252,26 @@ For the command line client, you need to download the "server" package from the 
     $ cd /opt/OMERO
     $ sudo unzip /tmp/OMERO.server.zip
     $ rm /tmp/OMERO.server.zip
+
+.. note::
+
+    Due to a bug in OMERO up to version ``5.0.3`` the client tries to store and
+    read its session files in a subfolder of the HOME directory of the user
+    running the OMERO client - in our case the same one that is running Apache.
+    This will fail on most standard installations due to the default directory
+    permissions in Apache's document root, therefore it is necessary to
+    manually create this session directory and adjust the permissions
+    accordingly.
+
+|ubuntu|
+
+.. code-block:: sh
+
+    sudo mkdir /var/www/omero
+    sudo chown www-data /var/www/omero
+    sudo chmod u+w /var/www/omero
+
+|fedora|
+
+Please contact us in case you're trying to set up the OMERO connector on a
+Fedora system and you're running into trouble there!
