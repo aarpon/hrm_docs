@@ -255,7 +255,7 @@ For the command line client, you need to download the "server" package from the 
 
 .. note::
 
-    Due to a bug in OMERO up to version ``5.0.3`` the client tries to store and
+    Due to an issue in OMERO up to version ``5.0.4`` the client tries to store and
     read its session files in a subfolder of the HOME directory of the user
     running the OMERO client - in our case the same one that is running Apache.
     This will fail on most standard installations due to the default directory
