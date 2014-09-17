@@ -68,3 +68,27 @@ Explanation
 - (optional) ``PHP_CLI`` is the path tho the php CLI executable if it is not in the path or another one should be used (for example: ``/usr/local/php/bin/php``).
 
 
+Set up the HRM user and group
+=============================
+
+Create a Unix group and user ``hrm`` on the web server machine.
+
+.. code-block:: sh
+                
+    $ sudo addgroup hrm
+    $ sudo adduser hrm --system --shell /bin/bash --no-create-home --ingroup hrm
+
+Make sure ``hrm`` owns (and has full read-write access) to HRM_DATA and HRM_LOG
+
+Set the group ownership of HRM_DATA to ``hrm``:
+
+.. code-block:: sh
+
+    chgrp -R hrm  ${HRM_DATA}
+    chmod -R g+ws ${HRM_DATA}          
+
+Add the Apache user (eg. www-data) to the ``hrm`` group:
+
+.. code-block:: sh
+
+    usermod -g hrm www-data                
