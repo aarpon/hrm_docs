@@ -71,24 +71,28 @@ Explanation
 Set up the HRM user and group
 =============================
 
-Create a Unix group and user ``hrm`` on the web server machine.
+Create a Unix group ``hrm`` and user ``hrm`` on the web server machine.
 
 .. code-block:: sh
                 
-    $ sudo addgroup hrm
-    $ sudo adduser hrm --system --shell /bin/bash --no-create-home --ingroup hrm
+    $ sudo groupadd --system hrm
+    $ sudo useradd hrm --system --gid hrm
 
 Make sure ``hrm`` owns (and has full read-write access) to HRM_DATA and HRM_LOG
 
-Set the group ownership of HRM_DATA to ``hrm``:
+Set the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
 
 .. code-block:: sh
 
-    chgrp -R hrm  ${HRM_DATA}
-    chmod -R g+ws ${HRM_DATA}          
+    sudo chown hrm:hrm ${HRM_DATA}
+    sudo chmod u+s,g+ws ${HRM_DATA}
+    sudo chown hrm:hrm ${HRM_LOG}
+    sudo chmod u+s,g+ws ${HRM_LOG}
 
-Add the Apache user (eg. www-data) to the ``hrm`` group:
+Add the Apache user (|ubuntu| www-data, |fedora| apache) to the ``hrm`` group:
 
 .. code-block:: sh
 
-    usermod -g hrm www-data                
+    # www-data in Ubuntu, apache in Fedora
+    sudo usermod www-data --append --groups hrm
+       
