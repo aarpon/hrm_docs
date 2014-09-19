@@ -14,7 +14,7 @@ The ``hrm.conf`` file is used by both the Web server and the Queue Manager.
 Copy the sample file
 ====================
 
-The sample configuration file ``$SAMPLES/hrm.conf.sample`` must be copied to ``/etc/hrm.conf`` and then edited as explained in the following. 
+The sample configuration file ``$SAMPLES/hrm.conf.sample`` must be copied to ``/etc/hrm.conf`` and then edited as explained in the following sections.
 
 Edit the configuration file
 ===========================
