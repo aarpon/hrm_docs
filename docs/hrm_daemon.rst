@@ -3,6 +3,8 @@
 .. toctree::
    :maxdepth: 3
 
+.. _`hrm_daemon`:
+
 ***********************
 Install the hrmd daemon
 ***********************
