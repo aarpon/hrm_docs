@@ -63,4 +63,4 @@ Variables
 
 .. note::
     
-    Please notice that $WWW_ROOT is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, $WWW_ROOT used to be ``/var/www``. 
+    Please notice that ``$WWW_ROOT`` is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, ``$WWW_ROOT`` used to be ``/var/www``.
