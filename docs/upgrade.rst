@@ -24,6 +24,18 @@ In some rare situations, the Queue Manager might get stuck. To ensure the *stop*
 
     ps aux | grep -i [r]unHuygens
 
+Upgrade the init script
+=======================
+
+This step is more or less identical to the initial installation of the init script as described in :ref:`installing the daemon <hrm_daemon>`. You need to copy the new script from ``$BIN/hrmd`` to ``/etc/init.d/`` and make sure it is executable. This can be done using the following commands:
+
+.. code-block:: sh
+
+    sudo cp -v $BIN/hrmd /etc/init.d/
+    sudo chmod +x /etc/init.d/hrmd
+
+|note| There should be *NO* need to run ``update-rc.d`` to update the run-level links.
+
 Update the configuration files
 ==============================
 
