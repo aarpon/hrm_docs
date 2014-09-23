@@ -10,14 +10,14 @@ Edit hrm_{server|client}_config.inc
 Copy the sample files
 =====================
 
-Copy ``$SAMPLES/hrm_server_config.inc.sample`` to ``$CONFIG/hrm_server_config.inc``: this file is used by the queue manager.
+Copy ``$HRM_SAMPLES/hrm_server_config.inc.sample`` to ``$HRM_CONFIG/hrm_server_config.inc``: this file is used by the queue manager.
 
-In a single-machine HRM installation, the server and client configuration files are identical. You can edit the server file and then copy it into ``$CONFIG/hrm_client_config.inc``. Alternatively, copy ``$SAMPLES/hrm_client_config.inc.sample`` to ``$CONFIG/hrm_client_config.inc`` and edit it.
+In a single-machine HRM installation, the server and client configuration files are identical. You can edit the server file and then copy it into ``$HRM_CONFIG/hrm_client_config.inc``. Alternatively, copy ``$HRM_SAMPLES/hrm_client_config.inc.sample`` to ``$HRM_CONFIG/hrm_client_config.inc`` and edit it.
 
 Edit the configuration files
 ============================
 
-Here we will assume a one-machine installation, and we will therefore show just one file (``$CONFIG/hrm_server_config.inc``).
+Here we will assume a one-machine installation, and we will therefore show just one file (``$HRM_CONFIG/hrm_server_config.inc``).
 
 .. code-block:: php
 

@@ -14,7 +14,7 @@ The ``hrm.conf`` file is used by both the Web server and the Queue Manager.
 Copy the sample file
 ====================
 
-The sample configuration file ``$SAMPLES/hrm.conf.sample`` must be copied to ``/etc/hrm.conf`` and then edited as explained in the following sections.
+The sample configuration file ``$HRM_SAMPLES/hrm.conf.sample`` must be copied to ``/etc/hrm.conf`` and then edited as explained in the following sections.
 
 Edit the configuration file
 ===========================
@@ -59,7 +59,7 @@ This is the content of the sample configuration file:
 Explanation
 ===========
 
-- ``HRM_HOME`` points to ``$ROOT/hrm`` (for example: ``/var/www/html/hrm``).
+- ``HRM_HOME`` points to ``$WWW_ROOT/hrm`` (for example: ``/var/www/html/hrm``).
 - ``HRM_DATA`` points to the data folder that contains all user subfolders (for example: ``/data/hrm_data``).
 - ``HRM_SOURCE`` and ``HRM_DEST`` are the source and destination subfolders inside the user directory (for example: ``src`` and ``dst``). The source folder for an hypothetical user 'john' would then be ``/data/hrm_data/john/src``.
 - ``SUSER`` is the Unix user that runs the Queue Manager (for example: ``hrm``).

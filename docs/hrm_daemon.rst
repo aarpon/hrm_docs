@@ -9,12 +9,12 @@
 Install the hrmd daemon
 ***********************
 
-Use the ``$BIN/hrmd`` daemon in Ubuntu Linux to start the queue manager. The configuration file for the hrmd daemon is ``/etc/hrm.conf`` (see :ref:`hrm_conf`)
+Use the ``$HRM_BIN/hrmd`` daemon in Ubuntu Linux to start the queue manager. The configuration file for the hrmd daemon is ``/etc/hrm.conf`` (see :ref:`hrm_conf`)
 
 Install the init script
 -----------------------
 
-To start the queue manager at boot, copy ``$BIN/hrmd`` to ``/etc/init.d/``. Make sure it is executable by typing in a shell:
+To start the queue manager at boot, copy ``$HRM_BIN/hrmd`` to ``/etc/init.d/``. Make sure it is executable by typing in a shell:
 
 .. code-block:: sh
 

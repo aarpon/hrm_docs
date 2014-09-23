@@ -7,11 +7,11 @@
 Customize the login page
 ************************
 
-You can customize the login page by renaming the ``$USER/login_user.inc.sample file`` into ``$USER/login_user.inc`` and adding information that you would like to appear on the HRM login page, such as contact information, quick instructions, etc.
+You can customize the login page by renaming the ``$HRM_USER/login_user.inc.sample file`` into ``$HRM_USER/login_user.inc`` and adding information that you would like to appear on the HRM login page, such as contact information, quick instructions, etc.
 
 .. warning::
 
-    Please use valid HTML code: no validation is performed on your ``$USER/login_user.inc`` HTML code, and you are responsible for any vulnerability you introduce into the HRM!
+    Please use valid HTML code: no validation is performed on your ``$HRM_USER/login_user.inc`` HTML code, and you are responsible for any vulnerability you introduce into the HRM!
 
 Example
 -------

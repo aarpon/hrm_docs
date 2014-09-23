@@ -6,7 +6,7 @@
 LDAP authentication
 *******************
 
-To enable LDAP authentication, please set the ``$authenticateAgainst`` variable to "LDAP" in ``$CONFIG/hrm_client_config.inc`` and in ``$CONFIG/hrm_server_config.inc``
+To enable LDAP authentication, please set the ``$authenticateAgainst`` variable to "LDAP" in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
 
 .. code-block:: php
 
@@ -16,7 +16,7 @@ To enable LDAP authentication, please set the ``$authenticateAgainst`` variable 
     $authenticateAgainst = "LDAP";
     ...
 
-Then, copy ``$SAMPLES/ldap.config.inc.sample`` to ``$CONFIG/ldap.config.inc`` and edit it.
+Then, copy ``$HRM_SAMPLES/ldap.config.inc.sample`` to ``$HRM_CONFIG/ldap.config.inc`` and edit it.
 
 .. code-block:: php
 

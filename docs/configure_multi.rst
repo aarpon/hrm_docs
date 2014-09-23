@@ -35,7 +35,7 @@ On **Machine 2**, create a user with name ``hrm`` and group ``hrm`` that will be
 HRM configuration files
 -----------------------
 
-On **Machine 1**, configure the HRM as usual (as in the single-server configuration) but set the following variables in ``$CONFIG/hrm_client_config.inc`` and ``$CONFIG/hrm_server_config.inc`` as shown:
+On **Machine 1**, configure the HRM as usual (as in the single-server configuration) but set the following variables in ``$HRM_CONFIG/hrm_client_config.inc`` and ``$HRM_CONFIG/hrm_server_config.inc`` as shown:
 
 .. code-block:: php
 

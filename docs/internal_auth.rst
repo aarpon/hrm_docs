@@ -4,7 +4,7 @@
 Internal authentication
 ***********************
 
-To enable Active Directory authentication, please set the ``$authenticateAgainst`` variable to "MYSQL" in ``$CONFIG/hrm_client_config.inc`` and in ``$CONFIG/hrm_server_config.inc``
+To enable Active Directory authentication, please set the ``$authenticateAgainst`` variable to "MYSQL" in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
 
 .. code-block:: php
 

@@ -6,7 +6,7 @@
 Active Directory authentication
 *******************************
 
-To enable Active Directory authentication, please set the ``$authenticateAgainst`` variable to "ACTIVE_DIR" in ``$CONFIG/hrm_client_config.inc`` and in ``$CONFIG/hrm_server_config.inc``
+To enable Active Directory authentication, please set the ``$authenticateAgainst`` variable to "ACTIVE_DIR" in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
 
 .. code-block:: php
 
@@ -16,7 +16,7 @@ To enable Active Directory authentication, please set the ``$authenticateAgainst
     $authenticateAgainst = "ACTIVE_DIR";
     ...
 
-Then, copy ``$SAMPLES/active_directory.config.inc.sample`` to ``$CONFIG/active_directory.config.inc`` and edit it.
+Then, copy ``$HRM_SAMPLES/active_directory.config.inc.sample`` to ``$HRM_CONFIG/active_directory.config.inc`` and edit it.
 
 .. code-block:: php
 

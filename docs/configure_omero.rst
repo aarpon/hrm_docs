@@ -8,8 +8,8 @@ OMERO connector
 
 Please make sure to have the :ref:`OMERO prerequisites <prerequisites-omero>`
 set up correctly. To enable the OMERO connector, then set the
-``$omero_transfers`` variable to ``true`` in ``$CONFIG/hrm_client_config.inc``
-and in ``$CONFIG/hrm_server_config.inc``.
+``$omero_transfers`` variable to ``true`` in ``$HRM_CONFIG/hrm_client_config.inc``
+and in ``$HRM_CONFIG/hrm_server_config.inc``.
 
 .. code-block:: php
 

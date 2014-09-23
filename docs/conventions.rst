@@ -42,25 +42,25 @@ Variables
 +--------------+----------------------------------------+----------------------------------------------+
 | Variable     | Description                            | (Example) value                              |
 +==============+========================================+==============================================+
-| $ROOT        | Web server document root               | /var/www/html                                |
+| $WWW_ROOT    | Web server document root               | /var/www/html                                |
 +--------------+----------------------------------------+----------------------------------------------+
-| $HRM_HOME    | HRM root (home) folder                 | $ROOT/hrm                                    |
+| $HRM_HOME    | HRM root (home) folder                 | $WWW_ROOT/hrm                                |
 +--------------+----------------------------------------+----------------------------------------------+
-| $CONFIG      | HRM configuration folder               | $HRM_HOME/config                             |
+| $HRM_CONFIG  | HRM configuration folder               | $HRM_HOME/config                             |
 +--------------+----------------------------------------+----------------------------------------------+
-| $SAMPLES     | HRM configuration samples folder       | $HRM_HOME/config/samples                     |
+| $HRM_SAMPLES | HRM configuration samples folder       | $HRM_HOME/config/samples                     |
 +--------------+----------------------------------------+----------------------------------------------+
-| $RESOURCES   | HRM resources folder                   | $HRM_HOME/resources                          |
+| $HRM_RESRC   | HRM resources folder                   | $HRM_HOME/resources                          |
 +--------------+----------------------------------------+----------------------------------------------+
-| $SETUP       | HRM setup folder                       | $HRM_HOME/setup                              |
+| $HRM_SETUP   | HRM setup folder                       | $HRM_HOME/setup                              |
 +--------------+----------------------------------------+----------------------------------------------+
-| $BIN         | HRM executables folder                 | $HRM_HOME/bin                                |
+| $HRM_BIN     | HRM executables folder                 | $HRM_HOME/bin                                |
 +--------------+----------------------------------------+----------------------------------------------+
-| $USER        | HRM customization folder               | $HRM_HOME/user                               |
+| $HRM_USER    | HRM customization folder               | $HRM_HOME/user                               |
 +--------------+----------------------------------------+----------------------------------------------+
 | $HRM_DATA    | HRM data folder                        | /data/hrm_data                               |
 +--------------+----------------------------------------+----------------------------------------------+
 
 .. note::
     
-    Please notice that $ROOT is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, $ROOT used to be ``/var/www``. 
+    Please notice that $WWW_ROOT is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, $WWW_ROOT used to be ``/var/www``. 
