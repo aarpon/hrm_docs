@@ -25,6 +25,8 @@ The script downloads, installs and sets up the HRM and its requested dependences
 Download standard archive
 =========================
 
+.. _download-hrm-standard:
+
 The HRM archive is the standard installation approach: you have full control over the installation procedure, but you'll have to do all the work yourself. Just unpack the code and install it following the :ref:`manual_install` instructions.
 
 .. note::
