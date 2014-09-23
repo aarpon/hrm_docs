@@ -9,6 +9,16 @@ Conventions
 
 This page lists some conventions and notations used in this documentation.
 
+Using ``sudo``
+==============
+
+Throughout this document, we're assuming that commands which require root
+permissions can be issued by using ``sudo``. If your system is not configured
+for this, you can either login directly as ``root`` (considered as "bad
+practice") or use the ``su -`` command to switch to the root user.
+
+|note| We highly recommend the usage of ``sudo`` though!
+
 Operating systems
 =================
 
