@@ -24,6 +24,40 @@ In some rare situations, the Queue Manager might get stuck. To ensure the *stop*
 
     ps aux | grep -i [r]unHuygens
 
+Download and extract the new HRM release
+========================================
+
+To install the new HRM version you need to download the ``.tar.gz`` file from
+the website or github as explained in :ref:`downloading the standard archive
+<download-hrm-standard>`.
+
+The downloaded package then needs to be extracted inside the HRM's installation
+directory, overwriting updated files but not touching your configuration files
+etc. Assuming your downloaded version is ``3.2.0`` and you were placing the
+package in your home directory, this can be done like this:
+
+.. code-block:: sh
+
+    cd $HRM_HOME
+    tar xzf $HOME/hrm-3.2.0.tar.gz --strip=1
+
+Cleaning up leftover files from previous installations
+======================================================
+
+Sometimes files were part of a previous release of the HRM but they are not
+contained in the current one any more. With the above described method those
+files don't get removed as only new files are extracted from the tar package.
+To avoid cluttering up the installation they should be removed according to the
+versions involved.
+
+3.1 to 3.2
+----------
+
+.. code-block:: sh
+
+    rm -v inc/ActiveDirectory.inc.php inc/Ldap.inc.php
+
+
 Upgrade the init script
 =======================
 
@@ -101,8 +135,8 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
 
 .. code-block:: sh
 
-    $ cd $HRM_HOME
-    $ php resources/checkConfig.php config/hrm_server_config.inc
+    cd $HRM_HOME
+    php resources/checkConfig.php config/hrm_server_config.inc
 
 Replace ``$HRM_HOME`` with the hrm root (e.g ``/var/www/hrm``).
 
