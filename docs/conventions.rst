@@ -61,6 +61,22 @@ Variables
 | $HRM_DATA    | HRM data folder                        | /data/hrm_data                               |
 +--------------+----------------------------------------+----------------------------------------------+
 
+If you want to use those variables in your interactive shell later on, just
+copy-paste the following lines into your session and adjust the values
+accordingly:
+
+.. code-block:: sh
+
+    WWW_ROOT=/var/www/html                 # Web server document root
+    HRM_HOME=$WWW_ROOT/hrm                 # HRM root (home) folder
+    HRM_CONFIG=$HRM_HOME/config            # HRM configuration folder
+    HRM_SAMPLES=$HRM_HOME/config/samples   # HRM configuration samples folder
+    HRM_RESRC=$HRM_HOME/resources          # HRM resources folder
+    HRM_SETUP=$HRM_HOME/setup              # HRM setup folder
+    HRM_BIN=$HRM_HOME/bin                  # HRM executables folder
+    HRM_USER=$HRM_HOME/user                # HRM customization folder
+    HRM_DATA=/data/hrm_data                # HRM data folder
+
 .. note::
     
     Please notice that ``$WWW_ROOT`` is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, ``$WWW_ROOT`` used to be ``/var/www``.
