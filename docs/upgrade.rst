@@ -9,6 +9,21 @@ Version upgrade
 
 If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (``hrm_{server|client}_config.inc``), and the database structure might have been changed.
 
+Stop the Queue Manager
+======================
+
+Significant parts of the configuration as well as the database are usually changed during an upgrade, so the Queue Manager needs to be stopped first.
+
+.. code-block:: sh
+
+    sudo /etc/init.d/hrmd stop
+
+In some rare situations, the Queue Manager might get stuck. To ensure the *stop* command did work properly, run the following check which should return empty:
+
+.. code-block:: sh
+
+    ps aux | grep -i [r]unHuygens
+
 Update the configuration files
 ==============================
 
@@ -158,3 +173,11 @@ Updating from the console
 
 Alternatively, the database can be updated from the console (see :ref:`create or update database <create-database>`). Please pay attention to what the update process will report! The output should be the same as the one listed in the previous section, but if the update fails, you might want to `report it <http://hrm.svi.nl:8080/redmine/projects/hrmdev/issues/new>`_.
 
+Re-start the Queue Manager
+==========================
+
+After processing the described upgrade steps, the Queue Manager needs to be started again.
+
+.. code-block:: sh
+
+    sudo /etc/init.d/hrmd start
