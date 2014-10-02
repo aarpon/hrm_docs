@@ -93,24 +93,103 @@ Then, copy ``$HRM_SAMPLES/active_directory.config.inc.sample`` to ``$HRM_CONFIG/
 Special case: Active Directory forests
 ======================================
 
-In most installations, the variables ``$AD_USERNAME_SUFFIX``, ``$AD_USERNAME_SUFFIX_REPLACE_MATCH`` and ``$AD_USERNAME_SUFFIX_REPLACE_STRING`` can be left unchanged (i.e. ``""``). These are meant for the case where HRM users belong to different Active Directory subdomains, e.g.         
+.. warning::
 
-    `user@subdoman.domain.ch`
+    For most installations, you can skip the entire rest of this section and
+    proceed with the next one by simply leaving the variables
+    ``$AD_USERNAME_SUFFIX``, ``$AD_USERNAME_SUFFIX_REPLACE_MATCH`` and
+    ``$AD_USERNAME_SUFFIX_REPLACE_STRING`` with their default values (empty,
+    i.e. ``""``).
 
-and they log in to the HRM using:
+This part of the config is meant for the special case of an Active Directory
+with multiple domains (commonly referred to as `forest`) which usually consist
+of a top-level domain (the `forest root` domain) and several sub-domains. If
+the HRM users belong to domains in all levels of the forest it would be
+required to enter the full domain name for logging in, which can become quite
+tedious (and therefore error-prone).
 
-    `user@subdomain`
+Consider the following domain setup, a root domain called ``SATURN`` with two
+sub-domains ``RHEA`` and ``TETHYS``. Those "plain" domain names are usually
+referred to as `NetBIOS Domain Names`. A hierarchical representation could look
+like this:
 
-Consider following example:
+.. code-block:: sh
+
+    SATURN
+      |
+      +-- RHEA
+      |
+      +-- TETHYS
+
+Now, assuming a top-level suffix of ``.private``, in Microsoft's Active
+Directory naming scheme this is translated into fully qualified domain names
+(FQDN's) as follows. The `root` domain (SATURN) gets prefixed by ``ads.`` and
+followed by the top-level ``.private`` suffix, whereas the two subdomains just
+get postfixed by the FQDN of the root domain. The graphical representation from
+above would therefore translate into this:
+
+.. code-block:: sh
+
+    ads.saturn.private
+      |
+      +-- rhea.ads.saturn.private
+      |
+      +-- tethys.ads.saturn.private
+
+
+To make authentication work in such a scenario, it is required to authenticate
+against the `GLOBAL CATALOG` of the Active Directory. This is an LDAP service
+provided `only` on the domain controllers of the `root` domain on the special
+port ``3268``. The usernames used to authenticate have to be of the form
+``username@fully.qualified.domain.name`` to provide the global catalog with the
+information to which sub-domain a certain account belongs as it is possible to
+have the same username for different accounts in different domains of a single
+domain forest.
+
+Now given the HRM configuration option ``$ACCOUNT_SUFFIX`` would be set to
+``.saturn.private``, a user ``foo`` from the domain ``SATURN`` could log in
+using something like ``foo@ads`` whereas a user ``bar`` from ``RHEA`` would
+have to type ``bar@rhea.ads``. This is obviously screaming for problems as
+normal users don't understand where and why to put those weird suffixes,
+especially as they've never heard of something like ``ads`` before.
+
+Using the sample config from below, users can simply log on by using their
+regular account name followed by an ``@`` sign and the (short) NetBIOS domain
+name, e.g.
+
+    `foo@saturn`
+
+or
+
+    `bar@rhea`
+
+which is way easier to explain and remember for them, especially as the short
+domain names are usually visible for them when logging into their workstation.
 
 .. code-block:: php
 
     <?php
     ...
-    $BASE_DN = "DC=A, DC=B, DC=C"; 
-    $DOMAIN_CONTROLLERS = array("prefix.A.B.C");
-    $AD_USERNAME_SUFFIX = ".A.B.C";
-    $AD_USERNAME_SUFFIX_REPLACE_MATCH = "@B.A.B.C"
-    $AD_USERNAME_SUFFIX_REPLACE_STRING = "@A.B.C"
+    $ACCOUNT_SUFFIX = "";
+    $BASE_DN = "DC=ads, DC=saturn, DC=private";
+
+    // set this to a domain controller of the *ROOT* domain:
+    $DOMAIN_CONTROLLERS = array("dc01.ads.saturn.private");
+
+    // the port is required to connect to the global catalog:
+    $AD_PORT = 3268;
+
+    // give the FQDN of the root domain with a leading dot here:
+    $AD_USERNAME_SUFFIX = ".ads.saturn.private";
+
+    // account names from the root domain will end up wrong, looking like this
+    // (note the leading "@" and the double occurence of the root domain):
+    $AD_USERNAME_SUFFIX_REPLACE_MATCH = "@saturn.ads.saturn.private";
+
+    // they have to be rewritten using the correct suffix instead (removing the
+    // first occurence of the root domain name):
+    $AD_USERNAME_SUFFIX_REPLACE_STRING = "@ads.saturn.private";
     ?>
 
+Please feel free to contact the HRM developers in case you need help setting up
+authentication in a multi-domain forest scenario!
