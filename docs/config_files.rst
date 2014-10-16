@@ -10,9 +10,20 @@ Edit hrm_{server|client}_config.inc
 Copy the sample files
 =====================
 
-Copy ``$HRM_SAMPLES/hrm_server_config.inc.sample`` to ``$HRM_CONFIG/hrm_server_config.inc``: this file is used by the queue manager.
+Copy ``$HRM_SAMPLES/hrm_server_config.inc.sample`` to ``$HRM_CONFIG/hrm_server_config.inc``, this file is used by the queue manager:
 
-In a single-machine HRM installation, the server and client configuration files are identical. You can edit the server file and then copy it into ``$HRM_CONFIG/hrm_client_config.inc``. Alternatively, copy ``$HRM_SAMPLES/hrm_client_config.inc.sample`` to ``$HRM_CONFIG/hrm_client_config.inc`` and edit it.
+.. code-block:: sh
+
+    sudo cp -v $HRM_SAMPLES/hrm_server_config.inc.sample $HRM_CONFIG/hrm_server_config.inc
+
+In a single-machine HRM installation, the server and client configuration files
+are identical. It is therefore recommended to create a symlink for the client
+configuration file that points to the server config file. This prevents
+out-of-sync configurations:
+
+.. code-block:: sh
+
+    sudo ln -s hrm_server_config.inc $HRM_CONFIG/hrm_client_config.inc
 
 Edit the configuration files
 ============================
