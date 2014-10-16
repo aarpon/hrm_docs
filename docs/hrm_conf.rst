@@ -82,9 +82,14 @@ Create a Unix group ``hrm`` and user ``hrm`` on the web server machine.
     $ sudo groupadd --system hrm
     $ sudo useradd hrm --system --gid hrm
 
-Make sure ``hrm`` owns (and has full read-write access) to HRM_DATA and HRM_LOG
+Create the log directory:
 
-Set the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
+.. code-block:: sh
+
+    sudo mkdir ${HRM_LOG}
+
+Make sure ``hrm`` owns (and has full read-write access) to HRM_DATA and HRM_LOG.
+This is done by setting the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
 
 .. code-block:: sh
 

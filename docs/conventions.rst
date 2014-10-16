@@ -75,6 +75,7 @@ accordingly:
     HRM_SETUP=$HRM_HOME/setup              # HRM setup folder
     HRM_BIN=$HRM_HOME/bin                  # HRM executables folder
     HRM_USER=$HRM_HOME/user                # HRM customization folder
+    HRM_LOG=/var/log/hrm                   # HRM logging folder
     HRM_DATA=/data/hrm_data                # HRM data folder
 
 .. note::
