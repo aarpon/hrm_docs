@@ -15,13 +15,13 @@ Unpack the downloaded archive to web server document root directory. This is the
 
 .. code-block:: sh
 
-    sudo tar xjvf hrm_x.y.z.tar.bz2 -C /var/www
+    sudo tar xjvf hrm_x.y.z.tar.bz2 --no-same-owner -C /var/www
 
 |fedora| and |ubuntu| **14.04 LTS** and later
 
 .. code-block:: sh
 
-    sudo tar xjvf hrm_x.y.z.tar.bz2 -C /var/www/html
+    sudo tar xjvf hrm_x.y.z.tar.bz2 --no-same-owner -C /var/www/html
 
 where ``x.y.z`` is a placeholder for the HRM version.
 
