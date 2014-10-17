@@ -48,7 +48,7 @@ Here we will assume a one-machine installation, and we will therefore show just 
 
 .. note::
 
-    Although the database abstraction library (`ADOdb <http://adodb.sourceforge.net/>`_) we use in the HRM can interface with a large number of databases, we currently support **MySQL** and **PostgreSQL**. Other DBs may work, but we haven't tested them.
+    Although the database abstraction library (`ADOdb <http://adodb.sourceforge.net/>`_) we use in the HRM can interface with a large number of databases, we currently only support **MySQL** and **PostgreSQL**. Other DBs may work, but we haven't tested them.
 
 .. code-block:: php
 
