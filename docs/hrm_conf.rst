@@ -71,6 +71,7 @@ Explanation
 - (optional) ``OMERO_PKG``, ``OMERO_HOSTNAME`` and ``OMERO_PORT``: see :ref:`connector_omero` for details.
 - (optional) ``PHP_CLI`` is the path tho the php CLI executable if it is not in the path or another one should be used (for example: ``/usr/local/php/bin/php``).
 
+.. _setup_hrm_user_and_group:
 
 Set up the HRM user and group
 =============================
