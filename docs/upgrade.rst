@@ -3,6 +3,8 @@
 .. toctree::
    :maxdepth: 3
 
+.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below.
+
 ***************
 Version upgrade
 ***************
@@ -68,7 +70,23 @@ This step is more or less identical to the initial installation of the init scri
     sudo cp -v $HRM_BIN/hrmd /etc/init.d/
     sudo chmod +x /etc/init.d/hrmd
 
-|note| There should be *NO* need to run ``update-rc.d`` to update the run-level links.
+.. note:: There should be *NO* need to run ``update-rc.d`` to update the run-level links.
+
+.. _update_hrm_data_permissions:
+
+Update the data folder permissions
+==================================
+
+As of HRM 3.2.0, the system users running the Queue Manager and the web server are expected to have full read-write access to ``$HRM_DATA``. The supported way of doing this is explained in :ref:`setup_hrm_user_and_group`. Briefly:
+
+  * a user ``hrm`` and its corresponding group ``hrm`` are created;
+  * the web server user (|ubuntu| www-data, |fedora| apache) is added to the ``hrm`` user;
+  * the variable ``SUSER`` is set to ``hrm`` in /etc/hrm.conf
+  * the ``$HRM_DATA`` and ``$HRM_LOG`` group ownership is set to hrm with the sticky bit set.
+
+For detailed instructions, please see :ref:`setup_hrm_user_and_group`.
+
+.. note:: Temporarily, the old behavior can still be preserved by setting a configuration variable ``$change_ownership`` as explained in the next section.
 
 Update the configuration files
 ==============================
@@ -76,7 +94,7 @@ Update the configuration files
 3.1 to 3.2
 ----------
 
-In version 3.2 of the HRM, the system users running the Queue Manager and the web server are expected to have direct read-write access to the data folders. If this is not the case for your setup and you rely on adding the web server user to ``/etc/sudoers``, please notice that this behavior is obsoleted in 3.2 but can still be enabled by adding:
+In version 3.2 of the HRM, the system users running the Queue Manager and the web server are expected to have direct read-write access to the data folders. If this is not the case for your setup and you rely on adding the web server user to ``/etc/sudoers``, please notice that **this behavior is obsoleted in 3.2 but can still be enabled** by adding:
 
 .. code-block:: php
 
@@ -120,7 +138,7 @@ Moreover, three variables were removed:
     [-] enable_code_for_huygens
 
 
-|note| If you are upgrading straight from HRM 1.2.x, please notice that as of HRM 2.0 configuration and sample files were moved as per following table.
+.. note:: If you are upgrading straight from HRM 1.2.x, please notice that as of HRM 2.0 configuration and sample files were moved as per following table.
 
 +----------------------+--------------------------+----------------------+----------------------+
 | Config files (new)   | Sample files (new)       | Config files (1.x)   | Sample files (1.x)   |
@@ -190,14 +208,16 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | 3.1         | 12               |
 +-------------+------------------+
+| 3.2         | 13               |
++-------------+------------------+
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-|note| Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 12 in one step.
+.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 13 in one step.
 
 The following describes two possible ways to update the database.
 
-|note| Although we test this procedure quite carefully, it is **highly recommended to backup the database before updating!**
+.. note:: Although we test this procedure quite carefully, it is **highly recommended to backup the database before updating!**
 
 Updating from the web interface
 -------------------------------
@@ -206,11 +226,11 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.1 is number 12.
-    Current database revision is number 11.
+    Needed database revision for HRM v3.2 is number 13.
+    Current database revision is number 12.
     Updating...
 
-    Database successfully updated to revision 12.
+    Database successfully updated to revision 13.
 
 The database is now at the latest revision.
 
