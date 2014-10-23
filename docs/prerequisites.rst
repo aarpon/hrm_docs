@@ -223,13 +223,17 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 (Optional) OMERO support
 ========================
 
-If you plan to use the :ref:`connector_omero`, you will need to install the prerequisites for OMERO and download and unzip the OMERO command line client.
+If you plan to use the :ref:`connector_omero`, you will need to download the
+"server" package from the OMERO website that matches your existing OMERO installation
+**and** the Ice version installed on your HRM system.
 
-.. note::
+As an example, the
+commands for ``OMERO 5.0.3`` and ``Ice 3.4`` are shown below. For other
+combinations please have a look at the `OMERO download site
+<http://downloads.openmicroscopy.org/omero/>`_. We recommend placing the
+downloaded OMERO
+"server" package into a subdirectory of ``/opt/OMERO``, as follows:
 
-    It is **NOT** required to do any *installation* or *configuration* of the downloaded OMERO package! The HRM just needs this package for being able to communicate with your OMERO server, which can be installed on *any* machine that you can establish a network connection to (from your HRM server).
-
-For the command line client, you need to download the "server" package from the OMERO website that matches your OMERO installation **and** the Ice version installed on your HRM system. As an example, the commands for ``OMERO 5.0.3`` and ``Ice 3.4`` are shown below, for other combinations please have a look at the `OMERO download site <http://downloads.openmicroscopy.org/omero/>`_. We recommend placing the OMERO client into a subdirectory of ``/opt/OMERO``.
 
 |ubuntu|
 
@@ -253,11 +257,22 @@ For the command line client, you need to download the "server" package from the 
     sudo unzip /tmp/OMERO.server.zip
     rm /tmp/OMERO.server.zip
 
+    
 .. note::
 
-    Due to an issue in OMERO up to version ``5.0.4`` the client tries to store and
-    read its session files in a subfolder of the HOME directory of the user
-    running the OMERO client - in our case the same one that is running Apache.
+    It is **NOT** required to do any *installation* or *configuration* of the
+    downloaded OMERO package! The HRM just needs this package for being able
+    to communicate with your existing installation of OMERO server.
+    This
+    communication can then be established with *any* machine connected to the
+    same network as the HRM server, which allows for data exchange between HRM
+    and the OMERO server across the network.
+
+.. note::
+
+    Due to an issue in OMERO up to version ``5.0.4`` there's an attempt to store and
+    read OMERO session files in a subfolder of the user's HOME directory who
+    executes OMERO queries - in our case the same user that is running Apache.
     This will fail on most standard installations due to the default directory
     permissions in Apache's document root, therefore it is necessary to
     manually create this session directory and adjust the permissions
