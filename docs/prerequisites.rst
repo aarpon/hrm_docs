@@ -226,9 +226,17 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 If you plan to use the :ref:`connector_omero`, you will need to download the
 "server" package from the OMERO website that matches your existing OMERO installation
 **and** the Ice version installed on your HRM system.
+  
+.. note::
 
-As an example, the
-commands for ``OMERO 5.0.3`` and ``Ice 3.4`` are shown below. For other
+    It is **NOT** required to do any *installation* or *configuration* of the
+    downloaded OMERO package! HRM just needs this package as a means
+    to communicate with your existing installation of OMERO server.
+    Thus, this package allows HRM to communicate with any OMERO server connected to
+    the network.
+
+As an example on how to download these packages, the
+commands used to fetch ``OMERO 5.0.3`` and ``Ice 3.4`` are shown below. For other
 combinations please have a look at the `OMERO download site
 <http://downloads.openmicroscopy.org/omero/>`_. We recommend placing the
 downloaded OMERO
@@ -257,17 +265,6 @@ downloaded OMERO
     sudo unzip /tmp/OMERO.server.zip
     rm /tmp/OMERO.server.zip
 
-    
-.. note::
-
-    It is **NOT** required to do any *installation* or *configuration* of the
-    downloaded OMERO package! The HRM just needs this package for being able
-    to communicate with your existing installation of OMERO server.
-    This
-    communication can then be established with *any* machine connected to the
-    same network as the HRM server, which allows for data exchange between HRM
-    and the OMERO server across the network.
-
 .. note::
 
     Due to an issue in OMERO up to version ``5.0.4`` there's an attempt to store and
@@ -276,7 +273,7 @@ downloaded OMERO
     This will fail on most standard installations due to the default directory
     permissions in Apache's document root, therefore it is necessary to
     manually create this session directory and adjust the permissions
-    accordingly.
+    accordingly, as follows:
 
 |ubuntu|
 
