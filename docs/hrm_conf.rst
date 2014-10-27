@@ -94,10 +94,10 @@ This is done by setting the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
 
 .. code-block:: sh
 
-    sudo chown hrm:hrm ${HRM_DATA}
-    sudo chmod u+s,g+ws ${HRM_DATA}
-    sudo chown hrm:hrm ${HRM_LOG}
-    sudo chmod u+s,g+ws ${HRM_LOG}
+    sudo chown -R hrm:hrm ${HRM_DATA}
+    sudo chmod -R u+s,g+ws ${HRM_DATA}
+    sudo chown -R hrm:hrm ${HRM_LOG}
+    sudo chmod -R u+s,g+ws ${HRM_LOG}
 
 Add the Apache user (|ubuntu| www-data, |fedora| apache) to the ``hrm`` group:
 
