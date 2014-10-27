@@ -86,7 +86,7 @@ of doing this is explained in :ref:`setup_hrm_user_and_group`. Briefly:
     ``hrm`` group
   * the variable ``SUSER`` is set to ``hrm`` in /etc/hrm.conf
   * the ``$HRM_DATA`` and ``$HRM_LOG`` group ownership is set to ``hrm`` with
-    the sticky bit set
+    the ``setgid`` bit set
 
 For detailed instructions, please see :ref:`setup_hrm_user_and_group`.
 
