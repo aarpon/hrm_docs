@@ -18,6 +18,7 @@ To start the queue manager at boot, copy ``$HRM_BIN/hrmd`` to ``/etc/init.d/``. 
 
 .. code-block:: sh
 
+    sudo cp -v $HRM_BIN/hrmd /etc/init.d/hrmd
     sudo chmod +x /etc/init.d/hrmd
 
 Start / stop the daemon at boot / shutdown
