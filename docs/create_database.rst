@@ -47,6 +47,17 @@ PostgreSQL
     su postgres -c "createuser -e -P -d -A -S -R -N hrm"
     su postgres -c "createdb hrm"
 
+|Fedora|
+
+MD5 host authentication has to be enabled explicitly on Fedora. This can be
+done using the following commands:
+
+.. code-block:: sh
+
+    sudo -s
+    echo "host all hrm 127.0.0.1/32 md5" >> /var/lib/pgsql/data/pg_hba.conf
+    service postgresql restart
+
 
 .. _`create-database`:
 
