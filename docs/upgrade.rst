@@ -77,16 +77,24 @@ This step is more or less identical to the initial installation of the init scri
 Update the data folder permissions
 ==================================
 
-As of HRM 3.2.0, the system users running the Queue Manager and the web server are expected to have full read-write access to ``$HRM_DATA``. The supported way of doing this is explained in :ref:`setup_hrm_user_and_group`. Briefly:
+As of HRM 3.2.0, the system users running the Queue Manager and the web server
+are expected to have full read-write access to ``$HRM_DATA``. The supported way
+of doing this is explained in :ref:`setting up the HRM user and group
+<setup_hrm_user_and_group>`. Briefly:
 
-  * a user ``hrm`` and its corresponding group ``hrm`` are created;
-  * the web server user (|ubuntu| www-data, |fedora| apache) is added to the ``hrm`` group;
+  * a user ``hrm`` and its corresponding group ``hrm`` are created
+  * the web server user (|ubuntu| www-data, |fedora| apache) is added to the
+    ``hrm`` group
   * the variable ``SUSER`` is set to ``hrm`` in /etc/hrm.conf
-  * the ``$HRM_DATA`` and ``$HRM_LOG`` group ownership is set to hrm with the sticky bit set.
+  * the ``$HRM_DATA`` and ``$HRM_LOG`` group ownership is set to ``hrm`` with
+    the ``setgid`` bit set
 
-For detailed instructions, please see :ref:`setup_hrm_user_and_group`.
+For detailed instructions, please see :ref:`setting up the HRM user and group
+<setup_hrm_user_and_group>`.
 
-.. note:: Temporarily, the old behavior can still be preserved by setting a configuration variable ``$change_ownership`` as explained in the next section.
+.. note:: Temporarily, the old behavior can still be preserved by setting a
+          configuration variable ``$change_ownership`` as explained in the next
+          section.
 
 Update the configuration files
 ==============================
