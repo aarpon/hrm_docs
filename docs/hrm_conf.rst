@@ -106,3 +106,4 @@ Add the Apache user (|ubuntu| www-data, |fedora| apache) to the ``hrm`` group:
     # www-data in Ubuntu, apache in Fedora
     sudo usermod www-data --append --groups hrm
        
+.. note:: You might have to restart your server for the group changes to be activated.
