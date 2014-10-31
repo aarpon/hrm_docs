@@ -1,5 +1,5 @@
 .. Directives
-.. |HRM_VERSION|    replace:: 3.2.0
+.. |HRM_VERSION|    replace:: 3.2.1
 .. |note|           image:: images/note.png
 .. |linux|          image:: images/linux_logo_22x22.png
 .. |ubuntu|         image:: images/ubuntu_logo_22x22.png
