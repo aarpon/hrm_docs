@@ -1,3 +1,5 @@
+.. _`upgrade-hrm`:
+
 .. include:: global_directives.inc
 
 .. toctree::
@@ -26,8 +28,11 @@ In some rare situations, the Queue Manager might get stuck. To ensure the *stop*
 
     ps aux | grep -i [r]unHuygens
 
-Download and extract the new HRM release
-========================================
+Get the latest HRM release
+==========================
+
+... From an Archive
+-------------------
 
 To install the new HRM version you need to download the ``.tar.gz`` file from
 the website or github as explained in :ref:`downloading the standard archive
@@ -42,6 +47,27 @@ package in your home directory, this can be done like this:
 
     cd $HRM_HOME
     tar xzf $HOME/hrm-3.2.0.tar.gz --strip=1
+
+... Using Git
+-------------
+
+If you :ref:`installed <upgrade-hrm>` the HRM using git you can upgrade to the latest version using the follwing commands:
+
+.. code-block:: sh
+
+    git checkout master
+    git pull
+    git tag -l
+    git checkout <latest tag>
+
+If you have a branch with your own modifications you want to additionally do:
+
+.. code-block:: sh
+
+    git checkout deployed
+    git rebase master
+
+(``deployed`` is the name we gave the branch in our example, might be any branch though)
 
 Cleaning up leftover files from previous installations
 ======================================================
