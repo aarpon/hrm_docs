@@ -13,8 +13,19 @@ The compiled documentation is available on [readthedocs.org][3] as HTML, PDF and
 [3]: http://huygens-remote-manager.readthedocs.org "Read the Docs"
 
 
-Build the documentation using a local sphinx readthedocs (RTD) theme
-====================================================================
+Editing conventions
+===================
+
+1.- When creating HRM screenshots log on to HRM with the user 'hrmuser', then
+capture the screenshot. This way all the HRM screenshots in the manual will
+display the same user.
+
+2.- Save image as .PNG. Currently there are many .gif which are only meant as
+a guide. Gif images will be replaced by png's.
+
+
+Building the documentation using a local sphinx readthedocs (RTD) theme
+=======================================================================
 
 Theme Installation
 ------------------
