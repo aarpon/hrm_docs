@@ -224,8 +224,10 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 ========================
 
 If you plan to use the :ref:`connector_omero`, you will need to download the
-"server" package from the OMERO website that matches your existing OMERO installation
-**and** the Ice version installed on your HRM system.
+"server" package from the OMERO website that matches your existing OMERO
+installation **and** the Ice version installed on your HRM system. To make it
+work on your system, you also need Python 2.6 or 2.7 and (which is installed by
+default on Fedora and Ubuntu) and Java 7.
   
 .. note::
 
@@ -247,7 +249,7 @@ downloaded OMERO
 
 .. code-block:: sh
 
-    sudo apt-get install python-zeroc-ice libicessl34
+    sudo apt-get install python-zeroc-ice libicessl34 openjdk-7-jre
     wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
     sudo mkdir -pv /opt/OMERO
     cd /opt/OMERO
@@ -258,7 +260,7 @@ downloaded OMERO
 
 .. code-block:: sh
 
-    sudo yum install ice-python
+    sudo yum install ice-python java-1.7.0-openjdk
     wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
     sudo mkdir -pv /opt/OMERO
     cd /opt/OMERO
@@ -267,12 +269,12 @@ downloaded OMERO
 
 .. note::
 
-    Due to an issue in OMERO up to version ``5.0.4`` there's an attempt to store and
-    read OMERO session files in a subfolder of the user's HOME directory who
-    executes OMERO queries - in our case the same user that is running Apache.
-    This will fail on most standard installations due to the default directory
-    permissions in Apache's document root, therefore it is necessary to
-    manually create this session directory and adjust the permissions
+    Due to an issue in the OMERO ``5.0.x`` series there's an attempt to store
+    and read OMERO session files in a subfolder of the user's HOME directory
+    who executes OMERO queries - in our case the same user that is running
+    Apache. This will fail on most standard installations due to the default
+    directory permissions in Apache's document root, therefore it is necessary
+    to manually create this session directory and adjust the permissions
     accordingly, as follows:
 
 |ubuntu|
