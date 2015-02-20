@@ -11,3 +11,28 @@ The compiled documentation is available on [readthedocs.org][3] as HTML, PDF and
 [1]: http://sphinx-doc.org/ "Sphinx"
 [2]: https://github.com/aarpon/hrm "Huygens Remote Manager"
 [3]: http://huygens-remote-manager.readthedocs.org "Read the Docs"
+
+
+Build the documentation using a local sphinx readthedocs (RTD) theme
+====================================================================
+
+Theme Installation
+------------------
+
+Install the sphinx RTD theme with:
+
+    (sudo) pip install sphinx_rtd_theme
+
+To upgrade it, use:
+
+    (sudo) pip install --upgrade sphinx_rtd_theme
+
+Building the docs
+-----------------
+
+Set the environment variable `USE_LOCAL_SPHINX_RTD_THEME` to enable the local sphinx_rtd_theme. You can set it in `~/.bashrc` or `~/.bash_profile` or define it right before use:
+
+    export USE_LOCAL_SPHINX_RTD_THEME=1
+    make html
+
+The configuration file `conf.py` will fall back to the default theme if sphinx_rtd_theme is not found.
