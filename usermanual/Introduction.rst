@@ -2,17 +2,9 @@
 Introduction
 **************************
 
-What is HRM
-
-Who makes HRM
-
-Where to find HRM
-
-Getting started
-
-
 
 What is HRM
+===========
 
 Welcome to the user guide for the Huygens Remote Manager (HRM)! HRM is a
 web-based collaborative open-source interface to Huygens Core to do
@@ -32,6 +24,7 @@ queue, allowing small jobs to go in between large ones.
 |image0|
 
 Who makes HRM
+=============
 
 HRM is an open source project, this means that the code is freely
 accessible and it can be adapted and modified to any needs by any user.
@@ -47,6 +40,7 @@ and open source.
 |image2|
 
 Where to find HRM
+=================
 
 HRM is a free and open source project, and can be found in SourceForge
 `1 <#50532361_pgfId-924454>`__.
@@ -65,13 +59,14 @@ site\ `3 <#50532361_pgfId-943475>`__ and in the SVI Wiki
 |image3|
 
 Getting started
+===============
 
 Here is a quick guide to get you started with deconvolution. To optimize
 results, please refer to `See Advanced deconvolution in
 HRM <HRMUserManual.htm#50532397_51687>`__.
 
 Create an account
-''''''''''''''''''''
+=================
 
 |image4|
 
@@ -87,7 +82,7 @@ Create an account
 |image5|
 
 Upload a raw image
-'''''''''''''''''''''
+==================
 
 Go to *raw images* and upload a file via the upload icon. Select a file
 from your PC. Several files can be uploaded at once.
@@ -95,7 +90,7 @@ from your PC. Several files can be uploaded at once.
 |image6|
 
 Deconvolve
-'''''''''''''
+==========
 
 From the main screen, go to *start a job* , entering the deconvolution
 process.
@@ -216,7 +211,7 @@ at the bottom of the page.
 |image14|
 
 Queue
-''''''''
+=====
 
 The job is now placed in the queue. HRM has a smart queue, which manages
 the jobs of several different users in an intelligent way. Allowing
@@ -226,7 +221,7 @@ viewed and own jobs can be deleted.
 |image15|
 
 Results
-''''''''''
+=======
 
 After deconvolution the images are placed in the results folder,
 accessible via the main menu. From there, files can be downloaded or
@@ -240,8 +235,8 @@ Anko de Graaff. <HRM/HRM%20Introduction.htm#50532372_11946>`__.
 
 |image17|
 
-Note
-''''
+Tips & Tricks
+=============
 
 To optimize your deconvolution results it is necessary to understand the
 different properties of your image and some of the mechanisms behind
