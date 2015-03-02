@@ -14,9 +14,6 @@ Tips & Tricks
 
 
 
-Administrator’s guide
-=====================
-
 Much information about the administration and maintenance is available
 online on the HRM project server\ `16 <#50532361_pgfId-923770>`__.
 Throughout this chapter some understanding of PHP is assumed.

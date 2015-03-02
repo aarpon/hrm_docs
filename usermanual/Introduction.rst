@@ -70,7 +70,7 @@ Here is a quick guide to get you started with deconvolution. To optimize
 results, please refer to `See Advanced deconvolution in
 HRM <HRMUserManual.htm#50532397_51687>`__.
 
-1. Create an account
+Create an account
 ''''''''''''''''''''
 
 |image4|
@@ -86,7 +86,7 @@ HRM <HRMUserManual.htm#50532397_51687>`__.
 
 |image5|
 
-2. Upload a raw image
+Upload a raw image
 '''''''''''''''''''''
 
 Go to *raw images* and upload a file via the upload icon. Select a file
@@ -94,7 +94,7 @@ from your PC. Several files can be uploaded at once.
 
 |image6|
 
-3. Deconvolve
+Deconvolve
 '''''''''''''
 
 From the main screen, go to *start a job* , entering the deconvolution
@@ -215,7 +215,7 @@ at the bottom of the page.
 
 |image14|
 
-4. Queue
+Queue
 ''''''''
 
 The job is now placed in the queue. HRM has a smart queue, which manages
@@ -225,7 +225,7 @@ viewed and own jobs can be deleted.
 
 |image15|
 
-5. Results
+Results
 ''''''''''
 
 After deconvolution the images are placed in the results folder,

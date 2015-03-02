@@ -30,9 +30,6 @@ Tips & Tricks
 
 
 
-Advanced deconvolution in HRM
-=============================
-
 This chapter explains in more detail how to create and launch
 deconvolution jobs in HRM. Instructions on how to inspect deconvolution
 results and how to access statistics in HRM are also included here.
