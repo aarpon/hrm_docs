@@ -10,6 +10,13 @@ Contents
 
 .. toctree::
    :maxdepth: 3
+              
+   Introduction
+   Advanced
+   Administrator
 
-   HRMUserManual
+
+
+
+
 
