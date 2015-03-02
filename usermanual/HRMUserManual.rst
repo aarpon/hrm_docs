@@ -1,8 +1,5 @@
 .. include:: global_directives.inc
 
-Contents
-========
-
 .. toctree::
    :maxdepth: 3
 
