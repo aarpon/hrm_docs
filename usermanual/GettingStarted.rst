@@ -1,25 +1,25 @@
+.. include:: global_directives.inc
+
+***************
 Getting started
-===============
+***************
 
-Here is a quick guide to get you started with deconvolution. To optimize
-results, please refer to `See Advanced deconvolution in
-HRM <HRMUserManual.htm#50532397_51687>`__.
+Here is a quick guide to get you started with the HRM/HuCore deconvolution. In
+order to optimize results, please refer to section :ref:`advanced_deconvolution`.
 
-Create an account
-=================
+Create an account in HRM
+========================
 
-|image4|
+-  If your imaging facility offers deconvolution via HRM, proceed to
+   the facility's HRM loging page and follow the registration link.
+   Notice that names are case sensitive.
+   
+   |image2|
+   
+-  If HRM is not available at your imaging facility you can still familiarize with
+   HRM by using the `HRM demo server <http://hrm.svi.nl>`_ offered by
+   SVI. Follow the registration link on the login page.
 
--  If your imaging facility already has an HRM server, go to the server
-   and create an account. Names are case sensitive. Contact your system
-   administrator for activation.
--  If you don’t have an HRM system running, it is still possible to get
-   familiar with Huygens by creating an account on the HRM demo
-   server\ `5 <#50532361_pgfId-948297>`__ at SVI, as seen in `See The
-   registration page for the HRM demo
-   server. <HRM/HRM%20Introduction.htm#50532372_48684>`__
-
-|image5|
 
 Upload a raw image
 ==================

@@ -12,6 +12,7 @@ Contents
    :maxdepth: 3
               
    Introduction
+   GettingStarted
    Advanced
    Administrator
 

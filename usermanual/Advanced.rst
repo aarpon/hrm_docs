@@ -1,3 +1,8 @@
+.. include:: global_directives.inc
+
+
+.. _advanced_deconvolution:
+
 *****************************
 Advanced deconvolution in HRM
 *****************************
