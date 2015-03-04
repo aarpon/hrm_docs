@@ -24,10 +24,14 @@ Create an account in HRM
 Upload a raw image
 ==================
 
-Go to *raw images* and upload a file via the upload icon. Select a file
-from your PC. Several files can be uploaded at once.
+After logging in, HRM will display the `Home panel`:
 
-|image6|
+|image0|
+
+Click on the `Raw images` icon. The following, intuitive upload tool will
+allow you to upload one or more files from your device:
+
+|image3|
 
 Deconvolve
 ==========
