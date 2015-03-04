@@ -1,9 +1,9 @@
 .. Directives
 .. |HRM_VERSION|    replace:: 3.2.0
 .. |ge|             unicode:: U+02265 .. GREATER THAN OR EQUAL TO
-.. |image0| image:: images/HRMUserManual-1.gif
-.. |image1| image:: images/HRMUserManual-1.gif
-.. |image2| image:: images/HRMUserManual-1.gif
+.. |image0| image:: images/homepanel.png
+.. |image1| image:: images/Collaborators.png
+.. |image2| image:: images/HRMUserManual-2.gif
 .. |image3| image:: images/HRMUserManual-1.gif
 .. |image4| image:: images/HRMUserManual-2.gif
 .. |image5| image:: images/HRMUserManual-3.gif
