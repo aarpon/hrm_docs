@@ -72,20 +72,16 @@ panel. The process of submitting the job is split into the following 5 steps:
   select the correct microscope type. For a detailed explanation on the
   remaining parameters please refer to section :ref:`advanced_deconvolution`.
 
-* |image10| **Step 3/5 - Restoration parameters** . Choose the parameters that will
-communicate with Huygens how the image must be restored.
-
-*Use predefined (easy).* Again a number of predefined sets from your
-administrator are available. It is worthwhile however to edit the set
-and obtain the appropriate SNR (see next).
-
-*Create your own (fairly easy).* Create or edit a set and enter the
-setup.
-
--  For deconvolution algorithm choose Classic Maximum Likelihood
+* |image12| **Step 3/5 - Restoration parameters**: Choose the parameters that will
+  communicate with Huygens how the image must be restored. *Use predefined
+  (easy). Again a number of predefined sets from your administrator are
+  available. It is worthwhile however to edit the set and obtain the
+   appropriate SNR (see next). *Create your own (fairly easy).* Create or
+   edit a set and enter the setup. For deconvolution algorithm choose
+   Classic Maximum Likelihood
    Estimation.
 
-|image11|
+
 
 -  Now use the SNR calculator. Upon entering an image, the calculator
    shows estimated previews of restored images for different SNR, along
