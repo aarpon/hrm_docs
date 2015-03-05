@@ -53,7 +53,7 @@ panel. The process of submitting the job is split into the following 5 steps:
   information about the dimensions, sampling and number of channels.
 
 
-*(2/5)* *Image parameters* . Select a parameter set, this parameter set
+* |image10| **Step 2/5 - Image parameters**: Select a parameter set, this parameter set
 contains information about how the image was created. Choosing the
 correct parameters is crucial for obtaining good deconvolution results.
 
