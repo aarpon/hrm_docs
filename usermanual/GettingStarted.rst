@@ -53,51 +53,26 @@ panel. The process of submitting the job is split into the following 5 steps:
   information about the dimensions, sampling and number of channels.
 
 
-* |image10| **Step 2/5 - Image parameters**: Select a parameter set, this parameter set
-contains information about how the image was created. Choosing the
-correct parameters is crucial for obtaining good deconvolution results.
+* |image10| **Step 2/5 - Image parameters**: An image parameter template
+  matching the imaging conditions of the microscope can be created at this
+  stage. Alternatively, an existing template can be selected from a
+  previous run. Also, other HRM users (including the administrator) may have
+  shared templates with you. Notice that choosing the correct parameters
+  is **crucial** for obtaining optimal deconvolution results  .
 
-*Use predefined (easy)* . There are a number of predefined deconvolution
-formats by your administrator. Make sure that the microscope type and
-the correct number of channels is selected (visible in the preview on
-the previous page). Proceed to the next step.
+  **Use existing parameter template (easy)**: When selecting an existing
+  parameter template the parameter contents are displayed on the right panel.
+  Make sure that the  microscope type and the number of channels of the
+  selected template match those of the images to deconvolve.
 
-|image9|
+  **Create a new parameter set (elaborated)**: Type a name for the new
+  parameter template in the `New/clone image template name` field, then click
+  the create button |image11|. The template editor opens, select the correct
+  number of channels and PSF type. Move on to the optical parameters and
+  select the correct microscope type. For a detailed explanation on the
+  remaining parameters please refer to section :ref:`advanced_deconvolution`.
 
-*Create your own (harder)* . Depending on the file format, some
-parameters are already provided by the metadata. HRM will inform whether
-usable metadata is present. To use the parameters in the metadata, leave
-the field blank. For advanced users it is possible to tune and tweak
-their parameters to optimize results, this is explained in `See Advanced
-deconvolution in HRM <HRMUserManual.htm#50532397_51687>`__.
-
-First create a new set, by entering a set name and press the new
-parameter set icon. Alternatively, it is possible to edit an existing
-set.
-
-The new parameter set opens, select the correct number of channels
-(visible in the preview in the first step *(1/5)* ). And select
-theoretical PSF.
-
-Next are the optical parameters. You need to know the parameters of your
-experiment and enter them, some of these may be included in the metadata
-as illustrated in `See The first optical parameters page. Shown is which
-parameters must be provided and which may be
-0mitted <HRM/HRM%20Introduction.htm#50532372_47906>`__. Note that there
-are two pages of optical data. There are several calculators available
-to help you enter the correct data. Additionally, it is possible to
-calculate the pixel size by dividing the size of the image by the number
-of pixels in that dimension, which are both shown in the preview of the
-first step *(1/5)* .
-
-|image10|
-
-Finally select whether you want to enable depth-dependent correction of
-the PSF. NO is default. YES improves the image quality, but also takes
-slightly longer to calculate. Here it is additionally necessary to
-submit from which side of the image the measurement started.
-
-*(3/5)* *Restoration parameters* . Choose the parameters that will
+* |image10| **Step 3/5 - Restoration parameters** . Choose the parameters that will
 communicate with Huygens how the image must be restored.
 
 *Use predefined (easy).* Again a number of predefined sets from your
