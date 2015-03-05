@@ -27,13 +27,14 @@ account needs to be validated by the administrator.
 Upload a raw image
 ==================
 
-After logging in, HRM will display the `Home panel`:
+Upon successful logging The HRM `Home panel` will be displayed:
 
 |image0|
 
-Click on the `Raw images` icon. The following, intuitive upload tool will
-allow you to upload one or more files from your device:
+To upload images click on the `Raw images` icon. The following, intuitive
+upload tool allows for multiple uploads from your local device:
 
+|image3|
 
 
 Deconvolve
