@@ -40,20 +40,18 @@ upload tool allows for multiple uploads from your local device:
 Deconvolve
 ==========
 
-From the main screen, go to *start a job* , entering the deconvolution
-process.
+To submit a deconvolution job proceed to `Start a job` |image5| from the home
+panel. The process of submitting the job is split into the following 5 steps:
 
-|image7|
 
-*(1/5)* *Select files.* First Select the desired file type, all files of
-that format in the deconvolution directory will be listed. Use the up en
-down icons to choose which files will be deconvolved. Multiple files can
-be selected, if they have the same format. When selecting a file, a
-preview can be generated on the right panel when requested. This preview
-provides information about your image, including the dimensions,
-sampling and the number of channels used.\ **
+* |image6| **Step 1/5 - Select images**: click on the "Image File Format" drop
+  down  widget to select the desired file type of the images that you wish to
+  deconvolve. All files of that format in your `"Raw Images"` folder will be
+  listed. Use the up/down arrow icons |image7| |image8| to discard/include
+  images from/into the selection. When selecting a file, a preview can be
+  requested by using |image9| on the right panel. The image preview provides
+  information about the dimensions, sampling and number of channels.
 
-|image8|
 
 *(2/5)* *Image parameters* . Select a parameter set, this parameter set
 contains information about how the image was created. Choosing the
