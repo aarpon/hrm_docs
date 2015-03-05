@@ -10,15 +10,18 @@ order to optimize results, please refer to section :ref:`advanced_deconvolution`
 Create an account in HRM
 ========================
 
--  If your imaging facility offers deconvolution via HRM, proceed to
-   the facility's HRM loging page and follow the registration link.
-   Notice that names are case sensitive.
-   
-   |image2|
+-  If your imaging facility already offers deconvolution via HRM, proceed to
+   the facility's HRM loging page.
    
 -  If HRM is not available at your imaging facility you can still familiarize with
    HRM by using the `HRM demo server <http://hrm.svi.nl>`_ offered by
-   SVI. Follow the registration link on the login page.
+   SVI.
+
+Follow the registration link on the HRM login page and complete the short
+form. Notice that names are case sensitive. Upon registration the new HRM
+account needs to be validated by the administrator.
+
+   |image2| |image4|
 
 
 Upload a raw image
@@ -31,7 +34,7 @@ After logging in, HRM will display the `Home panel`:
 Click on the `Raw images` icon. The following, intuitive upload tool will
 allow you to upload one or more files from your device:
 
-|image3|
+
 
 Deconvolve
 ==========
