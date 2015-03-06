@@ -24,7 +24,7 @@ allows for intelligent use of hardware and fast processing
 times. It features an intelligent queue that switches among the jobs of
 all users.
 
-|image0|
+|HomePanel|
 
 Who makes HRM
 =============
@@ -45,7 +45,7 @@ HRM is a joined collaboration of Huygens users from:
 Scientific Volume Imaging participates in this project by contributing
 its experience in deconvolution and software engineering. 
 
-|image1|
+|Collaborators|
 
 Where to find HRM
 =================

@@ -21,39 +21,40 @@ Follow the registration link on the HRM login page and complete the short
 form. Notice that names are case sensitive. Upon registration the new HRM
 account needs to be validated by the administrator.
 
-   |image2| |image4|
+|RegistrationLink| |RegistrationForm|
 
 
 Upload a raw image
 ==================
 
-Upon successful logging The HRM `Home panel` will be displayed:
+Upon successful logging the HRM `Home panel` will be displayed:
 
-|image0|
+|HomePanel|
 
-To upload images click on the `Raw images` icon. The following, intuitive
-upload tool allows for multiple uploads from your local device:
+To upload images click on the `Raw images` icon |RawImages22x22|. The
+following, intuitive upload tool allows for multiple uploads from your local
+device:
 
-|image3|
+|UploadFiles|
 
 
 Deconvolve
 ==========
 
-To submit a deconvolution job proceed to `Start a job` |image5| from the home
+To submit a deconvolution job proceed to `Start a job` |StartJob22x22| from the home
 panel. The process of submitting the job is split into the following 5 steps:
 
 
-* |image6| **Step 1/5 - Select images**: click on the "Image File Format" drop
+* |SelectImages48x48| **Step 1/5 - Select images**: click on the "Image File Format" drop
   down  widget to select the desired file type of the images that you wish to
   deconvolve. All files of that format in your `"Raw Images"` folder will be
-  listed. Use the up/down arrow icons |image7| |image8| to discard/include
+  listed. Use the up/down arrow icons |DownArrow22x22| |UpArrow22x22| to discard/include
   images from/into the selection. When selecting a file, a preview can be
-  requested by using |image9| on the right panel. The image preview provides
+  requested by using |GeneratePreviewLink| on the right panel. The image preview provides
   information about the dimensions, sampling and number of channels.
 
 
-* |image10| **Step 2/5 - Image parameters**: An image parameter template
+* |ImageParameters48x48| **Step 2/5 - Image parameters**: An image parameter template
   matching the imaging conditions of the microscope can be created at this
   stage. Alternatively, an existing template can be selected from a
   previous run. Also, other HRM users (including the administrator) may have
@@ -67,12 +68,12 @@ panel. The process of submitting the job is split into the following 5 steps:
 
   **Create a new parameter set (elaborated)**: Type a name for the new
   parameter template in the `New/clone image template name` field, then click
-  the create button |image11|. The template editor opens, select the correct
+  the create button |CreateTemplate22x22|. The template editor opens, select the correct
   number of channels and PSF type. Move on to the optical parameters and
   select the correct microscope type. For a detailed explanation on the
   remaining parameters please refer to section :ref:`advanced_deconvolution`.
 
-* |image12| **Step 3/5 - Restoration parameters**: Choose the parameters that will
+* |RestorationParameters48x48| **Step 3/5 - Restoration parameters**: Choose the parameters that will
   communicate with Huygens how the image must be restored. *Use predefined
   (easy). Again a number of predefined sets from your administrator are
   available. It is worthwhile however to edit the set and obtain the
