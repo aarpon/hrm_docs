@@ -121,35 +121,43 @@ the home panel. The process of submitting the job is split into the following
   save all the image parameters. Plus, they allow for good compression levels
   that minimize the amount of disk space needed for storage. Next, review the
   parameter summaries as well as the image selection. If all the settings are
-  correct then proceed to submit the job to the processing server by clicking
+  correct then proceed to submit the job to the server by clicking
   |SubmitJob30x22|.
-
 
 
 Queue
 =====
 
-The job is now placed in the queue. HRM has a smart queue, which manages
-the jobs of several different users in an intelligent way. Allowing
-small jobs to go in between large ones. Here jobs of all users can be
-viewed and own jobs can be deleted.
+After submitting the job HRM returns to the Home panel from where you can
+access the queue by clicking |JobQueue22x22|. A typical processing queue
+looks like the following:
 
-|image15|
+|JobQueueScreenshot|
+
+where you view how much work from you and other HRM users has been submitted
+to the processing server. This queue is handled in an intelligent way,
+allowing jobs from different users to be processed at different times.
+
 
 Results
 =======
 
-After deconvolution the images are placed in the results folder,
-accessible via the main menu. From there, files can be downloaded or
-viewed from the server.\ *
-* Click on *detailed results* in the right window to preview and compare
-the deconvolution result with the original image, illustrated in `See
-Compare deconvolved results using the MIP renderer. Image courtesy of
-Anko de Graaff. <HRM/HRM%20Introduction.htm#50532372_11946>`__.
+When a deconvolution and analysis job is finished you will get an email
+notifying you that the results are available. In order to view the deconvolved
+images go to the HRM home panel and click on the `Results` icon
+|Results22x22|. The contents of the `Results` folder will be listed. Select
+the image that you would like to visualize and a preview will be displayed
+on the right panel, like this:
 
-|image16|
+|ResultImages|
 
-|image17|
+For a detailed view click on the link shown on the right panel. A results page
+will open showing `MIP <http://www.svi.nl/MIP>`_,
+`SFP <http://www.svi.nl/SFP>`_ and slicer comparisons of the raw image versus the
+deconvolved image. Summary tables will show information about possible scaling
+factors, colocalization results as well as deconvolution and image parameters.
+Also, movies along the Z direction and/or through time will be available for
+download.
 
 Tips & Tricks
 =============
