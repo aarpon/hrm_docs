@@ -115,13 +115,16 @@ the home panel. The process of submitting the job is split into the following
   please refer to :ref:`advanced_deconvolution`.
 
 
-*(5/5)* *Launch* . Check whether all the configurations are correct and
-choose an output format. SVI-HDF5 is well suited for the Huygens
-environment and is very good at carrying metadata and compressing file
-data. ICS is a good allrounder. To deconvolve press the big green button
-at the bottom of the page.
+* |LaunchJob48x48| **Step 5/5 - Launch job**: Select the output file format
+  for the restored images. ICS and HDF5 are the recommended formats because
+  they provide good dynamic range and the necessary metadata infrastructure to
+  save all the image parameters. Plus, they allow for good compression levels
+  that minimize the amount of disk space needed for storage. Next, review the
+  parameter summaries as well as the image selection. If all the settings are
+  correct then proceed to submit the job to the processing server by clicking
+  |SubmitJob30x22|.
 
-|image14|
+
 
 Queue
 =====
