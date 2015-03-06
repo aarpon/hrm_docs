@@ -96,29 +96,24 @@ the home panel. The process of submitting the job is split into the following
   automatic, the number of iterations to 40 and the quality change to 0.01.
   For more detailed fine-tuning follow the instructions at
   :ref:`advanced_deconvolution`.
-  
 
+* |AnalysisParameters48x48| **Step 4/5 - Analysis parameters**: This step is
+  active only when 2 or more channels have been specified in the previous
+  steps. When active, the Analysis step allows the user to execute
+  Colocalization analysis on the deconvolved images.
 
+  **Use existing parameter template (easy)**: Select the analysis parameter
+  template of your choice and verify that the values displayed on the preview
+  on the right panel match your analysis needs.
 
+  **Create a new parameter template (elaborated)**: Create a new template by
+  following the instructions given in Step 2. Select whether colocalization
+  should be enabled. For a colocalization run select the channels that
+  should be inspected and the colocalization coefficients to be reported.
+  Set  the threshold to "Automatic estimation" and the Colocalization map
+  to "Pearson". In order to further fine-tune the Colocalization parameters
+  please refer to :ref:`advanced_deconvolution`.
 
-  *(4/5)* *Analysis parameters* . This step is only available if you
-   have a coloc license and if there is more than one channel available
-   for colocalization. Choose which analysis to perform on the image.
-   The colocalization\ `6 <#50532361_pgfId-949465>`__ analyzer is
-   already available on HRM and more options and tools will follow.
-
-*Use predefined (easy)* . Again there are a number of predefined
-options, choose whether you want colocalization or not.
-
-*Create your own (medium)* . Create or edit your own set. First choose
-whether you want Huygens to do a colocalization calculation. If you do,
-choose for which channels you want colocalization (default all
-channels). Next choose your colocalization coefficients, thresholds and
-map. As default select all the colocalization coefficients, choose
-automatic estimation for the threshold and Pearson for your
-colocalization map.
-
-|image13|
 
 *(5/5)* *Launch* . Check whether all the configurations are correct and
 choose an output format. SVI-HDF5 is well suited for the Huygens

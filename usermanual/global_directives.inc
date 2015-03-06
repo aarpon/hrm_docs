@@ -15,6 +15,7 @@
 .. |CreateTemplate22x22|        image:: images/CreateTemplate22x22.png
 .. |RawImages22x22|             image:: images/RawImages22x22.png
 .. |RestorationParameters48x48| image:: images/RestorationParameters48x48.png
+.. |AnalysisParameters48x48|    image:: images/AnalysisParameters48x48.png
 .. |image13| image:: images/HRMUserManual-11.gif
 .. |image14| image:: images/HRMUserManual-12.gif
 .. |image15| image:: images/HRMUserManual-13.gif
