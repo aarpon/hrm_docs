@@ -1,3 +1,5 @@
+.. _signal_to_noise_ratio:
+
 Signal to Noise ratio estimation
 ================================
 

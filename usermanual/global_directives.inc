@@ -1,7 +1,7 @@
 .. Directives
 .. |HRM_VERSION|    replace:: 3.2.0
 .. |ge|             unicode:: U+02265 .. GREATER THAN OR EQUAL TO
-.. |HomePanel|                  mage:: images/HomePanel.png
+.. |HomePanel|                  image:: images/HomePanel.png
 .. |Collaborators|              image:: images/Collaborators.png
 .. |RegistrationLink|           image:: images/RegistrationLink.png
 .. |UploadFiles|                image:: images/UploadFiles.png

@@ -41,67 +41,67 @@ device:
 Deconvolve
 ==========
 
-To submit a deconvolution job proceed to `Start a job` |StartJob22x22| from the home
-panel. The process of submitting the job is split into the following 5 steps:
+To submit a deconvolution job proceed to `Start a job` |StartJob22x22| from
+the home panel. The process of submitting the job is split into the following
+5 steps:
 
 
-* |SelectImages48x48| **Step 1/5 - Select images**: click on the "Image File Format" drop
-  down  widget to select the desired file type of the images that you wish to
+* |SelectImages48x48| **Step 1/5 - Select images**: click on the "Image File
+  Format" drop
+  down  widget to select the desired file type for the images that you wish to
   deconvolve. All files of that format in your `"Raw Images"` folder will be
-  listed. Use the up/down arrow icons |DownArrow22x22| |UpArrow22x22| to discard/include
+  listed. Use the |DownArrow22x22| |UpArrow22x22| icons to discard/include
   images from/into the selection. When selecting a file, a preview can be
-  requested by using |GeneratePreviewLink| on the right panel. The image preview provides
-  information about the dimensions, sampling and number of channels.
+  requested by using the link |GeneratePreviewLink| on the right panel. The
+  image preview also provides information about the dimensions, sampling and
+  number of channels.
 
 
-* |ImageParameters48x48| **Step 2/5 - Image parameters**: An image parameter template
+* |ImageParameters48x48| **Step 2/5 - Image parameters**: An image parameter
+  template
   matching the imaging conditions of the microscope can be created at this
   stage. Alternatively, an existing template can be selected from a
   previous run. Also, other HRM users (including the administrator) may have
   shared templates with you. Notice that choosing the correct parameters
-  is **crucial** for obtaining optimal deconvolution results  .
+  is **crucial** for obtaining optimal deconvolution results.
 
   **Use existing parameter template (easy)**: When selecting an existing
   parameter template the parameter contents are displayed on the right panel.
   Make sure that the  microscope type and the number of channels of the
   selected template match those of the images to deconvolve.
 
-  **Create a new parameter set (elaborated)**: Type a name for the new
+  **Create a new parameter template (elaborated)**: Type a name for the new
   parameter template in the `New/clone image template name` field, then click
-  the create button |CreateTemplate22x22|. The template editor opens, select the correct
+  the create button |CreateTemplate22x22|. The template editor opens, select
+  the correct
   number of channels and PSF type. Move on to the optical parameters and
   select the correct microscope type. For a detailed explanation on the
   remaining parameters please refer to section :ref:`advanced_deconvolution`.
 
-* |RestorationParameters48x48| **Step 3/5 - Restoration parameters**: Choose the parameters that will
-  communicate with Huygens how the image must be restored. *Use predefined
-  (easy). Again a number of predefined sets from your administrator are
-  available. It is worthwhile however to edit the set and obtain the
-   appropriate SNR (see next). *Create your own (fairly easy).* Create or
-   edit a set and enter the setup. For deconvolution algorithm choose
-   Classic Maximum Likelihood
-   Estimation.
+* |RestorationParameters48x48| **Step 3/5 - Restoration parameters**:
+  As in the previous step it's possible to choose between an existing template
+  or creating a new one.
+  
+  **Use existing parameter template (easy)**: Select a parameter template
+  and verify its contents on the preview shown on the right panel.
+  Particularly, pay attention to the value
+  of the Signal to Noise ratio (SNR) (see :ref:`signal_to_noise_ratio` for
+  further help).
+  
+  **Create a new parameter template (elaborated)**:
+  Follow the instructions of the previoius step to create a new template.
+  Once in the template editor select a deconvolution algorithm (CMLE is 
+  a good choice) and an SNR. Follow the instructions of the embedded SNR
+  estimator for a hint on the SNR of your images. Set the background mode to
+  automatic, the number of iterations to 40 and the quality change to 0.01.
+  For more detailed fine-tuning follow the instructions at
+  :ref:`advanced_deconvolution`.
+  
 
 
 
--  Now use the SNR calculator. Upon entering an image, the calculator
-   shows estimated previews of restored images for different SNR, along
-   with recommendations by the software, as seen in `See The SNR
-   estimator. Image is courtesy of Anko de Graaff from the Hubrecht
-   Institute. <HRM/HRM%20Introduction.htm#50532372_80119>`__. Pressing
-   forward means accepting the recommendations. Note that for each
-   channel an SNR must be chosen. This SNR is used for the entire set of
-   images, selected in step *(1/5)* . If one image has less channels
-   than submitted, only the first are used. As a guideline, use 20 for
-   confocal microscopy and 40 for widefield microscopy.
 
-|image12|
-
--  Background mode. Choose automatic background estimation.
--  Stopping criteria. The deconvolution will stop when either of two
-   criteria are met. 20 iterations and a quality change of 0.05 are good
-   default values.
--  *(4/5)* *Analysis parameters* . This step is only available if you
+  *(4/5)* *Analysis parameters* . This step is only available if you
    have a coloc license and if there is more than one channel available
    for colocalization. Choose which analysis to perform on the image.
    The colocalization\ `6 <#50532361_pgfId-949465>`__ analyzer is
