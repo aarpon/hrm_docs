@@ -162,11 +162,16 @@ download.
 Tips & Tricks
 =============
 
-To optimize your deconvolution results it is necessary to understand the
-different properties of your image and some of the mechanisms behind
-deconvolution. If you’ve followed this guide, many properties have been
-assigned default values. We would like to encourage the users to read
-into and explore different settings, which will help you improve your
-deconvolution results. Some more in-depth knowledge is given in chapter
-`See Advanced deconvolution in
-HRM <HRMUserManual.htm#50532397_51687>`__.
+
+* When a deconvolution run gives excellent results download the processed
+  data from the detailed view by clicking on |DownloadResults22x22| .
+* If you are satisfied with any of the templates that you have created do
+  share them with your colleagues by clicking on |ShareTemplate22x22| in steps
+  2, 3 or 4.
+* To optimize your deconvolution results it is necessary to understand the
+  different properties of your image and some of the mechanisms behind
+  deconvolution. If you’ve followed this guide, many properties have been
+  assigned default values. We would like to encourage the users to read
+  into and explore different settings, which will help you improve your
+  deconvolution results. Some more in-depth knowledge is given in section
+  section :ref:`advanced_deconvolution`.
