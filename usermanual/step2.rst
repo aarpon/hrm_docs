@@ -30,12 +30,12 @@ Notice that the following selections are possible at this stage:
   the template parameters so that meaningful values can be given to them.
 
 
-  .. note:: Notice the |CreateTemplate22x22| |EditTemplate22x22|
+  .. note:: Notice that |CreateTemplate22x22| |EditTemplate22x22|
             |CloneTemplate22x22| |ShareTemplate22x22| |FavouriteTemplate22x22|
             |DeleteTemplate22x22| show a tooltip stating their function with
             templates.
 
-A set of parameters consists of a number of relevant microscopic
+A parameter template consists of a number of relevant microscopic
 parameters. These provide Huygens Core with information about the images
 that will be deconvolved. The microscopic parameters of a particular set
 can be seen in the preview on the right or by editing it.
