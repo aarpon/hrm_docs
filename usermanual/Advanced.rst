@@ -10,7 +10,7 @@ Advanced deconvolution in HRM
 .. toctree::
    :maxdepth: 3
 
-   startpage
+   homepanel
    launchjob
    rawimages
    queuestatus
