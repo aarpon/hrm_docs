@@ -159,6 +159,8 @@ factors, colocalization results as well as deconvolution and image parameters.
 Also, movies along the Z direction and/or through time will be available for
 download.
 
+|DetailedViewScreenshot|
+
 Tips & Tricks
 =============
 
