@@ -7,6 +7,8 @@ Getting started
 Here is a quick guide to get you started with the HRM/HuCore deconvolution. In
 order to optimize results, please refer to section :ref:`advanced_deconvolution`.
 
+.. _create_an_account:
+
 Create an account in HRM
 ========================
 

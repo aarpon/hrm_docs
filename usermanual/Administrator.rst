@@ -8,7 +8,7 @@ To download the latest version of HRM please click `here
 <http://sourceforge.net/projects/hrm/files/latest/download>`_.
 
 Technical features
-===================================
+==================
 
 HRM consists of two main components: a **web based interface** and a **queue
 manager**.
