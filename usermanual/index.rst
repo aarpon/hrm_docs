@@ -14,6 +14,7 @@ Contents
    Introduction
    GettingStarted
    Advanced
+   OtherOptions
    Administrator
 
 

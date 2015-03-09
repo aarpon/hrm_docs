@@ -1,8 +1,8 @@
 .. include:: global_directives.inc
 
-**********************************
-Administrator’s guide
-**********************************
+************************************
+The role of the administrator in HRM
+************************************
 
 To download the latest version of HRM please click `here
 <http://sourceforge.net/projects/hrm/files/latest/download>`_.

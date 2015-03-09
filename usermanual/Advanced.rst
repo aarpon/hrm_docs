@@ -15,8 +15,6 @@ Advanced deconvolution in HRM
    rawimages
    queuestatus
    resultimages
-   statistics
-   youraccount
    tipstricks_advanced
 
 
