@@ -1,3 +1,5 @@
+.. _step4:
+
 Analysis parameters (4/5)
 =========================
 

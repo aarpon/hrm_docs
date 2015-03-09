@@ -1,3 +1,5 @@
+.. _step3:
+
 The Restoration Parameters (3/5)
 ================================
 

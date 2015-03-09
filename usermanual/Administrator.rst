@@ -31,21 +31,14 @@ To install HRM the following pre-requisites (at least) must be fulfilled:
 Administrator’s options
 =======================
 
-There are a number of extra options available to the administrator, the most
-most relevant ones are explained here:
+There are a number of extra options that are available to the administrator
+only:
 
-* **Create global templates**: The administrator can create global templates,
-  which are accessible to all users. This is useful to create a low threshold
-  for beginning users to start deconvolving their raw data. Additionally the
-  administrator may create a template for each setup present in the
-  facility. The templates hold the same properties as the users template.
-  Raw Images can be uploaded, so that the SNR estimator can be used when
-  creating a restoration template. The administrator can manage *Image
-  templates* (`See The Image Parameters
-  (2/5) <HRMUserManual.htm#50532397_23332>`__), *Restoration templates*
-  (`See The Restoration Parameters
-  (3/5) <HRMUserManual.htm#50532397_72620>`__) and *Analysis templates*
-  (`See Analysis parameters (4/5) <HRMUserManual.htm#50532397_74065>`__).
+* **Create global templates**: The administrator can create global templates
+  accessible to all users. This is meaningful for lowering the threshold
+  for those beginning users who need assistance to start deconvolving their
+  raw data. Global templates can be created at any of the states where
+  templates are required: :ref:`step2`, :ref:`step3` and :ref:`step4`.
   
 
 Version upgrade
