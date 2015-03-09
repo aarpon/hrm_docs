@@ -196,3 +196,20 @@ number of available computation servers.
 
 Tips & Tricks
 =============
+
+* Use the global statistics to get an idea on which microscopes are used most,
+  which file formats, PSFs, etc.
+
+* On the home panel, click on `System summary` |SystemSummary22x22| to get an
+  overview of your current HRM settings. Expand this information with the
+  PHP settings and/or test the HRM e-mails by clicking on |LightBulb18x22|.
+
+* When performing an HRM upgrade disable all users first. Upon successfully
+  upgrading HRM enable the users back again.
+
+* If you experience unexpected behaviour from the HRM queue manager, such as
+  a deleted job which persists in the queue, restart the HRM daemon.
+
+* Encourage your users to save deconvolved data in ICS or HDF5 formats since
+  the dynamic range and metadata parameters are conserved (unlike in TIFF).
+  Moreover both ICS and HDF5 allow for good compression rates. 
