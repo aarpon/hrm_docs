@@ -26,24 +26,25 @@ Notice that the following selections are possible at this stage:
 
 * **New/clone image template**: entry field for the name of a new parameter
   template. First type a name for the new template and click on
-  |CreateTemplate22x22|. A new template will be created. HRM will show the user
-  the template parameters so that meaningful values can be given to them.
+  |CreateTemplate22x22|. A new template will be created. HRM will present you
+  with empty template parameters so that meaningful values can be assigned
+  to them.
 
 
-  .. note:: Notice that |CreateTemplate22x22| |EditTemplate22x22|
-            |CloneTemplate22x22| |ShareTemplate22x22| |FavouriteTemplate22x22|
-            |DeleteTemplate22x22| show a tooltip stating their function with
-            templates.
+.. note:: Notice that |CreateTemplate22x22| |EditTemplate22x22|
+          |CloneTemplate22x22| |ShareTemplate22x22| |FavouriteTemplate22x22|
+          |DeleteTemplate22x22| show tooltips stating their action w.r.t
+          templates. Namely, **create**, **edit**, **clone**, **share**,
+          **mark as favourite** and **delete**.
 
 A parameter template consists of a number of relevant microscopic
 parameters. These provide Huygens Core with information about the images
-that will be deconvolved. The microscopic parameters of a particular set
-can be seen in the preview on the right or by editing it.
+that will be deconvolved. To get a **preview** of the template contents select
+the template, the contents will be displayed on the right panel.
 
-When a set is edited its parameters are displayed with links to the
-SVI-wiki where explanations are provided. These links are represented by
-question mark icons throughout HRM.
-
+.. note:: When editing a template help links |HelpLink22x22| are displayed at
+          key locations to point you to specific articles of the SVI-wiki.
+          
 .. toctree::
    :maxdepth: 3
 
