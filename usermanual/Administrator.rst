@@ -1,72 +1,55 @@
+.. include:: global_directives.inc
+
 **********************************
 Administrator’s guide
 **********************************
 
-Installation
+To download the latest version of HRM please click `here <http://sourceforge.net/projects/hrm/files/latest/download>`_.
 
-Administrator’s options
-
-How HRM communicates with Huygens Core
-
-Requirements and technical features
-
-Tips & Tricks
-
-
-
-Much information about the administration and maintenance is available
-online on the HRM project server\ `16 <#50532361_pgfId-923770>`__.
-Throughout this chapter some understanding of PHP is assumed.
-
-|image75|
 
 Installation
+============
 
-To install an HRM web-server several steps are required. There is a full
-and extended installation guide available on the project’s
-website\ `17 <#50532361_pgfId-919793>`__. Keep in mind that there are a
-number of pre-requisites, also described on the website. Below the main
-requisites are listed.
+To install HRM the following pre-requisites (at least) must be fulfilled:
 
--  *Operating system:* Any recent linux distribution and Mac OS X 10.5
-   (Leopard) and 10.6 (Snow Leopard) and 10.7 (Lion, though testing has
-   so far been limited).
--  *Huygens Core:* HRM is just an interface and needs Huygens Core to do
-   the calculations. Note that Huygens Core needs a license.
--  *Apache2 web server.*
--  PHP version 5.2+: Both the queue manager and the web interface are
-   written in PHP and need PHP to operate.
--  *MySQL or PostgreSQL:* A relational database management system is
-   required.
+* **Operating system**: Any recent Linux distribution. Ubuntu and Fedora are
+  the recommended distro's for HRM.
+* **Huygens Core**: HRM is just an interface and needs Huygens Core to
+  perform deconvolution on images. Note that Huygens Core needs a license.
+* **Apache2 web server**.
+* **PHP version** |ge| **5.3**:
+  Both the HRM queue manager and the web interface are
+  written in PHP and need PHP to operate.
+* **MySQL or PostgreSQL**:
+  A relational database management system is required.
 
-|image76|
+  To follow the list of guided installation steps please see `the installation
+  page at the HRM project’s site <http://huygens-remote-manager.readthedocs.org/en/latest>`_. 
+
+
 
 Administrator’s options
+=======================
 
-There are a number of extra options available to the administrator, most
-are self explanatory and will not be mentioned here. Some require
-highlighting.
+There are a number of extra options available to the administrator, the most
+most relevant ones are explained here:
 
-Create global templates
-'''''''''''''''''''''''
-
-The administrator can set global templates, which are accessible for all
-users to use. This is useful to create a low threshold for beginning
-users to start deconvolving their raw data. Additionally the
-administrator may create a template for each setup present in the
-facility. The templates hold the same properties as the users template.
-Raw Images can be uploaded, so that the SNR estimator can be used when
-creating a restoration template. The administrator can manage *Image
-templates* (`See The Image Parameters
-(2/5) <HRMUserManual.htm#50532397_23332>`__), *Restoration templates*
-(`See The Restoration Parameters
-(3/5) <HRMUserManual.htm#50532397_72620>`__) and *Analysis templates*
-(`See Analysis parameters (4/5) <HRMUserManual.htm#50532397_74065>`__).
-
-|image77|
+* **Create global templates**: The administrator can create global templates,
+  which are accessible to all users. This is useful to create a low threshold
+  for beginning users to start deconvolving their raw data. Additionally the
+  administrator may create a template for each setup present in the
+  facility. The templates hold the same properties as the users template.
+  Raw Images can be uploaded, so that the SNR estimator can be used when
+  creating a restoration template. The administrator can manage *Image
+  templates* (`See The Image Parameters
+  (2/5) <HRMUserManual.htm#50532397_23332>`__), *Restoration templates*
+  (`See The Restoration Parameters
+  (3/5) <HRMUserManual.htm#50532397_72620>`__) and *Analysis templates*
+  (`See Analysis parameters (4/5) <HRMUserManual.htm#50532397_74065>`__).
+  
 
 Version upgrade
-'''''''''''''''
+===============
 
 To upgrade to a new version of HRM, download the latest version from
 SourceForge\ `18 <#50532361_pgfId-920135>`__. Next, replace the old
@@ -82,7 +65,7 @@ to the project website\ `19 <#50532361_pgfId-920250>`__ for extra
 information.
 
 Database update
-'''''''''''''''
+===============
 
 The database backend of HRM contains all previously uploaded images and
 created parameter sets and templates. Therefore it cannot simply be
@@ -95,7 +78,7 @@ version. In order to get your system completely up to date, it is
 advised to upgrade the version first and then update the database.
 
 System configuration
-''''''''''''''''''''
+====================
 
 HRM can be configured during the installation, afterwards these settings
 are saved in a configuration file. If some settings need to be adjusted,
@@ -120,6 +103,7 @@ The path to the HRM configuration file:
 |image78|
 
 How HRM communicates with Huygens Core
+======================================
 
 For each deconvolution task in the job queue the HRM queue manager
 automatically generates a Huygens Batch template for Huygens Core that
@@ -150,6 +134,7 @@ number of available computation servers.
 |image79|
 
 Requirements and technical features
+===================================
 
 HRM consists of two main components: a web based interface and a queue
 manager. The web interface allows:
@@ -185,6 +170,11 @@ HRM requires:
 The setup is highly configurable, sincethe file server, the processing
 servers and the queue manager can either be all hosted by the same
 machine or be distributed across two, three or more computers.
+
+
+Tips & Tricks
+=============
+
 
  
 
