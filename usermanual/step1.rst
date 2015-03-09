@@ -3,7 +3,7 @@
 Select images (1/5)
 ===================
 
-In step 1 - **Select Images** - the user can add images for deconvolution.
+In step 1 - |SelectImages22x22| **Select Images** - the user can add images for deconvolution.
 A batch of images can be selected if they all have the same image format, as
 illustrated in the following figure:
 
