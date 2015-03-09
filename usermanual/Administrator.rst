@@ -31,6 +31,12 @@ To install HRM the following pre-requisites (at least) must be fulfilled:
 Administrator’s options
 =======================
 
+Log in to HRM with the credentials of the administrator. Instead of the
+regular user home panel HRM will display the administrator home panel, like
+this:
+
+|AdminHomePanelScreenshot|
+
 There are a number of extra options that are available to the administrator
 only:
 
@@ -44,31 +50,36 @@ only:
 Version upgrade
 ===============
 
-To upgrade to a new version of HRM, download the latest version from
-SourceForge\ `18 <#50532361_pgfId-920135>`__. Next, replace the old
-version of HRM on your Apache web server with the new version you just
-downloaded. For Linux use:
+Before upgrading HRM please proceed to backup the HRM database, images and
+source files.
 
-*cp -r /path/to/newHRM /path/to/oldHRM*
+To upgrade to a new version, download the latest version `from here
+<http://sourceforge.net/projects/hrm/files/latest/download>`_. Next, replace
+the source files of the old version with those of the new version.
+For Linux use something like:
 
-That’s it! The configuration file is created during installation and not
-included in new versions, so the configuration file from the old version
-will be conserved. When upgrading from old versions of HRM, please refer
-to the project website\ `19 <#50532361_pgfId-920250>`__ for extra
-information.
+.. code-block:: sh
+                
+   cp -r /path/to/newHRM /path/to/oldHRM*
+
+Because the configuration file is not in new versions, your existing
+configuration will be conserved.
+
+For intructions on **specific version upgrades** please refer to `this page
+at the HRM project's site <http://huygens-remote-manager.readthedocs.org/en/latest/upgrade.html>`_
+
 
 Database update
 ===============
 
-The database backend of HRM contains all previously uploaded images and
-created parameter sets and templates. Therefore it cannot simply be
-deleted and replaced by a newer version.
+HRM's database contains the existing users, statistics,
+parameter templates, etc. Therefore it should not be deleted and replaced
+by a newer version. Instead, the database should be upgraded to the new
+version. To do so, click on `Database Update` |UpdateDB22x22| from the admin
+home panel and follow the instructions to get the database upgrade.
 
-HRM contains an option to easily update the database to the latest
-version. Go to *Database update* from the main menu, on the right is an
-update button which will automatically update the database to the latest
-version. In order to get your system completely up to date, it is
-advised to upgrade the version first and then update the database.
+In order for this update to work properly it is advised to upgrade the
+HRM source code first and then the database.
 
 System configuration
 ====================
