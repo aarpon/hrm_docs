@@ -48,10 +48,9 @@ the template, the contents will be displayed on the right panel.
 .. toctree::
    :maxdepth: 3
 
-   step2_imagemetadata
    step2_numberchannels
    step2_psf
-
+   step2_imagemetadata
 
 
              

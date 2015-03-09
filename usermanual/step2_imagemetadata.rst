@@ -1,3 +1,6 @@
+.. include:: global_directives.inc
+
+
 Import metadata
 ===============
 
@@ -19,9 +22,6 @@ deconvolution job in HRM can be skipped almost entirely if the images
 contain good, complete, reliable metadata, while the deconvolution
 results will be optimal.
 
-|image34|
-
-|image35|
 
 At the end of the deconvolution job, the user may get a notification
 email and a link to the restored image, a summary table can be viewed
@@ -30,7 +30,7 @@ values (see `See Parameters used during deconvolution. Parameters
 retrieved from the image metadata are also
 shown. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_70726>`__).
 
-|image36|
+
 
 When entering the image parameters, the following properties are
 relevant (See `See Raw images section. Files can be uploaded and deleted
