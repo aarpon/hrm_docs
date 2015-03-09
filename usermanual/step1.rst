@@ -1,29 +1,28 @@
+.. include:: global_directives.inc
+
 Select images (1/5)
 ===================
 
-In the *Select Images* the user can add images to the deconvolution
-list, only one file type (per extension) can be deconvolved per batch,
-as illustrated in `See Select images page. Only files of the selected
-format are displayed, on the right is a preview of the selected image.
-Image is with courtesy of Drs. Jeff Tucker,
-NIEHS. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_11971>`__. Select
-the desired file format and use the up and down arrows to select the
-images for batch deconvolution. Several images can be selected at once
-to do batch processing. Keep in mind that these images must share the
-same microscopic parameters in order to obtain good deconvolution
-results. This is generally true if the images are recorded with the same
-setup.
+In step 1 - **Select Images** - the user can add images for deconvolution.
+A batch of images can be selected if they all have the same image format, as
+illustrated in the following figure:
 
-|image27|
+|SelectImagesScreenshot|
+
+Select the desired file format from the drop down widget and use
+|DownArrow22x22| |UpArrow22x22| to add images to the batch selection.
+
+.. note:: Keep in mind that the images of a batch must share the **same
+          microscopic parameters** in order to obtain good deconvolution
+          results because they will be restored with the same settings.
+          This is generally true if the images are recorded with
+          the same setup.
+
+
 
 When an image is selected a preview is displayed on the right panel
-whenever possible. The user can click on *Click to generate preview* to
-see a thumbnail of the image.
+whenever possible. The user can click on |GeneratePreviewLink| to 
+display a thumbnail of the image..
 
-|image28|
-
-
-.. toctree::
-   :maxdepth: 3
-
-   step1_imageformat
+.. note:: Image thumbnails display the image dimensions and sampling sizes
+          in an overlay. This will be useful to know in the subsequent steps.
