@@ -1,21 +1,8 @@
-There are a few more questions concerning the optical parameters of the
-microscope. `See (a) First optical parameters page. Only the microscope
-type must be provided. (b) Second optical parameters page. Some settings
-are only applicable for some
-microscopes. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_62198>`__
-shows a screenshot of these questions in HRM.
 
-|image38|
 
--  *Microscope type:* whether a Spinning disk confocal, Single point
-   confocal, Widefield or Multiphoton system was used as microscope to
-   take the image.
--  *Numerical aperture* : The numerical aperture describes the amount of
-   light coming from the focus that the objective can collect. It
-   depends on the half angle of the maximum cone of light that can enter
-   or exit the lens. It is directly linked to the resolution of the
-   objective. The numerical aperture is displayed on the objective,
-   right next to the magnification.
+
+
+
 -  *Wavelengths* : Excitation and emission wavelengths of each channel.
    For the emission wavelength the central value of the emission
    spectrum of the fluorophore can be considered. Make sure to insert
