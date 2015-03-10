@@ -52,6 +52,7 @@ The following parameters can be edited in a template.
 
    step2_numberchannels
    step2_psf
+   step2_microscopetype
    step2_imagemetadata
 
 
