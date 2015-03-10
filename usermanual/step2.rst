@@ -44,6 +44,8 @@ the template, the contents will be displayed on the right panel.
 
 .. note:: When editing a template help links |HelpLink22x22| are displayed at
           key locations to point you to specific articles of the SVI-wiki.
+
+The following parameters can be edited in a template.
           
 .. toctree::
    :maxdepth: 3
