@@ -4,34 +4,28 @@
 Import metadata
 ===============
 
-Most microscopy file formats allow for saving metadata. If the
-acquisition system works with such file formats it can save parameters
-such as the sampling sizes, pinhole sizes, numerical aperture, etc, in
-the raw data. In HRM the user can choose whether this information (image
-metadata) should be used in the deconvolution job. Some file formats,
-though, lack the structure to save all the relevant information of a
-parameter, e.g. physical units. For this reason, HRM informs, per file
-type, how reliably the metadata can be used (see `See Metadata warnings.
-When trusted metadata is present, HRM will inform on this, leave blank
-to adopt metadata
-values. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_35175>`__). Leave
-fields blank to accept the metadata. HRM assists the user in this
-regard, showing messages on which parameters may be skipped and which
-must be provided. Notice that entering the image parameters for a
-deconvolution job in HRM can be skipped almost entirely if the images
-contain good, complete, reliable metadata, while the deconvolution
-results will be optimal.
+Notice that the previous parameters showed a "`footnote`" like the following:
+
+|MetadataScreenshot|
+
+This is to make a distinction between the parameters that HRM requires from the
+user and those which can be imported from the raw images.
+
+In other words, some parameters can be imported from the image metadata at run
+time, while deconvolving the image, to save you time. In such cases, one
+doesn't need to enter a value for the parameter in the template.
+
+The way HRM lets you know when a parameter can be skipped and when it can't is
+by providing "`footnotes`" next to the parameter.
 
 
-At the end of the deconvolution job, the user may get a notification
-email and a link to the restored image, a summary table can be viewed
-listing which parameters were taken from the metadata, as well as their
-values (see `See Parameters used during deconvolution. Parameters
-retrieved from the image metadata are also
-shown. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_70726>`__).
+.. note:: Because some microscopy file formats allow for **restricted** or
+          **no metadata** HRM signals that a parameter may be missing from
+          the metadata of a batch of images, like this: |MetadataScreenshot3| 
+          
+.. note:: Fortunately, other microscopy file formats do allow for all sorts of
+          metadata. When working with such formats many parameters can be
+          skipped. |MetadataScreenshot2|
 
-
-
-When entering the image parameters, the following properties are
-relevant (See `See Raw images section. Files can be uploaded and deleted
-here.`).
+At the end of the deconvolution job, HRM informs on the values of all used
+parameters as well as their origin.
