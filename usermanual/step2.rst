@@ -59,4 +59,5 @@ The following parameters can be edited in a template.
    step2_objective
    step2_samplemedium
    step2_voxelsize
+   step2_pinhole
              
