@@ -1,8 +1,6 @@
 
 
 
--  *Objective type* : Dry or immersion objective (oil, water, glycerol,
-   air).
 -  *Sample medium* : The refractive index of the medium in which the
    sample was embedded (glycerol, polyvinyl alcohol, vectashield or
    other media).

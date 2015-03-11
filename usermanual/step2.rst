@@ -56,5 +56,5 @@ The following parameters can be edited in a template.
    step2_imagemetadata
    step2_na
    step2_wavelengths
-
+   step2_objective
              
