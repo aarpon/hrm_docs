@@ -60,4 +60,5 @@ The following parameters can be edited in a template.
    step2_samplemedium
    step2_voxelsize
    step2_pinhole
+   step2_sphericalaberration
              
