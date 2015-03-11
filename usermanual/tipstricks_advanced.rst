@@ -11,3 +11,8 @@ and four channels respectively. He may specify three channels in the
 fully deconvolved, while for the last image, only the first three
 channels are deconvolved. Additionally, for the first image, only the
 parameters for the first channel are used.
+
+
+  If all the optical parameters (numerical aperture, refractive indexes, etc)
+  were entered in the previous steps, HRM will so that
+  it can be used as a reference.

@@ -1,38 +1,5 @@
 
 
-
--  *Sample medium* : The refractive index of the medium in which the
-   sample was embedded (glycerol, polyvinyl alcohol, vectashield or
-   other media).
--  *Voxel size* : The voxel size is a very important parameter for the
-   deconvolution of microscopic images. According to the Nyquist
-   criterion\ `9 <#50532361_pgfId-982893>`__ its value should not be
-   larger than half the optical resolution of the imaging system. In
-   order to set the voxel size appropriately three different cases can
-   be distinguished depending on the microscope type.
--  *Voxel size, widefield and spinning disk microscopy* : On widefield
-   images, the *xy* pixel size depends on the physical size of the CCD
-   camera element, the objective magnification, the binning, and the
-   possible magnification factors introduced by the microscope tube and
-   the c-mount. In the frequent case in which the tube factor and the
-   c-mount factor are equal to 1, the *xy* pixel size is given by:
-
-|image39|
-
-If a pixel binning is used, it is necessary to take this into account to
-calculate the pixel size. HRM gives access to a calculator to compute
-the *xy* pixel size (see “Calculate from CCD pixel size” at the image
-parameters page). HRM also shows the ideal voxel size for the given
-optical parameters (numerical aperture, refractive indexes, etc) so that
-it can be used as a reference. Make sure to set a voxel size consistent
-with the optical resolution of the microscope as undersampled images
-will often show artifacts after deconvolution. Notice that the z-step
-value can often be found in the metadata of the image.
-
--  *Voxel size, confocal and 2-photon microscopy* : When using batch
-   processing, the parameters for all images need to be the same. In
-   case of confocal and widefield microscopy, the voxel size is affected
-   by the zooming factor and the frame size for a given objective.
 -  *Backprojected pinhole radius (for confocal and 2-photon microscopy,
    shown in `See (a) First optical parameters page. Only the microscope
    type must be provided. (b) Second optical parameters page. Some
@@ -47,6 +14,7 @@ value can often be found in the metadata of the image.
 -  *Backprojected pinhole spacing and radius (for* *Spinning disk
    microscopy)* :
 
+
 HRM also counts on a calculator to compute the backprojected value of
 the pinhole spacing for spinning disk microscopy (See `See Select files
 to measure PSF from. Active when a measured PSF is
@@ -57,6 +25,8 @@ the pinhole radius is set to 250 nm and the pinhole spacing is set to
 2.53 μm. From these values, combined with the magnification, HRM
 computes the backprojected counterparts (as they would be seen on the
 focal plane).
+
+
 
 |image40|
 
