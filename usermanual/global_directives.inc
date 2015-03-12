@@ -80,3 +80,4 @@
 .. |ZStabilizationScreenshot|    image:: images/ZStabilizationScreenshot.png
 .. |ColocalizationScreenshot|    image:: images/ColocalizationScreenshot.png
 .. |ColocChannelsScreenshot|     image:: images/ColocChannelsScreenshot.png
+.. |ColocCoefficientsScreenshot| image:: images/ColocCoefficientsScreenshot.png
