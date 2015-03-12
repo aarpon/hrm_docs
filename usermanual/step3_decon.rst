@@ -1,14 +1,14 @@
+.. include:: global_directives.inc
+
 Deconvolution algorithm
 =======================
 
-Two deconvolution algorithms are available to process the data. The
-Classic Maximum Likelihood Estimation (CMLE) algorithm and the Quick
-Maximum Likelihood Estimation (QMLE) (See `See Restoration Parameter
-set: Deconvolution algorithm, SNR estimation, background mode and
-stopping
-criteria. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_53130>`__).
+Choose one of the deconvolution algorithms from the drop down widget.
 
-The “Classic” algorithm should be used in most circumstances. The
-“Quick” algorithm is faster, but gives less precise solutions in some
-cases. One may consider using the “Quick” algorithm in compute-intensive
-situations, for example, when deconvolving 3D-time series.
+|DeconAlgsScreenshot|
+
+At the moment HRM offers two algorithms for the restoration of the images. 
+
+* **Classic Maximum Likelihood Estimation (CMLE)**: CMLE is the method of choice under most circumstances. In case of doubt, CMLE should be used.
+
+* **Quick Maximum Likelihood Estimation (QMLE)**: QMLE is faster than CMLE, but gives slightly less precise solutions in some cases. One may consider using QMLE in compute-intensive situations, for example, when deconvolving widefield 3D-time series.
