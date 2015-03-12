@@ -75,3 +75,4 @@
 .. |Next22x22|                   image:: images/Next22x22.png
 .. |CropScreenshot|              image:: images/CropScreenshot.png
 .. |BackgroundScreenshot|        image:: images/BackgroundScreenshot.png
+.. |StopCriteriaScreenshot|      image:: images/StopCriteriaScreenshot.png
