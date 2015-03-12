@@ -4,7 +4,7 @@
 .. _other_options:
 
 *****************************
-Other features of HRM
+Other features in HRM
 *****************************
 
 .. toctree::

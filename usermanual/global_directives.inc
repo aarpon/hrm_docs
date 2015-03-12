@@ -73,4 +73,4 @@
 .. |Calculator22x22|             image:: images/Calculator22x22.png
 .. |SNREstimationScreenshot|     image:: images/SNREstimationScreenshot.png
 .. |Next22x22|                   image:: images/Next22x22.png
-
+.. |CropScreenshot|              image:: images/CropScreenshot.png
