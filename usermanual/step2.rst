@@ -16,7 +16,7 @@ fostering collaboration and re-usage of good image settings.
 
 Notice that the following selections are possible at this stage:
 
-* **Admin image templates**: parameter sets created by the HRM administrator to
+* **Admin image templates**: parameter templates created by the HRM administrator to
   be used as references. They can be copied and edited by the HRM users. In
   order to use them, they first need to be copied to **Your image templates**
   by using |DownArrow22x22|.
@@ -37,7 +37,7 @@ Notice that the following selections are possible at this stage:
           templates. Namely, **create**, **edit**, **clone**, **share**,
           **mark as favourite** and **delete**.
 
-A parameter template consists of a number of relevant microscopic
+An image parameter template consists of a number of relevant microscopic
 parameters. These provide Huygens Core with information about the images
 that will be deconvolved. To get a **preview** of the template contents select
 the template, the contents will be displayed on the right panel.

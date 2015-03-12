@@ -3,6 +3,32 @@
 Signal to Noise ratio estimation
 ================================
 
+
+   
+
+A set of restoration parameters instructs Huygens Core how to restore
+your image. Some of these parameters are used before deconvolution, the
+background correction, for example, subtracts a background value from
+the image before deconvolution. Most options refer to the deconvolution
+itself, for example the Signal to Noise Ratio (SNR), the number of
+iterations (stopping criterium) or the convergence quality to a solution
+(stopping criterium).
+
+The background and the SNR are both linked to different important
+acquisition parameters, changing these in the experimental setup will
+most likely change the SNR and background of the recorded image,
+requiring them to be reset in the restoration parameters set.
+
+
+
+-  Gain / offset
+-  Time exposure / scanning velocity
+-  Summing / averaging
+-  Laser power
+-  Spectral detection range
+
+
+
 Noise are random fluctuations in the intensity of your image. The
 deconvolution process may in general increase the noise of the original
 images, as it restores the high frequencies. For this reason Huygens

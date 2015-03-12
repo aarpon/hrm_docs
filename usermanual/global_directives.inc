@@ -17,6 +17,7 @@
 .. |CreateTemplate22x22|         image:: images/CreateTemplate22x22.png
 .. |RawImages22x22|              image:: images/RawImages22x22.png
 .. |RestorationParameters48x48|  image:: images/RestorationParameters48x48.png
+.. |RestorationParameters22x22|  image:: images/RestorationParameters22x22.png
 .. |AnalysisParameters48x48|     image:: images/AnalysisParameters48x48.png
 .. |LaunchJob48x48|              image:: images/LaunchJob48x48.png
 .. |SubmitJob30x22|              image:: images/SubmitJob30x22.png
