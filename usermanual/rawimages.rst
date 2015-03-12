@@ -14,14 +14,9 @@ uploading the archive. Huygens will automatically depackage the archive
 and add the embedded files. Note that this will also decrease your
 upload time, since the data is compressed.
 
-|image22|
 
 After all the desired files have been selected, upload them using the
 *upload* icon again. When finished all the files will be added to your
 *Raw Images* directory. This is a personal directory with all the user’s
 unprocessed images.
-
-|image23|
-
-|image24|
 

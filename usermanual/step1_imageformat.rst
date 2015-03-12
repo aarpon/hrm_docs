@@ -28,6 +28,3 @@ A few examples of different tiff standards include:
 When all the files are selected, click on the *big right arrow* at the
 bottom of the page to continue to the image parameter step.
 
-|image29|
-
-|image30|

@@ -9,6 +9,3 @@ possible to use different types of colocalization coefficients.
 When done editing, select the preferred analysis map and use the *right
 arrow* at the bottom to continue.
 
-|image56|
-
-|image57|

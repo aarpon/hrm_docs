@@ -15,11 +15,6 @@ the figure are generally suitable for default
 values,.. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_22923>`__ and
 consists of:
 
-|image54|
-
-|image55|
-
-
 .. toctree::
    :maxdepth: 3
 

@@ -19,12 +19,8 @@ Restoration Parameter set: Deconvolution algorithm, SNR estimation,
 background mode and stopping
 criteria. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_53130>`__).
 
-|image51|
 
 The image, restoration and analysis parameter sets can be reused to
 launch other deconvolution jobs with the same microscopic and processing
 properties.
 
-|image52|
-
-|image53|

@@ -8,9 +8,6 @@ waiting jobs are listed. The job currently processed is marked in green
 (See `See The queue. Jobs marked in green are currently being
 processed. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_10833>`__).
 
-|image61|
-
-|image62|
 
 To monitor the owned jobs and optionally delete them, select the
 corresponding lines from the queue and click on the “\ *trash bin* ”
@@ -28,4 +25,3 @@ Notice that because HRM can be installed on a combination of dedicated
 servers the deconvolution process is usually performed with a good
 computation speed.
 
-|image63|

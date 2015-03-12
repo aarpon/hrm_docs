@@ -20,9 +20,3 @@ selected by the user to compute the statistics (See `See Your statistics
 in HRM. A straightforward way to check how HRM is being used and what
 image and restoration trends there are in the deconvolution
 jobs. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_27947>`__).
-
-|image71|
-
-|image72|
-
-|image73|

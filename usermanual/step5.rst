@@ -15,7 +15,6 @@ quantification. For 2D quantification 16-bit or 32-bit formats are
 recommended. For 3D visualization with Huygens ICS, ICS2 or HDF5 are
 most appropriate.
 
-|image58|
 
 To change the images or the settings of the Batch Deconvolution click on
 the corresponding links: *Image Parameters* , *Processing Parameters* ,
@@ -26,10 +25,8 @@ bottom of the page (See `See Launch. Select the output file format and
 launch. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_52511>`__). HRM
 will create one job per image and put it in the job queue.
 
-|image59|
 
 After launching the jobs HRM shows the main panel. Click on the *Queue
 Status* icon to examine the jobs status or to delete them if they are no
 longer needed.
 
-|image60|

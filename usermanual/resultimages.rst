@@ -16,7 +16,6 @@ a Slicer and a Stack movie which can all be downloaded by the user. With
 these tools it can be examined online whether the deconvolution result
 is satisfactory.
 
-|image64|
 
 Let us take a closer look at the image comparison tools. Upon entering
 the user is given an *MIP* view, which shows only the voxels which have
@@ -27,8 +26,6 @@ Profile view, compare the original (left) to the deconvolved image
 Tucker. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_54123>`__ shows a
 typical MIP result, comparing the original image with the deconvolved
 data set.
-
-|image65|
 
 The original raw data and deconvolved image can also be compared as
 *SFP* rendered images (see `See SFP comparison tool. An SFP, simulated
@@ -41,7 +38,6 @@ coefficient in the image, this area may absorb all the excitation light
 and cast a shadow over other parts of the object, making them difficult
 to image. .
 
-|image66|
 
 The *Slicer* allows the user to compare the original image and the
 deconvolved data set slice by slice along the z coordinate at any depth
@@ -49,7 +45,6 @@ deconvolved data set slice by slice along the z coordinate at any depth
 user to compare individual z-slices. Image courtesy of Anko de
 Graaff. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_13076>`__).
 
-|image67|
 
 The colocalization tool allows the user to do colocalization analysis of
 the image. There are several options and coefficients available, which
@@ -68,7 +63,6 @@ Colocalization coefficients and histogram. No clear colocalization is
 found. Note that other channel sets have been omitted. Image from Jeff
 Tucker. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_38805>`__.
 
-|image68|
 
 The colocalization map page can be accessed using *Coloc Maps* in the
 top menu. A colocalization map will be shown for each set of channels
@@ -76,7 +70,6 @@ for the parameter the user selected. On the left the two deconvolved
 source channels are shown, while on the right the colocalization results
 can be viewed.
 
-|image69|
 
 Note that there are two Manders coefficients and each channel (Red and
 Green) in the right image shows a Manders coefficient (M1 and M2), as
@@ -100,4 +93,3 @@ a z- or time dimension.
 -  *download deconvolved data:* Use the *download icon* to download the
    deconvolved data, this includes all accessory files.
 
-|image70|

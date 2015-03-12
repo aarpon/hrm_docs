@@ -28,7 +28,6 @@ focal plane).
 
 
 
-|image40|
 
 As the Point Spread Function (PSF) is the basic “brick” of which the
 images are “made”, one should record details at least on the scale of
@@ -60,7 +59,7 @@ use of a measured PSF can thus improve the deconvolution results.
    current image parameters are highlighted in red to stress that they
    are not good PSF candidates.
 
-|image41|
+
 
 -  *Theoretical PSF, spherical aberration correction* : if necessary HRM
    will ask whether to correct the theoretical PSF for spherical
@@ -87,7 +86,7 @@ use of a measured PSF can thus improve the deconvolution results.
    the refractive indexes of the objective and of the sample medium, as
    the processing is significantly more time-consuming.
 
-|image42|
+
 
 #. *Deconvolution with PSF generated at user-defined depth (advanced)* :
    A unique PSF will be used, but calculated at a sample depth defined
@@ -113,6 +112,4 @@ Select one parameter set for the deconvolution job and click on the big
 *right arrow* to continue (see `See Image parameters, main
 page. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_15842>`__).
 
-|image43|
 
-|image44|
