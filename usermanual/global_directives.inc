@@ -82,3 +82,4 @@
 .. |ColocChannelsScreenshot|     image:: images/ColocChannelsScreenshot.png
 .. |ColocCoefficientsScreenshot| image:: images/ColocCoefficientsScreenshot.png
 .. |ColocThresholdScreenshot|    image:: images/ColocThresholdScreenshot.png
+.. |ColocMapsScreenshot|         image:: images/ColocMapsScreenshot.png
