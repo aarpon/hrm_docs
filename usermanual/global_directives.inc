@@ -78,3 +78,4 @@
 .. |BackgroundScreenshot|        image:: images/BackgroundScreenshot.png
 .. |StopCriteriaScreenshot|      image:: images/StopCriteriaScreenshot.png
 .. |ZStabilizationScreenshot|    image:: images/ZStabilizationScreenshot.png
+.. |ColocalizationScreenshot|    image:: images/ColocalizationScreenshot.png

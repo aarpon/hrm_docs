@@ -1,8 +1,14 @@
+.. include:: global_directives.inc
+
+.. _colocalization:
 
 Colocalization
 ==============
 
-First step is to decide whether or not to do colocalization analysis.
-Colocalization is a tool which measures the amount of overlap between
-two channels, therefore it can only be performed if the image has two
-channels or more.
+Colocalization is a type of analysis which measures the amount of overlap between the objects of two channels. 
+
+|ColocalizationScreenshot|
+
+Here simply select whether or not colocalization analysis should be performed on your images after deconvolution.
+
+.. note:: Colocalization can **only** be performed on **multichannel** images.
