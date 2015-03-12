@@ -19,6 +19,7 @@
 .. |RestorationParameters48x48|  image:: images/RestorationParameters48x48.png
 .. |RestorationParameters22x22|  image:: images/RestorationParameters22x22.png
 .. |AnalysisParameters48x48|     image:: images/AnalysisParameters48x48.png
+.. |AnalysisParameters22x22|     image:: images/AnalysisParameters22x22.png
 .. |LaunchJob48x48|              image:: images/LaunchJob48x48.png
 .. |SubmitJob30x22|              image:: images/SubmitJob30x22.png
 .. |JobQueue22x22|               image:: images/JobQueue22x22.png
