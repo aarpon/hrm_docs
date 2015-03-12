@@ -13,3 +13,5 @@ Select here which colocalization coefficients should be used to quantify the amo
 |ColocCoefficientsScreenshot|
 
 A colocalization report with all these findings will be ready when the job is finished.
+
+For further information on specific colocalization coefficients please read `this article from the SVI wiki <http://www.svi.nl/ColocalizationCoefficients>`_.
