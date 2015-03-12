@@ -81,3 +81,4 @@
 .. |ColocalizationScreenshot|    image:: images/ColocalizationScreenshot.png
 .. |ColocChannelsScreenshot|     image:: images/ColocChannelsScreenshot.png
 .. |ColocCoefficientsScreenshot| image:: images/ColocCoefficientsScreenshot.png
+.. |ColocThresholdScreenshot|    image:: images/ColocThresholdScreenshot.png

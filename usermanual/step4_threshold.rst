@@ -1,10 +1,13 @@
+.. include:: global_directives.inc
+
+.. _threshold:
+
+
 Threshold
 =========
 
-Before colocalization a threshold can be set, under which no
-colocalization will be measured. Doing so will prevent measuring the
-overlap between unwanted background noise. HRM includes an automatic
-estimation option, which often works very good. Depending on the desired
-result and the image, a threshold can be set for each channel. For
-example, if there is cross-talk between channels, setting a threshold
-can eliminate colocalization between cross-talk signal.
+In order to discard background signals from the colocalization results it is possible to set a threshold level below which no colocalization is reported.
+
+|ColocThresholdScreenshot|
+
+The `automatic` option typically works well for most purposes. Yet, it's possible to specify a threshold per channel to discard particular features of each colour.
