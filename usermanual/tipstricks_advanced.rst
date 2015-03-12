@@ -16,3 +16,18 @@ parameters for the first channel are used.
   If all the optical parameters (numerical aperture, refractive indexes, etc)
   were entered in the previous steps, HRM will so that
   it can be used as a reference.
+
+
+
+The SNR estimation will be shown along with four noise simulations with
+different SNR values. The noise simulations serve to confirm visually
+the correctness of the automatic SNR estimation. Move the mouse pointer
+over the different images to see them zoomed in.
+
+
+The SNR is a delicate parameter as it can highly influence the
+deconvolution result. On the one hand, if the deconvolution result looks
+too smooth and details are missing, a higher SNR value can be used. On
+the other hand, if the result looks too grainy one can try to use a
+lower SNR value.
+
