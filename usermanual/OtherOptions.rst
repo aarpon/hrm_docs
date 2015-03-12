@@ -4,11 +4,13 @@
 .. _other_options:
 
 *****************************
-Other aspects of HRM
+Other features of HRM
 *****************************
 
 .. toctree::
    :maxdepth: 3
-              
+
+   omero_integration           
    statistics
    youraccount
+
