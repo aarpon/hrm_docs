@@ -12,3 +12,5 @@ At the moment HRM offers two algorithms for the restoration of the images.
 * **Classic Maximum Likelihood Estimation (CMLE)**: CMLE is the method of choice under most circumstances. In case of doubt, CMLE should be used.
 
 * **Quick Maximum Likelihood Estimation (QMLE)**: QMLE is faster than CMLE, but gives slightly less precise solutions in some cases. One may consider using QMLE in compute-intensive situations, for example, when deconvolving widefield 3D-time series.
+
+.. note:: Notice that **all channels** of an image will be deconvolved with the **same algorithm**.

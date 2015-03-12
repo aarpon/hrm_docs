@@ -1,77 +1,48 @@
+.. include:: global_directives.inc
+
 .. _signal_to_noise_ratio:
 
-Signal to Noise ratio estimation
-================================
+Signal to Noise ratio
+=====================
 
+In the Huygens Software the Signal-to-Noise ratio (SNR) is treated as a regularization parameter, i.e., a means to control the sharpness of the deconvolution result. 
 
-   
+Yet, one should be aware of the effect of extreme SNR values on image deconvolution: too high SNR values can produce restoration artifacts; too low SNR values can lead to smooth structures.
 
-A set of restoration parameters instructs Huygens Core how to restore
-your image. Some of these parameters are used before deconvolution, the
-background correction, for example, subtracts a background value from
-the image before deconvolution. Most options refer to the deconvolution
-itself, for example the Signal to Noise Ratio (SNR), the number of
-iterations (stopping criterium) or the convergence quality to a solution
-(stopping criterium).
+.. note:: After a little practice it is possible to assess the SNR range for deconvolution visually. Notice that the SNR should increase with the quality of the raw data. 
 
-The background and the SNR are both linked to different important
-acquisition parameters, changing these in the experimental setup will
-most likely change the SNR and background of the recorded image,
-requiring them to be reset in the restoration parameters set.
+There are different acquisition settings that have an impact on the quality of the recorded signal. Changing these in the experimental setup will most likely require a modification of the SNR value for deconvolution. These acquisition settings are:
 
+*  Gain / offset
+*  Time exposure / scanning velocity
+*  Summing / averaging
+*  Laser power
+*  Spectral detection range
 
+Because these settings are typically different for each channel HRM will require an SNR value per channel, like this:
 
--  Gain / offset
--  Time exposure / scanning velocity
--  Summing / averaging
--  Laser power
--  Spectral detection range
+|SNRScreenshot|
 
+As a guide, here the typical values for different microscopy tecniques:
 
+* **Confocal**: between 20 and 40. 
 
-Noise are random fluctuations in the intensity of your image. The
-deconvolution process may in general increase the noise of the original
-images, as it restores the high frequencies. For this reason Huygens
-will correct for noise during the deconvolution process. The SNR
-parameter defines the degree of noise correction that will be performed
-and should be a measure of the noise of the original image. The user can
-assess which SNR value is best or let HRM estimate it automatically.
+* **STED**: between 10 and 20.
 
-For an automatic estimation click on *Estimate SNR from image* . Then,
-select an image (see `See Select a method and image to estimate SNR. A
-preview is shown on the right. Image courtesy of Drs. Jeff
-Tucker. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_68128>`__) and
-click on the *calculate* button, the SNR will be estimated for each
-channel of the selected image.
+* **Widefield**: between 40 and 60. 
 
-|image49|
+HRM offers an estimator to further help you find good SNR values for the deconvolution runs. Click on |SNREstimatorLink| to use the **SNR estimator**.
 
-The SNR estimation will be shown along with four noise simulations with
-different SNR values. The noise simulations serve to confirm visually
-the correctness of the automatic SNR estimation. Move the mouse pointer
-over the different images to see them zoomed in.
+In a new page you will be asked to select an SNR estimation method.
 
-|image50|
+|SNRAlgorithmScreenshot|   
 
-All images deconvolved with the same restoration parameter set should
-have similar Signal to Noise Ratios. This will be the case if the images
-have been taken with the same Gain, Offset, laser power and image
-averaging for confocal imaging and the same Gain and time exposure for
-widefield imaging. Each time these microscope settings are changed or a
-different preparation is used the Signal to Noise Ratio should be
-re-estimated.
+The **beta** method gets good estimations on images without a baseline. When working with images that contain a baseline the **classic** method can be used instead.
 
-The SNR is a delicate parameter as it can highly influence the
-deconvolution result. On the one hand, if the deconvolution result looks
-too smooth and details are missing, a higher SNR value can be used. On
-the other hand, if the result looks too grainy one can try to use a
-lower SNR value.
+Next, select an image that represents the acquisition run of the batch that is to be deconvolved in this job. Press |Calculator22x22| for the SNR estimation:
 
-Since HRM 2.0.0 there exists a new Beta SNR estimator that aims at
-improving the accuracy of the classic SNR estimator. Both tools are
-currently available to estimate the SNR, though the Beta SNR estimator
-is being tested and improved. Its estimations in Widefield images and
-Confocal images free of baseline (black level) may already be accurate.
-The Beta SNR estimator may not yet find accurate results in confocal
-images that have a baseline or images that show strong clipping on the
-lower side of the intensity range.
+|SNREstimationScreenshot|
+
+The output of the SNR estimator shows (per channel) a thumbnail next to 4 different noise simulations of the same region. In bold letters the SNR of the simulation that most resembles the original image.
+
+By pressing |Next22x22| the estimated SNR values are copied into the restoration parameter template. 
