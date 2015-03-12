@@ -76,3 +76,4 @@
 .. |CropScreenshot|              image:: images/CropScreenshot.png
 .. |BackgroundScreenshot|        image:: images/BackgroundScreenshot.png
 .. |StopCriteriaScreenshot|      image:: images/StopCriteriaScreenshot.png
+.. |ZStabilizationScreenshot|    image:: images/ZStabilizationScreenshot.png
