@@ -108,3 +108,7 @@
 .. |ParameterSummaryScreenshot|  image:: images/ParameterSummaryScreenshot.png
 .. |HuygensLogLink|              image:: images/HuygensLogLink.png
 .. |AddOtherFileLink|            image:: images/AddOtherFileLink.png
+.. |Omero22x22|                  image:: images/Omero22x22.png
+.. |OmeroCredentialsScreenshot|  image:: images/OmeroCredentialsScreenshot.png
+.. |OmeroTreeScreenshot|         image:: images/OmeroTreeScreenshot.png
+.. |Refresh22x22|                image:: images/Refresh22x22.png
