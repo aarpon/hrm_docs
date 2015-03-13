@@ -112,3 +112,4 @@
 .. |OmeroCredentialsScreenshot|  image:: images/OmeroCredentialsScreenshot.png
 .. |OmeroTreeScreenshot|         image:: images/OmeroTreeScreenshot.png
 .. |Refresh22x22|                image:: images/Refresh22x22.png
+.. |StatisticsScreenshot|        image:: images/StatisticsScreenshot.png
