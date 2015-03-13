@@ -107,3 +107,4 @@
 .. |2DHistogramScreenshot|       image:: images/2DHistogramScreenshot.png
 .. |ParameterSummaryScreenshot|  image:: images/ParameterSummaryScreenshot.png
 .. |HuygensLogLink|              image:: images/HuygensLogLink.png
+.. |AddOtherFileLink|            image:: images/AddOtherFileLink.png
