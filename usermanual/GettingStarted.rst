@@ -140,6 +140,7 @@ where you view how much work from you and other HRM users has been submitted
 to the processing server. This queue is handled in an intelligent way,
 allowing jobs from different users to be processed at different times.
 
+.. _results:
 
 Results
 =======
@@ -153,8 +154,11 @@ on the right panel, like this:
 
 |ResultImages|
 
-For a detailed view click on the link shown on the right panel. A results page
-will open showing `MIP <http://www.svi.nl/MIP>`_,
+
+For a detailed view of both the raw image and the restored image click on
+|DetailedViewLink| .
+
+A results page will open showing `MIP <http://www.svi.nl/MIP>`_,
 `SFP <http://www.svi.nl/SFP>`_ and slicer comparisons of the raw image versus the
 deconvolved image. Summary tables will show information about possible scaling
 factors, colocalization results as well as deconvolution and image parameters.

@@ -1,95 +1,114 @@
-******************
-The Results Folder
-******************
+.. include:: global_directives.inc
 
-After deconvolution has finished, the files are placed in the *results*
-*folder* , accessible via the main menu. From here, results can be
-viewed and edited or downloaded directly. There is a preview available
-on the right panel. Additionally, HRM comes with a analysis tools to
-compare the deconvolved result with the original data, accessible
-via\ ** *Go to detailed results* button on the right panel.
+.. _detailed_view_results:
 
-The tools available, depending on the features of the image, are an
-MIP\ `11 <#50532361_pgfId-956703>`__ (Maximum Intensity Projection), an
-SFP\ `12 <#50532361_pgfId-956727>`__\ (Simulated Fluorescence Process),
-a Slicer and a Stack movie which can all be downloaded by the user. With
-these tools it can be examined online whether the deconvolution result
-is satisfactory.
+************************
+Detailed view of results
+************************
+
+When the job finishes, the files are placed in the |Results22x22|  **Results**
+folder, accessible via the home panel.
+
+Click on an image result for further inspection as explained in
+:ref:`results` .
+     
+The detailed view shows the following information:
+
+* `MIP <http://www.svi.nl/MIP>`_ of **original** vs **deconvolved**,
+* `SFP <http://www.svi.nl/SFP>`_    of **original** vs **deconvolved**,
+* Z Slicer of **original** vs **deconvolved**,
+* T Slicer of **original** vs **deconvolved**,
+* Stack movie of **deconvolved**,
+* T movie of **deconvolved**,
+* T SFP movie of **deconvolved**,
+* Colocalization results,
+* Parameter summaries,
+* Huygens log.
+
+.. note:: The number of tools shown in the detailed view depends on the type
+          of restoration, the image geometry and the HRM configuration.
+
+  
+MIP of original vs deconvolved
+==============================
+
+A comparison of the Maximum Intensity Projections of the raw image and the
+restored image shows the effect of deconvolution.
+
+|MIPResultScreenshot|
+
+SFP of original vs deconvolved
+==============================
+
+A comparison of the Simulated Fluorescense Process in both the raw image and the
+restored image also shows the effect of deconvolution and difference in noise.
+
+|SFPResultScreenshot|
+
+Z Slicer of original vs deconvolved
+==============================
+
+The slicer allows for a comparision of the raw image and the restored image
+slice by slice along the Z direction at any depth.
+
+|ZSlicerResultScreenshot|
+
+T Slicer of original vs deconvolved
+==============================
+
+The time slicer allows for a comparision of the raw image and the restored image
+frame by frame.
+
+|TSlicerResultScreenshot|
+
+Z, T and T-SFP movies
+=====================
+
+Click on the corresponding links to download any of the movies to your local
+computer.
+
+|MoviesLinks|
+
+.. note:: Notice how useful these automatically made movies are for
+          prepraring presentations. 
+
+Colocalization
+==============
+
+The selected colocalization coefficients of each two channels are listed
+in a table with an entry per frame.
+
+|ColocTableScreenshot|
+
+Also, `2D histograms <http://www.svi.nl/2DHistogram>`_ show the correlations
+between any two channels.
+
+|2DHistogramScreenshot|
+
+Lastly, the colocalization maps show the regions where colocalization between
+any two channels is strongest.
+
+|ColocMapsScreenshot2|
 
 
-Let us take a closer look at the image comparison tools. Upon entering
-the user is given an *MIP* view, which shows only the voxels which have
-an intensity higher than a certain value. Via the left menu, several
-other tools are available. `See MIP comparison tool. A Maximum Intensity
-Profile view, compare the original (left) to the deconvolved image
-(right). Image courtesy of Drs. Jeff
-Tucker. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_54123>`__ shows a
-typical MIP result, comparing the original image with the deconvolved
-data set.
+Parameter summaries
+===================
 
-The original raw data and deconvolved image can also be compared as
-*SFP* rendered images (see `See SFP comparison tool. An SFP, simulated
-Fluorescence Process, a tool to compare the original (left) with the
-restored image (right). Image courtesy of Jeff
-Tucker. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_55164>`__).
-Basically, an SFP renders the shadow profile of your object on a
-homogeneous plate. If there is an area with a high absorption
-coefficient in the image, this area may absorb all the excitation light
-and cast a shadow over other parts of the object, making them difficult
-to image. .
+HRM also gives feedback on all the parameter values used during deconvolution.
+This is particularly useful when the parameters are read from the image
+metadata. 
+
+|ParameterSummaryScreenshot|
+
+Notice that green entries indicate parameters loaded from the image metadata,
+whereas violet entries indicate parameters defined by the user.
+
+Huygens log
+===========
+
+The exact steps followed by Huygens to process the data can be found on the
+Huygens log, under the link |HuygensLogLink| .
 
 
-The *Slicer* allows the user to compare the original image and the
-deconvolved data set slice by slice along the z coordinate at any depth
-(See `See Slicer tool. A slicer tool for 3D images, which allows the
-user to compare individual z-slices. Image courtesy of Anko de
-Graaff. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_13076>`__).
-
-
-The colocalization tool allows the user to do colocalization analysis of
-the image. There are several options and coefficients available, which
-have been selected during the analysis parameters stage of the launching
-procedure. It is important to understand what these coefficients do in
-order to interpret them. Full information and details about different
-colocalization coefficients can be found on the
-website\ `13 <#50532361_pgfId-993687>`__
-`14 <#50532361_pgfId-993706>`__.
-
-Upon opening the colocalization analyzer, the coefficients page is
-displayed. Here the different coefficients for each two channels are
-shown, as well as a 2D colocalization
-histogram\ `15 <#50532361_pgfId-993732>`__, as shown in `See
-Colocalization coefficients and histogram. No clear colocalization is
-found. Note that other channel sets have been omitted. Image from Jeff
-Tucker. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_38805>`__.
-
-
-The colocalization map page can be accessed using *Coloc Maps* in the
-top menu. A colocalization map will be shown for each set of channels
-for the parameter the user selected. On the left the two deconvolved
-source channels are shown, while on the right the colocalization results
-can be viewed.
-
-
-Note that there are two Manders coefficients and each channel (Red and
-Green) in the right image shows a Manders coefficient (M1 and M2), as
-seen in `See Colocalization map. On the left the two deconvolved
-channels are shown, on the right the colocalization map for the two
-Manders coefficients. Image from Jeff Tucker. Note that other channel
-sets have been
-omitted. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_23965>`__. Other
-coefficients are singular and show only one channel.
-
-There are several download options available to the user. Not all
-options are available for all images, depending on whether the image has
-a z- or time dimension.
-
--  *Z-stack movie:* Use the *stack movie* button to download a .avi
-   file, which plays the z-slices in consecutive order.
--  *MIP time movie:* Use the *series movie* to download a .avi file,
-   which plays the MIP projection of your file in time.
--  *SFP time movie:* Use the *series SFP movie* to download a .avi file,
-   which plays the SFP projection of your image in time.
--  *download deconvolved data:* Use the *download icon* to download the
-   deconvolved data, this includes all accessory files.
-
+.. note:: Notice that all these results along with the deconvolved dataset
+          can be **donwloaded** by clicking |DownloadResults22x22| .
