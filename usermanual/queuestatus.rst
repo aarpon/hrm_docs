@@ -1,27 +1,29 @@
+.. include:: global_directives.inc
+
+.. _queue_status:
+
 ****************
 The Queue status
 ****************
 
+After submitting a job HRM returns to the home panel. The Queue Status button
+shows how many queued jobs you own, as follows:
+
+|QueueStatusScreenshot|
+
+Click on the button to get a detailed view of the job queue.
+
+|QueuedJobsScreenshot|
+
 HRM manages the deconvolution of multiple jobs owned by different users
-through a queue. When clicking on the “\ *Queue status* ” button all the
-waiting jobs are listed. The job currently processed is marked in green
-(See `See The queue. Jobs marked in green are currently being
-processed. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_10833>`__).
+through a smart queue. The job being processed is marked in green.
 
+To delete any of your jobs, select them in the queue view and click
+|TrashBin22x22| .
 
-To monitor the owned jobs and optionally delete them, select the
-corresponding lines from the queue and click on the “\ *trash bin* ”
-button.
+.. note:: Depending on the HRM configuration settings, a notification email
+          will be sent to the job owner when the job is finished. 
 
-When enabled by the administrator, HRM will send a notification email
-after the deconvolution job is finished. If an error occurs the user
-will also get a notification. In that case please contact the system
-administrator.
-
-If something seems wrong, try to verify if there is a mistake in the
-settings. Try to contact the system administrator otherwise.
-
-Notice that because HRM can be installed on a combination of dedicated
-servers the deconvolution process is usually performed with a good
-computation speed.
+If the job's result seems wrong, try to verify if there is a mistake in the
+settings. Contact the HRM administrator otherwise.
 

@@ -12,7 +12,6 @@ Advanced deconvolution in HRM
 
    homepanel
    launchjob
-   rawimages
    queuestatus
    resultimages
    tipstricks_advanced

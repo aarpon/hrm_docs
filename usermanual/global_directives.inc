@@ -94,3 +94,6 @@
 .. |AnalysisParametersLink|      image:: images/AnalysisParametersLink.png
 .. |SelectedImagesScreenshot|    image:: images/SelectedImagesScreenshot.png
 .. |SelectedImagesLink|          image:: images/SelectedImagesLink.png
+.. |QueueStatusScreenshot|       image:: images/QueueStatusScreenshot.png
+.. |QueuedJobsScreenshot|        image:: images/QueuedJobsScreenshot.png
+.. |TrashBin22x22|               image:: images/TrashBin22x22.png
