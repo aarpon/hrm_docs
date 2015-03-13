@@ -13,7 +13,7 @@ Create an account in HRM
 ========================
 
 -  If your imaging facility already offers deconvolution via HRM, proceed to
-   the facility's HRM loging page.
+   the facility's HRM login page.
    
 -  If HRM is not available at your imaging facility you can still familiarize with
    HRM by using the `HRM demo server <http://hrm.svi.nl>`_ offered by
@@ -29,7 +29,7 @@ account needs to be validated by the administrator.
 Upload a raw image
 ==================
 
-Upon successful logging the HRM `Home panel` will be displayed:
+Upon successful logon the HRM `Home panel` will be displayed:
 
 |HomePanel|
 
