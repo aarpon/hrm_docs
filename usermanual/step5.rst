@@ -1,32 +1,52 @@
+.. include:: global_directives.inc
+
+.. _step5:
+
+
 Launch the job (5/5)
 ====================
 
-In this last step several tables are shown listing the images and
-settings for the batch deconvolution.
-
-The format of the output images can be selected here. As a guide one can
-stick to the following rules. For 3D analysis the “ICS format” is
-appropriate, or even the most recent “ICS2”, which is a multichannel,
-32-bit format that stores all the deconvolution information while it
-preserves all important details. For 2D imaging, when analysis is
-required, the TIFF-8bit can be used for output. This format is fine for
-analysis such as counting or for segmentation, but not for
-quantification. For 2D quantification 16-bit or 32-bit formats are
-recommended. For 3D visualization with Huygens ICS, ICS2 or HDF5 are
-most appropriate.
+In this last step several summaries display all the parameters with which the
+job will be submitted.
 
 
-To change the images or the settings of the Batch Deconvolution click on
-the corresponding links: *Image Parameters* , *Processing Parameters* ,
-*Analysis Parameters* *and* *Selected Images* .
+The output format of the restored images can be adapted with the top drop-down widget.
 
-To launch the deconvolution click on the *big green button* at the
-bottom of the page (See `See Launch. Select the output file format and
-launch. <HRM/HRM%20Deconvolution%20Jobs.htm#50532397_52511>`__). HRM
-will create one job per image and put it in the job queue.
+|OutputFormatScreenshot|
+
+* **ICS**, **ICS2** and **HDF5**: support multi-channel images, 32 bit dynamic
+  range (preserve all image details) and all the microscopic metadata
+  parameters. Furthermore, their compression level is very good, since
+  deconvolved images often contain background regions with near 0 intensities
+  the compression algorithms typically do a great job. These are the
+  **recommended** formats for further work with Huygens.
+
+* **TIFF**: this format can be used for analysis such as counting or
+  segmentation, but **not** for quantification.
+
+* **IMS**, **OME-XML**, **R3D**: formats offered for compatibility with
+  other programs.
+
+Next, review the parameters. First the image paramters. Notice that it's
+possible to go back to the corresponding template editor by clicking on
+|ImageParametersLink| :
+
+|SummaryParamsScreenshot|
+
+Then the restoration parameters. Click on |RestorationParametersLink| to
+change the parameter selection.
+
+|SummaryParamsScreenshot2|
+
+And lastly the analysis parameters. Click on |AnalysisParametersLink| for
+further changes.
+
+|SummaryParamsScreenshot3|
 
 
-After launching the jobs HRM shows the main panel. Click on the *Queue
-Status* icon to examine the jobs status or to delete them if they are no
-longer needed.
+To change the image selection click on |SelectedImagesLink|.
+
+|SelectedImagesScreenshot|
+
+Finally **submit** the job by pressing |SubmitJob30x22| .
 
