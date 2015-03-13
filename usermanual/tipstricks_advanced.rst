@@ -1,33 +1,29 @@
+.. include:: global_directives.inc
+
+.. _tipstricks_advanced:
+
 *************
 Tips & Tricks
 *************
 
--  When doing deconvolution jobs for a batch, up to as many channels as
-   configured for will be deconvolved.
+* **File uploads**: When using the browser uploader it is possible to upload
+  compressed files containing more images. HRM will uncompress the file and
+  set the contents in your raw folder.
 
-*For example* : a user wants to deconvolve three images with one, three
-and four channels respectively. He may specify three channels in the
-*Image Parameter* settings. Then, the first and second image will be
-fully deconvolved, while for the last image, only the first three
-channels are deconvolved. Additionally, for the first image, only the
-parameters for the first channel are used.
+* **Getting previews**: Select an image and click on `Generate preview` to
+  visualize the image contents plus the dimensions and sampling sizes. The
+  colours used in the preview depict the wavelengths provided by the image
+  metadata.
 
+* **Voxel sizes**: Whenever possible HRM shows highlighted in yellow the
+  ideal voxel sizes according to the Nyquist criterion.
 
-  If all the optical parameters (numerical aperture, refractive indexes, etc)
-  were entered in the previous steps, HRM will so that
-  it can be used as a reference.
+* **SNR estimation**: Notice that it's possible to zoom in the thumbnails
+  displayed by the SNR estimator by moving the mouse pointer over the
+  thumbnails. This can be useful to confirm the correctness of the SNR
 
-
-
-The SNR estimation will be shown along with four noise simulations with
-different SNR values. The noise simulations serve to confirm visually
-the correctness of the automatic SNR estimation. Move the mouse pointer
-over the different images to see them zoomed in.
-
-
-The SNR is a delicate parameter as it can highly influence the
-deconvolution result. On the one hand, if the deconvolution result looks
-too smooth and details are missing, a higher SNR value can be used. On
-the other hand, if the result looks too grainy one can try to use a
-lower SNR value.
+* **SNR estimation**: The SNR can highly influence the deconvolution result.
+  On the one hand, if the deconvolution result looks too smooth and details
+  are missing, a higher SNR value can be used. On the other hand, if the
+  result looks too grainy one can try to use a lower SNR value.
 
