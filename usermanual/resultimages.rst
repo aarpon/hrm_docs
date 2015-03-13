@@ -3,7 +3,7 @@
 .. _detailed_view_results:
 
 ************************
-Detailed view of results
+Results: detailed view 
 ************************
 
 When the job finishes, the files are placed in the |Results22x22|  **Results**
