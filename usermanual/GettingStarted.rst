@@ -54,9 +54,9 @@ the home panel. The process of submitting the job is split into the following
   deconvolve. All files of that format in your `"Raw Images"` folder will be
   listed. Use the |DownArrow22x22| |UpArrow22x22| icons to discard/include
   images from/into the selection. When selecting a file, a preview can be
-  requested by using the link |GeneratePreviewLink| on the right panel. The
-  image preview also provides information about the dimensions, sampling and
-  number of channels.
+  requested by using the link |GeneratePreviewLink| on the right hand side
+  panel. The image preview also provides information about the dimensions,
+  sampling and number of channels.
 
 
 * |ImageParameters48x48| **Step 2/5 - Image parameters**: An image parameter
@@ -65,12 +65,12 @@ the home panel. The process of submitting the job is split into the following
   stage. Alternatively, an existing template can be selected from a
   previous run. Also, other HRM users (including the administrator) may have
   shared templates with you. Notice that choosing the correct parameters
-  is **crucial** for obtaining optimal deconvolution results.
+  is **absolutely crucial** for obtaining high-quality deconvolution results.
 
   **Use existing parameter template (easy)**: When selecting an existing
-  parameter template the parameter contents are displayed on the right panel.
-  Make sure that the  microscope type and the number of channels of the
-  selected template match those of the images to deconvolve.
+  parameter template the parameter contents are displayed on the right hand
+  side panel. Make sure that the  microscope type and the number of channels of
+  the selected template match those of the images to deconvolve.
 
   **Create a new parameter template (elaborated)**: Type a name for the new
   parameter template in the `New/clone image template name` field, then click
@@ -85,10 +85,9 @@ the home panel. The process of submitting the job is split into the following
   or creating a new one.
   
   **Use existing parameter template (easy)**: Select a parameter template
-  and verify its contents on the preview shown on the right panel.
-  Particularly, pay attention to the value
-  of the Signal to Noise ratio (SNR) (see :ref:`signal_to_noise_ratio` for
-  further help).
+  and verify its contents on the preview shown on the right hand side panel.
+  Particularly, pay attention to the value of the Signal to Noise ratio (SNR)
+  (see :ref:`signal_to_noise_ratio` for further help).
   
   **Create a new parameter template (elaborated)**:
   Follow the instructions of the previoius step to create a new template.
@@ -106,7 +105,7 @@ the home panel. The process of submitting the job is split into the following
 
   **Use existing parameter template (easy)**: Select the analysis parameter
   template of your choice and verify that the values displayed on the preview
-  on the right panel match your analysis needs.
+  on the right hand side panel match your analysis needs.
 
   **Create a new parameter template (elaborated)**: Create a new template by
   following the instructions given in Step 2. Select whether colocalization
@@ -150,7 +149,7 @@ notifying you that the results are available. In order to view the deconvolved
 images go to the HRM home panel and click on the `Results` icon
 |Results22x22|. The contents of the `Results` folder will be listed. Select
 the image that you would like to visualize and a preview will be displayed
-on the right panel, like this:
+on the right hand side panel, like this:
 
 |ResultImages|
 
