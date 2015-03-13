@@ -144,12 +144,12 @@ allowing jobs from different users to be processed at different times.
 Results
 =======
 
-When a deconvolution and analysis job is finished you will get an email
-notifying you that the results are available. In order to view the deconvolved
-images go to the HRM home panel and click on the `Results` icon
-|Results22x22|. The contents of the `Results` folder will be listed. Select
-the image that you would like to visualize and a preview will be displayed
-on the right hand side panel, like this:
+When a deconvolution and analysis job is finished you will receive a
+notification email about your results being available. In order to view the
+deconvolved images go to the HRM home panel and click on the `Results` icon
+|Results22x22|. The contents of the `Results` folder will be listed. Select the
+image that you would like to visualize and a preview will be displayed on the
+right hand side panel, like this:
 
 |ResultImages|
 
