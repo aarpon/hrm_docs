@@ -29,32 +29,32 @@ The detailed view shows the following information:
           of restoration, the image geometry and the HRM configuration.
 
   
-MIP of original vs deconvolved
-==============================
+Comparing MIPs
+==============
 
 A comparison of the Maximum Intensity Projections of the raw image and the
 restored image shows the effect of deconvolution.
 
 |MIPResultScreenshot|
 
-SFP of original vs deconvolved
-==============================
+Comparing SFPs
+==============
 
 A comparison of the Simulated Fluorescense Process in both the raw image and the
 restored image also shows the effect of deconvolution and difference in noise.
 
 |SFPResultScreenshot|
 
-Z Slicer of original vs deconvolved
-==============================
+Comparing Z Slices
+==================
 
 The slicer allows for a comparision of the raw image and the restored image
 slice by slice along the Z direction at any depth.
 
 |ZSlicerResultScreenshot|
 
-T Slicer of original vs deconvolved
-==============================
+Comparing T frames
+==================
 
 The time slicer allows for a comparision of the raw image and the restored image
 frame by frame.
