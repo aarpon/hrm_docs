@@ -3,8 +3,8 @@ Documentation for the HRM
 
 This repository contains the sources of the [sphinx-based][1] documentation for the [Huygens Remote Manager][2]. It consists of two parts:
 
-* the admin instructions (in `docs/`)
-* the user manual (in `usermanual/`)
+* the admin instructions (in `docs/admin`)
+* the user manual (in `docs/user`)
 
 The compiled documentation is available on [readthedocs.org][3] as HTML, PDF and Epub.
 
