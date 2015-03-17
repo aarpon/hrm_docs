@@ -1,7 +1,7 @@
 Huygens Remote Manager documentation
 ====================================
 
-This is the entry point for the Huygens Remote Manager documentation. Here, you will find both the :ref:`installation_instructions` and the :ref:`user_manual. The extended table of contents is listed below.
+This is the entry point for the Huygens Remote Manager documentation. Here, you will find both the :ref:`installation_instructions` and the :ref:`user_manual`. The extended table of contents is listed below.
 
 Contents
 ========
