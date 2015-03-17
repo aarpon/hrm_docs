@@ -2,7 +2,6 @@
 
 .. _step2:
 
-
 The Image Parameters (2/5)
 ==========================
 
