@@ -16,6 +16,7 @@ These are the detailed instructions for the Huygens Remote Manager User Manual.
    OtherOptions
    Administrator
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. The following is temporarily commented out until we fix it.
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

@@ -12,8 +12,8 @@ Contents
    admin/index.rst
    user/index.rst
 
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. The following is temporarily commented out until we fix it.
+.. * :ref:`genindex`
+..  * :ref:`modindex`
+..  * :ref:`search`
 

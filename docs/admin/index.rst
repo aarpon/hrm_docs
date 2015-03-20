@@ -16,7 +16,8 @@ These are the detailed installation and administration instructions for the Huyg
    manual_install
    upgrade
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. The following is temporarily commented out until we fix it.
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
