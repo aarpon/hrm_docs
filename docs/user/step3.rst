@@ -2,11 +2,10 @@
 
 .. _step3:
 
-
 The Restoration Parameters (3/5)
-==========================
+================================
 
-In step 3 - |RestorationParameters22x22| **Restoration Parameters** - the restoration settings can be specified and saved. As in :ref:`step_2` the restoration parameters are grouped in templates. A template can be reused in future deconvolution jobs. This will be useful when other images need to be restored with the same settings. Moreover, the templates can be shared among HRM users, fostering collaboration and re-usage of good restoration settings.
+In step 3 - |RestorationParameters22x22| **Restoration Parameters** - the restoration settings can be specified and saved. As in :ref:`step2` the restoration parameters are grouped in templates. A template can be reused in future deconvolution jobs. This will be useful when other images need to be restored with the same settings. Moreover, the templates can be shared among HRM users, fostering collaboration and re-usage of good restoration settings.
 
 
 Notice that the following selections are possible at this stage:

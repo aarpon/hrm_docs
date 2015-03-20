@@ -1,24 +1,17 @@
-.. include:: global_directives.inc
+Huygens Remote Manager documentation
+====================================
 
-Huygens Remote Manager |HRM_VERSION| documentation
-==================================================
-
-These are the detailed installation and administration instructions for the Huygens Remote Manager.
+This is the entry point for the Huygens Remote Manager documentation. Please use the links below to browse the :ref:`installation_instructions` and the :ref:`user_manual`.
 
 Contents
 ========
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1 
 
-   conventions
-   download
-   script_install
-   manual_install
-   upgrade
+   admin/index.rst
+   user/index.rst
 
-Indices and tables
-==================
 
 * :ref:`genindex`
 * :ref:`modindex`

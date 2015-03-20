@@ -1,5 +1,5 @@
 .. Directives
-.. |HRM_VERSION|    replace:: 3.2.0
+.. |HRM_VERSION|    replace:: 3.2.x
 .. |ge|             unicode:: U+02265 .. GREATER THAN OR EQUAL TO
 .. |HomePanel|                   image:: images/HomePanel.png
 .. |Collaborators|               image:: images/Collaborators.png

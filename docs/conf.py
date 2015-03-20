@@ -59,7 +59,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Huygens Remote Manager'
-copyright = u'2013 - 2014, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer'
+copyright = u'2013 - 2015, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -138,7 +138,7 @@ html_theme_path = found_html_theme_path
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['images']
+#html_static_path = ['']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
