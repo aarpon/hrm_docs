@@ -40,7 +40,7 @@ HRM is a joined collaboration of Huygens users from:
 * The Department of Biosystems Science and Engineering at the ETH Zürich,
 * The Leibniz Institute for Neurobiology (Magdeburg),
 * Teh Combinatorial Neuroimaging facility (Magdeburg),
-* The Center for Molecular Life Sciences at Biozentrum Basel.
+* The Imaging Core Facility at the Biozentrum (University of Basel).
   
 Scientific Volume Imaging participates in this project by contributing
 its experience in deconvolution and software engineering. 
