@@ -2,7 +2,7 @@
 
 .. _`user_manual`:
 
-User Manual
+User manual
 ===========
 
 These are the detailed instructions for the Huygens Remote Manager User Manual.
