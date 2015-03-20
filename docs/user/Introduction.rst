@@ -50,15 +50,12 @@ its experience in deconvolution and software engineering.
 Where to find HRM
 =================
 
-HRM is a free and open source project, and can be found in `this SourceForge site <http://sourceforge.net/projects/hrm/files/latest/download>`_.
+HRM is a free and open source project, and can be found on `http://huygens-rm.org <http://huygens-rm.org>`_. The source code is hosted on `https://github.com/aarpon/hrm <https://github.com/aarpon/hrm>`_.
 
 More information about HRM and links to other HRM resources can be found
 in `this online article <http://www.svi.nl/HuygensRemoteManager>`_ of the SVI Wiki.
 Instructions for online testing, downloading and installing HRM are also linked on that page.
 
-Installing HRM on a regular web server is not very difficult. Apart
-from the installation instructions that come along with the source code,
-other practical guidelines can be found in the `project’s official
-site <http://huygens-rm.org>`_ and in the `SVI Wiki <http://www.svi.nl/HrmInstallation>`_.
+Installing HRM on a regular web server is not very difficult. Please consult the :ref:`installation_instructions` and the `SVI Wiki <http://www.svi.nl/HrmInstallation>`_.
 
 
