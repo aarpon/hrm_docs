@@ -174,6 +174,17 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
     sudo yum install postfix
 
+.. note::
+
+    If your mail server is set up correctly and still PHP cannot send e-mails, SELinux might be blocking it. Query the status of ``httpd_can_sendmail`` as follows:
+
+    ``$ /usr/sbin/getsebool httpd_can_sendmail``
+
+    If ``httpd_can_sendmail`` is ``off``, you can enable it with:
+
+    ``$ /usr/sbin/setsebool -P httpd_can_sendmail on``
+
+
 PHP `date()` and default timezone
 ---------------------------------
 
