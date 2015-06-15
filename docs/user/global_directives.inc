@@ -114,3 +114,7 @@
 .. |Refresh22x22|                image:: images/Refresh22x22.png
 .. |StatisticsScreenshot|        image:: images/StatisticsScreenshot.png
 .. |AccountScreenshot|           image:: images/AccountScreenshot.png
+.. |DistilledPsfFileSelection1|   image:: images/DistilledPsfFileSelection1.png
+.. |DistilledPsfFileSelectionBrowse|   image:: images/DistilledPsfFileSelectionBrowse.png
+.. |DistilledPsfFileSelection2|   image:: images/DistilledPsfFileSelection2.png
+
