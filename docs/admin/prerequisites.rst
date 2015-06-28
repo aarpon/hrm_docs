@@ -135,8 +135,7 @@ You will need to manually enable PostgreSQL:
 
 Some additional information:
 
-    * `This <http://www.cyberciti.biz/faq/howto-add-postgresql-user-account/>`_ is a good tutorial on how to create a user for the PostgreSQL database to use with the HRM.
-    * To grant local access for users see `this page <http://www.svi.nl/PostgreSQLlocalAccess>`_.
+    * `This <https://help.ubuntu.com/community/PostgreSQL/>`_ is a good tutorial from the Ubuntu Community on how to set up PostgreSQL to use with the HRM.
 
 (Optional) LDAP support
 =======================
