@@ -33,6 +33,8 @@ configuration files.
 
     # start the mysql command line client and connect as root:
     mysql -u root -p
+    # Create the database if it does not exist yet: 
+    CREATE DATABASE hrm CHARACTER SET utf8;
     # now from within the client, create the database user:
     CREATE USER 'hrm'@'localhost' IDENTIFIED BY 'dbpasswd';
     # grant permissions to the user:
