@@ -246,6 +246,6 @@ To fix this, one must currently go and clean up a few places in the hrm database
 
 3. restart the hrm daemon
 
-.. parse-literal:: sh
+.. parsed-literal:: sh
 
    |call_hrmd| start
