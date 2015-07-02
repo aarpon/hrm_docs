@@ -228,6 +228,7 @@ To fix this, one must currently go and clean up a few places in the hrm database
    sudo /etc/init.d/hrmd stop
 
 2. go to the ``hrm`` database and do the following
+
    a. Empty all the ``job_*`` tables
    b. Make sure that the ``server`` table has a *status* of 'free' and *job* set to NULL
 
