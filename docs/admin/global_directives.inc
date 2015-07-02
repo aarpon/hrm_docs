@@ -7,3 +7,4 @@
 .. |macosx|         image:: images/apple_logo_22x22.png
 .. |github|         image:: images/github_logo_22x22.png
 .. |ge|             unicode:: U+02265 .. GREATER THAN OR EQUAL TO
+.. |call_hrmd|      replace:: sudo /etc/init.d/hrmd
