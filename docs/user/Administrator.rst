@@ -248,4 +248,4 @@ To fix this, one must currently go and clean up a few places in the hrm database
 
 .. code-block:: sh
 
-   sudo /etc/init.d/hrmd start
+   |call_hrmd| start
