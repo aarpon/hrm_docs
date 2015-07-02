@@ -57,11 +57,14 @@ done using the following commands:
 .. code-block:: sh
 
     sudo -s
-    echo "host all hrm 127.0.0.1/32 md5" >> /var/lib/pgsql/data/pg_hba.conf
+    echo -e "host all hrm 127.0.0.1/32 md5\n" >> /var/lib/pgsql/data/pg_hba.conf
+    echo -e "host all hrm ::1/127 md5\n" >> /var/lib/pgsql/data/pg_hba.conf
     service postgresql restart
 
 
 .. _`create-database`:
+
+Ob Ubuntu MD5 host authentication is enabled by default.
 
 Create or update the database 
 =============================
