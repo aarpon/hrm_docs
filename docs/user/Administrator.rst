@@ -213,3 +213,30 @@ Tips & Tricks
 * Encourage your users to save deconvolved data in ICS or HDF5 formats since
   the dynamic range and metadata parameters are conserved (unlike in TIFF).
   Moreover both ICS and HDF5 allow for good compression rates. 
+
+Clean a Stalled Queue in HRM
+============================
+
+It could happen that the queue breaks or freezes and the database is polluted with outdated information.
+
+To fix this, one must currently go and clean up a few places in the hrm database as well as restart the queue manager. Here is a short checklist of what to do.
+
+# shut down the hrm daemon
+.. code-block:: sh
+
+    sudo /etc/init.d/hrmd stop
+
+# go to the ``hrm`` database and do the following
+## Empty all the ``job_*`` tables
+## Make sure that the ``server`` table has a *status* of 'free' and *job* set to NULL
+
+.. code-block:: sql
+   TRUNCATE TABLE `job_analysis_parameter`;
+   TRUNCATE TABLE `job_analysis_setting`;
+   TRUNCATE TABLE `job_files`;
+   TRUNCATE TABLE `job_parameter`;
+   TRUNCATE TABLE `job_parameter_setting`;
+   TRUNCATE TABLE `job_queue`;
+   TRUNCATE TABLE `job_task_parameter`;
+   TRUNCATE TABLE `job_task_setting`;
+   UPDATE `server` SET `status` = 'free', `job` = NULL;
