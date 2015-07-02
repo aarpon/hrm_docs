@@ -221,16 +221,18 @@ It could happen that the queue breaks or freezes and the database is polluted wi
 
 To fix this, one must currently go and clean up a few places in the hrm database as well as restart the queue manager. Here is a short checklist of what to do.
 
-# shut down the hrm daemon
+1. shut down the hrm daemon
+
 .. code-block:: sh
 
-    sudo /etc/init.d/hrmd stop
+   sudo /etc/init.d/hrmd stop
 
-# go to the ``hrm`` database and do the following
-## Empty all the ``job_*`` tables
-## Make sure that the ``server`` table has a *status* of 'free' and *job* set to NULL
+2. go to the ``hrm`` database and do the following
+   a. Empty all the ``job_*`` tables
+   b. Make sure that the ``server`` table has a *status* of 'free' and *job* set to NULL
 
 .. code-block:: sql
+
    TRUNCATE TABLE `job_analysis_parameter`;
    TRUNCATE TABLE `job_analysis_setting`;
    TRUNCATE TABLE `job_files`;
