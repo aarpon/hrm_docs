@@ -244,7 +244,7 @@ To fix this, one must currently go and clean up a few places in the hrm database
    TRUNCATE TABLE `job_task_setting`;
    UPDATE `server` SET `status` = 'free', `job` = NULL;
 
-1. restart the hrm daemon
+3. restart the hrm daemon
 
 .. code-block:: sh
 
