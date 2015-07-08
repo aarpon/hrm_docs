@@ -229,20 +229,20 @@ To fix this, one must currently go and clean up a few places in the hrm database
 
 2. go to the ``hrm`` database and do the following
 
-   a. Empty all the ``job_*`` tables
+   a. Remove broken or killed jobs from the ``job_*`` tables
    b. Make sure that the ``server`` table has a *status* of 'free' and *job* set to NULL
 
 .. code-block:: sql
 
-   TRUNCATE TABLE `job_analysis_parameter`;
-   TRUNCATE TABLE `job_analysis_setting`;
-   TRUNCATE TABLE `job_files`;
-   TRUNCATE TABLE `job_parameter`;
-   TRUNCATE TABLE `job_parameter_setting`;
-   TRUNCATE TABLE `job_queue`;
-   TRUNCATE TABLE `job_task_parameter`;
-   TRUNCATE TABLE `job_task_setting`;
-   UPDATE `server` SET `status` = 'free', `job` = NULL;
+   DELETE FROM job_analysis_parameter WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");   
+   DELETE FROM job_analysis_setting WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_files WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_parameter WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_parameter_setting WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_task_parameter WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_task_setting WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_queue  WHERE status="broken" OR status="kill";
+   UPDATE server SET status= 'free', job = NULL;
 
 3. restart the hrm daemon
 
