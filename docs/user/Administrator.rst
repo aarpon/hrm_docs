@@ -234,12 +234,12 @@ To fix this, one must currently go and clean up a few places in the hrm database
 
 .. code-block:: sql
 
-   DELETE FROM job_analysis_parameter WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");   
+   DELETE FROM job_analysis_parameter WHERE setting IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");   
    DELETE FROM job_analysis_setting WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
-   DELETE FROM job_files WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
-   DELETE FROM job_parameter WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_files WHERE job IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_parameter WHERE setting IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
    DELETE FROM job_parameter_setting WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
-   DELETE FROM job_task_parameter WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
+   DELETE FROM job_task_parameter WHERE setting IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
    DELETE FROM job_task_setting WHERE name IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");
    DELETE FROM job_queue  WHERE status="broken" OR status="kill";
    UPDATE server SET status= 'free', job = NULL;
