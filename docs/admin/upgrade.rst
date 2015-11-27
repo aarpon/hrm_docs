@@ -1,7 +1,7 @@
 .. include:: global_directives.inc
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
 .. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below.
 

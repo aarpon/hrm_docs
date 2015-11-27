@@ -8,7 +8,7 @@ Other features in HRM
 *****************************
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    omero_integration           
    statistics

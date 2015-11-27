@@ -43,7 +43,7 @@ the template, the contents will be displayed on the right panel.
 The following parameters can be edited in a template.
           
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    step3_decon
    step3_snr

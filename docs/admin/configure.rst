@@ -8,7 +8,7 @@ Mandatory configuration steps
 =============================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    hrm_conf
    config_files
@@ -22,7 +22,7 @@ Optional configuration steps
 ============================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    customize_login
    export_data_share

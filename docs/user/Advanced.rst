@@ -8,7 +8,7 @@ Advanced deconvolution in HRM
 *****************************
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1 
 
    homepanel
    launchjob

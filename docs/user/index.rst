@@ -8,7 +8,7 @@ User manual
 These are the detailed instructions for the Huygens Remote Manager User Manual.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
               
    Introduction
    GettingStarted

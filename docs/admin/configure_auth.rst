@@ -9,7 +9,7 @@ The HRM curently supports three user authentication mechanisms; if your institut
 The following pages explain the required configuration steps for the support authntication mechanisms.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    internal_auth
    activedir_auth

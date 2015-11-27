@@ -8,7 +8,7 @@ Installation instructions
 These are the detailed installation and administration instructions for the Huygens Remote Manager.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    conventions
    download

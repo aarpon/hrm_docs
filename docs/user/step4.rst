@@ -38,7 +38,7 @@ An analysis parameter template consists of a number of options that provide Huyg
 The following parameters can be edited in a template.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    step4_colocalization
    step4_channels
