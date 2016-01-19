@@ -72,8 +72,8 @@ Here we will assume a one-machine installation, and we will therefore show just 
     //==============================================================================
 
     // Huygens server default user
-    $huygens_user = "huygens";
-    $huygens_group = "huygens";
+    $huygens_user = "hrm";
+    $huygens_group = "hrm";
     ?>
 
 The ``$huygens_user`` is used in case the processing machine (the one where Huygens Core is installed) does not have direct access to the file server (i.e. the files to be deconvolved must be copied from the file server to the processing machine via ssh). For this to work, you will need to set up password-less ssh connection between file and processing server for the ``$huygens_user`` (see for example `here <http://www.debian-administration.org/articles/152>`_) and also set the variable ``$copy_images_to_huygens_server`` to ``true`` (see below).
@@ -109,17 +109,17 @@ The web interface uses hucore for some operations on the input and result files 
     $image_host = "localhost";
 
     // File server default user
-    $image_user = "apache";
-    $image_group = "apache";
+    $image_user = "hrm";
+    $image_group = "hrm";
 
     // File server base folder (without trailing /)
     $image_folder = "/path/to/hrm_data";
 
     // File server image source folder
-    $image_source = "huygens_src";
+    $image_source = "src";
 
     // File server image destination folder
-    $image_destination = "huygens_dst";
+    $image_destination = "dst";
 
     // File server base folder as seen from the Huygens server machines (with trailing /)
     $huygens_server_image_folder = "/path/to/hrm_data/";

@@ -2,7 +2,8 @@
 
              
 Using a measured PSF
-==========
+====================
+
 This option will only appear if 'measured PSF' was selected as PSF Type in a previous step.
 
 Distilled PSFs need to be created beforehand using Huygens Professional and placed
