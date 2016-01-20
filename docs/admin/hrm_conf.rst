@@ -41,8 +41,8 @@ This is the content of the sample configuration file:
     HRM_DATA="/path/to/hrm/data"
 
     # Source and destination folder names
-    HRM_SOURCE="huygens_src"
-    HRM_DEST="huygens_dst"
+    HRM_SOURCE="src"
+    HRM_DEST="dst"
 
     # User to run the HRM daemon with rights to
     # execute /bin/mkdir, /bin/chown, /bin/chmod and
