@@ -5,20 +5,38 @@
 
 .. _`hrm_daemon`:
 
-***********************
-Install the hrmd daemon
-***********************
+**********************
+Install the HRM daemon
+**********************
 
-Use the ``$HRM_BIN/hrmd`` daemon in Ubuntu Linux to start the queue manager. The configuration file for the hrmd daemon is ``/etc/hrm.conf`` (see :ref:`hrm_conf`)
+The HRM daemon consists of two parts, the actual queue manager (a PHP process)
+and a shell-based wrapper in ``$HRM_BIN/hrm_queuemanager`` that prepares the
+environment, checks the config, launches the queue manager and cleans up after
+the process has terminated.
+
+The configuration file for the HRM daemon is ``/etc/hrm.conf`` (see
+:ref:`hrm_conf`)
+
+.. warning::
+
+    You should never start the PHP process directly as unpredicted effects will
+    happen, in worst case including damage to the HRM database.
 
 Install the init script
 -----------------------
 
-To start the queue manager at boot, copy ``$HRM_BIN/hrmd`` to ``/etc/init.d/``. Make sure it is executable by typing in a shell:
+To launch the HRM daemon at boot, we are providing an init script in
+``$HRM_RESRC/hrmd_lsb-init`` which can be placed in ``/etc/init.d/``. The
+script makes use of the LSB init functions and therefore requires
+``/lib/lsb/init-functions`` to be available in your distribution (which is true
+for Ubuntu and Fedora, as well as most other major up-to-date Linux
+distributions).
+
+For installing the init script, type the following commands in a shell:
 
 .. code-block:: sh
 
-    sudo cp -v $HRM_BIN/hrmd /etc/init.d/hrmd
+    sudo cp -v $HRM_RESRC/hrmd_lsb-init /etc/init.d/hrmd
     sudo chmod +x /etc/init.d/hrmd
 
 Start / stop the daemon at boot / shutdown
@@ -53,8 +71,15 @@ If the queue manager started correctly, you should see:
 
 .. code-block:: sh
 
-    Reporting to /var/log/hrm/log.txt /var/log/hrm/error_log.txt 
-    Starting HRM daemon...................ok
+    Forking background process...
+    Reporting stdout to '/var/log/hrm/log.txt' and stderr to '/var/log/hrm/error_log.txt'.
+
+To check if the queue manager daemon is running, use the ``status`` argument.
+In case the service is operational, it will show a message like this:
+
+.. code-block:: sh
+
+    [ ok ] HRM is running (/var/www/hrm/bin/hrm_queuemanager), PID: 1234.
 
 The queue manager can be started, stopped and restarted by using:
 
