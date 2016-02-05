@@ -183,8 +183,6 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_server_config.inc
 
-Replace ``$HRM_HOME`` with the hrm root (e.g ``/var/www/hrm``).
-
 3.3.x to 3.3.x
 --------------
 
