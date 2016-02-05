@@ -95,12 +95,21 @@ of doing this is explained in :ref:`setting up the HRM user and group
 For detailed instructions, please see :ref:`setting up the HRM user and group
 <setup_hrm_user_and_group>`.
 
-.. note:: Temporarily, the old behavior can still be preserved by setting a
-          configuration variable ``$change_ownership`` as explained in the next
-          section.
+.. warning:: With **HRM 3.2** it was possible to preserve the old behavior by
+             setting a configuration variable ``$change_ownership``. This is
+             not supported with **HRM 3.3** any more!
 
 Update the configuration files
 ==============================
+
+3.2 to 3.3
+----------
+
+As stated in the previous section, the ``$change_ownership`` option is not
+supported in version **3.3** any more. If the variable is present in the
+configuration files ``hrm_{server|client}_config.inc`` it will be silently
+ignored. For consistency reasons it is therefore recommend to remove this
+setting from the config file(s).
 
 3.1 to 3.2
 ----------
