@@ -54,7 +54,14 @@ run-levels. Please note that issuing this command does *NOT* actually start the
 daemon until the next reboot. To start it right now follow the steps in the
 section below.
 
-|fedora| Fedora: *Coming soon.*
+|fedora| Fedora
+
+Fedora does not install the Linux Standard Base (LSB) specification by default, which is required by the new init script. 
+Please install ``redhat-lsb.x86_64`` as follows:
+
+..  code:: sh
+
+    sudo dnf install redhat-lsb.x86_64
 
 Start manually
 --------------

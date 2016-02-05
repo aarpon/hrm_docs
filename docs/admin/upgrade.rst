@@ -3,7 +3,7 @@
 .. toctree::
    :maxdepth: 1
 
-.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below.
+.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below. The deprecated fall-back mechanism of version 3.2 **no longer works in 3.3**!
 
 ***************
 Version upgrade
@@ -35,13 +35,13 @@ the website or github as explained in :ref:`downloading the standard archive
 
 The downloaded package then needs to be extracted inside the HRM's installation
 directory, overwriting updated files but not touching your configuration files
-etc. Assuming your downloaded version is ``3.2.0`` and you were placing the
+etc. Assuming your downloaded version is ``3.3.0`` and you were placing the
 package in your home directory, this can be done like this:
 
 .. code-block:: sh
 
     cd $HRM_HOME
-    tar xzf $HOME/hrm-3.2.0.tar.gz --strip=1
+    tar xzf $HOME/hrm-3.3.0.tar.gz --strip=1
 
 Cleaning up leftover files from previous installations
 ======================================================
@@ -52,6 +52,11 @@ files don't get removed as only new files are extracted from the tar package.
 To avoid cluttering up the installation they should be removed according to the
 versions involved.
 
+3.2 to 3.3
+----------
+
+HRM 3.3 uses new init scripts. Please delete the old files ``$HRM_BIN\hrm_user_manager``, ``$HRM_BIN\hrm_user_manager_old``, ``$HRM_BIN\hrmd`` and ``$HRM_BIN\ome_hrm`` and then follow the instructions in :ref:`Upgrade the init script <upgrade_the_init_script>`.
+
 3.1 to 3.2
 ----------
 
@@ -59,6 +64,8 @@ versions involved.
 
     rm -v inc/ActiveDirectory.inc.php inc/Ldap.inc.php
 
+
+.. _upgrade_the_init_script:
 
 Upgrade the init script
 =======================
@@ -114,7 +121,7 @@ setting from the config file(s).
 3.1 to 3.2
 ----------
 
-In version 3.2 of the HRM, the system users running the Queue Manager and the web server are expected to have direct read-write access to the data folders. If this is not the case for your setup and you rely on adding the web server user to ``/etc/sudoers``, please notice that **this behavior is obsolete in 3.2 but can still be enabled** by adding:
+As of version 3.2 of HRM, the system users running the Queue Manager and the web server are expected to have direct read-write access to the data folders. If this is not the case for your setup and you rely on adding the web server user to ``/etc/sudoers``, please notice that **this behavior is deprecated in 3.2 but can still be enabled** by adding:
 
 .. code-block:: php
 
@@ -178,12 +185,28 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
 
 Replace ``$HRM_HOME`` with the hrm root (e.g ``/var/www/hrm``).
 
-Checking the 3.0.x files with the 3.1 ``checkConfig.php`` script will result in the following output:
+3.3.x to 3.3.x
+--------------
+
+**PLEASE COMPLETE**
+
+3.1.x to 3.2.x
+--------------
+
+**PLEASE COMPLETE**
+
+3.0.x to 3.1.x
+--------------
+
+Checking the 3.0.x files with the 3.1.x ``checkConfig.php`` script will result in the following output:
 
 .. code-block:: sh
 
     Check against HRM v3.1.x.
     Check completed successfully! Your configuration file is valid!
+
+2.1.x to 3.0.x
+--------------
 
 Checking the 2.1.x files with the 3.0 ``checkConfig.php`` script will result in the following output:
 
@@ -192,6 +215,10 @@ Checking the 2.1.x files with the 3.0 ``checkConfig.php`` script will result in 
     Check against HRM v3.0.x.
     * * * Error: variable omero_transfers not set or empty.
     Check completed with errors! Please fix your configuration!
+
+
+1.2.x to 2.1.x
+--------------
 
 Checking the 1.2.x files with the 2.1.x ``checkConfig.php`` script will result in the following output:
 
@@ -230,10 +257,12 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | 3.2         | 13               |
 +-------------+------------------+
+| 3.3         | 14               |
++-------------+------------------+
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 13 in one step.
+.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 14 in one step.
 
 The following describes two possible ways to update the database.
 
@@ -246,11 +275,11 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.2 is number 13.
-    Current database revision is number 12.
+    Needed database revision for HRM v3.3 is number 14.
+    Current database revision is number 13.
     Updating...
 
-    Database successfully updated to revision 13.
+    Database successfully updated to revision 14.
 
 The database is now at the latest revision.
 
