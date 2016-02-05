@@ -86,8 +86,8 @@ of doing this is explained in :ref:`setting up the HRM user and group
 <setup_hrm_user_and_group>`. Briefly:
 
   * a user ``hrm`` and its corresponding group ``hrm`` are created
-  * the web server user (|ubuntu| www-data, |fedora| apache) is added to the
-    ``hrm`` group
+  * the web server user (|ubuntu| ``www-data``, |fedora| ``apache``) is added
+    to the ``hrm`` group
   * the variable ``SUSER`` is set to ``hrm`` in /etc/hrm.conf
   * the ``$HRM_DATA`` and ``$HRM_LOG`` group ownership is set to ``hrm`` with
     the ``setgid`` bit set
