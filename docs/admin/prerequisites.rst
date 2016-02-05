@@ -245,10 +245,9 @@ with the HRM ones by clicking on the "Re-generate Preview" link.
 .. note::
 
     It is **NOT** required to do any *installation* or *configuration* of the
-    downloaded OMERO package! HRM just needs this package as a means
-    to communicate with your existing installation of OMERO server.
-    Thus, this package allows HRM to communicate with any OMERO server connected to
-    the network.
+    downloaded OMERO package! HRM just needs this package to communicate with
+    your existing OMERO server. Thus, this package allows HRM to communicate
+    with any OMERO server connected to the network.
 
 As an example on how to download these packages, the
 commands used to fetch ``OMERO 5.0.3`` and ``Ice 3.4`` are shown below. For other
