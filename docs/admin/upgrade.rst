@@ -63,11 +63,14 @@ versions involved.
 Upgrade the init script
 =======================
 
-This step is more or less identical to the initial installation of the init script as described in :ref:`installing the daemon <hrm_daemon>`. You need to copy the new script from ``$HRM_BIN/hrmd`` to ``/etc/init.d/`` and make sure it is executable. This can be done using the following commands:
+This step is basically identical to the initial installation of the init script
+as described in :ref:`installing the daemon <hrm_daemon>`. You need to copy the
+new script from ``$HRM_RESRC/hrmd_lsb-init`` to ``/etc/init.d/`` and make sure
+it is executable. This can be done using the following commands:
 
 .. code-block:: sh
 
-    sudo cp -v $HRM_BIN/hrmd /etc/init.d/
+    sudo cp -v $HRM_RESRC/hrmd_lsb-init /etc/init.d/hrmd
     sudo chmod +x /etc/init.d/hrmd
 
 .. note:: There should be *NO* need to run ``update-rc.d`` to update the run-level links.
