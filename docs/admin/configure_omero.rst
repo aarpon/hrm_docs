@@ -41,9 +41,10 @@ matching your current setup.
     OMERO_HOSTNAME="omero.mynetwork.xy"
     OMERO_PORT="4064"
 
-Optionally, you can configure the OMERO connector to look for Python packages
-in a non-standard location (i.e. not within the regular ``PYTHONPATH``). To do
-so, uncomment the following variable and adjust it accordingly:
+Optionally, you can configure the OMERO connector to look for :ref:`additional
+Python packages <prerequisites-omero-optional>` in a non-standard location
+(i.e. not within the regular ``PYTHONPATH``). To do so, uncomment the following
+variable and adjust it accordingly:
 
 .. code-block:: sh
 

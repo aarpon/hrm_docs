@@ -320,6 +320,8 @@ Fedora system and you're running into trouble there!
 
     This configuration variable also applies to the following section!
 
+.. _prerequisites-omero-optional:
+
 Additional Python Packages (Optional)
 -------------------------------------
 
