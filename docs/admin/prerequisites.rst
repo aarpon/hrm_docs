@@ -289,29 +289,6 @@ follows:
 
 .. note::
 
-    Due to an issue in the OMERO ``5.0.x`` series there's an attempt to store
-    and read OMERO session files in a subfolder of the user's HOME directory
-    who executes OMERO queries - in our case the same user that is running
-    Apache. This will fail on most standard installations due to the default
-    directory permissions in Apache's document root, therefore it is necessary
-    to manually create this session directory and adjust the permissions
-    accordingly, as follows:
-
-|ubuntu|
-
-.. code-block:: sh
-
-    sudo mkdir /var/www/omero
-    sudo chown www-data /var/www/omero
-    sudo chmod u+w /var/www/omero
-
-|fedora|
-
-Please contact us in case you're trying to set up the OMERO connector on a
-Fedora system and you're running into trouble there!
-
-.. note::
-
     From HRM 3.3.0 on, the OMERO connector requires the Python package
     ``argparse``, which is included by default from Python 2.7 on. In case you
     are running an older Python version, you have to install the package
