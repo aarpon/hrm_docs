@@ -305,6 +305,21 @@ follows:
 Please contact us in case you're trying to set up the OMERO connector on a
 Fedora system and you're running into trouble there!
 
+.. note::
+
+    From HRM 3.3.0 on, the OMERO connector requires the Python package
+    ``argparse``, which is included by default from Python 2.7 on. In case you
+    are running an older Python version, you have to install the package
+    yourself. Please refer to the installation instructions of your
+    distribution on how to set up Python argparse.
+
+    Please follow the instructions in :ref:`configuring the OMERO connector
+    <connector_omero>` about the optional configuration variable
+    ``PYTHON_EXTLIB`` in case you have to place the package in a non-default
+    location.
+
+    This configuration variable also applies to the following section!
+
 Additional Python Packages (Optional)
 -------------------------------------
 

@@ -37,3 +37,11 @@ matching your current setup.
     OMERO_PKG="/opt/OMERO/OMERO.server-5.0.3-ice34-b41.linux"
     OMERO_HOSTNAME="omero.mynetwork.xy"
     OMERO_PORT="4064"
+
+Optionally, you can configure the OMERO connector to look for Python packages
+in a non-standard location (i.e. not within the regular ``PYTHONPATH``). To do
+so, uncomment the following variable and adjust it accordingly:
+
+.. code-block:: sh
+
+    PYTHON_EXTLIB="/opt/OMERO/python-extlibs"
