@@ -183,10 +183,16 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_server_config.inc
 
-3.3.x to 3.3.x
+3.2.x to 3.3.x
 --------------
 
-**PLEASE COMPLETE**
+Checking the 3.2.x files with the 3.3.x ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+    Check against HRM v3.3.x.
+    * * * Error: variable change_ownership must be removed from the configuration files!
+    Check completed with errors! Please fix your configuration!
 
 3.1.x to 3.2.x
 --------------
