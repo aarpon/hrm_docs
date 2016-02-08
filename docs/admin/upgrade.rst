@@ -191,7 +191,12 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
 3.1.x to 3.2.x
 --------------
 
-**PLEASE COMPLETE**
+Checking the 3.1.x files with the 3.2.x ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+    Check against HRM v3.2.x.
+    Check completed successfully! Your configuration file is valid!
 
 3.0.x to 3.1.x
 --------------
