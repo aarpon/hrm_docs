@@ -25,7 +25,10 @@ and in ``$HRM_CONFIG/hrm_server_config.inc``.
     ?>
 
 In addition, the following values need to be set accordingly in
-``/etc/hrm.conf``. Assuming your OMERO server is running on a host called
+``/etc/hrm.conf``. By default, those settings are commented out, so make sure
+to remove the comment sign ``#`` in front of those lines!
+
+Assuming your OMERO server is running on a host called
 ``omero.mynetwork.xy`` and using the versions shown in the example in the
 :ref:`OMERO prerequisites <prerequisites-omero>`, this would look as below.
 Please make sure to adjust ``OMERO_PKG`` and ``OMERO_HOSTNAME`` so it is
