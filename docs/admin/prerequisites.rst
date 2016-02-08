@@ -234,10 +234,15 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 ========================
 
 If you plan to use the :ref:`connector_omero`, you will need to download the
-"server" package from the OMERO website that matches your existing OMERO
+"server" package from the OMERO website that **matches** your existing OMERO
 installation **and** the Ice version installed on your HRM system. To make it
 work on your system, you also need Python 2.6 or 2.7 and (which is installed by
 default on Fedora and Ubuntu) and Java 7.
+
+.. warning::
+
+    The connector requires at least the **5.0 series** of OMERO, the latest
+    version is only tested against **OMERO 5.1** and newer!
   
 .. note::
 
