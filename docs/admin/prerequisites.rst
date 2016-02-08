@@ -246,16 +246,11 @@ default on Fedora and Ubuntu) and Java 7.
     your existing OMERO server. Thus, this package allows HRM to communicate
     with any OMERO server connected to the network.
 
-If the `Python Imaging Library (PIL) <https://pypi.python.org/pypi/PIL>`_ or
-`Pillow <http://python-pillow.org/>`_ is installed, the connector will download
-thumbnails as well to use them as previews in the HRM side bar. Those "simple"
-previews can of course be replaced with the HRM ones by clicking on the
-"Re-generate Preview" link.
+Required OMERO Connector Components
+-----------------------------------
 
-In case the `Beautiful Soup <https://pypi.python.org/pypi/beautifulsoup4>`_
-library is available on the system, the connector will generate parameter
-summaries and attach them as a human-readable comment to any image uploaded to
-OMERO.
+This section explains the steps required if you want to use the optional
+:ref:`connector_omero`.
 
 As an example on how to download these packages, the commands used to fetch
 ``OMERO 5.0.3`` and ``Ice 3.4`` are shown below. For other combinations please
@@ -269,7 +264,7 @@ follows:
 
 .. code-block:: sh
 
-    sudo apt-get install python-zeroc-ice libicessl34 openjdk-7-jre python-imaging python-bs4
+    sudo apt-get install python-zeroc-ice libicessl34 openjdk-7-jre
     wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
     sudo mkdir -pv /opt/OMERO
     cd /opt/OMERO
@@ -280,7 +275,7 @@ follows:
 
 .. code-block:: sh
 
-    sudo yum install ice-python java-1.7.0-openjdk python-imaging python-beautifulsoup4
+    sudo yum install ice-python java-1.7.0-openjdk
     wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
     sudo mkdir -pv /opt/OMERO
     cd /opt/OMERO
@@ -309,3 +304,32 @@ follows:
 
 Please contact us in case you're trying to set up the OMERO connector on a
 Fedora system and you're running into trouble there!
+
+Additional Python Packages (Optional)
+-------------------------------------
+
+This section is about packages that are not mandatory for using the connector,
+but add more functionality to it.
+
+If the `Python Imaging Library (PIL) <https://pypi.python.org/pypi/PIL>`_ or
+`Pillow <http://python-pillow.org/>`_ is installed, the connector will download
+thumbnails as well to use them as previews in the HRM side bar. Those "simple"
+previews can of course be replaced with the HRM ones by clicking on the
+"Re-generate Preview" link.
+
+In case the `Beautiful Soup <https://pypi.python.org/pypi/beautifulsoup4>`_
+library is available on the system, the connector will generate parameter
+summaries and attach them as a human-readable comment to any image uploaded to
+OMERO.
+
+|ubuntu|
+
+.. code-block:: sh
+
+    sudo apt-get install python-imaging python-bs4
+
+|fedora|
+
+.. code-block:: sh
+
+    sudo yum install python-imaging python-beautifulsoup4
