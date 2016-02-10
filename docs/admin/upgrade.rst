@@ -1,8 +1,5 @@
 .. include:: global_directives.inc
 
-.. toctree::
-   :maxdepth: 1
-
 .. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below. The deprecated fall-back mechanism of version 3.2 **no longer works in 3.3**!
 
 ***************
@@ -43,8 +40,8 @@ package in your home directory, this can be done like this:
     cd $HRM_HOME
     tar xzf $HOME/hrm-3.3.0.tar.gz --strip=1
 
-Cleaning up leftover files from previous installations
-======================================================
+Clean up previous installations
+===============================
 
 Sometimes files were part of a previous release of the HRM but they are not
 contained in the current one any more. With the above described method those
@@ -52,18 +49,9 @@ files don't get removed as only new files are extracted from the tar package.
 To avoid cluttering up the installation they should be removed according to the
 versions involved.
 
-3.2 to 3.3
-----------
-
 HRM 3.3 uses new init scripts. Please delete the old files ``$HRM_BIN\hrm_user_manager``, ``$HRM_BIN\hrm_user_manager_old``, ``$HRM_BIN\hrmd`` and ``$HRM_BIN\ome_hrm`` and then follow the instructions in :ref:`Upgrade the init script <upgrade_the_init_script>`.
 
-3.1 to 3.2
-----------
-
-.. code-block:: sh
-
-    rm -v inc/ActiveDirectory.inc.php inc/Ldap.inc.php
-
+.. note:: Please follow :ref:`these instructions <upgrade_clean_previous>` **first** if you are upgrading from older versions.
 
 .. _upgrade_the_init_script:
 
@@ -109,9 +97,6 @@ For detailed instructions, please see :ref:`setting up the HRM user and group
 Update the configuration files
 ==============================
 
-3.2 to 3.3
-----------
-
 As stated in the previous section, the ``$change_ownership`` option is not
 supported in version **3.3** any more. If the variable is present in the
 configuration files ``hrm_{server|client}_config.inc`` it will be silently
@@ -119,64 +104,11 @@ ignored. For consistency reasons it is therefore recommend to remove this
 setting from the config file(s).
 
 Group authentication
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 As of HRM 3.3, external authentication via :ref:`Active Directory <activedir_auth>` or :ref:`generic LDAP <ldap_auth>` now supports **group authorization**. An additional array ``$AUTHORIZED_GROUPS`` can be set to define the set of :ref:`Active Directory <activedir_auth>` or :ref:`generic LDAP <ldap_auth>` groups that are granted access to HRM.
 
-3.1 to 3.2
-----------
-
-As of version 3.2 of HRM, the system users running the Queue Manager and the web server are expected to have direct read-write access to the data folders. If this is not the case for your setup and you rely on adding the web server user to ``/etc/sudoers``, please notice that **this behavior is deprecated in 3.2 but can still be enabled** by adding:
-
-.. code-block:: php
-
-    $change_ownership=true;
-
-in ``hrm_{server|client}_config.inc``. The variable ``$change_ownership`` defaults to ``false`` if not explicitly set to true in the configuration, in compliance to the new behavior.
-
-.. note:: As of **HRM 3.3**, this variable will be ignored and the new behavior will be **enforced**!
- 
-3.0.x to 3.1
-------------
-
-No changes in the configuration files.
-
-2.1.x to 3.0
-------------
-
-From HRM 2.1.x to HRM 3.0, one variable was added in the configuration files.
-
-.. code-block:: php
-
-    $omero_transfers={true|false}
-
-1.2.x to 2.0
-------------
-
-From HRM 1.2.x to HRM 2.0, three variables were added in the configuration files:
-
-::
-
-    [+] max_upload_limit
-    [+] max_post_limit
-    [+] email_list_separator
-
-Moreover, three variables were removed:
-
-::
-
-    [-] resultImagesOwnedByUser
-    [-] resultImagesRenamed
-    [-] enable_code_for_huygens
-
-
-.. note:: If you are upgrading straight from HRM 1.2.x, please notice that as of HRM 2.0 configuration and sample files were moved as per following table.
-
-+----------------------+--------------------------+----------------------+----------------------+
-| Config files (new)   | Sample files (new)       | Config files (1.x)   | Sample files (1.x)   |
-+======================+==========================+======================+======================+
-| $HRM_HOME/config     | $HRM_HOME/config/samples | $HRM_HOME/inc        | $HRM_HOME/resources  |
-+----------------------+--------------------------+----------------------+----------------------+
+.. note:: Please follow :ref:`these instructions <upgrade_conf_previous>` **first** if you are upgrading from older versions.
 
 Check the configuration files
 =============================
@@ -188,9 +120,6 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_server_config.inc
 
-3.2.x to 3.3.x
---------------
-
 Checking the 3.2.x files with the 3.3.x ``checkConfig.php`` script will result in the following output:
 
 .. code-block:: sh
@@ -199,55 +128,9 @@ Checking the 3.2.x files with the 3.3.x ``checkConfig.php`` script will result i
     * * * Error: variable change_ownership must be removed from the configuration files!
     Check completed with errors! Please fix your configuration!
 
-3.1.x to 3.2.x
---------------
-
-Checking the 3.1.x files with the 3.2.x ``checkConfig.php`` script will result in the following output:
-
-.. code-block:: sh
-
-    Check against HRM v3.2.x.
-    Check completed successfully! Your configuration file is valid!
-
-3.0.x to 3.1.x
---------------
-
-Checking the 3.0.x files with the 3.1.x ``checkConfig.php`` script will result in the following output:
-
-.. code-block:: sh
-
-    Check against HRM v3.1.x.
-    Check completed successfully! Your configuration file is valid!
-
-2.1.x to 3.0.x
---------------
-
-Checking the 2.1.x files with the 3.0 ``checkConfig.php`` script will result in the following output:
-
-.. code-block:: sh
-
-    Check against HRM v3.0.x.
-    * * * Error: variable omero_transfers not set or empty.
-    Check completed with errors! Please fix your configuration!
-
-
-1.2.x to 2.1.x
---------------
-
-Checking the 1.2.x files with the 2.1.x ``checkConfig.php`` script will result in the following output:
-
-.. code-block:: sh
-
-    Check against HRM v2.1.x.
-    * * * Error: variable max_upload_limit not set or empty.
-    * * * Error: variable max_post_limit not set or empty.
-    * * * Error: variable email_list_separator not set or empty. 
-    * * * Error: variable resultImagesOwnedByUser must be removed from the configuration files!
-    * * * Error: variable resultImagesRenamed must be removed from the configuration files! 
-    * * * Error: variable enable_code_for_huygens must be removed from the configuration files! 
-    Check completed with errors! Please fix your configuration!
-
 Please make sure to fix all problems. The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
+
+.. note:: Please follow :ref:`these instructions <upgrade_check_previous>` **first** if you are upgrading from older versions.
 
 Update the database
 ===================
@@ -257,21 +140,21 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | HRM version | Database version |
 +=============+==================+
-| 1.2.3       | 7                |
-+-------------+------------------+
-| 2.0         | 8                |
-+-------------+------------------+
-| 2.1         | 9                |
-+-------------+------------------+
-| 3.0         | 10               |
-+-------------+------------------+
-| 3.0.3       | 11               |
-+-------------+------------------+
-| 3.1         | 12               |
+| 3.3         | 14               |
 +-------------+------------------+
 | 3.2         | 13               |
 +-------------+------------------+
-| 3.3         | 14               |
+| 3.1         | 12               |
++-------------+------------------+
+| 3.0.3       | 11               |
++-------------+------------------+
+| 3.0         | 10               |
++-------------+------------------+
+| 2.1         | 9                |
++-------------+------------------+
+| 2.0         | 8                |
++-------------+------------------+
+| 1.2.3       | 7                |
 +-------------+------------------+
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
@@ -310,3 +193,15 @@ After processing the described upgrade steps, the Queue Manager needs to be star
 .. code-block:: sh
 
     sudo /etc/init.d/hrmd start
+
+Upgrade from previous releases
+==============================
+
+The following pages are linked to from the relevant sections above, but are listed here again for convenience.
+
+.. toctree::
+    :maxdepth: 1
+
+    upgrade_clean_previous
+    upgrade_conf_previous
+    upgrade_check_previous
