@@ -84,6 +84,31 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
     sudo yum install php php-cli php-common php-process php-json 
 
+Production php.ini settings
+---------------------------
+
+Please configure the HRM machine for production. Edit the ``php.ini`` configuration file and set at least the values below (more information can be found in the ``php.ini`` file itself).
+
+|ubuntu|
+
+.. code-block:: sh
+
+    sudo vim /etc/php5/apache2/php.ini
+
+|fedora|
+
+.. code-block:: sh
+
+    sudo vim /etc/php.ini
+
+Make sure to set following values:
+
+.. code-block:: sh
+
+    display_errors = Off
+    display_startup_errors = Off
+    error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+
 A relational database
 =====================
 
