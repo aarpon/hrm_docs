@@ -87,21 +87,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 Production php.ini settings
 ---------------------------
 
-Please configure the HRM machine for production. Edit the ``php.ini`` configuration file and set at least the values below (more information can be found in the ``php.ini`` file itself).
-
-|ubuntu|
-
-.. code-block:: sh
-
-    sudo vim /etc/php5/apache2/php.ini
-
-|fedora|
-
-.. code-block:: sh
-
-    sudo vim /etc/php.ini
-
-Make sure to set following values:
+Please configure the HRM machine for production. Edit the ``php.ini`` configuration file (|ubuntu| ``/etc/php5/apache2/php.ini``, |fedora| ``/etc/php.ini``) and set at least the values below (more information can be found in the ``php.ini`` file itself).
 
 .. code-block:: sh
 
