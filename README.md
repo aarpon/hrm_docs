@@ -27,6 +27,13 @@ a guide. Gif images will be replaced by png's.
 Building the documentation using a local sphinx readthedocs (RTD) theme
 =======================================================================
 
+Sphinx Installation
+-------------------
+
+Install the sphinx python documentation generator:
+
+    (sudo) pip install sphinx
+
 Theme Installation
 ------------------
 
