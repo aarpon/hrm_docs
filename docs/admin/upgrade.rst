@@ -50,9 +50,9 @@ To avoid cluttering up the installation they should be removed according to the
 versions involved.
 
 HRM 3.3 uses new init scripts. Please delete the old files
-``$HRM_BIN\hrm_user_manager``, ``$HRM_BIN\hrm_user_manager_old``,
-``$HRM_BIN\hrmd`` and ``$HRM_BIN\ome_hrm`` and then follow the instructions in
-:ref:`Upgrade the init script <upgrade_the_init_script>` below.
+``$HRM_BIN/hrm_user_manager``, ``$HRM_BIN/hrm_user_manager_old``,
+``$HRM_BIN/hrmd`` and ``$HRM_BIN/ome_hrm`` and then follow the instructions in
+:ref:`Upgrade the init script <upgrade_the_init_script>`.
 
 .. note:: Please follow :ref:`these instructions <upgrade_clean_previous>` **first** if you are upgrading from older versions.
 
