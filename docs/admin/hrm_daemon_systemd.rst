@@ -73,3 +73,12 @@ In case the service is operational, it will show a message like this:
                |-7785 /bin/bash /var/www/html/hrm/bin/hrm_queuemanager
                |-7791 php -q /var/www/html/hrm/run/runHuygensRemoteManager.php
                `-7792 sleep 1
+
+
+The queue manager can be started, stopped and restarted by using:
+
+.. code-block:: sh
+
+    sudo systemctl start hrmd.service
+    sudo systemctl stop hrmd.service
+    sudo systemctl restart hrmd.service
