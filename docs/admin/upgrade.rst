@@ -61,6 +61,13 @@ HRM 3.3 uses new init scripts. Please delete the old files
 Upgrade the init script
 =======================
 
+.. note:: If your Linux installation is using the ``systemd`` init system,
+          please have a look at the :ref:`instructions about how to set up the
+          HRM daemon with systemd <install_hrmd_systemd>`. Please make sure to
+          remove the old init script at ``/etc/init.d/hrmd`` in this case!
+
+          Otherwise, proceed as described here for the init script.
+
 This step is basically identical to the initial installation of the init script
 as described in :ref:`installing the daemon <hrm_daemon>`. You need to copy the
 new script from ``$HRM_RESRC/sysv-init-lsb/hrmd`` to ``/etc/init.d/`` and make
@@ -70,8 +77,6 @@ sure it is executable. This can be done using the following commands:
 
     sudo cp -v $HRM_RESRC/sysv-init-lsb/hrmd /etc/init.d/hrmd
     sudo chmod +x /etc/init.d/hrmd
-
-.. note:: There should be *NO* need to run ``update-rc.d`` to update the run-level links.
 
 .. _update_hrm_data_permissions:
 
