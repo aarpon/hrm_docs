@@ -53,12 +53,13 @@ Recent versions of Fedora do not install the Linux Standard Base (LSB)
 specification by default, as they are using ``systemd`` init. Therefore we
 recommend using the systemd unit file, described in :ref:`install_hrmd_systemd`.
 
-If you want to use the classical init script approach nevertheless, please make
-sure the package ``redhat-lsb.x86_64`` is installed, i.e. by running:
+.. note:: If you want to use the classical init script approach nevertheless,
+          please make sure the package ``redhat-lsb.x86_64`` is installed, i.e.
+          by running:
 
-.. code-block:: sh
+          .. code-block:: sh
 
-    sudo dnf install redhat-lsb.x86_64
+              sudo dnf install redhat-lsb.x86_64
 
 Start manually
 --------------
