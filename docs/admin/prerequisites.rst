@@ -19,7 +19,16 @@ The HRM should work on any recent Linux distribution, but we only support |ubunt
     Please notice that with release 3.1, we dropped support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks. For reference, see `the old documentation <http://huygens-rm.org/home/?q=node/16>`_.
 
 .. note::
-    For those who want to use the :ref:`prerequisites-omero`, beware that different Linux distributions package and support different versions of `Ice <http://www.zeroc.com>`_ that do not necessarily overlap. HRM and OMERO will need the same Ice version to be able to communicate. To end up with a compatible setup you should have a look on the `OMERO administrator documentation <https://www.openmicroscopy.org/site/support/omero4/sysadmins/unix/server-install-linux.html>`_.
+
+    For those who plan on using the :ref:`prerequisites-omero` it is strongly
+    recommended to set up the HRM and OMERO using the same Linux *distribution*
+    and *version*, simply to avoid `Ice <http://www.zeroc.com>`_ version
+    incompatibilities, which will prevent the HRM-OMERO connector from working.
+    Details can be found in the `OMERO system administrator documentation
+    <https://www.openmicroscopy.org/site/support/omero5/sysadmins/index.html>`_.
+    
+    PLEASE MIND: this does **NOT** mean you should install HRM and OMERO on the
+    **same machine**! You should just run the same Linux installation on them.
 
 Huygens Core
 ============
