@@ -65,11 +65,21 @@ If you plan to install the HRM in a specific user directory, use ``/home/<hrm_us
 Apache2 access handling
 -----------------------
 
-HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to set the ``AllowOverride`` directive in ``/etc/apache2/sites-available/default`` |ubuntu| resp. ``FIXME`` |fedora| to enable ``.htaccess`` files in the HRM on the web server (``AllowOverride All``), or at least make sure to prevent access to the subdirectories ``inc``, ``config``, ``run``, ``resources`` and ``setup``.
+HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to configure Apache2 to use them by setting the ``AllowOverride`` and ``Require`` directives in ``/etc/apache2/sites-available/000-default`` |ubuntu| resp. ``/etc/httpd/conf/httpd.conf`` |fedora|. Please notice that the ``Require`` directive is required from Apache version 2.4.
 
-If you are installing the HRM in your user dir, make sure to change ``AllowOverride`` to ``All`` in ``/etc/apache2/mods-available/userdir.conf`` |ubuntu| resp. ``FIXME`` |fedora| (make sure to enable the userdir mod first by running ``sudo a2enmod userdir`` in the shell).
+.. code-block:: sh
+
+    <Directory /var/www/html/hrm>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+If you are installing the HRM in your user dir, make sure set the same directives in ``/etc/apache2/mods-available/userdir.conf`` |ubuntu| resp. ``/etc/httpd/conf.d/userdir.conf`` |fedora|. (|Ubuntu| Make sure to enable the userdir mod first by running ``sudo a2enmod userdir`` in the shell).
 
 |ubuntu| See also `Enabling use of Apache htaccess files <https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles>`_.
+
+|fedora| See also `Apache Userdir with SELinux on Fedora 23/22, CentOS/RHEL 7.2/6.7/5.11 <http://www.if-not-true-then-false.com/2010/enable-apache-userdir-with-selinux-on-fedora-centos-red-hat-rhel/>`_.
 
 PHP |ge| 5.3
 ============
