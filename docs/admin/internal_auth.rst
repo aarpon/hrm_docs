@@ -4,19 +4,13 @@
 Internal authentication
 ***********************
 
-To enable internal authentication, please set the ``$authenticateAgainst`` variable to "MYSQL" in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
+To enable internal authentication, please add "integrated" to the ``$authenticateAgainst`` array in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
 
 .. code-block:: php
 
     <?php
     ...
-    // Authentication type: MYSQL, ACTIVE_DIR or LDAP
-    $authenticateAgainst = "MYSQL";
+    $authenticateAgainst = array("integrated");
     ...
 
 This is the default value, so nothing needs to be changed in a fresh installation to use internal authentication.
-
-.. note::
-
-    Please notice that you should use ``"MYSQL"`` even if you are using PostgreSQL as your database backend!
-

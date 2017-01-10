@@ -6,14 +6,13 @@
 LDAP authentication
 *******************
 
-To enable LDAP authentication, please set the ``$authenticateAgainst`` variable to "LDAP" in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
+To enable LDAP authentication, please add "ldap" to the ``$authenticateAgainst`` array in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
 
 .. code-block:: php
 
     <?php
     ...
-    // Authentication type: MYSQL, ACTIVE_DIR or LDAP
-    $authenticateAgainst = "LDAP";
+    $authenticateAgainst = array("ldap");
     ...
 
 Then, copy ``$HRM_SAMPLES/ldap.config.inc.sample`` to ``$HRM_CONFIG/ldap.config.inc`` and edit it.
