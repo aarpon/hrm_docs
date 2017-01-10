@@ -42,13 +42,21 @@ Here we will assume a one-machine installation, and we will therefore show just 
     // Database settings
     //==============================================================================
 
-    // The database type (mysql or postgres)
-    $db_type = "mysql";
+    // The database type ('mysqli' or 'postgres'; mysql is deprecated).
+    // Please notice that it is highly recommended to use the mysqli driver for
+    // PHP 5.5 and above. In PHP >= 5.6, the mysql driver is deprecated and will
+    // overflow your log files when used!
+    $db_type = "mysqli";
+
     ?>
 
 .. note::
 
     Although the database abstraction library (`ADOdb <http://adodb.sourceforge.net/>`_) we use in the HRM can interface with a large number of databases, we currently only support **MySQL** and **PostgreSQL**. Other DBs may work, but we haven't tested them.
+
+.. note::
+
+    Also, please use the **'mysqli'** driver instead of 'mysql' as in previous versions of the HRM. From PHP 5.6, the 'mysql' driver is deprecated!
 
 .. code-block:: php
 
@@ -270,19 +278,45 @@ The ``$logdir`` variable points to the directory where the log files created by 
     // instead of the standard ',' for distribution lists.
     $email_list_separator = ",";    // Valid options are ',' and ';'.
 
-    // Authentication type: MYSQL, ACTIVE_DIR or LDAP
-    $authenticateAgainst = "MYSQL";
-    ?>
-
-Setting the authentication mode to **MYSQL** enables the embedded user management system (independent of the actual database you are using, e.g. postgresql). Use this if you don't have any other user management system in place. Alternatively, simple authentication against **Microsoft's Active Directory** and **OpenLDAP** is possible.
-
-In case one of the alternative authentication types are selected (i.e. ``ACTIVE_DIR`` or ``LDAP``), some additional configuration will be required (see later).
+Enable and configure the e-mail service.
 
 .. code-block:: php
 
     <?php
     ...
-    // If true, use DES password encryption; if false, use MD5
+    // Supported authentication types. Possible values are 'integrated', 'active_dir', 'ldap'.
+    // These values replace the previous ones (but the old ones are still recognized):
+    // 'integrated' replaces 'MYSQL';
+    // 'active_dir' replaces 'ACTIVE_DIR';
+    // 'ldap' replaces 'LDAP'.
+    // You can use more than one authentication mechanism by listing them all in the
+    // $authenticateAgainst array below. 
+    //
+    // e.g. $authenticateAgainst = array("active_dir", integrated");
+    // 
+    // The first entry in the array is the default authentication mode that will be used
+    // for new users. Administrators can then change the authentication mode for individual 
+    // users in the user management pages.
+    //
+    // Make sure to properly configure all authentication modes 
+    // (see sample files in config/samples).
+    $authenticateAgainst = array("integrated");
+    ?>
+
+Setting the authentication mode to **integrated** enables the embedded user management system (independent of the actual database you are using, e.g. postgresql). Use this if you don't have any other user management system in place. Alternatively, simple authentication against **Microsoft's Active Directory** and **OpenLDAP** is possible.
+
+In case one or more of the alternative authentication types are selected (i.e. ``active_dir`` or ``ldap``), some additional configuration will be required (see later).
+
+.. note::
+
+    The super administrator 'admin' always has authentication mode 'integrated'!
+
+.. code-block:: php
+
+    <?php
+    ...
+    // If true, use DES password encryption; if false, use MD5.
+    // This variable is DEPRECATED and will be removed in the next HRM version!
     $useDESEncryption = false;
 
     // If true, the queue manager and the image processing server run on the same 
@@ -296,6 +330,10 @@ In case one of the alternative authentication types are selected (i.e. ``ACTIVE_
 Set ``$imageProcessingIsOnQueueManager`` to false if the queue manager is not on the same machine as the Huygens Core that runs deconvolution.
 
 Set ``$copy_images_to_huygens_server`` to true if the files have to be copied to the machine where the Huygens Core is installed via ssh (using password-less ssh connection!). If Huygens Core has direct access to the file area (e.g. through NFS mount), set this to false.
+
+.. note::
+
+    The use of the variable **$useDESEncryption** is deprecated and will be removed in the next HRM version!
 
 .. code-block:: php
 
@@ -348,8 +386,13 @@ Set ``$copy_images_to_huygens_server`` to true if the files have to be copied to
     // Huygens Core 3.5.2). This is the max size in pixels for each of the images's
     // slicer.
     $maxComparisonSize = 300;
-    These were several options for preview generations.
 
+These were several options for preview generations.
+
+.. code-block:: php
+
+    <?php
+    ...
     // A shell command that executes ping four times and stops afterwards
     $ping_command = 'ping -w 4';    // use this on linux systems
     // $ping_command = 'ping -t 4'; // use this on macosx systems
