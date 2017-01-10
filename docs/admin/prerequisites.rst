@@ -81,14 +81,14 @@ If you are installing the HRM in your user dir, make sure set the same directive
 
 |fedora| See also `Apache Userdir with SELinux on Fedora 23/22, CentOS/RHEL 7.2/6.7/5.11 <http://www.if-not-true-then-false.com/2010/enable-apache-userdir-with-selinux-on-fedora-centos-red-hat-rhel/>`_.
 
-PHP |ge| 5.3
+PHP |ge| 5.5
 ============
 
 The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
 
 .. note::
 
-    Minimum required PHP version is **5.3**.
+    Minimum required PHP version is **5.5**.
 
 |ubuntu|
 
