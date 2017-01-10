@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _`install_hrmd_systemd`:
+.. _install_hrmd_systemd:
 
 Install the HRM daemon as a systemd service
 ===========================================

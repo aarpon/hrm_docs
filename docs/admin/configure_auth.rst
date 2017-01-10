@@ -1,5 +1,7 @@
 .. include:: global_directives.inc
 
+.. _configure_auth:
+
 ************************
 Configure authentication
 ************************
