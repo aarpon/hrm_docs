@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below. The deprecated fall-back mechanism of version 3.2 **no longer works in 3.3**!
+.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below. The deprecated fall-back mechanism of version 3.2 **no longer works in 3.3 and 3.4**!
 
 ***************
 Version upgrade
@@ -56,33 +56,29 @@ To install the new HRM version you need to download the ``.zip`` file from
 the website or github as explained in :ref:`downloading the standard archive
 <download-hrm-standard>`.
 
-The downloaded package then needs to be extracted inside the HRM's installation
-directory, overwriting updated files but not touching your configuration files
-etc. Assuming your downloaded version is ``3.4.0`` and you were placing the
-package in your home directory, this can be done like this:
+.. warning::
 
-.. code-block:: sh
-
-    unzip -o hrm-3.4.0 $HRM_HOME
+  Please do not extract the new archive on top of the previous HRM installation! See details below.
 
 Clean up previous installations
 ===============================
 
-Sometimes files were part of a previous release of the HRM but they are not
-contained in the current one any more. With the above described method those
-files don't get removed as only new files are extracted from the tar package.
-To avoid cluttering up the installation they should be removed according to the
-versions involved.
+In version 3.4, we started a major reorganization of the code structure of HRM and it is therefore higly recommended **not to extract the new archive on top of the old one**. 
 
-No files need to be removed from HRM 3.3.0 to 3.4.0.
+Please rename the old hrm folder, extract the code into a fresh ``${HRM_ROOT}`` and move the configuration files from the old ``config`` subfolder into the new ``${HRM_ROOT}/config``.   
+
+You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.service`` scripts.
 
 .. note:: Please follow :ref:`these instructions <upgrade_clean_previous>` **first** if you are upgrading from older versions.
 
 Update the configuration files
 ==============================
 
+$authenticateAgainst
+--------------------
+
 The support for various :ref:`authentication mechanisms <configure_auth>` was extended in HRM 3.4. This comes with a change 
-in configuration: the  ``$authenticateAgainst`` variable is now an array and its values have also changes (although, temporarily, 
+in configuration: the  ``$authenticateAgainst`` variable is **now an array** and its values have also changed (although, temporarily, 
 the old ones are still supported). Example:
 
 .. code-block:: php
@@ -92,7 +88,10 @@ the old ones are still supported). Example:
   $authenticateAgainst = array("active_dir", "integrated");
   ...
 
-Moreover, the configuration variable ``$useDESEncryption`` is deprecated and will be removed from next version of HRM.
+$useDESEncryption
+-----------------
+
+The configuration variable ``$useDESEncryption`` (that was not used) must be removed from the configuration files!
 
 .. note:: Please follow :ref:`these instructions <upgrade_conf_previous>` **first** if you are upgrading from older versions.
 
@@ -105,6 +104,7 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
 
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_server_config.inc
+    php resources/checkConfig.php config/hrm_client_config.inc
 
 Checking the 3.3 files with the 3.4.x ``checkConfig.php`` script will result in the following output:
 
