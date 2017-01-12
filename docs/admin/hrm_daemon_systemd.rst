@@ -19,8 +19,30 @@ used with systemd directly.
     If unsure, or in case of problems with systemd, use the :ref:`instructions
     for System-V <install_hrmd_sysv>`!
 
-Install the unit file
+Install the init file
 ---------------------
+
+.. warning::
+
+  In HRM 3.3, the file ``$HRM_HOME/resources/systemd/hrmd.service`` includes a hard-coded
+  dependence on ``mariadb.service`` that might not be correct for your system (for instance,
+  it is not on CentOS 7). 
+
+  This will be fixed in the next release of HRM, but for the time
+  being you can either change **lines 3** and **4** to reference the correct service, e.g.
+
+    .. code-block:: sh
+    
+      Requires=mysqld.service
+      After=mysqld.service
+  
+  or comment them out:
+
+    .. code-block:: sh
+
+      #Requires=mariadb.service  
+      #After=mariadb.service
+
 
 To launch the HRM daemon as a systemd service, the unit file has to be copied
 into ``/etc/systemd/system/`` and systemd has to be notified of the new unit.
