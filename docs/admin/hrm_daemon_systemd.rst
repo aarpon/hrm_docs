@@ -43,6 +43,18 @@ Install the init file
       #Requires=mariadb.service  
       #After=mariadb.service
 
+  Moreover, on **line 7** you might want to change:
+
+    .. code-block:: sh
+
+      User=hrmuser
+
+  to:
+
+    .. code-block:: sh
+
+      User=hrm
+
 
 To launch the HRM daemon as a systemd service, the unit file has to be copied
 into ``/etc/systemd/system/`` and systemd has to be notified of the new unit.
