@@ -19,6 +19,37 @@ used with systemd directly.
     If unsure, or in case of problems with systemd, use the :ref:`instructions
     for System-V <install_hrmd_sysv>`!
 
+Change the default configuration in the unit file
+-------------------------------------------------
+
+By default, the unit file is to configured to run as the ``hrm`` user and to depend on 
+``mysql.service``. If needed, you can change those values before you proceed with the installation.
+
+.. code-block:: sh
+
+  [Unit]
+  Description=HRM (Huygens Remote Manager) Queue Manager Service
+  # For both 'Requires=' and 'After=', please set one of mysql.service, 
+  # mariadb.service (fork of mysql), postgresql.service.
+  Requires=mysql.service
+  After=mysql.service
+
+  [Service]
+  # If needed, change 'User=' and 'Group=' to point to the correct values.
+  User=hrm
+  Group=hrm
+  ExecStart=/var/www/html/hrm/bin/hrm_queuemanager --detach
+  Type=forking
+  PIDFile=/var/log/hrm/hrmd.pid
+
+  [Install]
+  WantedBy=multi-user.target
+
+
+Please change the values of ``Requires=``, ``After=`` to point to the correct database you are using for HRM
+(one of ``mariadb.service``, ``mysql.service``, ``postgresql.service``) and ``User=`` and ``Group=`` if you are
+planning to run the Queue Manager as a different user (please see also `set-up-the-hrm-user-and-group`).
+
 Install the unit file
 ---------------------
 
