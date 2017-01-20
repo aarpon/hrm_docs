@@ -49,7 +49,7 @@ Update the data folder permissions
 As of HRM 3.2.0, the system users running the Queue Manager and the web server
 are expected to have full read-write access to ``$HRM_DATA``. The supported way
 of doing this is explained in :ref:`setting up the HRM user and group
-<setup_hrm_user_and_group>`. Briefly:
+<hrm_user_group_perm>`. Briefly:
 
   * a user ``hrm`` and its corresponding group ``hrm`` are created
   * the web server user (|ubuntu| ``www-data``, |fedora| ``apache``) is added
@@ -59,7 +59,7 @@ of doing this is explained in :ref:`setting up the HRM user and group
     the ``setgid`` bit set
 
 For detailed instructions, please see :ref:`setting up the HRM user and group
-<setup_hrm_user_and_group>`.
+<hrm_user_group_perm>`.
 
 .. warning:: With **HRM 3.2** it was possible to preserve the old behavior by
              setting a configuration variable ``$change_ownership``. This is
