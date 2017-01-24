@@ -56,7 +56,7 @@ Here we will assume a one-machine installation, and we will therefore show just 
 
 .. note::
 
-    Also, please use the **'mysqli'** driver instead of 'mysql' as in previous versions of the HRM. From PHP 5.6, the 'mysql' driver is deprecated!
+    Also, please use the **'mysqli'** driver instead of **'mysql'** as in previous versions of the HRM. From PHP 5.6, the 'mysql' driver is deprecated!
 
 .. code-block:: php
 

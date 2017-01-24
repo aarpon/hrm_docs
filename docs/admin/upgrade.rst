@@ -178,11 +178,19 @@ Alternatively, the database can be updated from the console (see :ref:`create or
 Re-start the Queue Manager
 ==========================
 
-After processing the described upgrade steps, the Queue Manager needs to be started again.
+After processing the described upgrade steps, the Queue Manager needs to be started again, with:
 
 .. code-block:: sh
 
     sudo /etc/init.d/hrmd start
+
+if you are using System-V or upstart, or with:
+
+.. code-block:: sh
+
+    sudo systemctl start hrmd.service
+
+if you are using systemd.
 
 Upgrade from previous releases
 ==============================
