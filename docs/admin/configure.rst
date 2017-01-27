@@ -10,6 +10,7 @@ Mandatory configuration steps
 .. toctree::
    :maxdepth: 1
 
+   hrm_user_group_perm
    hrm_conf
    config_files
    configure_auth
@@ -27,3 +28,5 @@ Optional configuration steps
    customize_login
    export_data_share
    configure_omero
+   enable_gpus
+   add_servers

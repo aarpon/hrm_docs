@@ -1,7 +1,6 @@
 .. include:: global_directives.inc
 
-
-.. _`install_hrmd_sysv`:
+.. _install_hrmd_sysv:
 
 Install the HRM daemon on System-V-like init systems
 ====================================================

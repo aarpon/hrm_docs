@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _`install_hrmd_systemd`:
+.. _install_hrmd_systemd:
 
 Install the HRM daemon as a systemd service
 ===========================================
@@ -19,42 +19,40 @@ used with systemd directly.
     If unsure, or in case of problems with systemd, use the :ref:`instructions
     for System-V <install_hrmd_sysv>`!
 
-Install the init file
+Change the default configuration in the unit file
+-------------------------------------------------
+
+By default, the unit file is to configured to run as the ``hrm`` user and to depend on 
+``mysql.service``. If needed, you can change those values before you proceed with the installation.
+
+.. code-block:: sh
+
+  [Unit]
+  Description=HRM (Huygens Remote Manager) Queue Manager Service
+  # For both 'Requires=' and 'After=', please set one of mysql.service, 
+  # mariadb.service (fork of mysql), postgresql.service.
+  Requires=mysql.service
+  Wants=network-online.target
+  After=mysql.service network.target network-online.target
+
+  [Service]
+  # If needed, change 'User=' and 'Group=' to point to the correct values.
+  User=hrm
+  Group=hrm
+  ExecStart=/var/www/html/hrm/bin/hrm_queuemanager --detach
+  Type=forking
+  PIDFile=/var/log/hrm/hrmd.pid
+
+  [Install]
+  WantedBy=multi-user.target
+
+
+Please change the values of ``Requires=``, ``After=`` to point to the correct database you are using for HRM
+(one of ``mariadb.service``, ``mysql.service``, ``postgresql.service``) and ``User=`` and ``Group=`` if you are
+planning to run the Queue Manager as a different user (please see also `set-up-the-hrm-user-and-group`).
+
+Install the unit file
 ---------------------
-
-.. warning::
-
-  In HRM 3.3, the file ``$HRM_HOME/resources/systemd/hrmd.service`` includes a hard-coded
-  dependence on ``mariadb.service`` that might not be correct for your system (for instance,
-  it is not on CentOS 7). 
-
-  This will be fixed in the next release of HRM, but for the time
-  being you can either change **lines 3** and **4** to reference the correct service, e.g.
-
-    .. code-block:: sh
-    
-      Requires=mysqld.service
-      After=mysqld.service
-  
-  or comment them out:
-
-    .. code-block:: sh
-
-      #Requires=mariadb.service  
-      #After=mariadb.service
-
-  Moreover, on **line 7** you might want to change:
-
-    .. code-block:: sh
-
-      User=hrmuser
-
-  to:
-
-    .. code-block:: sh
-
-      User=hrm
-
 
 To launch the HRM daemon as a systemd service, the unit file has to be copied
 into ``/etc/systemd/system/`` and systemd has to be notified of the new unit.

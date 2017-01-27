@@ -1,10 +1,10 @@
 .. include:: global_directives.inc
 
-.. _configure_multi:
+.. _add_servers:
 
-********************************
-Configure the HRM (multi-server)
-********************************
+***********************
+Add processing machines
+***********************
 
 This section describes the specific steps required to configure the HRM to run on multiple machines. In particular, we address the following setup:
 
@@ -48,14 +48,15 @@ On **Machine 1**, configure the HRM as usual (as in the single-server configurat
 
 Replace ``hrm`` with your own user name and group if different.
 
-Processing server
------------------
+Register processing machines
+----------------------------
 
-On **Machine 1**, add the name of **Machine 2** and the absolute Huygens Core path on that machine to the ``server`` table of the HRM database (see :ref:`set_server`).
+Log on to HRM as admin and go to `Servers and GPUs` |ServersGPUs22x22|.
+Register the processing servers in HRM by adding an entry for every processing
+machine, specifiying the absolute Huygens Core path on that machine, as well
+as the machine name. For details on the GPU ID field see :ref:`enable_gpus`.
 
-.. note::
 
-    If you have more than one processing server, add each server to the table in a separate row.
 
 Data folder
 -----------

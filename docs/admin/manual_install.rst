@@ -12,4 +12,3 @@ Manual installation
    prerequisites
    install
    configure
-   configure_multi

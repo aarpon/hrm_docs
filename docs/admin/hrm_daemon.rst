@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _`hrm_daemon`:
+.. _hrm_daemon:
 
 **********************
 Install the HRM daemon

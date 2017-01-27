@@ -16,7 +16,7 @@ The compiled documentation is available on [readthedocs.org][3] as HTML, PDF and
 Editing conventions
 ===================
 
-1.- When creating HRM screenshots log on to HRM with the user 'hrmuser', then
+1.- When creating HRM screenshots log on to HRM with the user 'hrm', then
 capture the screenshot. This way all the HRM screenshots in the manual will
 display the same user.
 
