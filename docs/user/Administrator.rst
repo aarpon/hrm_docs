@@ -113,7 +113,7 @@ Version upgrade
 
 To upgrade to a new version, download the latest version `from here
 <http://sourceforge.net/projects/hrm/files/latest/download>`_. Then follow the
-intructions on **specific version upgrades** `here <http://huygens-remote-manager.readthedocs.org/en/latest/admin/upgrade.html>`_.
+intructions on `specific version upgrades <http://huygens-remote-manager.readthedocs.org/en/latest/admin/upgrade.html>`_.
 
 
 Database update
