@@ -15,25 +15,18 @@ Current version
 
 Current version of the HRM is |HRM_VERSION|.
 
-Download installation script
-============================
-
-The script downloads, installs and sets up the HRM and its requested dependences while allowing for a certain degree of configurability. Please follow the :ref:`script-install` instructions.
-
-|ubuntu| |fedora| `Download the installation script <https://github.com/aarpon/hrm_installer/releases>`_.
-
-Download standard archive
-=========================
-
 .. _download-hrm-standard:
 
-The HRM archive is the standard installation approach: you have full control over the installation procedure, but you'll have to do all the work yourself. Just unpack the code and install it following the :ref:`manual_install` instructions.
+Download archive
+================
 
-.. note::
-
-    This is the only way to install the HRM on platforms not supported by the installation script or to tweak the set up beyond the set of options provided by it.
+Download the latest version of HRM, unpack the code and install it following the :ref:`manual_install` instructions.
 
 |linux| `Download the archive <https://sourceforge.net/projects/hrm/files/latest/download>`_.
+
+.. note::
+	
+	We are working on installation scripts to automate the process!
 
 Clone git repository
 ====================
