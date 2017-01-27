@@ -51,9 +51,9 @@ Replace ``hrm`` with your own user name and group if different.
 Processing server
 -----------------
 
-Log on to HRM as admin and go to `Servers and GPUs` |ServersGPUs22x22|. Add an entry for every
-machine, specifiying the absolute Huygens Core path on that machine, as well
-as the machine name. 
+Log on to HRM as admin and go to `Servers and GPUs` |ServersGPUs22x22|.
+Add an entry for every processing machine, specifiying the absolute Huygens
+Core path on that machine, as well as the machine name. 
 
 .. note::
 
