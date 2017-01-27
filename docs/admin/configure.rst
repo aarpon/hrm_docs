@@ -29,3 +29,4 @@ Optional configuration steps
    export_data_share
    configure_omero
    enable_gpus
+   add_servers
