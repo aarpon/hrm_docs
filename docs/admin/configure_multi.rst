@@ -48,16 +48,38 @@ On **Machine 1**, configure the HRM as usual (as in the single-server configurat
 
 Replace ``hrm`` with your own user name and group if different.
 
-Processing server
------------------
+Processing servers
+------------------
 
 Log on to HRM as admin and go to `Servers and GPUs` |ServersGPUs22x22|.
-Add an entry for every processing machine, specifiying the absolute Huygens
-Core path on that machine, as well as the machine name. 
+Register the processing servers in HRM by adding an entry for every processing
+machine, specifiying the absolute Huygens Core path on that machine, as well
+as the machine name.
 
-.. note::
+GPUs
+----
 
-    If you have more than one processing server, add each server to the table in a separate row.
+The `Servers and GPUs` |ServersGPUs22x22| form allows you to also register GPUs in HRM for
+further parallelization of the HRM processing queue.
+
+To register a machine with no GPU cards then any GPU ID will do in the form. Use, for example, GPU ID = 0.
+
+To register a machine with one or more GPU cards simply add different entries
+for the GPUs of the same machine. As follows,
+
+|ServersGPUsScreenshot|
+
+HRM will consider each GPU card as a separate server. The HRM queue will
+process as many images in parallel as the total number of registered GPU cards.
+
+The GPU IDs can be retrieved with the NVIDIA tools or via HuCore. For example,
+the following machine reports 2 GPUs with IDs 0 (Titan X) and 1 (Quadro P5000):
+
+.. code-block:: sh
+
+   > hucore
+   % huOpt gpu -query names
+       {0: TITAN X (Pascal)} {1: Quadro P5000} 
 
 Data folder
 -----------
