@@ -112,19 +112,8 @@ Version upgrade
           images and source files.
 
 To upgrade to a new version, download the latest version `from here
-<http://sourceforge.net/projects/hrm/files/latest/download>`_. Next, replace
-the old source files with the new ones.
-For Linux you can use something like:
-
-.. code-block:: sh
-                
-   cp -r /path/to/newHRM /path/to/oldHRM*
-
-Because the configuration file is not included in new versions, the existing
-configuration file will be conserved.
-
-For intructions on **specific version upgrades** please refer to `this page
-at the HRM project's site <http://huygens-remote-manager.readthedocs.org/en/latest/upgrade.html>`_.
+<http://sourceforge.net/projects/hrm/files/latest/download>`_. Then follow the
+intructions on **specific version upgrades** `here <http://huygens-remote-manager.readthedocs.org/en/latest/admin/upgrade.html>`_.
 
 
 Database update
