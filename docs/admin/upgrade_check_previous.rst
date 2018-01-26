@@ -18,6 +18,19 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_server_config.inc
 
+3.3.x to 3.4
+------------
+
+Checking the 3.3 files with the 3.4.x ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+  Check against HRM v3.4.x.
+  * * * Error: variable useDESEncryption must be removed from the configuration files!
+  * * * Error: variable 'authenticateAgainst' must be an array!
+  * * * Moreover, please change 'MYSQL' into 'integrated'.
+  Check completed with errors! Please fix your configuration!
+
 3.2.x to 3.3
 ------------
 

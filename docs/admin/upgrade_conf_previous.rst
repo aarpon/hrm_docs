@@ -11,6 +11,30 @@ Update the configuration files (previous versions)
 
 .. warning:: These instructions refer to older versions of HRM!
 
+3.3 to 3.4
+----------
+
+$authenticateAgainst
+--------------------
+
+The support for various :ref:`authentication mechanisms <configure_auth>` was extended in HRM 3.4. This comes with a change 
+in configuration: the  ``$authenticateAgainst`` variable is **now an array** and its values have also changed (although, temporarily, 
+the old ones are still supported). Example:
+
+.. code-block:: php
+
+  <?php
+  ...
+  $authenticateAgainst = array("active_dir", "integrated");
+  ...
+
+$useDESEncryption
+-----------------
+
+The configuration variable ``$useDESEncryption`` (that was not used) must be removed from the configuration files!
+
+.. note:: Please follow :ref:`these instructions <upgrade_conf_previous>` **first** if you are upgrading from older versions.
+
 3.2 to 3.3
 ----------
 

@@ -11,6 +11,15 @@ Clean up previous installations (previous versions)
 
 .. warning:: These instructions refer to older versions of HRM!
 
+3.3 to 3.4
+----------
+
+In version 3.4, we started a major reorganization of the code structure of HRM and it is therefore highly recommended **not to extract the new archive on top of the old one**. 
+
+Please rename the old hrm folder, extract the code into a fresh ``${HRM_ROOT}`` and move the configuration files from the old ``config`` subfolder into the new ``${HRM_ROOT}/config``.   
+
+You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.service`` scripts.
+
 3.2 to 3.3
 ----------
 

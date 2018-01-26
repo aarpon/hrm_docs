@@ -1,6 +1,8 @@
 .. include:: global_directives.inc
 
-.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below. The deprecated fall-back mechanism of version 3.2 **no longer works in 3.3 and 3.4**!
+.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below. The deprecated fall-back mechanism of version 3.2 **no longer works in 3.3, 3.4 and 3.5**!
+
+.. note:: These instructions always explain the steps required to upgrade from **last stable release** to **current stable release**. However, each section also provides links to instructions for older versions.
 
 ***************
 Version upgrade
@@ -63,7 +65,7 @@ the website or github as explained in :ref:`downloading the standard archive
 Clean up previous installations
 ===============================
 
-In version 3.4, we started a major reorganization of the code structure of HRM and it is therefore highly recommended **not to extract the new archive on top of the old one**. 
+Because of changes in tre structure of the code and of the external dependences (starting from version 3.4), we highly recommend **not to extract the new archive on top of the old one**. 
 
 Please rename the old hrm folder, extract the code into a fresh ``${HRM_ROOT}`` and move the configuration files from the old ``config`` subfolder into the new ``${HRM_ROOT}/config``.   
 
@@ -74,26 +76,7 @@ You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.serv
 Update the configuration files
 ==============================
 
-$authenticateAgainst
---------------------
-
-The support for various :ref:`authentication mechanisms <configure_auth>` was extended in HRM 3.4. This comes with a change 
-in configuration: the  ``$authenticateAgainst`` variable is **now an array** and its values have also changed (although, temporarily, 
-the old ones are still supported). Example:
-
-.. code-block:: php
-
-  <?php
-  ...
-  $authenticateAgainst = array("active_dir", "integrated");
-  ...
-
-$useDESEncryption
------------------
-
-The configuration variable ``$useDESEncryption`` (that was not used) must be removed from the configuration files!
-
-.. note:: Please follow :ref:`these instructions <upgrade_conf_previous>` **first** if you are upgrading from older versions.
+There were no configuration changes between versions 3.4.x and 3.5.x of HRM.
 
 Check the configuration files
 =============================
@@ -106,17 +89,14 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     php resources/checkConfig.php config/hrm_server_config.inc
     php resources/checkConfig.php config/hrm_client_config.inc
 
-Checking the 3.3 files with the 3.4.x ``checkConfig.php`` script will result in the following output:
+There were no configuration changes between versions 3.4.x and 3.5.x of HRM. The output of the ``checkConfig.php`` script should be:
 
 .. code-block:: sh
 
-  Check against HRM v3.4.x.
-  * * * Error: variable useDESEncryption must be removed from the configuration files!
-  * * * Error: variable 'authenticateAgainst' must be an array!
-  * * * Moreover, please change 'MYSQL' into 'integrated'.
-  Check completed with errors! Please fix your configuration!
+  Checking against HRM v3.5.x.
+  Check completed successfully! Your configuration file is valid!
 
-Please make sure to fix all problems. The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
+Please make sure to fix all problems you might have! The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
 
 .. note:: Please follow :ref:`these instructions <upgrade_check_previous>` **first** if you are upgrading from older versions.
 
@@ -128,6 +108,8 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | HRM version | Database version |
 +=============+==================+
+| 3.5         | 16               |
++-------------+------------------+
 | 3.4         | 15               |
 +-------------+------------------+
 | 3.3         | 14               |
@@ -149,7 +131,7 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 15 in one step.
+.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 16 in one step.
 
 The following describes two possible ways to update the database.
 
@@ -162,11 +144,11 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.4 is number 15.
-    Current database revision is number 14.
+    Needed database revision for HRM v3.5 is number 16.
+    Current database revision is number 15.
     Updating...
 
-    Database successfully updated to revision 15.
+    Database successfully updated to revision 16.
 
 The database is now at the latest revision.
 
