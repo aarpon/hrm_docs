@@ -201,7 +201,7 @@ This is information needed for the web interface and the queue manager to login 
     $decompressBin['tar.gz'] = "cd %DEST% \n /usr/bin/tar xzf ";
     ?>
 
-If $allowHttpTransfer is true, the results of deconvolution can be downloaded through the web interface. If it is false, then the results can only be accessed by other means (e.g. via network shares). Downloaded files are compressed to reduce bandwidth load: $compressExt defines the type of compression (default is zip).
+If ``$allowHttpTransfer`` is true, the results of deconvolution can be downloaded through the web interface. If it is false, then the results can only be accessed by other means (e.g. via network shares). Downloaded files are compressed to reduce bandwidth load: ``$compressExt`` defines the type of compression (default is zip).
 
 .. note::
 
