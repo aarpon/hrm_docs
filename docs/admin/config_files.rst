@@ -120,8 +120,8 @@ The web interface uses hucore for some operations on the input and result files 
     $image_user = "hrm";
     $image_group = "hrm";
 
-    // File server base folder (without trailing /)
-    $image_folder = "/path/to/hrm_data";
+    // File server base folder
+    $image_folder = "/data/hrm_data";
 
     // File server image source folder
     $image_source = "src";
@@ -129,8 +129,8 @@ The web interface uses hucore for some operations on the input and result files 
     // File server image destination folder
     $image_destination = "dst";
 
-    // File server base folder as seen from the Huygens server machines (with trailing /)
-    $huygens_server_image_folder = "/path/to/hrm_data/";
+    // File server base folder as seen from the Huygens server machines
+    $huygens_server_image_folder = "/data/hrm_data";
     ?>
     
 This is information needed for the web interface and the queue manager to login to the file server. If the file server is not on the same machine, its host name must be given.
