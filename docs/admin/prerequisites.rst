@@ -65,7 +65,7 @@ If you plan to install the HRM in a specific user directory, use ``/home/<hrm_us
 Apache2 access handling
 -----------------------
 
-HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to configure Apache2 to use them by setting the ``AllowOverride`` and ``Require`` directives in ``/etc/apache2/sites-available/000-default`` |ubuntu| resp. ``/etc/httpd/conf/httpd.conf`` |fedora|. Please notice that the ``Require`` directive is required from Apache version 2.4.
+HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to configure Apache2 to use them by setting the ``AllowOverride`` and ``Require`` directives in ``/etc/apache2/sites-available/000-default.conf`` |ubuntu| resp. ``/etc/httpd/conf/httpd.conf`` |fedora|. Please notice that the ``Require`` directive is required from Apache version 2.4.
 
 .. code-block:: sh
 
