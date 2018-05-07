@@ -70,7 +70,7 @@ Here we will assume a one-machine installation, and we will therefore show just 
     $db_name = "hrm";
 
     // The name of the user with which the database is accessed
-    $db_user = "dbuser";
+    $db_user = "hrm";
 
     // The password of the account with which the database is accessed
     $db_password = "dbpasswd";
