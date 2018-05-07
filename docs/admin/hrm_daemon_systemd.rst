@@ -22,7 +22,7 @@ used with systemd directly.
 Change the default configuration in the unit file
 -------------------------------------------------
 
-By default, the unit file is to configured to run as the ``hrm`` user and to depend on 
+By default, the unit file is configured to run as the ``hrm`` user and to depend on
 ``mysql.service``. If needed, you can change those values before you proceed with the installation.
 
 .. code-block:: sh
