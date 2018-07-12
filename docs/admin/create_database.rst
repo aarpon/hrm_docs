@@ -22,6 +22,12 @@ and assign the corresponding permissions.
 MySQL
 -----
 
+.. note::
+
+    On Ubuntu 18.04 LTS you might need to follow `these instructions to set 
+    the mysql root password <https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux>`_.  
+
+
 The following command will create a new MySQL user ``hrm`` and grant the
 permissions to a database ``hrm@localhost`` using the ``mysql`` command line
 tool. Of course, you can also use a database management tool like
@@ -64,7 +70,7 @@ done using the following commands:
 
 .. _`create-database`:
 
-Ob Ubuntu MD5 host authentication is enabled by default.
+On Ubuntu MD5 host authentication is enabled by default.
 
 Create or update the database 
 =============================
