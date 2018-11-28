@@ -44,6 +44,12 @@ Install the sphinx RTD theme with:
 To upgrade it, use:
 
     (sudo) pip install --upgrade sphinx_rtd_theme
+    
+Extension Installation
+---------------------- 
+To have tabs for code blocks concerning different distributions:
+    
+    pip install sphinx-tabs
 
 Building the docs
 -----------------

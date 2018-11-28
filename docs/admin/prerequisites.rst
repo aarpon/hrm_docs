@@ -12,11 +12,7 @@ The HRM requires a few prerequisites for its functions.
 Operating system
 ================
 
-The HRM should work on any recent Linux distribution, but we only support |ubuntu| **Ubuntu** (with its derivatives) and |fedora| **Fedora** (that will apply to **RHEL** and **CentOS**). Distribution-specific differences are marked in the following with the corresponding distribution logos.
-
-.. warning::
-
-    Please notice that with release 3.1, we dropped support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
+If you have not yet read the conventions, please consult the :ref:`conventions-os`.
 
 .. note::
 
@@ -42,30 +38,67 @@ The HRM is an interface to Scientific Volume Imaging's `Huygens Core <http://www
 Apache2 web server
 ==================
 
-|ubuntu|
 
-.. code-block:: sh
+.. tabs::
+   .. tab:: Debian
 
-    sudo apt-get install apache2
+      .. code-block:: sh
 
-|fedora|
+          sudo apt-get install apache2
 
-.. code-block:: sh
+   .. tab:: RHEL
 
-    sudo yum install httpd
+      .. code-block:: sh
+
+          sudo yum install httpd
 
 Web pages can be installed globally or per-user.
 
-|ubuntu| The Apache2 global document root is ``/var/www``, or ``/var/www/html`` in more recent versions (14.04 LTS and newer). 
+.. tabs::
+    .. tab:: Debian
 
-|fedora| The Apache2 global document root is ``/var/www/html``.
+        The Apache2 global document root is ``/var/www``, or ``/var/www/html`` in more recent versions (14.04 LTS and newer).
+
+    .. tab:: RHEL
+
+        The Apache2 global document root is ``/var/www/html``.
 
 If you plan to install the HRM in a specific user directory, use ``/home/<hrm_user>/public_html``.
 
 Apache2 access handling
 -----------------------
 
-HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure to configure Apache2 to use them by setting the ``AllowOverride`` and ``Require`` directives in ``/etc/apache2/sites-available/000-default.conf`` |ubuntu| resp. ``/etc/httpd/conf/httpd.conf`` |fedora|. Please notice that the ``Require`` directive is required from Apache version 2.4.
+HRM uses ``.htaccess`` files to prevent access to configuration files.
+Make sure to configure Apache2 to use them by setting the *AllowOverride* and *Require* directives in configuration files.
+
+.. tabs::
+    .. tab:: Debian
+
+        ``/etc/apache2/sites-available/000-default.conf``
+
+        If you are installing HRM in your user directory also put the directives in
+        ``/etc/apache2/mods-available/userdir.conf``
+        Make sure to enable the userdir mod first by running the follwing line in the shell:
+
+        .. code-block:: sh
+
+            sudo a2enmod userdir
+
+        See also `Enabling use of Apache htaccess files <https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles>`_.
+
+    .. tab:: RHEL
+
+        ``/etc/httpd/conf/httpd.conf``
+
+        If you are installing HRM in your user directory also put the directives in:
+        ``/etc/httpd/conf.d/userdir.conf``
+
+        See also `Apache Userdir with SELinux on Fedora 23/22, CentOS/RHEL 7.2/6.7/5.11 <http://www.if-not-true-then-false.com/2010/enable-apache-userdir-with-selinux-on-fedora-centos-red-hat-rhel/>`_.
+
+
+
+Please notice that the ``Require`` directive is required from Apache version 2.4. Here is the code snippet for the config
+files
 
 .. code-block:: sh
 
@@ -75,41 +108,50 @@ HRM uses ``.htaccess`` files to prevent access to configuration files. Make sure
         Require all granted
     </Directory>
 
-If you are installing the HRM in your user dir, make sure set the same directives in ``/etc/apache2/mods-available/userdir.conf`` |ubuntu| resp. ``/etc/httpd/conf.d/userdir.conf`` |fedora|. (|Ubuntu| Make sure to enable the userdir mod first by running ``sudo a2enmod userdir`` in the shell).
 
-|ubuntu| See also `Enabling use of Apache htaccess files <https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles>`_.
-
-|fedora| See also `Apache Userdir with SELinux on Fedora 23/22, CentOS/RHEL 7.2/6.7/5.11 <http://www.if-not-true-then-false.com/2010/enable-apache-userdir-with-selinux-on-fedora-centos-red-hat-rhel/>`_.
-
-PHP |ge| 5.5
-============
-
-The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
+PHP
+===
 
 .. note::
 
     Minimum required PHP version is **5.5**.
 
-|ubuntu|
+The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
 
-.. code-block:: sh
 
-    sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json php5-xml
+.. tabs::
+    .. tab:: Debian
 
-.. note::
+        .. code-block:: sh
 
-    JSON support for PHP was moved into a separate package ``php5-json`` in Ubuntu 14.04LTS; in older versions, JSON support is part of the core ``php5`` package.
+            sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json php5-xml
 
-|fedora|
+        .. note::
 
-.. code-block:: sh
+            JSON support for PHP was moved into a separate package ``php5-json`` in Ubuntu 14.04LTS; in older versions, JSON support is part of the core ``php5`` package.
 
-    sudo yum install php php-cli php-common php-process php-json php-xml
+    .. tab:: RHEL
+
+        .. code-block:: sh
+
+            sudo yum install php php-cli php-common php-process php-json php-xml
 
 Production php.ini settings
 ---------------------------
 
-Please configure the HRM machine for production. Edit the ``php.ini`` configuration file (|ubuntu| ``/etc/php5/apache2/php.ini``, |fedora| ``/etc/php.ini``) and set at least the values below (more information can be found in the ``php.ini`` file itself).
+Please configure the HRM machine for production. Edit the ``php.ini`` configuration file
+
+.. tabs::
+    .. tab:: Debian
+
+        ``/etc/php5/apache2/php.ini``
+
+    .. tab:: RHEL
+
+        ``/etc/php.ini``
+
+
+ In there set at least the values below (more information can be found in the ``php.ini`` file itself).
 
 .. code-block:: sh
 
@@ -125,17 +167,18 @@ The HRM officially supports two relational databases: **MySQL** and **PostgreSQL
 MySQL
 -----
 
-|ubuntu|
+.. tabs::
+    .. tab:: Debian
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo apt-get install php5-mysql mysql-server
+            sudo apt-get install php5-mysql mysql-server
 
-|fedora|
+    .. tab:: RHEL
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo yum install php-mysql php-pdo mysql-server
+            sudo yum install php-mysql php-pdo mysql-server
 
 .. note::
 
@@ -144,17 +187,18 @@ MySQL
 PostgreSQL
 ----------
 
-|ubuntu|
+.. tabs::
+    .. tab:: Debian
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo apt-get install php5-pgsql postgresql
+            sudo apt-get install php5-pgsql postgresql
 
-|fedora|
+    .. tab:: RHEL
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo yum install php-pgsql postgresql-server postgresql-contrib
+            sudo yum install php-pgsql postgresql-server postgresql-contrib
 
 You will need to manually enable PostgreSQL:
 
@@ -175,17 +219,18 @@ Some additional information:
 
 If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ldap_auth`, you will need to install the php-ldap package as well:
 
-|ubuntu|
+.. tabs::
+    .. tab:: Debian
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo apt-get install php5-ldap
+            sudo apt-get install php5-ldap
 
-|fedora|
+    .. tab:: RHEL
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo yum install php-ldap 
+            sudo yum install php-ldap
 
 Sendmail (postfix)
 ==================
@@ -194,17 +239,18 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
     "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them." `More... <http://www.php.net/mail>`_
 
-|ubuntu|
+.. tabs::
+    .. tab:: Debian
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo apt-get install postfix
+            sudo apt-get install postfix
 
-|fedora|
+    .. tab:: RHEL
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo yum install postfix
+            sudo yum install postfix
 
 .. note::
 
@@ -248,17 +294,18 @@ Compressors
 
 The HRM compresses files to be downloaded (such as deconvolution results). Several options are possible (and more can be added in the configuration files), but by default the HRM uses ``zip``.
 
-|ubuntu|
+.. tabs::
+    .. tab:: Debian
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo apt-get install zip
+            sudo apt-get install zip
 
-|fedora|
+    .. tab:: RHEL
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo yum install zip
+            sudo yum install zip
 
 
 .. _prerequisites-omero:
@@ -298,27 +345,28 @@ downloaded OMERO "server" package into a subdirectory of ``/opt/OMERO``, as
 follows:
 
 
-|ubuntu|
+.. tabs::
+    .. tab:: Debian
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo apt-get install python-zeroc-ice libicessl34 openjdk-7-jre
-    wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
-    sudo mkdir -pv /opt/OMERO
-    cd /opt/OMERO
-    sudo unzip /tmp/OMERO.server.zip
-    rm /tmp/OMERO.server.zip
+            sudo apt-get install python-zeroc-ice libicessl34 openjdk-7-jre
+            wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
+            sudo mkdir -pv /opt/OMERO
+            cd /opt/OMERO
+            sudo unzip /tmp/OMERO.server.zip
+            rm /tmp/OMERO.server.zip
 
-|fedora|
+    .. tab:: RHEL
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo yum install ice-python java-1.7.0-openjdk
-    wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
-    sudo mkdir -pv /opt/OMERO
-    cd /opt/OMERO
-    sudo unzip /tmp/OMERO.server.zip
-    rm /tmp/OMERO.server.zip
+            sudo yum install ice-python java-1.7.0-openjdk
+            wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
+            sudo mkdir -pv /opt/OMERO
+            cd /opt/OMERO
+            sudo unzip /tmp/OMERO.server.zip
+            rm /tmp/OMERO.server.zip
 
 .. note::
 
@@ -354,14 +402,15 @@ library is available on the system, the connector will generate parameter
 summaries and attach them as a human-readable comment to any image uploaded to
 OMERO.
 
-|ubuntu|
+.. tabs::
+    .. tab:: Debian
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo apt-get install python-imaging python-bs4
+            sudo apt-get install python-imaging python-bs4
 
-|fedora|
+    .. tab:: RHEL
 
-.. code-block:: sh
+        .. code-block:: sh
 
-    sudo yum install python-imaging python-beautifulsoup4
+            sudo yum install python-imaging python-beautifulsoup4

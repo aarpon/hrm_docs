@@ -17,7 +17,7 @@ import sys, os
 # Install it with:
 #    (sudo) pip install sphinx_rtd_theme
 
-found_html_theme = 'default'
+found_html_theme = 'classic'
 found_html_theme_path = []
 if os.environ.get('USE_LOCAL_SPHINX_RTD_THEME') is not None:
     try:
@@ -43,7 +43,7 @@ else:
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = ['sphinx_tabs.tabs']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

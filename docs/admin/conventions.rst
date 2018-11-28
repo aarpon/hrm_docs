@@ -21,22 +21,39 @@ practice") or use the ``su -`` command to switch to the root user.
 
 |note| We highly recommend the usage of ``sudo`` though!
 
+
+.. _conventions-os:
+
 Operating systems
 =================
 
-We will use visual shortcuts to refer to the operating system families supported by the HRM, as in the following table:
+The recommended linux distributions are:
 
 +--------------+----------------------------------------+
-| Icon         | Corresponding operating system family  |
+| Icon         | Distribution name                      |
 +==============+========================================+
-| |fedora|     | Fedora, CentOS, RHEL                   |
+| |debian|     | Debian                                 |
 +--------------+----------------------------------------+
-| |ubuntu|     | Ubuntu and derivatives                 | 
+| |ubuntu|     | Ubuntu                                 |
++--------------+----------------------------------------+
+| |centos|     | CentOS                                 |
++--------------+----------------------------------------+
+| |fedora|     | Fedora (not tested for HRM ver. > 3.5) |
++--------------+----------------------------------------+
+
+We will use tabs to group the code and instructions for respective operating system families
+
++--------------+----------------------------------------+
+| Tab name     | Corresponding operating system family  |
++==============+========================================+
+| Debian       | Debian, Ubuntu                         |
++--------------+----------------------------------------+
+| RHEL         | Fedora, CentOS                         |
 +--------------+----------------------------------------+
 
 .. warning::
 
-    Support for |macosx| Mac OS X was dropped in HRM version 3.1.
+    Please notice that with release 3.1, we dropped support for |macosx| **Mac OS X**. HRM 3.0 is still known to work on Mac OS X from 10.5 (Leopard) onward, but no effort will be made to make future versions of the HRM compatible with Mac OS X. Also notice that the HRM was never tested on Mavericks.
 
 Variables
 =========
