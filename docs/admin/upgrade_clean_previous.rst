@@ -50,7 +50,7 @@ sure it is executable. This can be done using the following commands:
     sudo cp -v $HRM_RESRC/sysv-init-lsb/hrmd /etc/init.d/hrmd
     sudo chmod +x /etc/init.d/hrmd
 
-.. _update_hrm_data_permissions:
+.. _update_hrm_data_permissions_previous:
 
 Update the data folder permissions
 ==================================
