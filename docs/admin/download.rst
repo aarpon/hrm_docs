@@ -32,6 +32,7 @@ Clone git repository
 ====================
 
 |github| If you want to follow the HRM development, you can also `clone <https://github.com/aarpon/hrm>`_ the read-only HRM repository from github.
+Find more detailed instructions in the  :ref:`installation pages<install-hrm-git>`.
 
 .. warning::
 

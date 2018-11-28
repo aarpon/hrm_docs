@@ -34,6 +34,9 @@ where ``x.y.z`` is a placeholder for the HRM version.
 
     You can of course extract or clone the HRM somewhere else: just add the location to the Apache2 configuration (``httpd.conf``).
 
+
+.. _`install-hrm-git`:
+
 ... Using Git
 =============
 
