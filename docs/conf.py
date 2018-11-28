@@ -19,17 +19,14 @@ import sys, os
 
 found_html_theme = 'classic'
 found_html_theme_path = []
-if os.environ.get('USE_LOCAL_SPHINX_RTD_THEME') is not None:
-    try:
-        import sphinx_rtd_theme
-        found_html_theme = 'sphinx_rtd_theme'
-        found_html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-        print("Using local sphinx RTD theme.")
-    except:
-        print("Could not import sphinx RTD theme. Using default.")
-        pass
-else:
-    print("Using default theme.")
+try:
+    import sphinx_rtd_theme
+    found_html_theme = 'sphinx_rtd_theme'
+    found_html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    print("Using local sphinx RTD theme.")
+except:
+    print("Could not import sphinx RTD theme. Using default.")
+    pass
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -59,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Huygens Remote Manager'
-copyright = u'2013 - 2016, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer'
+copyright = u'2013 - 2019, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
