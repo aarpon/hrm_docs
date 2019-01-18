@@ -11,6 +11,11 @@ Update the configuration files (previous versions)
 
 .. warning:: These instructions refer to older versions of HRM!
 
+3.4 to 3.5
+----------
+
+There were no changes in the configuration files between versions 3.4 and 3.5 of HRM.
+
 3.3 to 3.4
 ----------
 
