@@ -40,8 +40,8 @@ Clone git repository
     $ ./setup/setup_release.sh
 
 
-|github| If you want to follow the HRM development, you can checkout the read-only HRM repository and
-and configure your working copy for development.
+|github| If you want to follow the **HRM development**, you can checkout the read-only HRM repository and
+and configure your working copy for development:
 
 .. code:: bash
 
