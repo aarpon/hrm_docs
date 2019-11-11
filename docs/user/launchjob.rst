@@ -13,7 +13,7 @@ Launch a job
    step4
    step5
 
-To start a new deconvolution and analysis job click on `Start a job`
+To start a new deconvolution and analysis job click on `Launch jobs`
 |StartJob22x22|. Starting a new job is split into 5 main steps:
 
 * Selection of **raw images**.

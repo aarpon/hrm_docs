@@ -43,7 +43,7 @@ device:
 Deconvolve
 ==========
 
-To submit a deconvolution job proceed to `Start a job` |StartJob22x22| from
+To submit a deconvolution job proceed to `Launch jobs` |StartJob22x22| from
 the home panel. The process of submitting the job is split into the following
 5 steps:
 
