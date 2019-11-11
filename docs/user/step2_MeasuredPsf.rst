@@ -18,13 +18,13 @@ When presented with the **Distilled PSF file selection**-window,
 |DistilledPsfFileSelection1|
 			
 			
-browse for the distilled PSF appropriate for the channel(s) your image contains.
+browse for the distilled PSF appropriate for the channel(s) of the image.
 
 |DistilledPsfFileSelectionBrowse|
 			
 			
 
-Select your file of choice and click close. Repeat for all channels.
+Choose the PSF fileS and click close. Repeat for all channels.
 
 |DistilledPsfFileSelection2|
 			
@@ -32,7 +32,8 @@ Select your file of choice and click close. Repeat for all channels.
 
 Afterwards, press save and return to the image parameter selection page.
 
-.. note:: Appropriate PSFs are highlighted in black.
+.. note:: Files that can't work as PSFs for the selected image(s) are
+          crossed off and displayed in red and.
           
 		  
 

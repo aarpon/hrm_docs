@@ -11,6 +11,6 @@ directly.
 
 |ObjectiveTypeScreenshot|
 
-.. note:: Notice that specific file formats allow you to leave this parameter
+.. note:: Several file formats allow you to leave this parameter
           empty. If you would like to do so please click on |ResetChoice22x22|
           to remove any previous choices.

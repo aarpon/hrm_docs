@@ -12,6 +12,5 @@ directly.
 
 |SampleMediumScreenshot|
 
-.. note:: Notice that specific file formats allow you to leave this parameter
-          empty. If you would like to do so please click on |ResetChoice22x22|
-          to remove any previous choices.
+.. note::  Some file formats may report this value in the meta data. To remove
+           any previous selection click on |ResetChoice22x22|.

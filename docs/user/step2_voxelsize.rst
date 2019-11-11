@@ -18,8 +18,8 @@ Ideally, the optimal voxel sizes are calculated before acquiring the images.
 By doing so, one can ensure that the images are compliant with the Nyquist
 criterion. Click on |NyquistCalculatorLink| to determine how large the
 voxel sizes should be. By using these values, there will be **no lost
-information** during the image acquisition and the deconvolution will do a nice
-job in restoring your images.
+information** during the image acquisition and the deconvolution will be able
+to restore the original signal better.
 
 If the optimal voxel sizes have not been determined before the acquisition
 stage one can calculate the resulting sizes in **widefield** and
