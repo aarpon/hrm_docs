@@ -11,7 +11,7 @@ Once logged in HRM, the home panel is displayed, like this:
 From this page the user can manage deconvolution jobs as well as other
 HRM administrative tasks. The following shortcuts are available:
 
-* |StartJob22x22| **Start a job** : Start a new deconvolution or a batch
+* |StartJob22x22| **Launch jobs** : Start a new deconvolution or a batch
   of deconvolutions.
 * |JobQueue22x22| **Queue status** : See all jobs. Manage owned jobs.
 * |RawImages22x22| **Raw images**: Upload new data for deconvolution.

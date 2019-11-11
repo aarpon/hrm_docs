@@ -13,26 +13,20 @@ conditions. Moreover, the parameter templates can be shared among HRM users,
 fostering collaboration and re-usage of good image settings.
 
 
-Notice that the following selections are possible at this stage:
+The following selections are possible at this stage:
 
 * **Admin image templates**: parameter templates created by the HRM administrator to
   be used as references. They can be copied and edited by the HRM users. In
   order to use them, they first need to be copied to **Your image templates**
   by using |DownArrow22x22|.
    
-* **Your image templates**: the image templates the user can actually use
+* **Your image templates**: the image templates the user can use
   directly. All templates in this area may be selected, edited, removed, etc.
-
-* **New/clone image template**: entry field for the name of a new parameter
-  template. First type a name for the new template and click on
-  |CreateTemplate22x22|. A new template will be created. HRM will present you
-  with empty template parameters so that meaningful values can be assigned
-  to them.
 
 
 .. note:: Notice that |CreateTemplate22x22| |EditTemplate22x22|
           |CloneTemplate22x22| |ShareTemplate22x22| |FavouriteTemplate22x22|
-          |DeleteTemplate22x22| show tooltips stating their action w.r.t
+          |DeleteTemplate22x22| show tooltips describing their actions w.r.t
           templates. Namely, **create**, **edit**, **clone**, **share**,
           **mark as favourite** and **delete**.
 
