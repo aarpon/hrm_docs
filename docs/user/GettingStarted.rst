@@ -67,15 +67,14 @@ the home panel. The process of submitting the job is split into the following
   shared templates with you. Notice that choosing the correct parameters
   is **absolutely crucial** for obtaining high-quality deconvolution results.
 
-  **Use existing parameter template (easy)**: When selecting an existing
+  **Use an existing parameter template (easy)**: When selecting an existing
   parameter template the parameter contents are displayed on the right hand
   side panel. Make sure that the  microscope type and the number of channels of
   the selected template match those of the images to deconvolve.
 
-  **Create a new parameter template (elaborated)**: Type a name for the new
-  parameter template in the `New/clone image template name` field, then click
-  the create button |CreateTemplate22x22|. The template editor opens, select
-  the correct
+  **Create a new parameter template (elaborated)**: Click the `New template`
+  button |CreateTemplate22x22|. Type a name for the new template and click
+  'Create'. The template editor opens, select the correct
   number of channels and PSF type. Move on to the optical parameters and
   select the correct microscope type. For a detailed explanation on the
   remaining parameters please refer to section :ref:`advanced_deconvolution`.
@@ -90,7 +89,7 @@ the home panel. The process of submitting the job is split into the following
   (see :ref:`signal_to_noise_ratio` for further help).
   
   **Create a new parameter template (elaborated)**:
-  Follow the instructions of the previoius step to create a new template.
+  Follow the instructions of the previous step to create a new template.
   Once in the template editor select a deconvolution algorithm (CMLE is 
   a good choice) and an SNR. Follow the instructions of the embedded SNR
   estimator for a hint on the SNR of your images. Set the background mode to
@@ -118,7 +117,7 @@ the home panel. The process of submitting the job is split into the following
 
 * |LaunchJob48x48| **Step 5/5 - Launch job**: Select the output file format
   for the restored images. ICS and HDF5 are the recommended formats because
-  they provide good dynamic range and the necessary metadata infrastructure to
+  they provide good dynamic range and the necessary meta data infrastructure to
   save all the image parameters. Plus, they allow for good compression levels
   that minimize the amount of disk space needed for storage. Next, review the
   parameter summaries as well as the image selection. If all the settings are
@@ -177,7 +176,7 @@ Tips & Tricks
   2, 3 or 4.
 * To optimize your deconvolution results it is necessary to understand the
   different properties of your image and some of the mechanisms behind
-  deconvolution. If you’ve followed this guide, many properties have been
+  deconvolution. If you have followed this guide, many properties have been
   assigned default values. We would like to encourage the users to read
   into and explore different settings, which will help you improve your
   deconvolution results. Some more in-depth knowledge is given in section
