@@ -13,7 +13,7 @@ detection**, **Continous wave non gated detection** or **Off/Confocal**.
 
 |STEDModeScreenshot|
 
-.. note:: Notice that **STED and confocal microscopy are often combined**. That's
+.. note:: **STED and confocal microscopy are often combined**. That's
           why even if the selected microscope type is STED it's still possible
           to set specific channels as **confocal** at this point.
 
@@ -28,8 +28,8 @@ Channel 1 is grayed out in these figures because it was set as confocal.
 
 |STEDWavelengthScreenshot|
 
-The STED immunity fraction tells Huygens which percentage of the fluorescent
-molecules are not susceptible to the STED laser. Typical values are in the
+The STED immunity fraction tells Huygens the percentage of fluorescent
+molecules that are not susceptible to the STED laser. Typical values are in the
 range 0% to 10%.
 
 |STEDImmunityScreenshot|

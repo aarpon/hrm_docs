@@ -8,8 +8,7 @@ Spherical aberration is mainly caused by a **mismatch** between the refractive
 indexes of the objective immersion medium and the sample embedding medium.
 
 HRM will automatically detect this mismatch and ask whether the aberration
-should be corrected for as long as a theoretical PSF is used during
-deconvolution. This question is skipped otherwise.
+should be corrected for when using a theoretical PSF.
 
 .. note:: Spherical aberration can be corrected for by creating different
           theoretical PSFs (with slightly changing shapes) at different
@@ -40,10 +39,12 @@ The `Advanced correction` will further enable a number of advanced options.
   for each Z brick in which the original data is split.
 * **Depth-dependent PSF slice by slice**: a different PSF will be generated
   for each slice.
-* **PSF at user-defined depth**: the user can define a specific depth for
-  the generation of a PSF which will be used for all depths.
+* **Depth-dependent PSF on few slabs**: several PSFs will be generated
+  for each Z brick. This option is memory-consuming but the best choice when
+  the spherical aberration is very strong. 
 
-.. note:: Notice that splitting the original data into bricks while
+
+.. note:: Splitting the original data into bricks while
           deconvolving not only helps to correct for spherical aberration
           but it also **minimizes the amount of RAM memory**
           needed for deconvolution.
