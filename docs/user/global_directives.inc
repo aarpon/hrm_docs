@@ -106,6 +106,7 @@
 .. |ColocTableScreenshot|        image:: images/ColocTableScreenshot.png
 .. |2DHistogramScreenshot|       image:: images/2DHistogramScreenshot.png
 .. |ParameterSummaryScreenshot|  image:: images/ParameterSummaryScreenshot.png
+.. |ScalingFactorsScreenshot|    image:: images/ScalingFactorsScreenshot.png
 .. |HuygensLogLink|              image:: images/HuygensLogLink.png
 .. |AddOtherFileLink|            image:: images/AddOtherFileLink.png
 .. |Omero22x22|                  image:: images/Omero22x22.png

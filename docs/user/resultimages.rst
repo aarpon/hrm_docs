@@ -33,15 +33,17 @@ Comparing MIPs
 ==============
 
 A comparison of the Maximum Intensity Projections of the raw image and the
-restored image shows the effect of deconvolution.
+restored image shows the effect of deconvolution. This can be assessed in both
+XY and XZ projections.
 
 |MIPResultScreenshot|
 
 Comparing SFPs
 ==============
 
-A comparison of the Simulated Fluorescense Process in both the raw image and the
-restored image also shows the effect of deconvolution and difference in noise.
+A comparison of the `Simulated Fluoresence Process <http://www.svi.nl/SFP>`_
+in both the raw image and the restored image also shows the effect of
+deconvolution and difference in noise.
 
 |SFPResultScreenshot|
 
@@ -69,7 +71,7 @@ computer.
 
 |MoviesLinks|
 
-.. note:: Notice how useful these automatically made movies are for
+.. note:: These automatically made movies are quite useful for
           prepraring presentations. 
 
 Colocalization
@@ -105,6 +107,12 @@ metadata.
 Notice that green entries indicate parameters loaded from the image metadata,
 whereas violet entries indicate parameters defined by the user.
 
+If the image had to be scaled to fit in the output file format (some formats
+have very limited dynamic ranges) HRM will show the scaling factors for
+further quantification:
+
+|ScalingFactorsScreenshot|
+
 Huygens log
 ===========
 
@@ -112,5 +120,5 @@ The exact steps followed by Huygens to process the data can be found on the
 Huygens log, under the link |HuygensLogLink| .
 
 
-.. note:: Notice that all these results along with the deconvolved dataset
-          can be **donwloaded** by clicking |DownloadResults22x22| .
+.. note:: All these results can be **donwloaded** along with the deconvolved
+          dataset by clicking |DownloadResults22x22| at the top of the page.
