@@ -4,8 +4,6 @@
 The role of the administrator in HRM
 ************************************
 
-To download the latest version of HRM please click `here
-<http://sourceforge.net/projects/hrm/files/latest/download>`_.
 
 Technical features
 ==================
@@ -16,7 +14,7 @@ manager**.
 The **web interface** allows:
 
 *  the management of users by the system administrator;
-*  the management of parameter sets that all users can copy or use
+*  the management of parameter sets (templates) that all users can copy or use
    directly;
 *  the creation of deconvolution jobs, including image selection,
    setting microscopic, restoration and analysis parameters;
@@ -52,7 +50,7 @@ To install HRM the following pre-requisites (at least) must be fulfilled:
   perform deconvolution on the raw images. Note that Huygens Core needs a
   license.
 * **Apache2 web server**.
-* **PHP version** |ge| **5.3**:
+* **PHP version** |ge| **5.6**:
   Both the HRM queue manager and the web interface are written in PHP and need
   PHP to operate.
 * **MySQL or PostgreSQL**:
@@ -103,7 +101,13 @@ only:
   for those beginning users who need assistance to start deconvolving their
   raw data. Global templates can be created at any of the states where
   templates are required: :ref:`step2`, :ref:`step3` and :ref:`step4`.
-  
+
+* **Servers & GPUs**: Add and remove processing machines and GPU cards. This
+  has an effect on the total number of jobs that can run in parallel.
+
+* **HuCore licenses**: Get an overview of the installed Huygens license. 
+
+
 
 Version upgrade
 ===============
@@ -166,6 +170,10 @@ automatically generates a Huygens Batch template for Huygens Core that
    Function,
 -  deconvolves the image using the restoration parameters chosen by the
    user,
+-  optionally applies a chromatic aberration correction,
+-  optionally stabilizes the time series,
+-  optionally computes the colocalization coefficients of multi-channel images
+   and generates colocalization maps,
 -  stores the resulting restored image in a destination directory,
 -  generates several visualizations of the raw and deconvolved
    images for the user to see the effect of the restoration,
@@ -178,8 +186,8 @@ e-mail announcing the end of the job and its status. The administrator
 may configure this.
 
 Multiple jobs can be processed in parallel depending on how HRM is
-configured, the multiprocessing capabilities of the server and the
-number of available computation servers.
+configured, the multiprocessing capabilities of the server, the
+number of available computation servers and GPU cards.
 
 
 
@@ -210,17 +218,26 @@ It could happen that the queue breaks or freezes and the database is polluted wi
 
 To fix this, one must currently go and clean up a few places in the hrm database as well as restart the queue manager. Here is a short checklist of what to do.
 
-1. shut down the hrm daemon
+1. shut down the hrm daemon by using
 
 .. code-block:: sh
 
    sudo /etc/init.d/hrmd stop
+       
+or 
+
+.. code-block:: sh
+
+   sudo systemctl stop hrmd
+
 
 2. go to the ``hrm`` database and do the following
 
    a. Remove broken or killed jobs from the ``job_*`` tables
    b. Make sure that the ``server`` table has a *status* of 'free' and *job* set to NULL
 
+   Both measures can be achieved with the following SQL script:
+      
 .. code-block:: sql
 
    DELETE FROM job_analysis_parameter WHERE setting IN (SELECT id FROM job_queue WHERE status="broken" OR status="kill");   
