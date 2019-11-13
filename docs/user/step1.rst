@@ -1,5 +1,7 @@
 .. include:: global_directives.inc
 
+.. _step1:
+   
 Select images (1/5)
 ===================
 
