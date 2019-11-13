@@ -6,12 +6,15 @@
 Colocalization coefficients
 ===========================
 
-HRM can report all the colocalization coefficients that are most broadly used in fluorescence microscopy.
+HRM can report all the colocalization coefficients that are most widely used
+in fluorescence microscopy.
 
-Select here which colocalization coefficients should be used to quantify the amount of overlap between channels. 
+Select here the colocalization coefficients for the analysis:
 
 |ColocCoefficientsScreenshot|
 
-A colocalization report with all these findings will be ready when the job is finished.
+A colocalization report with all these findings will be ready when the job is
+finished.
 
-For further information on specific colocalization coefficients please read `this article from the SVI wiki <http://www.svi.nl/ColocalizationCoefficients>`_.
+For further information on specific colocalization coefficients please read
+`this article from the SVI wiki <http://www.svi.nl/ColocalizationCoefficients>`_.
