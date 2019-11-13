@@ -123,4 +123,10 @@
 .. |ParamPreviewScreenshot|      image:: images/ParamPreviewScreenshot.png
 .. |ThemeChoiceScreenshot|       image:: images/ThemeChoiceScreenshot.png
 .. |ThemesScreenshot|            image:: images/ThemesScreenshot.png
-
+.. |SPIMExcModeScreenshot|       image:: images/SPIMExcModeScreenshot.png
+.. |SPIMGaussWidthScreenshot|    image:: images/SPIMGaussWidthScreenshot.png
+.. |SPIMFocusScreenshot|         image:: images/SPIMFocusScreenshot.png
+.. |SPIMCenterScreenshot|        image:: images/SPIMCenterScreenshot.png
+.. |SPIMNAScreenshot|            image:: images/SPIMNAScreenshot.png
+.. |SPIMFillScreenshot|          image:: images/SPIMFillScreenshot.png
+.. |SPIMDirectionScreenshot|     image:: images/SPIMDirectionScreenshot.png

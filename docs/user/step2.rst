@@ -61,5 +61,6 @@ The following parameters can be edited in a template.
    step2_MeasuredPsf
    step2_pinhole
    step2_sted
+   step2_spim
    step2_sphericalaberration
              
