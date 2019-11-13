@@ -12,8 +12,8 @@ or exit the lens. It is directly linked to the resolution of the objective.
 
 |NAScreenshot|
 
-Tipically, you can find the NA **engraved** on the objective next to the
+Usually, the NA can be found **engraved** on the objective next to the
 magnification.
 
-.. note:: Notice that depending on the file format that you are using the
-          parameter may be skipped or must be provided.
+.. note:: Depending on the selected file format this
+          parameter may be skipped, as explained in :ref:`image_metadata`.

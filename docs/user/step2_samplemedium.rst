@@ -12,5 +12,5 @@ directly.
 
 |SampleMediumScreenshot|
 
-.. note::  Some file formats may report this value in the meta data. To remove
-           any previous selection click on |ResetChoice22x22|.
+.. note:: Few file formats report this value in the meta data.
+          To leave empty please click on |ResetChoice22x22|.
