@@ -11,14 +11,14 @@ Tips & Tricks
   set the contents in your raw folder.
   
 * **File uploads**: Add more files to your selection by clicking
-  |AddOtherFileLink| .
+  |AddOtherFileLink|. Use drag&drop from your desktop into the browser.
 
 * **Image previews**: Select an image and click on `Generate preview` to
   visualize the image contents plus the dimensions and sampling sizes. The
   colours used in the preview depict the wavelengths provided by the image
   metadata.
 
-* **Voxel sizes**: Whenever possible HRM shows highlighted in yellow the
+* **Voxel sizes**: Whenever possible HRM highlights in yellow the
   ideal voxel sizes according to the Nyquist criterion.
 
 * **SNR estimation**: Notice that it's possible to zoom in the thumbnails
@@ -28,12 +28,13 @@ Tips & Tricks
 * **SNR estimation**: The SNR can highly influence the deconvolution result.
   On the one hand, if the deconvolution result looks too smooth and details
   are missing, a higher SNR value can be used. On the other hand, if the
-  result looks too grainy one can try to use a lower SNR value.
+  result looks too grainy a lower SNR value may be better.
 
 * **Colocalization**: Filter out unsignificant colocalization coefficients
-  by using the `Highlight` button and entry field of the  colocalization
-  section in the detailed view.
+  by using the `Highlight` button of the  colocalization section in the
+  detailed view.
 
-* **Select images (1/5)**: Tick the "Automatically load file series if
-  supported" checkbox if several indepent files should add up to a single image.
+* **Select images (1/5)**: Tick the "When applicable, load file series
+  automatically" checkbox if several independent files should be loaded into
+  a single image.
   
