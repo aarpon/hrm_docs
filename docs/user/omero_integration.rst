@@ -26,7 +26,8 @@ images in the OMERO repository that you are allowed to visualize, like this:
 |OmeroTreeScreenshot|
 
 .. note:: The OMERO credentials and file tree will be used throughout the HRM
-          session, after that they will be deleted.
+          session. When the session is closed HRM will remove the OMERO
+          credentials from the cache.
 
 The OMERO tree is requested automatically only the first time in every HRM
 session. This saves waiting time in subsequent import/export operations with
@@ -35,10 +36,12 @@ OMERO. To force a tree rebuild click |Refresh22x22| .
 The following actions are possible:
 
 * **Import data from OMERO**: In the `Raw images` |RawImages22x22| folder
-  select an image from the OMERO tree and click |UpArrow22x22| . The image
-  will be imported in HRM with extension .ome.tiff.
+  select an image from the OMERO tree and click |UpArrow22x22|. The image
+  will be imported to HRM with extension .ome.tiff. Select more images
+  with Ctrl + click for importing multiple images in one go.
 
 * **Export data to OMERO**: In the `Results` |Results22x22| folder select the
   HRM image to be exported. Select the target OMERO dataset. Click
   |DownArrow22x22| . The image will be attached to the OMERO project with an
-  annotation stating all the parameters used for deconvolution.
+  annotation describing all the parameters used for deconvolution. Select more
+  images from the Results folder for exporting multiple images in one go.
