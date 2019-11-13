@@ -6,40 +6,42 @@
 Launch the job (5/5)
 ====================
 
-In this last step several summaries display all the parameters with which the
-job will be submitted.
+In this last step several summaries display all the chosen parameters.
 
-
-The output format of the restored images can be adapted with the top drop-down widget.
+Also, the output format for the result images can be selected at the top
+of the page:
 
 |OutputFormatScreenshot|
 
 * **ICS**, **ICS2** and **HDF5**: support multi-channel images, 32 bit dynamic
   range (preserve all image details) and all the microscopic metadata
-  parameters. Furthermore, their compression level is very good, since
+  parameters. Furthermore, they support high compression levels. Since
   deconvolved images often contain background regions with near 0 intensities
-  the compression algorithms typically do a great job. These are the
-  **recommended** formats for further work with Huygens.
+  the compression algorithms usualy manage to greatly reduce the size of the
+  images. For all these reasons these are the formats **recommended** for
+  further work with Huygens.
 
 * **TIFF**: this format can be used for analysis such as counting or
-  segmentation, but **not** for quantification.
+  segmentation. For quantification one needs to scale the TIFF image back
+  to its original dynamic range. The corresponding scaling factors are
+  reported by HRM and can be found in :ref:`parameter_summaries`.
 
 * **IMS**, **OME-XML**, **R3D**: formats offered for compatibility with
   other programs.
 
-Next, review the parameters. First the image paramters. Notice that it's
-possible to go back to the corresponding template editor by clicking on
-|ImageParametersLink| :
+Next, review all the selected parameters before submitting the job to the
+server. It's possible to go back to the image, restoration, and analysis
+template editors by clicking on the corresponding links.
+
+Click on |ImageParametersLink| to change the image parameters.
 
 |SummaryParamsScreenshot|
 
-Then the restoration parameters. Click on |RestorationParametersLink| to
-change the parameter selection.
+Click on |RestorationParametersLink| to change the restoration parameters.
 
 |SummaryParamsScreenshot2|
 
-And lastly the analysis parameters. Click on |AnalysisParametersLink| for
-further changes.
+Click on |AnalysisParametersLink| to change the analysis parameters.
 
 |SummaryParamsScreenshot3|
 
@@ -48,5 +50,5 @@ To change the image selection click on |SelectedImagesLink|.
 
 |SelectedImagesScreenshot|
 
-Finally **submit** the job by pressing |SubmitJob30x22| .
+Finally **submit** the job by pressing |SubmitJob30x22|.
 

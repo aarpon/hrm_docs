@@ -91,6 +91,8 @@ any two channels is strongest.
 |ColocMapsScreenshot2|
 
 
+.. _parameter_summaries:
+
 Parameter summaries
 ===================
 
