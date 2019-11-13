@@ -118,4 +118,7 @@
 .. |DistilledPsfFileSelection1|   image:: images/DistilledPsfFileSelection1.png
 .. |DistilledPsfFileSelectionBrowse|   image:: images/DistilledPsfFileSelectionBrowse.png
 .. |DistilledPsfFileSelection2|   image:: images/DistilledPsfFileSelection2.png
+.. |AdminTemplatesScreenshot|    image:: images/AdminTemplatesScreenshot.png
+.. |UserTemplatesScreenshot|     image:: images/UserTemplatesScreenshot.png
+.. |ParamPreviewScreenshot|      image:: images/ParamPreviewScreenshot.png
 

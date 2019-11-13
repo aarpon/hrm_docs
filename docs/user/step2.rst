@@ -9,31 +9,37 @@ In step 2 - |ImageParameters22x22| **Image Parameters** - the microscope
 settings can be specified and saved. The image parameters are grouped in
 templates. A parameter template can be reused in future deconvolution jobs.
 This will be useful when there are more images recorded under the same
-conditions. Moreover, the parameter templates can be shared among HRM users,
-fostering collaboration and re-usage of good image settings.
+conditions. Moreover, the parameter templates can be shared with one or more
+HRM users.
 
 
 The following selections are possible at this stage:
 
-* **Admin image templates**: parameter templates created by the HRM administrator to
-  be used as references. They can be copied and edited by the HRM users. In
-  order to use them, they first need to be copied to **Your image templates**
-  by using |DownArrow22x22|.
+* **Admin image templates**: parameter templates created by the HRM
+  administrator to be used as references. These templates cannot be changed
+  directly. Instead, they can be copied to **Your image templates** (see below)
+  for  further changes. For copying to **Your image templates** select the
+  admin template and use |DownArrow22x22|.
+
+
+|AdminTemplatesScreenshot|
    
-* **Your image templates**: the image templates the user can use
+* **Your image templates**: the image templates that the user can use
   directly. All templates in this area may be selected, edited, removed, etc.
 
+|UserTemplatesScreenshot|
 
-.. note:: Notice that |CreateTemplate22x22| |EditTemplate22x22|
+.. note:: |CreateTemplate22x22| |EditTemplate22x22|
           |CloneTemplate22x22| |ShareTemplate22x22| |FavouriteTemplate22x22|
           |DeleteTemplate22x22| show tooltips describing their actions w.r.t
           templates. Namely, **create**, **edit**, **clone**, **share**,
           **mark as favourite** and **delete**.
 
-An image parameter template consists of a number of relevant microscopic
-parameters. These provide Huygens Core with information about the images
-that will be deconvolved. To get a **preview** of the template contents select
+An image parameter template consists of several microscopic pararameters
+relevant for deconvolution. To get a **preview** of the template contents select
 the template, the contents will be displayed on the right panel.
+
+|ParamPreviewScreenshot|
 
 .. note:: When editing a template help links |HelpLink22x22| are displayed at
           key locations to point you to specific articles of the SVI-wiki.

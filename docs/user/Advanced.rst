@@ -17,16 +17,22 @@ Advanced deconvolution in HRM
    tipstricks_advanced
 
 
-This section explains in detail how to create and launch
-deconvolution jobs in HRM. It also describes how to inspect deconvolution
-results and how to view user statistics.
+This section explains how to:
 
-For the sake of clarity, it is recommended to emulate the explanations here
-in an actual HRM installation. For instructions on how to request an HRM
-account please see :ref:`create_an_account`.
+* upload/download images.
 
-With an HRM account deconvolution and analysis jobs can be run remotely,
-in batch mode, with just a few clicks.
+* create and launch deconvolution jobs.
+
+* inspect deconvolution results.
+
+* access colocalization coefficients and maps.
+
+* import/export data from/to OMERO.
+
+* view user statistics.
+
+For instructions on how to request an HRM account please see
+:ref:`create_an_account`.
 
 
 
