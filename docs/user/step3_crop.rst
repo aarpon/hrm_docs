@@ -15,4 +15,6 @@ Select from:
 
 * **Do not crop the image**: if computation time is not an issue.
 
-.. note:: Notice that the **time needed** to deconvolve an image increases more than proportionally with the **image volume**. Thus, cropping the image will speed up its restoration and the overall HRM queue.
+.. note:: The **time needed** to deconvolve an image increases more than
+   proportionally with the **image volume**. Thus, cropping the image will
+   speed up its restoration and the processing of the HRM queue.
