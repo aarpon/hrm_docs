@@ -121,4 +121,6 @@
 .. |AdminTemplatesScreenshot|    image:: images/AdminTemplatesScreenshot.png
 .. |UserTemplatesScreenshot|     image:: images/UserTemplatesScreenshot.png
 .. |ParamPreviewScreenshot|      image:: images/ParamPreviewScreenshot.png
+.. |ThemeChoiceScreenshot|       image:: images/ThemeChoiceScreenshot.png
+.. |ThemesScreenshot|            image:: images/ThemesScreenshot.png
 

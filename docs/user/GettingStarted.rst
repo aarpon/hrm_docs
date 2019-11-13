@@ -8,6 +8,22 @@ Here is a quick guide to get you started with the HRM/HuCore deconvolution. In
 order to optimize results, please refer to section
 :ref:`advanced_deconvolution`.
 
+
+.. _select_theme:
+
+Select UI theme in HRM
+========================
+
+HRM offers two UI themes (dark, light) that can be selected from the login page.
+
+|ThemeChoiceScreenshot|
+
+|ThemesScreenshot|
+
+The theme selected at the moment of logging in is preserved during the entire
+session. In this manual screenshots from both themes are displayed
+interchangeably. 
+
 .. _create_an_account:
 
 Create an account in HRM
