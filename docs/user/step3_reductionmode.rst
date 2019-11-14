@@ -3,7 +3,7 @@
 .. _reduction_mode:
 
 Array Detector Reduction Mode
-=====================
+=============================
 
 This option will only be shown when restoring Array Detector images
 (Airyscan, SPAD, etc).
