@@ -1,6 +1,8 @@
 .. include:: global_directives.inc
 
-             
+.. _voxel_size:
+
+   
 Voxel Size
 ==========
 
@@ -28,4 +30,11 @@ sizes are calculated from the CCD camera element, the objective
 magnification, etc., although no optimal voxel size can be guaranteed.
       
 .. note:: Make sure to set a voxel size consistent with the Nyquist criterion.
-          Undersampled images will often show artifacts after deconvolution. 
+          Undersampled images will often show artifacts after deconvolution.    
+
+Lastly, for deconvolving time series set the time interval between subsequent
+frames.
+
+|TimeIntervalScreenshot|
+
+Among other things, this will help HRM to decide when to stabilize the image.

@@ -2,7 +2,7 @@
 
 .. _z_stabilization:
 
-Stabilization along Z
+Stabilization in Z
 =====================
 
 This option will only be shown when restoring STED images (including STED 3D).
