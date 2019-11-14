@@ -1,5 +1,7 @@
 .. include:: global_directives.inc
 
+.. _number_channels:
+   
 Number of channels
 ==================
 

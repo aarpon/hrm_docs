@@ -137,3 +137,6 @@
 .. |TStabilizationScreenshot|    image:: images/TStabilizationScreenshot.png
 .. |TStabilizationScreenshot2|   image:: images/TStabilizationScreenshot2.png
 .. |TStabilizationScreenshot3|   image:: images/TStabilizationScreenshot3.png
+.. |ChromaticScreenshot|         image:: images/ChromaticScreenshot.png
+.. |ChromaticScreenshot2|        image:: images/ChromaticScreenshot2.png
+.. |ChromaticScreenshot3|        image:: images/ChromaticScreenshot3.png

@@ -47,6 +47,7 @@ The following parameters can be edited in a template.
    step3_reductionmode
    step3_background
    step3_stopcriteria
+   step3_chromatic
    step3_tstabilization
 
 
