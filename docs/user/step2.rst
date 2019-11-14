@@ -29,11 +29,13 @@ The following selections are possible at this stage:
 
 |UserTemplatesScreenshot|
 
-.. note:: |CreateTemplate22x22| |EditTemplate22x22|
-          |CloneTemplate22x22| |ShareTemplate22x22| |FavouriteTemplate22x22|
+.. note:: |CreateTemplate22x22| |EditTemplate22x22| |CloneTemplate22x22|
+          |FromImage22x22| |HuygensTemplate22x27|
+          |ShareTemplate22x22| |FavouriteTemplate22x22|
           |DeleteTemplate22x22| show tooltips describing their actions w.r.t
-          templates. Namely, **create**, **edit**, **clone**, **share**,
-          **mark as favourite** and **delete**.
+          templates. Namely, **create**, **edit**, **clone**,
+          **import from an image**, **import from a Huygens template**,
+          **share**, **mark as favourite** and **delete**.
 
 An image parameter template consists of several microscopic pararameters
 relevant for deconvolution. To get a **preview** of the template contents select

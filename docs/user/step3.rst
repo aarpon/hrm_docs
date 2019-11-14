@@ -20,10 +20,11 @@ The following selections are possible at this stage:
   removed, etc.
 
 
-.. note:: |CreateTemplate22x22| |EditTemplate22x22|
-          |CloneTemplate22x22| |ShareTemplate22x22| |FavouriteTemplate22x22|
+.. note:: |CreateTemplate22x22| |EditTemplate22x22| |CloneTemplate22x22|
+          |HuygensTemplate22x27| |ShareTemplate22x22| |FavouriteTemplate22x22|
           |DeleteTemplate22x22| show tooltips describing their actions w.r.t
-          templates. Namely, **create**, **edit**, **clone**, **share**,
+          templates. Namely, **create**, **edit**, **clone**,
+          **import from a Huygens template**, **share**,
           **mark as favourite** and **delete**.
 
 A restoration parameter template consists of a number of options which
