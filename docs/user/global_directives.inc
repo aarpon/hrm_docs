@@ -130,3 +130,4 @@
 .. |SPIMNAScreenshot|            image:: images/SPIMNAScreenshot.png
 .. |SPIMFillScreenshot|          image:: images/SPIMFillScreenshot.png
 .. |SPIMDirectionScreenshot|     image:: images/SPIMDirectionScreenshot.png
+.. |ReductionModeScreenshot|     image:: images/ReductionModeScreenshot.png
