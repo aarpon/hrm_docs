@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. warning:: As of version 3.2.0, the HRM expects specific file permissions on the file area! Please see :ref:`update_hrm_data_permissions` below. The deprecated fall-back mechanism of version 3.2 **no longer works in 3.3, 3.4, 3.5 and 3.6!**!
+.. _`upgrade-hrm`:
 
 .. note:: These instructions always explain the steps required to upgrade from **last stable release** to **current stable release**. However, each section also provides links to instructions for older versions.
 
@@ -76,7 +76,7 @@ You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.serv
 Update the configuration files
 ==============================
 
-There were no configuration changes between versions 3.4.x and 3.5.x of HRM.
+There were no configuration changes between versions 3.6.x and 3.7.x of HRM.
 
 Check the configuration files
 =============================
@@ -89,15 +89,12 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     php resources/checkConfig.php config/hrm_server_config.inc
     php resources/checkConfig.php config/hrm_client_config.inc
 
-There were two configuration changes between versions 3.5.x and 3.6 of HRM. The output of the ``checkConfig.php`` script should be:
+There were no configuration changes between versions 3.6.x and 3.7 of HRM. The output of the ``checkConfig.php`` script should be:
 
 .. code-block:: sh
 
-  Checking against HRM v3.6.x.
-
-  * * * Error: variable default_output_format not set or empty.
-  * * * Error: variable min_free_mem_launch_requirement not set or empty.
-  Check completed with errors! Please fix your configuration!
+  Checking against HRM v3.7.
+  Check completed successfully! Your configuration file is valid!
 
 Please make sure to fix all problems you might have! The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
 
@@ -111,6 +108,8 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | HRM version | Database version |
 +=============+==================+
+| 3.7         | 18               |
++-------------+------------------+
 | 3.6         | 17               |
 +-------------+------------------+
 | 3.5         | 16               |
@@ -136,7 +135,7 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 17 in one step.
+.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 18 in one step.
 
 The following describes two possible ways to update the database.
 
@@ -149,11 +148,11 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.6 is number 17.
-    Current database revision is number 16.
+    Needed database revision for HRM v3.7 is number 18.
+    Current database revision is number 17.
     Updating...
 
-    Database successfully updated to revision 17.
+    Database successfully updated to revision 18.
 
 The database is now at the latest revision.
 

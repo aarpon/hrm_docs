@@ -11,8 +11,8 @@ Clean up previous installations (previous versions)
 
 .. warning:: These instructions refer to older versions of HRM!
 
-3.4 to 3.5
-----------
+3.4 and newer
+-------------
 
 It is highly recommended **not to extract the new archive on top of the old one**. 
 

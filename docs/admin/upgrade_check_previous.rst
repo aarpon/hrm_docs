@@ -18,6 +18,19 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_server_config.inc
 
+3.5.x to 3.6
+------------
+
+Checking the 3.5 files with the 3.6.x ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+  Checking against HRM v3.6.x.
+
+  * * * Error: variable default_output_format not set or empty.
+  * * * Error: variable min_free_mem_launch_requirement not set or empty.
+  Check completed with errors! Please fix your configuration!
+
 3.4.x to 3.5
 ------------
 
