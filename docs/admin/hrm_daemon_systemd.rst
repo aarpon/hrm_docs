@@ -42,6 +42,8 @@ By default, the unit file is configured to run as the ``hrm`` user and to depend
   ExecStart=/var/www/html/hrm/bin/hrm_queuemanager --detach
   Type=forking
   PIDFile=/var/log/hrm/hrmd.pid
+  Restart=always
+  RestartSec=10
 
   [Install]
   WantedBy=multi-user.target
