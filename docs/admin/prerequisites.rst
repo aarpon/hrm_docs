@@ -124,7 +124,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
         .. code-block:: sh
 
-            sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json php5-xml
+            sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json php5-xml php5-mbstring
 
         .. note::
 
@@ -134,7 +134,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
         .. code-block:: sh
 
-            sudo yum install php php-cli php-common php-process php-json php-xml
+            sudo yum install php php-cli php-common php-process php-json php-xml php-mbstring
 
 Production php.ini settings
 ---------------------------
