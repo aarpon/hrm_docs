@@ -97,6 +97,6 @@ If the database does not exist, it will be created using the information stored 
     mysql -u root -p
    # notify MySQL that the HRM user logs in with a password.
    ALTER USER '$HRMUSER'@'localhost' IDENTIFIED WITH mysql_native_password BY
-   'password';
+   '$HRMUSERPASSWORD';
    FLUSH PRIVILEGES;             
   
