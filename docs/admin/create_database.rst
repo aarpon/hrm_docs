@@ -95,10 +95,11 @@ If the database does not exist, it will be created using the information stored 
    
 .. code-block:: sh
    
-   # start the mysql command line client and connect as root:
-    mysql -u root -p
-   # notify MySQL that the HRM user logs in with a password.
+   # Start the mysql command line client and connect as root:
+   mysql -u root -p
+   # Notify MySQL that the HRM user logs in with a password.
    ALTER USER '$HRMUSER'@'localhost' IDENTIFIED WITH mysql_native_password BY
    '$HRMUSERPASSWORD';
-   FLUSH PRIVILEGES;             
+   FLUSH PRIVILEGES;
+   exit;
   
