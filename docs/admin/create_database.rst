@@ -85,3 +85,18 @@ of the database when the HRM version is upgraded:
     php dbupdate.php
 
 If the database does not exist, it will be created using the information stored in the ``$HRM_CONFIG/hrm_client_config.inc`` and filled with content for the latest revision. If it exists, it will be updated from whichever revision it currently has.
+
+
+.. note::
+
+    MySQL 8+ might return the following error: 'The server requested
+    authentication method unknown to the client'.
+    Which can be fixed by 
+.. code-block:: sh
+   # start the mysql command line client and connect as root:
+    mysql -u root -p
+   # notify MySQL that the HRM user logs in with a password.
+   ALTER USER '$HRMUSER'@'localhost' IDENTIFIED WITH mysql_native_password BY
+   'password';
+   FLUSH PRIVILEGES;             
+  
