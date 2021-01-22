@@ -91,8 +91,10 @@ If the database does not exist, it will be created using the information stored 
 
     MySQL 8+ might return the following error: 'The server requested
     authentication method unknown to the client'.
-    Which can be fixed by 
+    Which can be fixed by
+   
 .. code-block:: sh
+   
    # start the mysql command line client and connect as root:
     mysql -u root -p
    # notify MySQL that the HRM user logs in with a password.
