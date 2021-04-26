@@ -124,11 +124,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
         .. code-block:: sh
 
-            sudo apt-get install libapache2-mod-php5 php5 php5-cli php5-common php5-json php5-xml php5-mbstring
-
-        .. note::
-
-            JSON support for PHP was moved into a separate package ``php5-json`` in Ubuntu 14.04LTS; in older versions, JSON support is part of the core ``php5`` package.
+            sudo apt-get install libapache2-mod-php php php-cli php-common php-json php-xml php-mbstring
 
     .. tab:: RHEL
 
@@ -172,7 +168,7 @@ MySQL
 
         .. code-block:: sh
 
-            sudo apt-get install php5-mysql mysql-server
+            sudo apt-get install php-mysql mysql-server
 
     .. tab:: RHEL
 
@@ -192,7 +188,7 @@ PostgreSQL
 
         .. code-block:: sh
 
-            sudo apt-get install php5-pgsql postgresql
+            sudo apt-get install php-pgsql postgresql
 
     .. tab:: RHEL
 
@@ -224,7 +220,7 @@ If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ld
 
         .. code-block:: sh
 
-            sudo apt-get install php5-ldap
+            sudo apt-get install php-ldap
 
     .. tab:: RHEL
 
