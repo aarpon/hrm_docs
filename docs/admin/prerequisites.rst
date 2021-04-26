@@ -154,7 +154,7 @@ Please configure the HRM machine for production. Edit the ``php.ini`` configurat
         ``/etc/php.ini``
 
 
- In there set at least the values below (more information can be found in the ``php.ini`` file itself).
+In there set at least the values below (more information can be found in the ``php.ini`` file itself).
 
 .. code-block:: sh
 
