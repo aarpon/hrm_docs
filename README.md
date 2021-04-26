@@ -44,19 +44,23 @@ Install the sphinx RTD theme with:
 To upgrade it, use:
 
     (sudo) pip install --upgrade sphinx_rtd_theme
-    
+
 Extension Installation
----------------------- 
+----------------------
+
 To have tabs for code blocks concerning different distributions:
-    
+
     pip install sphinx-tabs
 
 Building the docs
 -----------------
 
-Set the environment variable `USE_LOCAL_SPHINX_RTD_THEME` to enable the local sphinx_rtd_theme. You can set it in `~/.bashrc` or `~/.bash_profile` or define it right before use:
+Set the environment variable `USE_LOCAL_SPHINX_RTD_THEME` to enable the
+local sphinx_rtd_theme. You can set it in `~/.bashrc` or `~/.bash_profile` or define
+it right before use:
 
     export USE_LOCAL_SPHINX_RTD_THEME=1
     make html
 
-The configuration file `conf.py` will fall back to the default theme if sphinx_rtd_theme is not found.
+The configuration file `conf.py` will fall back to the default theme if sphinx_rtd_theme
+is not found.

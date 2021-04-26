@@ -22,7 +22,7 @@ If you have not yet read the conventions, please consult the :ref:`conventions-o
     incompatibilities, which will prevent the HRM-OMERO connector from working.
     Details can be found in the `OMERO system administrator documentation
     <https://www.openmicroscopy.org/site/support/omero5/sysadmins/index.html>`_.
-    
+
     PLEASE MIND: this does **NOT** mean you should install HRM and OMERO on the
     **same machine**! You should just run the same Linux installation on them.
 
