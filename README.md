@@ -59,6 +59,7 @@ Set the environment variable `USE_LOCAL_SPHINX_RTD_THEME` to enable the
 local sphinx_rtd_theme. You can set it in `~/.bashrc` or `~/.bash_profile` or define
 it right before use:
 
+    cd docs/
     export USE_LOCAL_SPHINX_RTD_THEME=1
     make html
 
