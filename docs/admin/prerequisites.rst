@@ -331,8 +331,7 @@ default on Fedora and Ubuntu) and Java 7.
 
     It is **NOT** required to do any *installation* or *configuration* of the
     downloaded OMERO package! HRM just needs this package to communicate with
-    your existing OMERO server. Thus, this package allows HRM to communicate
-    with any OMERO server connected to the network.
+    your existing OMERO server over the network.
 
 Required OMERO Connector Components
 -----------------------------------
