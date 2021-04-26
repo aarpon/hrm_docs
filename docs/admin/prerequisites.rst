@@ -54,14 +54,7 @@ Apache2 web server
 
 Web pages can be installed globally or per-user.
 
-.. tabs::
-    .. tab:: Debian
-
-        The Apache2 global document root is ``/var/www``, or ``/var/www/html`` in more recent versions (14.04 LTS and newer).
-
-    .. tab:: RHEL
-
-        The Apache2 global document root is ``/var/www/html``.
+The Apache2 global document root is ``/var/www/html``.
 
 If you plan to install the HRM in a specific user directory, use ``/home/<hrm_user>/public_html``.
 
