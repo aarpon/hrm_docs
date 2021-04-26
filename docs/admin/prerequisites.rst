@@ -325,8 +325,8 @@ default on Fedora and Ubuntu) and Java 7.
 .. warning::
 
     The connector requires at least the **5.0 series** of OMERO, the latest
-    version is only tested against **OMERO 5.1** and newer!
-  
+    version is only tested against **OMERO 5.4** and newer!
+
 .. note::
 
     It is **NOT** required to do any *installation* or *configuration* of the
