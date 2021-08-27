@@ -35,3 +35,49 @@ the following machine reports 2 GPUs with ID 0 (Titan X) and ID 1 (Quadro P5000)
    > hucore
    % huOpt gpu -query names
        {0: TITAN X (Pascal)} {1: Quadro P5000} 
+
+
+Performance considerations
+==========================
+
+Every time Huygens is launched NVIDIA checks to compile some Huygens code for
+each of the GPUs in the system. This can easily take about 20 or more
+seconds. Whenever possible NVIDIA caches the compilation results to avoid
+repeating this time-consuming process. Thus, in practice, when the cache works
+properly, new compilations only occur once when a new NVIDIA driver is
+installed. That one time Huygens shows the message ‘Slow GPU initialization …’
+while launching.
+
+As it turns out the NVIDIA cache is user-dependent and is located in the ‘.nv’
+folder of the user running the process. Therefore, it is important that the
+home folders of the 2 HRM system users (‘hrm’ and ‘apache’) have the proper
+ownership, so that this cache can be created. Otherwise, **every single HRM job
+will incur in a significant performance penalty**.
+
+Thus, simply make sure the 2 following folders and ownerships are set
+properly:
+
+* Frontend machine:
+
+.. code-block:: sh
+   
+   # www-data in Ubuntu, apache in Fedora
+   sudo chown -R www-data:www-data /var/www
+
+.. code-block:: sh
+
+   Add 'export HOME=/var/www' after 'unset HOME' to '/etc/apache2/envvars'.
+
+   Restart Apache.
+
+                
+* Processing machine(s):
+
+.. code-block:: sh
+
+   sudo mkdir -p /home/hrm
+   sudo chown -R hrm:hrm /home/hrm
+
+
+As a reminder, also notice that each HRM job has a corresponding Huygens log in the HRM ‘Detailed view’. If the system is properly configured then the message ‘Slow GPU initialization’ should not be logged.
+
