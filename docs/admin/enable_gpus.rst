@@ -43,8 +43,8 @@ Performance considerations
 Every time Huygens is launched NVIDIA checks to compile some Huygens code for
 each of the GPUs in the system. This can easily take about 20 or more
 seconds. Whenever possible NVIDIA caches the compilation results to avoid
-repeating this time-consuming process. Thus, in practice, when the cache works
-properly, new compilations only occur once when a new NVIDIA driver is
+repeating this time-consuming process. Thus, in practice, if the cache works
+properly, new compilations only occur once, when a new NVIDIA driver is
 installed. That one time Huygens shows the message ‘Slow GPU initialization …’
 while launching.
 
