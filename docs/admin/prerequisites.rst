@@ -44,7 +44,7 @@ Apache2 web server
 
       .. code-block:: sh
 
-          sudo apt-get install apache2
+          sudo apt install apache2
 
    .. tab:: RHEL
 
@@ -107,9 +107,9 @@ PHP
 
 .. note::
 
-    Minimum required PHP version is **5.5**.
+    Minimum required PHP version is **7.4**.
 
-The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
+The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP module for Apache2, the queue manager requires the PHP command line interpreter.
 
 
 .. tabs::
@@ -117,7 +117,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
         .. code-block:: sh
 
-            sudo apt-get install \
+            sudo apt install \
                 libapache2-mod-php \
                 php \
                 php-cli \
@@ -147,7 +147,7 @@ Please configure the HRM machine for production. Edit the ``php.ini`` configurat
 .. tabs::
     .. tab:: Debian
 
-        ``/etc/php5/apache2/php.ini``
+        ``/etc/php/7.4/apache2/php.ini``
 
     .. tab:: RHEL
 
@@ -175,7 +175,7 @@ MySQL
 
         .. code-block:: sh
 
-            sudo apt-get install php-mysql mysql-server
+            sudo apt install php-mysql mysql-server
 
     .. tab:: RHEL
 
@@ -195,7 +195,7 @@ PostgreSQL
 
         .. code-block:: sh
 
-            sudo apt-get install php-pgsql postgresql
+            sudo apt install php-pgsql postgresql
 
     .. tab:: RHEL
 
@@ -227,7 +227,7 @@ If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ld
 
         .. code-block:: sh
 
-            sudo apt-get install php-ldap
+            sudo apt install php-ldap
 
     .. tab:: RHEL
 
@@ -247,7 +247,7 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
         .. code-block:: sh
 
-            sudo apt-get install postfix
+            sudo apt install postfix
 
     .. tab:: RHEL
 
@@ -302,7 +302,7 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 
         .. code-block:: sh
 
-            sudo apt-get install zip
+            sudo apt install zip
 
     .. tab:: RHEL
 
@@ -352,7 +352,7 @@ follows:
 
         .. code-block:: sh
 
-            sudo apt-get install python-zeroc-ice libicessl34 openjdk-7-jre
+            sudo apt install python-zeroc-ice libicessl34 openjdk-7-jre
             wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
             sudo mkdir -pv /opt/OMERO
             cd /opt/OMERO
@@ -409,7 +409,7 @@ OMERO.
 
         .. code-block:: sh
 
-            sudo apt-get install python-imaging python-bs4
+            sudo apt install python-imaging python-bs4
 
     .. tab:: RHEL
 
