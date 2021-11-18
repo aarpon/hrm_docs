@@ -17,10 +17,11 @@ Create a Unix group ``hrm`` and user ``hrm`` on the web server machine.
     $ sudo groupadd --system hrm
     $ sudo useradd hrm --system --gid hrm
 
-Create the log directory:
+Make sure the log and data directories exist:
 
 .. code-block:: sh
 
+    sudo mkdir ${HRM_DATA}
     sudo mkdir ${HRM_LOG}
 
 Make sure ``hrm`` owns (and has full read-write access) to HRM_DATA and HRM_LOG.
