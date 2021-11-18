@@ -13,7 +13,7 @@ In the following instructions, ``HRM_DATA`` points to the data folder that conta
 Create a Unix group ``hrm`` and user ``hrm`` on the web server machine.
 
 .. code-block:: sh
-                
+
     $ sudo groupadd --system hrm
     $ sudo useradd hrm --system --gid hrm
 
@@ -39,5 +39,5 @@ Add the Apache user (|ubuntu| www-data, |fedora| apache) to the ``hrm`` group:
 
     # www-data in Ubuntu, apache in Fedora
     sudo usermod www-data --append --groups hrm
-       
+
 .. note:: You might have to restart your server for the group changes to be activated.
