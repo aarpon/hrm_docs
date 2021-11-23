@@ -49,4 +49,17 @@ Add the Apache user to the ``hrm`` group:
 
             sudo usermod apache --append --groups hrm
 
-.. note:: You might have to restart your server for the group changes to be activated.
+Finally restart your web server for the group changes to be activated.
+
+.. tabs::
+    .. tab:: Debian
+
+        .. code-block:: sh
+
+            sudo systemctl restart apache2.service
+
+    .. tab:: RHEL
+
+        .. code-block:: sh
+
+            sudo systemctl restart httpd.service
