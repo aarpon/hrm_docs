@@ -16,10 +16,10 @@ and in ``$HRM_CONFIG/hrm_server_config.inc``.
     <?php
     ...
     //======================================================================
-    // HRM + Omero 
+    // HRM + OMERO
     //======================================================================
 
-    // Switch on/off (true/false) data transfers between HRM and Omero.
+    // Switch on/off (true/false) data transfers between HRM and OMERO.
     $omero_transfers = true;
 
     ?>
