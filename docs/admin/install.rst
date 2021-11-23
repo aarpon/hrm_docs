@@ -36,9 +36,18 @@ where ``x.y.z`` is a placeholder for the HRM version.
 The advantage of using git is that later :ref:`upgrades <upgrade-hrm>` are easy to perform, and all the modifications are documented this way.
 You need to install git on the machine.
 
-.. code-block:: sh
+.. tabs::
+    .. tab:: Debian
 
-    sudo apt-get install git
+        .. code-block:: sh
+
+            sudo apt install git
+
+    .. tab:: RHEL
+
+        .. code-block:: sh
+
+            sudo yum install git
 
 Then you can change directory to the hrm document root and check out the git repository.
 
