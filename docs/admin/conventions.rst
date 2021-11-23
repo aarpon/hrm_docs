@@ -98,7 +98,3 @@ accordingly:
     HRM_USER=$HRM_HOME/user                # HRM customization folder
     HRM_LOG=/var/log/hrm                   # HRM logging folder
     HRM_DATA=/data/hrm_data                # HRM data folder
-
-.. note::
-    
-    Please notice that ``$WWW_ROOT`` is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, ``$WWW_ROOT`` used to be ``/var/www``.
