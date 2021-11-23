@@ -55,6 +55,7 @@ Then you can change directory to the hrm document root and check out the git rep
 
     cd $WWW_ROOT
     git clone https://github.com/aarpon/hrm.git
+    cd hrm
     git tag -l
 
 In this project tags are used to mark the different version in the master branch. the last command (see above) gives you a list of all the
