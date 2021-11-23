@@ -34,11 +34,19 @@ This is done by setting the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
     sudo chown -R hrm:hrm ${HRM_LOG}
     sudo chmod -R u+s,g+ws ${HRM_LOG}
 
-Add the Apache user (|ubuntu| www-data, |fedora| apache) to the ``hrm`` group:
+Add the Apache user to the ``hrm`` group:
 
-.. code-block:: sh
+.. tabs::
+    .. tab:: Debian
 
-    # www-data in Ubuntu, apache in Fedora
-    sudo usermod www-data --append --groups hrm
+        .. code-block:: sh
+
+            sudo usermod www-data --append --groups hrm
+
+    .. tab:: RHEL
+
+        .. code-block:: sh
+
+            sudo usermod apache --append --groups hrm
 
 .. note:: You might have to restart your server for the group changes to be activated.
