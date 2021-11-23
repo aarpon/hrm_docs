@@ -6,10 +6,11 @@
 OMERO connector
 ***************
 
-Please make sure to have the :ref:`OMERO prerequisites <prerequisites-omero>`
-set up correctly. To enable the OMERO connector, then set the
-``$omero_transfers`` variable to ``true`` in ``$HRM_CONFIG/hrm_client_config.inc``
-and in ``$HRM_CONFIG/hrm_server_config.inc``.
+For setting up the `HRM-OMERO Connetor <https://pypi.org/project/hrm-omero/>`_ please
+first follow the installation instructions from the project's documentation.
+
+Then enable the OMERO connector by setting the value of ``$omero_transfers`` to ``true``
+in ``$HRM_CONFIG/hrm_client_config.inc`` and ``$HRM_CONFIG/hrm_server_config.inc``.
 
 .. code-block:: php
 
@@ -28,24 +29,11 @@ In addition, the following values need to be set accordingly in
 ``/etc/hrm.conf``. By default, those settings are commented out, so make sure
 to remove the comment sign ``#`` in front of those lines!
 
-Assuming your OMERO server is running on a host called
-``omero.mynetwork.xy`` and using the versions shown in the example in the
-:ref:`OMERO prerequisites <prerequisites-omero>`, this would look as below.
-Please make sure to adjust ``OMERO_PKG`` and ``OMERO_HOSTNAME`` so it is
-matching your current setup.
+Assuming your OMERO instance is running on host ``omero.mynetwork.xy`` and is using the
+default port ``4064``, this should look as shown below.
 
 .. code-block:: sh
-    
+
     # Interaction with OMERO (if switched on in hrm/config).
-    OMERO_PKG="/opt/OMERO/OMERO.server-5.0.3-ice34-b41.linux"
     OMERO_HOSTNAME="omero.mynetwork.xy"
     OMERO_PORT="4064"
-
-Optionally, you can configure the OMERO connector to look for :ref:`additional
-Python packages <prerequisites-omero-optional>` in a non-standard location
-(i.e. not within the regular ``PYTHONPATH``). To do so, uncomment the following
-variable and adjust it accordingly:
-
-.. code-block:: sh
-
-    PYTHON_EXTLIB="/opt/OMERO/python-extlibs"
