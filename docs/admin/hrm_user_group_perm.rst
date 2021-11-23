@@ -21,8 +21,8 @@ Make sure the log and data directories exist:
 
 .. code-block:: sh
 
-    sudo mkdir ${HRM_DATA}
-    sudo mkdir ${HRM_LOG}
+    sudo mkdir -pv ${HRM_DATA}
+    sudo mkdir -pv ${HRM_LOG}
 
 Make sure ``hrm`` owns (and has full read-write access) to HRM_DATA and HRM_LOG.
 This is done by setting the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
