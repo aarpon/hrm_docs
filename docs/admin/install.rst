@@ -12,7 +12,7 @@ Install the HRM
 ... From an Archive
 ===================
 
-Download or checkout the HRM as explained :ref:`here <download-hrm>`.
+Download or checkout the HRM as explained in :ref:`getting the HRM <download-hrm>`.
 
 Unpack the downloaded archive to web server document root directory. This is the directory where Apache2 finds the html and php files to serve.
 
