@@ -47,7 +47,7 @@ You need to install git on the machine.
 
         .. code-block:: sh
 
-            sudo yum install git
+            sudo dnf install git
 
 Then you can change directory to the hrm document root and check out the git repository.
 

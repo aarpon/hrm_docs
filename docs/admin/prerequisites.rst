@@ -50,7 +50,7 @@ Apache2 web server
 
       .. code-block:: sh
 
-          sudo yum install httpd
+          sudo dnf install httpd
 
           sudo systemctl enable httpd
 
@@ -132,7 +132,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
         .. code-block:: sh
 
-            sudo yum install \
+            sudo dnf install \
                 php \
                 php-cli \
                 php-common \
@@ -206,7 +206,7 @@ PostgreSQL
 
         .. code-block:: sh
 
-            sudo yum install php-pgsql postgresql-server postgresql-contrib
+            sudo dnf install php-pgsql postgresql-server postgresql-contrib
 
 You will need to manually enable PostgreSQL:
 
@@ -238,7 +238,7 @@ If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ld
 
         .. code-block:: sh
 
-            sudo yum install php-ldap
+            sudo dnf install php-ldap
 
 Sendmail (postfix)
 ==================
@@ -258,7 +258,7 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
         .. code-block:: sh
 
-            sudo yum install postfix
+            sudo dnf install postfix
 
 .. note::
 
@@ -313,7 +313,7 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 
         .. code-block:: sh
 
-            sudo yum install zip
+            sudo dnf install zip
 
 
 .. _prerequisites-omero:
