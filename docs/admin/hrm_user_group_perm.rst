@@ -15,7 +15,7 @@ Create a Unix group ``hrm`` and user ``hrm`` on the web server machine.
 .. code-block:: sh
 
     $ sudo groupadd --system hrm
-    $ sudo useradd hrm --system --gid hrm
+    $ sudo useradd hrm --system --gid hrm --create-home
 
 Make sure the log and data directories exist:
 
