@@ -181,7 +181,7 @@ MySQL
 
         .. code-block:: sh
 
-            sudo yum install php-mysql php-pdo mariadb-server
+            sudo dnf install php-mysqlnd php-pdo mariadb-server
 
 .. note::
 
