@@ -153,7 +153,8 @@ Please configure the HRM machine for production. Edit the ``php.ini`` configurat
 
     .. tab:: RHEL
 
-        ``/etc/php.ini``
+        The corresponding file is ``/etc/php.ini`` but at least as of RHEL 8 all
+        default settings are fine, so there shouldn't be anything to change.
 
 
 In there set at least the values below (more information can be found in the ``php.ini`` file itself).
