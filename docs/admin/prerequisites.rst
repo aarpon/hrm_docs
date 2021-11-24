@@ -52,6 +52,8 @@ Apache2 web server
 
           sudo yum install httpd
 
+          sudo systemctl enable httpd
+
 Web pages can be installed globally or per-user.
 
 The Apache2 global document root is ``/var/www/html``.
@@ -182,6 +184,8 @@ MySQL
         .. code-block:: sh
 
             sudo dnf install php-mysqlnd php-pdo mariadb-server
+
+            sudo systemctl enable mariadb
 
 .. note::
 
