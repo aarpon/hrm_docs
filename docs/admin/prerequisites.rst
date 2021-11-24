@@ -83,7 +83,7 @@ Make sure to configure Apache2 to use them by setting the *AllowOverride* and *R
 
     .. tab:: RHEL
 
-        ``/etc/httpd/conf/httpd.conf``
+        ``/etc/httpd/conf.d/hrm.conf`` (the file has to be created)
 
         If you are installing HRM in your user directory also put the directives in:
         ``/etc/httpd/conf.d/userdir.conf``
