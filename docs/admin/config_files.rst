@@ -213,6 +213,11 @@ If ``$allowHttpTransfer`` is true, the results of deconvolution can be downloade
 
     memory_limit = 128M
 
+.. warning::
+
+    Although HRM takes care of cleaning all temporary files after each download, it may happen that data is left behind if the process fails for any reason. Is is recommended that an HRM admin checks and if necessary cleans the ``${HRM_DATA}/.hrm_downloads`` folder from time to time.
+
+
 If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow for the uploading of the files to be deconvolved through the web interface. Multi-file upload (with directory structures) is indirectly possible by first compressing the files into an archive that the HRM will automatically extract at the end upload process. Default supported formats are ``zip``, ``tgz``, ``tar`` and ``tar.gz`` (as long as the corresponding executables are installed on the system) but more can be added by extending the ``$decompressBin`` array.
 
 .. note::
@@ -239,6 +244,10 @@ Finally, the HRM configuration variables ``$max_upload_limit`` and ``$max_post_l
 .. code-block:: sh
 
     max_execution_time = 120
+
+.. warning::
+
+    Although HRM takes care of cleaning all temporary files after each upload, it may happen that data is left behind if the process fails for any reason. Is is recommended that an HRM admin checks and if necessary cleans the ``${HRM_DATA}/.hrm_chunks`` and ``${HRM_DATA}/.hrm_files`` folders from time to time.
 
 .. code-block:: php
 
