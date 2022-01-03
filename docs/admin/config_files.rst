@@ -224,16 +224,20 @@ If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow for 
 
     The behavior of the HTTP uploader depends on the ``php.ini`` directives ``upload_max_filesize`` and ``post_max_size``, but can also **optionally** be tweaked by the HRM variables ``$max_upload_limit`` and ``$max_post_limit``.   
     
-The HTTP uploader uploads files in 4 concurrent (parallel) chunks. The size of each chunk is defined by the ``php.ini`` directive ``upload_max_filesize``; however, please notice that this value will be capped to 16M by HRM to avoid out-of-memory errors that may occur if many users upload data at the same time. Since ``post_max_size`` and ``upload_max_filesize`` are intrinsically connected by the number of concurrent uploads, it is recommended to set ``post_max_size`` to be ``4 * upload_max_filesize``.
+The HTTP uploader uses the ``php.ini`` directive ``upload_max_filesize`` to define the maximum size of each selected file and the ``post_max_size`` directive to define the total upload size allowed in one upload session.
     
-Finally, the HRM configuration variables ``$max_upload_limit`` and ``$max_post_limit`` can be used to set **more restrictive values** in case the web server runs other services besides HRM. By default, both variables are set to 0 (and hence disabled).
+The HRM configuration variables ``$max_upload_limit`` and ``$max_post_limit`` can be used to set **more restrictive values** in case the web server runs other services besides HRM. By default, both variables are set to ``0`` so that the values from ``php.ini`` are used.
+
+.. note::
+
+    The HRM administrator can check the values in use in the **System summary** page, under **Configuration**.
 
 **Example:**
 
 .. code-block:: sh
 
-    post_max_size = 64M
-    upload_max_filesize = 16M
+    post_max_size = 2048M
+    upload_max_filesize = 1024M
 
 .. note::
 
