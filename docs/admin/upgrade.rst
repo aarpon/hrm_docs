@@ -90,8 +90,8 @@ commands:
 
    $HRM_HOME/config/hrm_client_config.inc
 
-Check the configuration files
-=============================
+Check the configuration file
+============================
 
 An easy way to check for modifications is by running the ``$HRM_HOME/resources/checkConfig.php`` script. From the shell, run:
 
@@ -100,14 +100,14 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_config.inc
 
-There were no configuration changes between versions 3.6.x and 3.7 of HRM. The output of the ``checkConfig.php`` script should be:
+There were no configuration changes between versions 3.7.x and 3.8 of HRM. The output of the ``checkConfig.php`` script should be:
 
 .. code-block:: sh
 
   Checking against HRM v3.8.
   Check completed successfully! Your configuration file is valid!
 
-Please make sure to fix all problems you might have! The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
+Please make sure to fix all problems you might have! The sample file and the :ref:`manual_install` instructions will help you set the correct parameters.
 
 .. note:: Please follow :ref:`these instructions <upgrade_check_previous>` **first** if you are upgrading from older versions.
 
