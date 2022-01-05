@@ -14,11 +14,11 @@ The ``hrm.conf`` file is used by both the Web server and the Queue Manager.
 Copy the sample file
 ====================
 
-The sample configuration file ``$HRM_SAMPLES/hrm.conf.sample`` must be copied to ``/etc/hrm.conf`` and then edited as explained in the following sections.
+The sample configuration file ``$HRM_SAMPLES/etc/hrm.conf.sample`` must be copied to ``/etc/hrm.conf`` and then edited as explained in the following sections.
 
 .. code-block:: sh
 
-    sudo cp $HRM_SAMPLES/hrm.conf.sample /etc/hrm.conf
+    sudo cp $HRM_SAMPLES/etc/hrm.conf.sample /etc/hrm.conf
 
 Edit the configuration file
 ===========================
