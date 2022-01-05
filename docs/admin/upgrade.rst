@@ -73,8 +73,8 @@ You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.serv
 
 .. note:: Please follow :ref:`these instructions <upgrade_clean_previous>` **first** if you are upgrading from older versions.
 
-Update the configuration files
-==============================
+Update the configuration file
+=============================
 
 HRM 3.8 brings a few simplifications in these files. Please run the following
 commands:
@@ -92,8 +92,8 @@ commands:
    
    If you are upgrading from an older version of HRM and both files had the same content, you can simply rename one of them to hrm_config.inc.
 
-Check the configuration files
-=============================
+Check the configuration file
+============================
 
 An easy way to check for modifications is by running the ``$HRM_HOME/resources/checkConfig.php`` script. From the shell, run:
 
