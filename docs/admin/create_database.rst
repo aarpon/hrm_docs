@@ -84,7 +84,7 @@ of the database when the HRM version is upgraded:
     cd $HRM_SETUP
     php dbupdate.php
 
-If the database does not exist, it will be created using the information stored in the ``$HRM_CONFIG/hrm_client_config.inc`` and filled with content for the latest revision. If it exists, it will be updated from whichever revision it currently has.
+If the database does not exist, it will be created using the information stored in the ``$HRM_CONFIG/hrm_config.inc`` and filled with content for the latest revision. If it exists, it will be updated from whichever revision it currently has.
 
 
 .. note::

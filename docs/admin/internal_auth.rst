@@ -4,7 +4,7 @@
 Internal authentication
 ***********************
 
-To enable internal authentication, please add "integrated" to the ``$authenticateAgainst`` array in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
+To enable internal authentication, please add "integrated" to the ``$authenticateAgainst`` array in ``$HRM_CONFIG/hrm_config.inc``
 
 .. code-block:: php
 

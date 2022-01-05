@@ -4,31 +4,23 @@
    :maxdepth: 1
 
 ***********************************
-Edit hrm_{server|client}_config.inc
+Edit hrm_config.inc
 ***********************************
 
 Copy the sample files
 =====================
 
-Copy ``$HRM_SAMPLES/hrm_server_config.inc.sample`` to ``$HRM_CONFIG/hrm_server_config.inc``, this file is used by the queue manager:
+Copy ``$HRM_SAMPLES/hrm_config.inc.sample`` to ``$HRM_CONFIG/hrm_config.inc``:
 
 .. code-block:: sh
 
-    sudo cp -v $HRM_SAMPLES/hrm_server_config.inc.sample $HRM_CONFIG/hrm_server_config.inc
+    sudo cp -v $HRM_SAMPLES/hrm_config.inc.sample $HRM_CONFIG/hrm_config.inc
 
-In a single-machine HRM installation, the server and client configuration files
-are identical. It is therefore recommended to create a symlink for the client
-configuration file that points to the server config file. This prevents
-out-of-sync configurations:
-
-.. code-block:: sh
-
-    sudo ln -s hrm_server_config.inc $HRM_CONFIG/hrm_client_config.inc
 
 Edit the configuration files
 ============================
 
-Here we will assume a one-machine installation, and we will therefore show just one file (``$HRM_CONFIG/hrm_server_config.inc``).
+Here we will assume a one-machine installation:
 
 .. code-block:: php
 

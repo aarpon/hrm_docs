@@ -153,7 +153,7 @@ configuration and 200MB is the maximum allowed file size.
    
    **The PHP configuration file**: /path/to/php/php.ini
    
-   **The HRM configuration file**: /path/to/hrm/config/hrm_client_config.inc
+   **The HRM configuration file**: /path/to/hrm/config/hrm_config.inc
 
 
 

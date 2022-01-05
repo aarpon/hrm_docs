@@ -6,7 +6,7 @@
 Active Directory authentication
 *******************************
 
-To enable Active Directory authentication, please add "active_dir" to the ``$authenticateAgainst`` array in ``$HRM_CONFIG/hrm_client_config.inc`` and in ``$HRM_CONFIG/hrm_server_config.inc``
+To enable Active Directory authentication, please add "active_dir" to the ``$authenticateAgainst`` array in ``$HRM_CONFIG/hrm_config.inc``
 
 .. code-block:: php
 

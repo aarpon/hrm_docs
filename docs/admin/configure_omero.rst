@@ -10,7 +10,7 @@ For setting up the `HRM-OMERO Connetor <https://pypi.org/project/hrm-omero/>`_ p
 first follow the installation instructions from the project's documentation.
 
 Then enable the OMERO connector by setting the value of ``$omero_transfers`` to ``true``
-in ``$HRM_CONFIG/hrm_client_config.inc`` and ``$HRM_CONFIG/hrm_server_config.inc``.
+in ``$HRM_CONFIG/hrm_config.inc``.
 
 .. code-block:: php
 

@@ -16,7 +16,7 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
 .. code-block:: sh
 
     cd $HRM_HOME
-    php resources/checkConfig.php config/hrm_server_config.inc
+    php resources/checkConfig.php config/hrm_config.inc
 
 3.5.x to 3.6
 ------------

@@ -8,7 +8,7 @@
 Version upgrade
 ***************
 
-If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (``hrm_{server|client}_config.inc``), and the database structure might have been changed.
+If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (``hrm_config.inc``), and the database structure might have been changed.
 
 Stop the Queue Manager
 ======================
@@ -86,8 +86,7 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
 .. code-block:: sh
 
     cd $HRM_HOME
-    php resources/checkConfig.php config/hrm_server_config.inc
-    php resources/checkConfig.php config/hrm_client_config.inc
+    php resources/checkConfig.php config/hrm_config.inc
 
 There were no configuration changes between versions 3.6.x and 3.7 of HRM. The output of the ``checkConfig.php`` script should be:
 
