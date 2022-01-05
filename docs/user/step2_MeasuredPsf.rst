@@ -10,7 +10,7 @@ previous step.
 Distilled PSFs need to be created beforehand using Huygens Professional and
 uploaded to the **Raw images** folder.
 
-.. note:: One PSF image per channel. Mltichannel PSFs are not supported.
+.. note:: One PSF image per channel. Multichannel PSFs are not supported.
           
 
 When presented with the **Distilled PSF file selection** window,
