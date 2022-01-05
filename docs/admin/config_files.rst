@@ -7,8 +7,8 @@
 Edit hrm_config.inc
 ***********************************
 
-Copy the sample files
-=====================
+Copy the sample file
+====================
 
 Copy ``$HRM_SAMPLES/hrm_config.inc.sample`` to ``$HRM_CONFIG/hrm_config.inc``:
 
@@ -17,8 +17,8 @@ Copy ``$HRM_SAMPLES/hrm_config.inc.sample`` to ``$HRM_CONFIG/hrm_config.inc``:
     sudo cp -v $HRM_SAMPLES/hrm_config.inc.sample $HRM_CONFIG/hrm_config.inc
 
 
-Edit the configuration files
-============================
+Edit the configuration file
+===========================
 
 Here we will assume a one-machine installation:
 
