@@ -10,4 +10,5 @@
 .. |github|                 image:: images/github_logo_22x22.png
 .. |ServersGPUs22x22|       image:: images/ServersGPUs22x22.png
 .. |ServersGPUsScreenshot|  image:: images/ServersGPUsScreenshot.png
+.. |script_install_1|       image:: images/script_install_1.png
 .. |ge|                     unicode:: U+02265 .. GREATER THAN OR EQUAL TO
