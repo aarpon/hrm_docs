@@ -11,4 +11,5 @@ Automated installation
    :maxdepth: 1
 
    script_install_1
+   script_install_db
 
