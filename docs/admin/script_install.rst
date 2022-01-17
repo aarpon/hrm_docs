@@ -10,7 +10,7 @@ Automated installation
 .. toctree::
    :maxdepth: 1
 
-   script_install_1
+   script_install_pre
    script_install_db
    script_install_qm_user
    script_install_apache_conf

@@ -3,8 +3,8 @@
 .. _script_install_db:
 
 
-Installation script (interactive mode) - Database
-=================================================
+Installation script - Database
+==============================
    
 What happens if no DBMS detected:
 

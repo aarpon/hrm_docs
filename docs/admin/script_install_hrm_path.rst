@@ -3,8 +3,8 @@
 .. _script_install_hrm_path:
 
 
-Installation script (interactive mode) - The HRM path
-=====================================================
+Installation script - The HRM path
+==================================
 
 The HRM path
 
