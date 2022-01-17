@@ -11,4 +11,7 @@
 .. |ServersGPUs22x22|       image:: images/ServersGPUs22x22.png
 .. |ServersGPUsScreenshot|  image:: images/ServersGPUsScreenshot.png
 .. |script_install_1|       image:: images/script_install_1.png
+.. |script_install_2|       image:: images/script_install_2.png
+.. |script_install_3|       image:: images/script_install_3.png
+.. |script_install_4|       image:: images/script_install_4.png
 .. |ge|                     unicode:: U+02265 .. GREATER THAN OR EQUAL TO
