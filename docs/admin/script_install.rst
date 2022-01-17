@@ -15,5 +15,7 @@ Automated installation
    script_install_qm_user
    script_install_apache_conf
    script_install_hrm_path
+   script_install_hrm_files
+   script_install_multiserver
    
 

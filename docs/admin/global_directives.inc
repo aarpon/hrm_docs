@@ -31,4 +31,12 @@
 .. |script_install_apache_conf_2| image:: images/script_install_apache_conf_2.png
 .. |script_install_hrm_path_1| image:: images/script_install_hrm_path_1.png
 .. |script_install_hrm_path_2| image:: images/script_install_hrm_path_2.png
+.. |script_install_hrm_files_1| image:: images/script_install_hrm_files_1.png
+.. |script_install_hrm_files_2| image:: images/script_install_hrm_files_2.png
+.. |script_install_hrm_files_3| image:: images/script_install_hrm_files_3.png
+.. |script_install_hrm_files_4| image:: images/script_install_hrm_files_4.png
+.. |script_install_hrm_files_5| image:: images/script_install_hrm_files_5.png
+.. |script_install_multiserver_1| image:: images/script_install_multiserver_1.png
+.. |script_install_multiserver_2| image:: images/script_install_multiserver_2.png
+.. |script_install_multiserver_3| image:: images/script_install_multiserver_3.png
 .. |ge|                     unicode:: U+02265 .. GREATER THAN OR EQUAL TO
