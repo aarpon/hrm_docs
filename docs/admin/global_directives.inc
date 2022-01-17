@@ -24,4 +24,11 @@
 .. |script_install_db_8|    image:: images/script_install_db_8.png
 .. |script_install_db_9|    image:: images/script_install_db_9.png
 .. |script_install_db_10|   image:: images/script_install_db_10.png
+.. |script_install_qm_user_1| image:: images/script_install_qm_user_1.png
+.. |script_install_qm_user_2| image:: images/script_install_qm_user_2.png
+.. |script_install_qm_user_3| image:: images/script_install_qm_user_3.png
+.. |script_install_apache_conf_1| image:: images/script_install_apache_conf_1.png
+.. |script_install_apache_conf_2| image:: images/script_install_apache_conf_2.png
+.. |script_install_hrm_path_1| image:: images/script_install_hrm_path_1.png
+.. |script_install_hrm_path_2| image:: images/script_install_hrm_path_2.png
 .. |ge|                     unicode:: U+02265 .. GREATER THAN OR EQUAL TO
