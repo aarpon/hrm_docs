@@ -17,5 +17,5 @@ Automated installation
    script_install_hrm_path
    script_install_hrm_files
    script_install_multiserver
-   
+   script_install_non_interactive
 
