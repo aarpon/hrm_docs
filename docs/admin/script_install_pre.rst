@@ -2,8 +2,8 @@
 
 .. _script_install_pre:
    
-Interactive mode - Prerequisites
-================================
+Prerequisites
+=============
 
 What happens if the script is launched by a normal user:
 

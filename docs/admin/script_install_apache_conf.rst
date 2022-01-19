@@ -3,8 +3,8 @@
 .. _script_install_apache_conf:
 
 
-Interactive mode - Apache configuration
-=======================================
+Apache configuration
+====================
 
 Apache configuration:
 

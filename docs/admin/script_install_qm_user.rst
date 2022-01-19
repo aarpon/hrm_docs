@@ -3,8 +3,8 @@
 .. _script_install_qm_user:
 
 
-Interactive mode - System user
-==============================
+System user
+===========
 
 System user:
 

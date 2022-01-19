@@ -3,8 +3,8 @@
 .. _script_install_hrm_files:
 
 
-Interactive mode - The HRM files
-================================
+The HRM files
+=============
 
 The different versions are fetched directly from GitHub. You can choose the one you want to
 install. Master will normally be hidden unless ‘--rolling=true’ is specified as a command line

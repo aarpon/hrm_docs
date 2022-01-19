@@ -2,9 +2,9 @@
 
 .. _script_install_non_interactive:
 
-
+********************
 Non interactive mode
-====================
+********************
 
 Execute the installation script from the command line, as follows:
 
