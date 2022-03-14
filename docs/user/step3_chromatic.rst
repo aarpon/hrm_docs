@@ -41,4 +41,16 @@ Huygens Professional or Essential to fill out the table. All images recorded
 with the same settings and the same microscope can be corrected with the
 same chromatic aberration values.
 
+As of **Huygens 21.10.1** the Chromatic Aberration correction has an option for
+higher order corrections (e.g.: barrel and pincushion distorsions). The
+description of these deformations can be imported into HRM from the
+corresponding Huygens template. However, due to the complexity of the
+parameters they **can't be either edited or viewed** in HRM.
+
+**HRM 3.8** and higher will let you choose between the higher-order correction
+and the 5 parameter correction (x,y,z, rotation, scale) when importing
+templates from Huygens. Please do keep in mind that the extra parameters
+will be handled under the hood and not displayed in the HRM UI.
+
+
 .. note:: For skipping this correction simply leave the table fields empty.
