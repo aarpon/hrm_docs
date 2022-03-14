@@ -143,3 +143,5 @@
 .. |HotPixelCorrection1|         image:: images/HotPixelCorrection1.png
 .. |HotPixelCorrection2|         image:: images/HotPixelCorrection2.png
 .. |HotPixelCorrection3|         image:: images/HotPixelCorrection3.png
+.. |BleachingCorrection1|        image:: images/BleachingYesScreenshot.png
+.. |BleachingCorrection2|        image:: images/BleachingNoScreenshot.png

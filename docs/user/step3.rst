@@ -43,6 +43,7 @@ The following parameters can be edited in a template.
    step3_decon
    step3_snr
    step3_crop
+   step3_bleaching
    step3_zstabilization
    step3_reductionmode
    step3_background
