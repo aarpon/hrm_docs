@@ -146,3 +146,5 @@
 .. |HotPixelCorrection3|         image:: images/HotPixelCorrection3.png
 .. |BleachingCorrection1|        image:: images/BleachingYesScreenshot.png
 .. |BleachingCorrection2|        image:: images/BleachingNoScreenshot.png
+.. |Acuity1|                     image:: images/AcuityScreenshot1.png
+.. |Acuity2|                     image:: images/AcuityScreenshot2.png
