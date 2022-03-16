@@ -50,7 +50,13 @@ parameters they **can't be either edited or viewed** in HRM.
 **HRM 3.8** and higher will let you choose between the higher-order correction
 and the 5 parameter correction (x,y,z, rotation, scale) when importing
 templates from Huygens. Please do keep in mind that the extra parameters
-will be handled under the hood and not displayed in the HRM UI.
+will be handled under the hood and are not displayed in the HRM UI.
 
+An option to edit the shifts, rotation and scale while discarding the
+higher-order corrections from a Huygens template will appear on importing,
+as follows:
 
-.. note:: For skipping this correction simply leave the table fields empty.
+|ChromaticScreenshot4|
+
+.. note:: For skipping the chromatic aberration correction simply leave the
+	  table fields empty.
