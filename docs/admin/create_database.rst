@@ -55,10 +55,10 @@ PostgreSQL
     su postgres -c "createuser -e -P -d -A -S -R -N hrm"
     su postgres -c "createdb hrm"
 
-|Fedora|
+RHEL
 
-MD5 host authentication has to be enabled explicitly on Fedora. This can be
-done using the following commands:
+MD5 host authentication has to be enabled explicitly on RHEL systems.
+This can be done using the following commands:
 
 .. code-block:: sh
 

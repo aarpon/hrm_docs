@@ -36,9 +36,9 @@ The recommended linux distributions are:
 +--------------+----------------------------------------+
 | |ubuntu|     | Ubuntu                                 |
 +--------------+----------------------------------------+
-| |centos|     | CentOS                                 |
+| |rocky|      | Rocky Linux                            |
 +--------------+----------------------------------------+
-| |fedora|     | Fedora (not tested for HRM ver. > 3.5) |
+| |alma|       | Alma Linux                             |
 +--------------+----------------------------------------+
 
 We will use tabs to group the code and instructions for respective operating system families
@@ -48,7 +48,7 @@ We will use tabs to group the code and instructions for respective operating sys
 +==============+========================================+
 | Debian       | Debian, Ubuntu                         |
 +--------------+----------------------------------------+
-| RHEL         | Fedora, CentOS                         |
+| RHEL         | RedHat, Rocky Linux, Alma Linux        |
 +--------------+----------------------------------------+
 
 .. warning::
