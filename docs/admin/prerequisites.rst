@@ -222,6 +222,37 @@ Some additional information:
 
     * `This <https://help.ubuntu.com/community/PostgreSQL/>`_ is a good tutorial from the Ubuntu Community on how to set up PostgreSQL to use with the HRM.
 
+
+Disable SElinux
+===============
+
+HRM needs access to several operations that are blocked by SElinux.
+
+.. tabs::
+    .. tab:: Debian
+
+	By default SElinux **is disabled**. In case SElinux has been enabled
+	edit file /etc/selinux/config and update the following variable.
+	
+        .. code-block:: sh
+
+            SELINUX=permissive
+
+    .. tab:: RHEL
+
+	By default SElinux **is enabled**. Edit file /etc/selinux/config to
+	update the following variable.
+	
+        .. code-block:: sh
+
+            SELINUX=permissive
+	    
+.. note::
+
+    Restart the machine after changing the value of SElinux.
+
+
+      
 (Optional) LDAP support
 =======================
 
