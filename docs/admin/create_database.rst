@@ -24,8 +24,8 @@ MySQL
 
 .. note::
 
-    On Ubuntu 18.04 LTS you might need to follow `these instructions to set 
-    the mysql root password <https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux>`_.  
+    On Ubuntu 18.04 LTS you might need to follow `these instructions to set
+    the mysql root password <https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux>`_.
 
 
 The following command will create a new MySQL user ``hrm`` and grant the
@@ -39,7 +39,7 @@ configuration files.
 
     # start the mysql command line client and connect as root:
     mysql -u root -p
-    # Create the database if it does not exist yet: 
+    # Create the database if it does not exist yet:
     CREATE DATABASE hrm CHARACTER SET utf8;
     # now from within the client, create the database user:
     CREATE USER 'hrm'@'localhost' IDENTIFIED BY 'dbpasswd';
@@ -52,7 +52,7 @@ PostgreSQL
 
 .. code-block:: sh
 
-    su postgres -c "createuser -e -P -d -A -S -R -N hrm"
+    su postgres -c "createuser -e -P -d -A -S -R hrm"
     su postgres -c "createdb hrm"
 
 RHEL
@@ -72,7 +72,7 @@ This can be done using the following commands:
 
 On Ubuntu MD5 host authentication is enabled by default.
 
-Create or update the database 
+Create or update the database
 =============================
 
 Run the php script ``$HRM_SETUP/dbupdate.php`` from the shell to create and
@@ -92,9 +92,9 @@ If the database does not exist, it will be created using the information stored 
     MySQL 8+ might return the following error: 'The server requested
     authentication method unknown to the client'.
     Which can be fixed by
-   
+
 .. code-block:: sh
-   
+
    # Start the mysql command line client and connect as root:
    mysql -u root -p
    # Notify MySQL that the HRM user logs in with a password.
@@ -102,4 +102,3 @@ If the database does not exist, it will be created using the information stored 
    '$HRMUSERPASSWORD';
    FLUSH PRIVILEGES;
    exit;
-  

@@ -232,27 +232,27 @@ HRM needs access to several operations that are blocked by SElinux.
     .. tab:: Debian
 
 	By default SElinux **is disabled**. In case SElinux has been enabled
-	edit file /etc/selinux/config and update the following variable.
-	
+	edit file ``/etc/selinux/config`` and update the following variable.
+
         .. code-block:: sh
 
             SELINUX=permissive
 
     .. tab:: RHEL
 
-	By default SElinux **is enabled**. Edit file /etc/selinux/config to
+	By default SElinux **is enabled**. Edit file ``/etc/selinux/config`` to
 	update the following variable.
-	
+
         .. code-block:: sh
 
             SELINUX=permissive
-	    
+
 .. note::
 
     Restart the machine after changing the value of SElinux.
 
 
-      
+
 (Optional) LDAP support
 =======================
 
@@ -274,7 +274,7 @@ If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ld
 Sendmail (postfix)
 ==================
 
-HRM uses the PHP ``mail()`` function to notify the users: 
+HRM uses the PHP ``mail()`` function to notify the users:
 
     "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them." `More... <http://www.php.net/mail>`_
 
