@@ -6,7 +6,7 @@
 OMERO connector
 ***************
 
-For setting up the `HRM-OMERO Connetor <https://pypi.org/project/hrm-omero/>`_ please
+For setting up the `HRM-OMERO Connector <https://pypi.org/project/hrm-omero/>`_ please
 first follow the installation instructions from the project's documentation.
 
 Then enable the OMERO connector by setting the value of ``$omero_transfers`` to ``true``
