@@ -67,7 +67,7 @@ the website or github as explained in :ref:`downloading the standard archive
 Clean up previous installations
 ===============================
 
-Because of changes in tre structure of the code and of the external dependences (starting from version 3.4), we highly recommend **not to extract the new archive on top of the old one**. 
+Because of changes in tree structure of the code and of the external dependences (starting from version 3.4), we highly recommend **not to extract the new archive on top of the old one**. 
 
 Please rename the old hrm folder, extract the code into a fresh ``${HRM_ROOT}`` and move the configuration files from the old ``config`` subfolder into the new ``${HRM_ROOT}/config``.   
 
