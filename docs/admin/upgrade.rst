@@ -2,6 +2,8 @@
 
 .. _`upgrade-hrm`:
 
+.. note:: Version 3.8 introduces a simplification of the configuration. Please see :ref:`update_conf_files` below.
+
 .. note:: These instructions always explain the steps required to upgrade from **last stable release** to **current stable release**. However, each section also provides links to instructions for older versions.
 
 ***************
@@ -73,6 +75,8 @@ You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.serv
 
 .. note:: Please follow :ref:`these instructions <upgrade_clean_previous>` **first** if you are upgrading from older versions.
 
+.. _update_conf_files:
+
 Update the configuration file
 =============================
 
@@ -86,11 +90,11 @@ commands:
 
 .. note:: The following files have become redundant and can be removed:
 
-   $HRM_HOME/config/hrm_server_config.inc
+   ``$HRM_HOME/config/hrm_server_config.inc```
 
-   $HRM_HOME/config/hrm_client_config.inc
+   ``$HRM_HOME/config/hrm_client_config.inc``
    
-   If you are upgrading from an older version of HRM and both files had the same content, you can simply rename one of them to hrm_config.inc.
+   If you are upgrading from an older version of HRM and both files had the same content, you can simply rename one of them to ``hrm_config.inc``.
 
 Check the configuration file
 ============================
