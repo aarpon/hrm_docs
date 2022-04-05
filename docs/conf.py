@@ -56,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Huygens Remote Manager'
-copyright = u'2013 - 2021, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer, Egor Zindy'
+copyright = u'2013 - 2022, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer, Egor Zindy, Kevin Namink, Joost Oliemans'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
