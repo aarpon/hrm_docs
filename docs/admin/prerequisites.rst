@@ -109,7 +109,7 @@ PHP
 
 .. note::
 
-    Minimum required PHP version is **7.2**.
+    Minimum required PHP version is **7.2**. However, HRM is **not yet compatible with PHP 8.0 and newer!**
 
 The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP module for Apache2, the queue manager requires the PHP command line interpreter.
 
