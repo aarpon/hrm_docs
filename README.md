@@ -12,7 +12,6 @@ The compiled documentation is available on [readthedocs.org][3] as HTML, PDF and
 [2]: https://github.com/aarpon/hrm "Huygens Remote Manager"
 [3]: http://huygens-remote-manager.readthedocs.org "Read the Docs"
 
-
 Editing conventions
 ===================
 
@@ -23,34 +22,22 @@ display the same user.
 2.- Save image as .PNG. Currently there are many .gif which are only meant as
 a guide. Gif images will be replaced by png's.
 
-
 Building the documentation using a local sphinx readthedocs (RTD) theme
 =======================================================================
 
 Sphinx Installation
 -------------------
 
-Install the sphinx python documentation generator:
+Install the Sphinx Python documentation generator (preferably in a separate *virtual
+environment*, see the Python documentation for details):
 
-    (sudo) pip install sphinx
-
-Theme Installation
-------------------
-
-Install the sphinx RTD theme with:
-
-    (sudo) pip install sphinx_rtd_theme
-
-To upgrade it, use:
-
-    (sudo) pip install --upgrade sphinx_rtd_theme
-
-Extension Installation
-----------------------
-
-To have tabs for code blocks concerning different distributions:
-
-    pip install sphinx-tabs
+```bash
+pip install \
+    sphinx \
+    sphinx_rtd_theme \
+    docutils==0.16.0 \
+    sphinx_tabs
+```
 
 Building the docs
 -----------------
@@ -59,9 +46,11 @@ Set the environment variable `USE_LOCAL_SPHINX_RTD_THEME` to enable the
 local sphinx_rtd_theme. You can set it in `~/.bashrc` or `~/.bash_profile` or define
 it right before use:
 
-    cd docs/
-    export USE_LOCAL_SPHINX_RTD_THEME=1
-    make html
+```bash
+cd docs/
+export USE_LOCAL_SPHINX_RTD_THEME=1
+make html
+```
 
 The configuration file `conf.py` will fall back to the default theme if sphinx_rtd_theme
 is not found.

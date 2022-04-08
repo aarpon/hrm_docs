@@ -44,8 +44,8 @@ Installation and requirements
 
 To install HRM the following pre-requisites (at least) must be fulfilled:
 
-* **Operating system**: Any recent Linux distribution. **Ubuntu** and
-  **Fedora**  are the recommended distro's for HRM.
+* **Operating system**: Any recent Linux distribution. Based on Debian or
+  RHEL.
 * **Huygens Core**: HRM is just an interface and needs Huygens Core to
   perform deconvolution on the raw images. Note that Huygens Core needs a
   license.
@@ -153,7 +153,7 @@ configuration and 200MB is the maximum allowed file size.
    
    **The PHP configuration file**: /path/to/php/php.ini
    
-   **The HRM configuration file**: /path/to/hrm/config/hrm_client_config.inc
+   **The HRM configuration file**: /path/to/hrm/config/hrm_config.inc
 
 
 

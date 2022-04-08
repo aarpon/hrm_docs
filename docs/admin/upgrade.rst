@@ -2,13 +2,15 @@
 
 .. _`upgrade-hrm`:
 
+.. note:: Version 3.8 introduces a simplification of the configuration. Please see :ref:`update_conf_files` below.
+
 .. note:: These instructions always explain the steps required to upgrade from **last stable release** to **current stable release**. However, each section also provides links to instructions for older versions.
 
 ***************
 Version upgrade
 ***************
 
-If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (``hrm_{server|client}_config.inc``), and the database structure might have been changed.
+If you have upgraded the HRM in the past, you will know that some steps must be performed in addition to replacing the old HRM code with the new one: some entries might have been added or changed in the configuration files (``hrm_config.inc``), and the database structure might have been changed.
 
 Stop the Queue Manager
 ======================
@@ -65,7 +67,7 @@ the website or github as explained in :ref:`downloading the standard archive
 Clean up previous installations
 ===============================
 
-Because of changes in tre structure of the code and of the external dependences (starting from version 3.4), we highly recommend **not to extract the new archive on top of the old one**. 
+Because of changes in tree structure of the code and of the external dependences (starting from version 3.4), we highly recommend **not to extract the new archive on top of the old one**. 
 
 Please rename the old hrm folder, extract the code into a fresh ``${HRM_ROOT}`` and move the configuration files from the old ``config`` subfolder into the new ``${HRM_ROOT}/config``.   
 
@@ -73,27 +75,42 @@ You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.serv
 
 .. note:: Please follow :ref:`these instructions <upgrade_clean_previous>` **first** if you are upgrading from older versions.
 
-Update the configuration files
-==============================
+.. _update_conf_files:
 
-There were no configuration changes between versions 3.6.x and 3.7.x of HRM.
-
-Check the configuration files
+Update the configuration file
 =============================
+
+HRM 3.8 brings a few simplifications in these files. Please run the following
+commands:
+
+.. code-block:: sh
+		
+   cd $HRM_HOME/config
+   cp -p hrm_server_config.inc hrm_config.inc
+
+.. note:: The following files have become redundant and can be removed:
+
+   ``$HRM_HOME/config/hrm_server_config.inc```
+
+   ``$HRM_HOME/config/hrm_client_config.inc``
+   
+   If you are upgrading from an older version of HRM and both files had the same content, you can simply rename one of them to ``hrm_config.inc``.
+
+Check the configuration file
+============================
 
 An easy way to check for modifications is by running the ``$HRM_HOME/resources/checkConfig.php`` script. From the shell, run:
 
 .. code-block:: sh
 
     cd $HRM_HOME
-    php resources/checkConfig.php config/hrm_server_config.inc
-    php resources/checkConfig.php config/hrm_client_config.inc
+    php resources/checkConfig.php config/hrm_config.inc
 
 There were no configuration changes between versions 3.6.x and 3.7 of HRM. The output of the ``checkConfig.php`` script should be:
 
 .. code-block:: sh
 
-  Checking against HRM v3.7.
+  Checking against HRM v3.8.
   Check completed successfully! Your configuration file is valid!
 
 Please make sure to fix all problems you might have! The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
@@ -108,6 +125,8 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | HRM version | Database version |
 +=============+==================+
+| 3.8         | 19               |
++-------------+------------------+
 | 3.7         | 18               |
 +-------------+------------------+
 | 3.6         | 17               |
@@ -135,7 +154,7 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 18 in one step.
+.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 19 in one step.
 
 The following describes two possible ways to update the database.
 
@@ -148,11 +167,11 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.7 is number 18.
-    Current database revision is number 17.
+    Needed database revision for HRM v3.8 is number 19.
+    Current database revision is number 18.
     Updating...
 
-    Database successfully updated to revision 18.
+    Database successfully updated to revision 19.
 
 The database is now at the latest revision.
 

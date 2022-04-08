@@ -4,31 +4,23 @@
    :maxdepth: 1
 
 ***********************************
-Edit hrm_{server|client}_config.inc
+Edit hrm_config.inc
 ***********************************
 
-Copy the sample files
-=====================
+Copy the sample file
+====================
 
-Copy ``$HRM_SAMPLES/hrm_server_config.inc.sample`` to ``$HRM_CONFIG/hrm_server_config.inc``, this file is used by the queue manager:
-
-.. code-block:: sh
-
-    sudo cp -v $HRM_SAMPLES/hrm_server_config.inc.sample $HRM_CONFIG/hrm_server_config.inc
-
-In a single-machine HRM installation, the server and client configuration files
-are identical. It is therefore recommended to create a symlink for the client
-configuration file that points to the server config file. This prevents
-out-of-sync configurations:
+Copy ``$HRM_SAMPLES/hrm_config.inc.sample`` to ``$HRM_CONFIG/hrm_config.inc``:
 
 .. code-block:: sh
 
-    sudo ln -s hrm_server_config.inc $HRM_CONFIG/hrm_client_config.inc
+    sudo cp -v $HRM_SAMPLES/hrm_config.inc.sample $HRM_CONFIG/hrm_config.inc
 
-Edit the configuration files
-============================
 
-Here we will assume a one-machine installation, and we will therefore show just one file (``$HRM_CONFIG/hrm_server_config.inc``).
+Edit the configuration file
+===========================
+
+Here we will assume a one-machine installation:
 
 .. code-block:: php
 
@@ -213,17 +205,30 @@ If ``$allowHttpTransfer`` is true, the results of deconvolution can be downloade
 
     memory_limit = 128M
 
-If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow uploading of the files to be deconvolved through the web interface. Multi-file upload (with directory structures) is indirectly possible by first compressing the files into an archive that the HRM will automatically extract at the end upload process. Default supported formats are ``zip``, ``tgz``, ``tar`` and ``tar.gz`` (as long as the corresponding executables are installed on the system) but more can be added by extending the ``$decompressBin`` array.
-
 .. warning::
 
-    Make sure to change the values of ``upload_max_filesize`` AND ``post_max_size`` in ``php.ini``: with the default values, only extremely small files can be uploaded!
+    Although HRM takes care of cleaning all temporary files after each download, it may happen that data is left behind if the process fails for any reason. Is is recommended that an HRM admin checks and if necessary cleans the ``${HRM_DATA}/.hrm_downloads`` folder from time to time.
+
+
+If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow for the uploading of the files to be deconvolved through the web interface. Multi-file upload (with directory structures) is indirectly possible by first compressing the files into an archive that the HRM will automatically extract at the end upload process. Default supported formats are ``zip``, ``tgz``, ``tar`` and ``tar.gz`` (as long as the corresponding executables are installed on the system) but more can be added by extending the ``$decompressBin`` array.
+
+.. note::
+
+    The behavior of the HTTP uploader depends on the ``php.ini`` directives ``upload_max_filesize`` and ``post_max_size``, but can also **optionally** be tweaked by the HRM variables ``$max_upload_limit`` and ``$max_post_limit``.   
+    
+The HTTP uploader uses the ``php.ini`` directive ``upload_max_filesize`` to define the maximum size of each selected file and the ``post_max_size`` directive to define the total upload size allowed in one upload session.
+    
+The HRM configuration variables ``$max_upload_limit`` and ``$max_post_limit`` can be used to set **more restrictive values** in case the web server runs other services besides HRM. By default, both variables are set to ``0`` so that the values from ``php.ini`` are used.
+
+.. note::
+
+    The HRM administrator can check the values in use in the **System summary** page, under **Configuration**.
 
 **Example:**
 
 .. code-block:: sh
 
-    post_max_size = 1024M
+    post_max_size = 2048M
     upload_max_filesize = 1024M
 
 .. note::
@@ -235,6 +240,10 @@ If ``$allowHttpUpload`` is true, an HTTP uploader will be in place to allow uplo
 .. code-block:: sh
 
     max_execution_time = 120
+
+.. warning::
+
+    Although HRM takes care of cleaning all temporary files after each upload, it may happen that data is left behind if the process fails for any reason. Is is recommended that an HRM admin checks and if necessary cleans the ``${HRM_DATA}/.hrm_chunks`` and ``${HRM_DATA}/.hrm_files`` folders from time to time.
 
 .. code-block:: php
 

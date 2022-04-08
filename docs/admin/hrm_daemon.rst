@@ -22,8 +22,7 @@ The configuration file for the HRM daemon is ``/etc/hrm.conf`` (see
 Depending on whether your Linux installation is using a "classical" ``System-V``
 like init system (including ``upstart``) or the more modern ``systemd``, you will
 need to follow different instructions. Please note that ``systemd`` is the
-default in recent versions of Ubuntu and Fedora, as well as its close relatives
-Debian and CentOS/RHEL.
+default in recent versions of Debian and RedHat-based systems.
 
 .. toctree::
    :maxdepth: 1

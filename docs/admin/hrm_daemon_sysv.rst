@@ -21,7 +21,7 @@ To launch the HRM daemon at boot, we are providing an init script in
 ``$HRM_RESRC/sysv-init-lsb/hrmd`` which can be placed in ``/etc/init.d/``. The
 script makes use of the LSB init functions and therefore requires
 ``/lib/lsb/init-functions`` to be available in your distribution (which is true
-for Ubuntu and Fedora, as well as most other major up-to-date Linux
+for Ubuntu and RHEL systems, as well as most other major up-to-date Linux
 distributions).
 
 For installing the init script, type the following commands in a shell:
@@ -46,9 +46,10 @@ run-levels. Please note that issuing this command does *NOT* actually start the
 daemon until the next reboot. To start it right now follow the steps in the
 section below.
 
-|fedora| Fedora
+**RHEL**
 
-Recent versions of Fedora do not install the Linux Standard Base (LSB)
+Recent versions of RHEL-based sysmtems do not install the Linux Standard
+Base (LSB)
 specification by default, as they are using ``systemd`` init. Therefore we
 recommend using the systemd unit file, described in :ref:`install_hrmd_systemd`.
 

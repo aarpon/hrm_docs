@@ -61,7 +61,7 @@ properly:
 
 .. code-block:: sh
    
-   # www-data in Ubuntu, apache in Fedora
+   # www-data in Ubuntu, apache in |RHEL|
    sudo chown -R www-data:www-data /var/www
 
 .. code-block:: sh

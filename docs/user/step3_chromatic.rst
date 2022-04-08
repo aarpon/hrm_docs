@@ -8,11 +8,11 @@ Chromatic Aberration Correction
 This option will only be shown when restoring multi channel images. In order
 to let HRM know that an image batch contains multi channel images please set
 the number of channels correctly, as explained in :ref:`number_channels`.
-                                                        
+
 The restoration template editor contains a section for post-deconvolution
 operations. Options for these operations
 (chromatic aberration correction and stabilization of time series) only show
-up when applicable, i.e, multichannel images and time series. 
+up when applicable, i.e, multichannel images and time series.
 
 Therefore, the following section will only be displayed when restoring multi
 channel images:
@@ -32,7 +32,7 @@ or scale. For the other channels, type in the shifts, rotations and scales.
 
 The table will contain one entry per channel.
 
-For an accurate estimation of the chromatic aberration 
+For an accurate estimation of the chromatic aberration
 one can use a local installation of Huygens Professional or Huygens Essential,
 see `Chromatic Aberration Corrector <https://svi.nl/ChromaticAberrationCorrector>`_.
 
@@ -41,4 +41,22 @@ Huygens Professional or Essential to fill out the table. All images recorded
 with the same settings and the same microscope can be corrected with the
 same chromatic aberration values.
 
-.. note:: For skipping this correction simply leave the table fields empty.
+As of **Huygens 21.10.1** the Chromatic Aberration correction has an option for
+higher order corrections (e.g.: barrel and pincushion distortions). The
+description of these deformations can be imported into HRM from the
+corresponding Huygens template. However, due to the complexity of the
+parameters they **can't be either edited or viewed** in HRM.
+
+**HRM 3.8** and higher will let you choose between the higher-order correction
+and the 5 parameter correction (x,y,z, rotation, scale) when importing
+templates from Huygens. Please do keep in mind that the extra parameters
+will be handled under the hood and are not displayed in the HRM UI.
+
+An option to edit the shifts, rotation and scale while discarding the
+higher-order corrections from a Huygens template will appear on importing,
+as follows:
+
+|ChromaticScreenshot4|
+
+.. note:: For skipping the chromatic aberration correction simply leave the
+	  table fields empty.

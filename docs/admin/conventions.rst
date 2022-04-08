@@ -36,9 +36,9 @@ The recommended linux distributions are:
 +--------------+----------------------------------------+
 | |ubuntu|     | Ubuntu                                 |
 +--------------+----------------------------------------+
-| |centos|     | CentOS                                 |
+| |rocky|      | Rocky Linux                            |
 +--------------+----------------------------------------+
-| |fedora|     | Fedora (not tested for HRM ver. > 3.5) |
+| |alma|       | Alma Linux                             |
 +--------------+----------------------------------------+
 
 We will use tabs to group the code and instructions for respective operating system families
@@ -48,7 +48,7 @@ We will use tabs to group the code and instructions for respective operating sys
 +==============+========================================+
 | Debian       | Debian, Ubuntu                         |
 +--------------+----------------------------------------+
-| RHEL         | Fedora, CentOS                         |
+| RHEL         | RedHat, Rocky Linux, Alma Linux        |
 +--------------+----------------------------------------+
 
 .. warning::
@@ -98,7 +98,3 @@ accordingly:
     HRM_USER=$HRM_HOME/user                # HRM customization folder
     HRM_LOG=/var/log/hrm                   # HRM logging folder
     HRM_DATA=/data/hrm_data                # HRM data folder
-
-.. note::
-    
-    Please notice that ``$WWW_ROOT`` is ``/var/www/html`` in |fedora| and in |ubuntu| as of version 14.04 LTS. In earlier versions of |ubuntu|, however, ``$WWW_ROOT`` used to be ``/var/www``.

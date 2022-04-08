@@ -1,5 +1,5 @@
 .. Directives
-.. |HRM_VERSION|    replace:: 3.7.x
+.. |HRM_VERSION|    replace:: 3.8.x
 .. |ge|             unicode:: U+02265 .. GREATER THAN OR EQUAL TO
 .. |HomePanel|                   image:: images/HomePanel.png
 .. |Collaborators|               image:: images/Collaborators.png
@@ -140,3 +140,11 @@
 .. |ChromaticScreenshot|         image:: images/ChromaticScreenshot.png
 .. |ChromaticScreenshot2|        image:: images/ChromaticScreenshot2.png
 .. |ChromaticScreenshot3|        image:: images/ChromaticScreenshot3.png
+.. |ChromaticScreenshot4|        image:: images/CACImportTemplateScreenshot.png
+.. |HotPixelCorrection1|         image:: images/HotPixelCorrection1.png
+.. |HotPixelCorrection2|         image:: images/HotPixelCorrection2.png
+.. |HotPixelCorrection3|         image:: images/HotPixelCorrection3.png
+.. |BleachingCorrection1|        image:: images/BleachingYesScreenshot.png
+.. |BleachingCorrection2|        image:: images/BleachingNoScreenshot.png
+.. |Acuity1|                     image:: images/AcuityScreenshot1.png
+.. |Acuity2|                     image:: images/AcuityScreenshot2.png

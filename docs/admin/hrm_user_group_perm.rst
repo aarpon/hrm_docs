@@ -13,15 +13,16 @@ In the following instructions, ``HRM_DATA`` points to the data folder that conta
 Create a Unix group ``hrm`` and user ``hrm`` on the web server machine.
 
 .. code-block:: sh
-                
-    $ sudo groupadd --system hrm
-    $ sudo useradd hrm --system --gid hrm
 
-Create the log directory:
+    $ sudo groupadd --system hrm
+    $ sudo useradd hrm --system --gid hrm --create-home
+
+Make sure the log and data directories exist:
 
 .. code-block:: sh
 
-    sudo mkdir ${HRM_LOG}
+    sudo mkdir -pv ${HRM_DATA}
+    sudo mkdir -pv ${HRM_LOG}
 
 Make sure ``hrm`` owns (and has full read-write access) to HRM_DATA and HRM_LOG.
 This is done by setting the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
@@ -33,11 +34,32 @@ This is done by setting the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
     sudo chown -R hrm:hrm ${HRM_LOG}
     sudo chmod -R u+s,g+ws ${HRM_LOG}
 
-Add the Apache user (|ubuntu| www-data, |fedora| apache) to the ``hrm`` group:
+Add the Apache user to the ``hrm`` group:
 
-.. code-block:: sh
+.. tabs::
+    .. tab:: Debian
 
-    # www-data in Ubuntu, apache in Fedora
-    sudo usermod www-data --append --groups hrm
-       
-.. note:: You might have to restart your server for the group changes to be activated.
+        .. code-block:: sh
+
+            sudo usermod www-data --append --groups hrm
+
+    .. tab:: RHEL
+
+        .. code-block:: sh
+
+            sudo usermod apache --append --groups hrm
+
+Finally restart your web server for the group changes to be activated.
+
+.. tabs::
+    .. tab:: Debian
+
+        .. code-block:: sh
+
+            sudo systemctl restart apache2.service
+
+    .. tab:: RHEL
+
+        .. code-block:: sh
+
+            sudo systemctl restart httpd.service

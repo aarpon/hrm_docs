@@ -2,9 +2,9 @@
 
 .. _manual_install:
 
-*******************
-Manual installation
-*******************
+*********************************
+Manual installation (recommended)
+*********************************
 
 .. toctree::
    :maxdepth: 1

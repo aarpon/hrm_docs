@@ -44,13 +44,15 @@ Apache2 web server
 
       .. code-block:: sh
 
-          sudo apt-get install apache2
+          sudo apt install apache2
 
    .. tab:: RHEL
 
       .. code-block:: sh
 
-          sudo yum install httpd
+          sudo dnf install httpd
+
+          sudo systemctl enable httpd
 
 Web pages can be installed globally or per-user.
 
@@ -81,7 +83,7 @@ Make sure to configure Apache2 to use them by setting the *AllowOverride* and *R
 
     .. tab:: RHEL
 
-        ``/etc/httpd/conf/httpd.conf``
+        ``/etc/httpd/conf.d/hrm.conf`` (the file has to be created)
 
         If you are installing HRM in your user directory also put the directives in:
         ``/etc/httpd/conf.d/userdir.conf``
@@ -107,9 +109,9 @@ PHP
 
 .. note::
 
-    Minimum required PHP version is **5.5**.
+    Minimum required PHP version is **7.2**. However, HRM is **not yet compatible with PHP 8.0 and newer!**
 
-The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP 5 module for Apache2, the queue manager requires the PHP 5 command line interpreter.
+The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP module for Apache2, the queue manager requires the PHP command line interpreter.
 
 
 .. tabs::
@@ -117,7 +119,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
         .. code-block:: sh
 
-            sudo apt-get install \
+            sudo apt install \
                 libapache2-mod-php \
                 php \
                 php-cli \
@@ -130,7 +132,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
         .. code-block:: sh
 
-            sudo yum install \
+            sudo dnf install \
                 php \
                 php-cli \
                 php-common \
@@ -147,14 +149,15 @@ Please configure the HRM machine for production. Edit the ``php.ini`` configurat
 .. tabs::
     .. tab:: Debian
 
-        ``/etc/php5/apache2/php.ini``
+        ``/etc/php/7.4/apache2/php.ini``
 
     .. tab:: RHEL
 
-        ``/etc/php.ini``
+        The corresponding file is ``/etc/php.ini`` but at least as of RHEL 8 all
+        default settings are fine, so there shouldn't be anything to change.
 
 
- In there set at least the values below (more information can be found in the ``php.ini`` file itself).
+In there set at least the values below (more information can be found in the ``php.ini`` file itself).
 
 .. code-block:: sh
 
@@ -175,13 +178,15 @@ MySQL
 
         .. code-block:: sh
 
-            sudo apt-get install php-mysql mysql-server
+            sudo apt install php-mysql mysql-server
 
     .. tab:: RHEL
 
         .. code-block:: sh
 
-            sudo yum install php-mysql php-pdo mysql-server
+            sudo dnf install php-mysqlnd php-pdo mariadb-server
+
+            sudo systemctl enable mariadb
 
 .. note::
 
@@ -195,13 +200,13 @@ PostgreSQL
 
         .. code-block:: sh
 
-            sudo apt-get install php-pgsql postgresql
+            sudo apt install php-pgsql postgresql
 
     .. tab:: RHEL
 
         .. code-block:: sh
 
-            sudo yum install php-pgsql postgresql-server postgresql-contrib
+            sudo dnf install php-pgsql postgresql-server postgresql-contrib
 
 You will need to manually enable PostgreSQL:
 
@@ -217,6 +222,37 @@ Some additional information:
 
     * `This <https://help.ubuntu.com/community/PostgreSQL/>`_ is a good tutorial from the Ubuntu Community on how to set up PostgreSQL to use with the HRM.
 
+
+Disable SElinux
+===============
+
+HRM needs access to several operations that are blocked by SElinux.
+
+.. tabs::
+    .. tab:: Debian
+
+	By default SElinux **is disabled**. In case SElinux has been enabled
+	edit file ``/etc/selinux/config`` and update the following variable.
+
+        .. code-block:: sh
+
+            SELINUX=permissive
+
+    .. tab:: RHEL
+
+	By default SElinux **is enabled**. Edit file ``/etc/selinux/config`` to
+	update the following variable.
+
+        .. code-block:: sh
+
+            SELINUX=permissive
+
+.. note::
+
+    Restart the machine after changing the value of SElinux.
+
+
+
 (Optional) LDAP support
 =======================
 
@@ -227,18 +263,18 @@ If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ld
 
         .. code-block:: sh
 
-            sudo apt-get install php-ldap
+            sudo apt install php-ldap
 
     .. tab:: RHEL
 
         .. code-block:: sh
 
-            sudo yum install php-ldap
+            sudo dnf install php-ldap
 
 Sendmail (postfix)
 ==================
 
-HRM uses the PHP ``mail()`` function to notify the users: 
+HRM uses the PHP ``mail()`` function to notify the users:
 
     "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them." `More... <http://www.php.net/mail>`_
 
@@ -247,13 +283,13 @@ HRM uses the PHP ``mail()`` function to notify the users:
 
         .. code-block:: sh
 
-            sudo apt-get install postfix
+            sudo apt install postfix
 
     .. tab:: RHEL
 
         .. code-block:: sh
 
-            sudo yum install postfix
+            sudo dnf install postfix
 
 .. note::
 
@@ -302,13 +338,13 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 
         .. code-block:: sh
 
-            sudo apt-get install zip
+            sudo apt install zip
 
     .. tab:: RHEL
 
         .. code-block:: sh
 
-            sudo yum install zip
+            sudo dnf install zip
 
 
 .. _prerequisites-omero:
@@ -316,103 +352,6 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 (Optional) OMERO support
 ========================
 
-If you plan to use the :ref:`connector_omero`, you will need to download the
-"server" package from the OMERO website that **matches** your existing OMERO
-installation **and** the Ice version installed on your HRM system. To make it
-work on your system, you also need Python 2.6 or 2.7 and (which is installed by
-default on Fedora and Ubuntu) and Java 7.
-
-.. warning::
-
-    The connector requires at least the **5.0 series** of OMERO, the latest
-    version is only tested against **OMERO 5.4** and newer!
-
-.. note::
-
-    It is **NOT** required to do any *installation* or *configuration* of the
-    downloaded OMERO package! HRM just needs this package to communicate with
-    your existing OMERO server over the network.
-
-Required OMERO Connector Components
------------------------------------
-
-This section explains the steps required if you want to use the optional
-:ref:`connector_omero`.
-
-As an example on how to download these packages, the commands used to fetch
-``OMERO 5.0.3`` and ``Ice 3.4`` are shown below. For other combinations please
-have a look at the `OMERO download site
-<http://downloads.openmicroscopy.org/omero/>`_. We recommend placing the
-downloaded OMERO "server" package into a subdirectory of ``/opt/OMERO``, as
-follows:
-
-
-.. tabs::
-    .. tab:: Debian
-
-        .. code-block:: sh
-
-            sudo apt-get install python-zeroc-ice libicessl34 openjdk-7-jre
-            wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
-            sudo mkdir -pv /opt/OMERO
-            cd /opt/OMERO
-            sudo unzip /tmp/OMERO.server.zip
-            rm /tmp/OMERO.server.zip
-
-    .. tab:: RHEL
-
-        .. code-block:: sh
-
-            sudo yum install ice-python java-1.7.0-openjdk
-            wget http://downloads.openmicroscopy.org/omero/5.0.3/artifacts/OMERO.server-5.0.3-ice34-b41.zip -O /tmp/OMERO.server.zip
-            sudo mkdir -pv /opt/OMERO
-            cd /opt/OMERO
-            sudo unzip /tmp/OMERO.server.zip
-            rm /tmp/OMERO.server.zip
-
-.. note::
-
-    From HRM 3.3.0 on, the OMERO connector requires the Python package
-    ``argparse``, which is included by default from Python 2.7 on. In case you
-    are running an older Python version, you have to install the package
-    yourself. Please refer to the installation instructions of your
-    distribution on how to set up Python argparse.
-
-    Please follow the instructions in :ref:`configuring the OMERO connector
-    <connector_omero>` about the optional configuration variable
-    ``PYTHON_EXTLIB`` in case you have to place the package in a non-default
-    location.
-
-    This configuration variable also applies to the following section!
-
-.. _prerequisites-omero-optional:
-
-Additional Python Packages (Optional)
--------------------------------------
-
-This section is about packages that are not mandatory for using the connector,
-but add more functionality to it.
-
-If the `Python Imaging Library (PIL) <https://pypi.python.org/pypi/PIL>`_ or
-`Pillow <http://python-pillow.org/>`_ is installed, the connector will download
-thumbnails as well to use them as previews in the HRM side bar. Those "simple"
-previews can of course be replaced with the HRM ones by clicking on the
-"Re-generate Preview" link.
-
-In case the `Beautiful Soup <https://pypi.python.org/pypi/beautifulsoup4>`_
-library is available on the system, the connector will generate parameter
-summaries and attach them as a human-readable comment to any image uploaded to
-OMERO.
-
-.. tabs::
-    .. tab:: Debian
-
-        .. code-block:: sh
-
-            sudo apt-get install python-imaging python-bs4
-
-    .. tab:: RHEL
-
-        .. code-block:: sh
-
-            sudo yum install python-imaging python-beautifulsoup4
+For using the :ref:`connector_omero`, you will need to install the corresponding
+Python package. Please refer to the `HRM-OMERO Connector project
+<https://pypi.org/project/hrm-omero/>`_ for installation details.

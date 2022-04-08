@@ -12,17 +12,10 @@ Install the HRM
 ... From an Archive
 ===================
 
-Download or checkout the HRM as explained :ref:`here <download-hrm>`.
+Download or checkout the HRM as explained in :ref:`getting the HRM <download-hrm>`.
 
-Unpack the downloaded archive to web server document root directory. This is the directory where Apache2 finds the html and php files to serve.
-
-|ubuntu| up to **13.10**
-
-.. code-block:: sh
-
-    sudo unzip hrm_x.y.z.zip -d /var/www
-
-|fedora| and |ubuntu| **14.04 LTS** and later
+Unpack the downloaded archive to web server document root directory. This is the
+directory where Apache2 finds the html and php files to serve.
 
 .. code-block:: sh
 
@@ -43,9 +36,18 @@ where ``x.y.z`` is a placeholder for the HRM version.
 The advantage of using git is that later :ref:`upgrades <upgrade-hrm>` are easy to perform, and all the modifications are documented this way.
 You need to install git on the machine.
 
-.. code-block:: sh
+.. tabs::
+    .. tab:: Debian
 
-    sudo apt-get install git
+        .. code-block:: sh
+
+            sudo apt install git
+
+    .. tab:: RHEL
+
+        .. code-block:: sh
+
+            sudo dnf install git
 
 Then you can change directory to the hrm document root and check out the git repository.
 
@@ -53,6 +55,7 @@ Then you can change directory to the hrm document root and check out the git rep
 
     cd $WWW_ROOT
     git clone https://github.com/aarpon/hrm.git
+    cd hrm
     git tag -l
 
 In this project tags are used to mark the different version in the master branch. the last command (see above) gives you a list of all the
