@@ -21,7 +21,7 @@ Get the installation script
 
 .. code:: bash
 
-    $ git clone -b whiptail --single-branch https://github.com/aarpon/hrm_installer
+    $ git clone https://github.com/aarpon/hrm_installer
 
 Basic operation
 ===============
@@ -42,7 +42,7 @@ There are a few prerequisites to take care of before the script is run. In case 
 Further documentation
 =====================
 
-For now, the documentation is available on https://github.com/aarpon/hrm_installer/tree/whiptail and better instructions will be added here later.
+For now, the documentation is available on https://github.com/aarpon/hrm_installer and better instructions will be added here later.
 
 Getting help
 ============
