@@ -180,6 +180,14 @@ Updating from the console
 
 Alternatively, the database can be updated from the console (see :ref:`create or update database <create-database>`). Please pay attention to what the update process will report! The output should be the same as the one listed in the previous section, but if the update fails, you might want to `report it <http://hrm.svi.nl:8080/redmine/projects/hrmdev/issues/new>`_.
 
+Check your HRM-OMERO connector
+==============================
+
+In case you are using the `HRM-OMERO Connector <https://pypi.org/project/hrm-omero/>`_
+you will need to update that one as well as it has been split into a separate project.
+Please refer to the instructions on the
+`connector's project page <https://pypi.org/project/hrm-omero/>`_for details.
+
 Re-start the Queue Manager
 ==========================
 
