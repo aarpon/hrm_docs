@@ -1,5 +1,5 @@
 sphinx
-sphinx_rtd_theme
+piccolo_theme
 docutils==0.16.0
 sphinx_tabs
 
