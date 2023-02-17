@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _ldap_auth:
+.. _configure_auth_ldap:
 
 *******************
 LDAP authentication

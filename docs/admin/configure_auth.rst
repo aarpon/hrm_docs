@@ -36,5 +36,5 @@ The following pages explain the required configuration steps for the support aut
 
    internal_auth
    configure_auth_activedir
-   ldap_auth
+   configure_auth_ldap
    
