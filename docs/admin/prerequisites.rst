@@ -256,7 +256,7 @@ HRM needs access to several operations that are blocked by SElinux.
 (Optional) LDAP support
 =======================
 
-If you plan to configure the HRM to use either :ref:`activedir_auth` or :ref:`ldap_auth`, you will need to install the php-ldap package as well:
+If you plan to configure the HRM to use either :ref:`configure_auth_activedir` or :ref:`ldap_auth`, you will need to install the php-ldap package as well:
 
 .. tabs::
     .. tab:: Debian

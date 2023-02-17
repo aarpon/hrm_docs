@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _activedir_auth:
+.. _configure_auth_activedir:
 
 *******************************
 Active Directory authentication

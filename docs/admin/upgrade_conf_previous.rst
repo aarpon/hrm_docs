@@ -56,7 +56,7 @@ setting from the config file(s).
 Group authentication
 --------------------
 
-As of HRM 3.3, external authentication via :ref:`Active Directory <activedir_auth>` or :ref:`generic LDAP <ldap_auth>` now supports **group authorization**. An additional array ``$AUTHORIZED_GROUPS`` can be set to define the set of :ref:`Active Directory <activedir_auth>` or :ref:`generic LDAP <ldap_auth>` groups that are granted access to HRM.
+As of HRM 3.3, external authentication via :ref:`Active Directory <configure_auth_activedir>` or :ref:`generic LDAP <ldap_auth>` now supports **group authorization**. An additional array ``$AUTHORIZED_GROUPS`` can be set to define the set of :ref:`Active Directory <configure_auth_activedir>` or :ref:`generic LDAP <ldap_auth>` groups that are granted access to HRM.
 
 3.1 to 3.2
 ----------

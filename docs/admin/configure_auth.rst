@@ -35,6 +35,6 @@ The following pages explain the required configuration steps for the support aut
    :maxdepth: 1
 
    internal_auth
-   activedir_auth
+   configure_auth_activedir
    ldap_auth
    
