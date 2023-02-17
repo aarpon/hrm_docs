@@ -265,3 +265,41 @@ domain names are usually visible for them when logging into their workstation.
 
 Please feel free to contact the HRM developers in case you need help setting up
 authentication in a multi-domain forest scenario!
+
+
+
+TLS Configurations
+==================
+
+To secure the connection between the HRM server and the LDAP server, it is recommended to enable the
+transport layer security (TLS). Once the LDAP authentication described in the previous section works,
+We need to do the modifications bellow to encrypt the communication between our servers.
+
+First we need to edit the ``/etc/ldap/ldap.conf`` and add the following line in the file:
+
+.. code-block:: bash
+
+    TLS_REQCERT never
+
+
+Then in ``$HRM_CONFIG/active_directory_config.inc`` change the following lines:
+
+.. code-block:: bash
+
+    $AD_PORT = 636;
+    $USE_SSL = true;
+
+
+Testing and Debugging
+=====================
+
+To test if the *base_DN* and *search_DN* work as well as for testing the TLS configurations,
+there is a helper script in ``$HRM_HOME/resources/debugActiveDirectory.php``. Before testing this script needs editing to assign to the ``$query_u`` variable a meaningful user name.
+Then the ``$HRM_HOME/resources`` directory it can by directly executed with the following command.
+
+
+.. code-block:: bash
+
+    php debugActiveDirectory.php
+
+This will generate some useful output to help troubleshooting connection and query problems.
