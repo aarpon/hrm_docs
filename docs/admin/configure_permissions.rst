@@ -3,7 +3,7 @@
 .. toctree::
    :maxdepth: 1
 
-.. _hrm_user_group_perm:
+.. _configure_permissions:
 
 Set up HRM user and group and set permissions
 =============================================

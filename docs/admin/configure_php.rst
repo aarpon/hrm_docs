@@ -3,9 +3,11 @@
 .. toctree::
    :maxdepth: 1
 
-***********************************
-Edit hrm_config.inc
-***********************************
+*************************************
+Edit hrm_config.inc (web-application)
+*************************************
+
+These configurations concern PHP, hence the web-application (front end) itself.
 
 Copy the sample file
 ====================

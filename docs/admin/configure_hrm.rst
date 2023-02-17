@@ -3,13 +3,13 @@
 .. toctree::
    :maxdepth: 1
 
-.. _`hrm_conf`:
+.. _configure_hrm:
 
-*************
-Edit hrm.conf
-*************
+*************************
+Edit hrm.conf (webserver)
+*************************
 
-The ``hrm.conf`` file is used by both the Web server and the Queue Manager.
+The ``hrm.conf`` file is used by both the webserver and the queue-manager (back-end).
 
 Copy the sample file
 ====================

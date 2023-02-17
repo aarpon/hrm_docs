@@ -12,7 +12,7 @@ environment, checks the config, launches the queue manager and cleans up after
 the process has terminated.
 
 The configuration file for the HRM daemon is ``/etc/hrm.conf`` (see
-:ref:`hrm_conf`)
+:ref:`configure_hrm`)
 
 .. warning::
 
@@ -27,5 +27,5 @@ default in recent versions of Debian and RedHat-based systems.
 .. toctree::
    :maxdepth: 1
 
-   hrm_daemon_sysv
-   hrm_daemon_systemd
+   configure_daemon_sysv
+   configure_daemon_systemd

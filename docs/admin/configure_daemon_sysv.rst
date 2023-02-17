@@ -64,7 +64,7 @@ recommend using the systemd unit file, described in :ref:`install_hrmd_systemd`.
 Start manually
 --------------
 
-Make sure to set the proper value of ``SUSER`` in ``/etc/hrm.conf`` (see :ref:`hrm_conf`).
+Make sure to set the proper value of ``SUSER`` in ``/etc/hrm.conf`` (see :ref:`configure_hrm`).
 
 Start a shell and type:
 

@@ -3,8 +3,6 @@
 .. toctree::
    :maxdepth: 1
 
-.. _`set_server`:
-
 **************************************
 Review processing server configuration 
 **************************************
