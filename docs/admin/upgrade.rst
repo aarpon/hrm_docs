@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _`upgrade-hrm`:
+.. _upgrade-hrm:
 
 .. note:: Version 3.8 introduces a simplification of the configuration. Please see :ref:`update_conf_files` below.
 
@@ -183,10 +183,10 @@ Alternatively, the database can be updated from the console (see :ref:`create or
 Check your HRM-OMERO connector
 ==============================
 
-In case you are using the `HRM-OMERO Connector <https://pypi.org/project/hrm-omero/>`_
-you will need to update that one as well as it has been split into a separate project.
-Please refer to the instructions on the
-`connector's project page <https://pypi.org/project/hrm-omero/>`_for details.
+In case you are using the `HRM-OMERO`_ connector, you will need to update that one as well as it has been split into a separate project.
+Please refer to the instructions on the `HRM-OMERO`_ project page for details.
+
+.. _HRM-OMERO: https://pypi.org/project/hrm-omero/
 
 Re-start the Queue Manager
 ==========================
