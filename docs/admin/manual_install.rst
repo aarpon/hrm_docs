@@ -10,6 +10,6 @@ Manual installation (recommended)
    :maxdepth: 1
 
    manual_install_prerequisites
-   manual_install_hrm
+   manual_install_get_hrm
    configure
    configure_opt

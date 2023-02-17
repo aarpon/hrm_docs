@@ -11,7 +11,6 @@ These are the detailed installation and administration instructions for the Huyg
    :maxdepth: 1
 
    conventions
-   download
    manual_install
    script_install
    upgrade

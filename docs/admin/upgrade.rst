@@ -53,12 +53,12 @@ Alternatively, you can use:
 
 that should return empty (nothing).
 
-Download and extract the new HRM release
+Get the new HRM release
 ========================================
 
 To install the new HRM version you need to download the ``.zip`` file from
 the website or github as explained in :ref:`downloading the standard archive
-<download-hrm-standard>`.
+<get_hrm>`.
 
 .. warning::
 
