@@ -12,8 +12,8 @@ These are the detailed installation and administration instructions for the Huyg
 
    conventions
    download
-   script_install
    manual_install
+   script_install
    upgrade
 
 .. The following is temporarily commented out until we fix it.

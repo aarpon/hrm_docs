@@ -3,9 +3,9 @@
 
 .. _`script-install`:
 
-**********************
-Automated installation
-**********************
+*****************************
+Automated installation (beta)
+*****************************
 
 .. note::
 
