@@ -1,7 +1,5 @@
 .. include:: global_directives.inc
 
-.. _add_servers:
-
 ***********************
 Add processing machines
 ***********************
@@ -54,7 +52,7 @@ Register processing machines
 Log on to HRM as admin and go to `Servers and GPUs` |ServersGPUs22x22|.
 Register the processing servers in HRM by adding an entry for every processing
 machine, specifiying the absolute Huygens Core path on that machine, as well
-as the machine name. For details on the GPU ID field see :ref:`enable_gpus`.
+as the machine name. For details on the GPU ID field see :ref:`configure_auth_ldap`.
 
 
 

@@ -4,9 +4,6 @@
 Configure the HRM
 *****************
 
-Mandatory configuration steps
-=============================
-
 .. toctree::
    :maxdepth: 1
 
@@ -18,15 +15,3 @@ Mandatory configuration steps
    set_server
    hrm_daemon
    admin_password
-
-Optional configuration steps
-============================
-
-.. toctree::
-   :maxdepth: 1
-
-   customize_login
-   export_data_share
-   configure_omero
-   enable_gpus
-   add_servers

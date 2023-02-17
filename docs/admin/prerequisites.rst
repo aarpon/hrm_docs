@@ -352,6 +352,6 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 (Optional) OMERO support
 ========================
 
-For using the :ref:`connector_omero`, you will need to install the corresponding
+For using the :ref:`omero_configuration`, you will need to install the corresponding
 Python package. Please refer to the `HRM-OMERO Connector project
 <https://pypi.org/project/hrm-omero/>`_ for installation details.

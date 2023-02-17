@@ -1,7 +1,5 @@
 .. include:: global_directives.inc
 
-.. _enable_gpus:
-
 *************
 Enable GPUs
 *************

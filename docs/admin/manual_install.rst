@@ -12,3 +12,4 @@ Manual installation (recommended)
    prerequisites
    install
    configure
+   configure_opt

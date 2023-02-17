@@ -1,6 +1,6 @@
 .. include:: global_directives.inc
 
-.. _connector_omero:
+.. _omero_configuration:
 
 ***************
 OMERO connector
