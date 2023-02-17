@@ -32,11 +32,7 @@ Install the Sphinx Python documentation generator (preferably in a separate *vir
 environment*, see the Python documentation for details):
 
 ```bash
-pip install \
-    sphinx \
-    sphinx_rtd_theme \
-    docutils==0.16.0 \
-    sphinx_tabs
+pip install -r requirements.txt
 ```
 
 Building the docs
