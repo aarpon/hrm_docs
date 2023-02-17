@@ -9,7 +9,7 @@ Manual installation (recommended)
 .. toctree::
    :maxdepth: 1
 
-   prerequisites
-   install
+   manual_install_prerequisites
+   manual_install_hrm
    configure
    configure_opt
