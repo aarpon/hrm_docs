@@ -34,7 +34,7 @@ The following pages explain the required configuration steps for the support aut
 .. toctree::
    :maxdepth: 1
 
-   internal_auth
+   configure_auth_internal
    configure_auth_activedir
    configure_auth_ldap
    
