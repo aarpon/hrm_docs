@@ -24,7 +24,7 @@ MySQL
 
 .. note::
 
-    On Ubuntu 18.04 LTS you might need to follow `these instructions to set
+    On Ubuntu 18.04 LTS and newer you might need to follow `these instructions to set
     the mysql root password <https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux>`_.
 
 

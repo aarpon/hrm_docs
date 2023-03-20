@@ -11,6 +11,29 @@ Update the configuration files (previous versions)
 
 .. warning:: These instructions refer to older versions of HRM!
 
+3.7 to 3.8
+----------
+
+HRM 3.8 brings a few simplifications in the configuration files. Please run the following commands:
+
+.. code-block:: sh
+
+   cd $HRM_HOME/config
+   cp -p hrm_server_config.inc hrm_config.inc
+
+.. note:: The following files have become redundant and can be removed:
+
+   ``$HRM_HOME/config/hrm_server_config.inc``
+
+   ``$HRM_HOME/config/hrm_client_config.inc``
+   
+   If you are upgrading from an older version of HRM and both files had the same content, you can simply rename one of them to ``hrm_config.inc``.
+
+3.6 to 3.7
+----------
+
+There were no changes in the configuration files between versions 3.6 and 3.7 of HRM.
+
 3.5 to 3.6
 ----------
 
