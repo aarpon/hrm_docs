@@ -1,5 +1,5 @@
 sphinx
 piccolo_theme
-docutils==0.16.0
+docutils
 sphinx_tabs
 
