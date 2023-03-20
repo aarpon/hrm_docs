@@ -20,12 +20,12 @@ import sys, os
 found_html_theme = 'classic'
 found_html_theme_path = []
 try:
-    import sphinx_rtd_theme
-    found_html_theme = 'sphinx_rtd_theme'
-    found_html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-    print("Using local sphinx RTD theme.")
+    import piccolo_theme
+    found_html_theme = 'piccolo_theme'
+    found_html_theme_path = [piccolo_theme.get_html_theme_path()]
+    print("Using local sphinx %s theme." % found_html_theme)
 except:
-    print("Could not import sphinx RTD theme. Using default.")
+    print("Could not import sphinx %s theme. Using default." % found_html_theme)
     pass
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -56,7 +56,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Huygens Remote Manager'
-copyright = u'2013 - 2022, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer, Egor Zindy, Kevin Namink, Joost Oliemans'
+# copyright = u'2013 - 2022, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter,' \
+#             u' Olivier Burri, Felix Meyenhofer, Egor Zindy, Kevin Namink, Joost Oliemans'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -111,7 +112,10 @@ html_theme = found_html_theme
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    "source_url": "https://github.com/aarpon/hrm_docs/tree/master",
+    "globaltoc_maxdepth": 5
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = found_html_theme_path
@@ -165,10 +169,10 @@ html_theme_path = found_html_theme_path
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
