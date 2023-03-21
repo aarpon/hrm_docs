@@ -24,8 +24,8 @@ MySQL
 
 .. note::
 
-    On Ubuntu 18.04 LTS and newer you might need to follow `these instructions to set
-    the mysql root password <https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux>`_.
+    On Ubuntu 22.04 LTS and newer you might need to follow `these instructions to set
+    the mysql root password <https://linuxhint.com/change-mysql-password-ubuntu-22-04/>`_.
 
 
 The following command will create a new MySQL user ``hrm`` and grant the
