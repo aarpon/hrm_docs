@@ -1,5 +1,4 @@
 sphinx
-piccolo_theme
+furo
 docutils
 sphinx_tabs
-
