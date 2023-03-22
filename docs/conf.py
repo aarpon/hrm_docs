@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Huygens Remote Manager'
-copyright = u'2013 - 2023, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter,' \
+copyright = u'2013-2023, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter,' \
             u' Olivier Burri, Felix Meyenhofer, Egor Zindy, Kevin Namink, Joost Oliemans'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -93,24 +93,30 @@ exclude_patterns = ['_build']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'furo'
+html_fallback_theme = 'alabaster'
 
 # Fallback on the classic theme if set theme cannot be imported
 try:
     import furo
-    print("Using local sphinx %s theme." % html_theme)
+    print("Using local sphinx '%s' theme." % html_theme)
 except ImportError:
-    print("Could not import sphinx theme '%s'." % html_theme)
-    html_theme = 'classic'
-    print("Using sphinx theme '%s'" % html_theme)
+    print("Could not import sphinx theme '%s', using fallback '%s'." % (html_theme, html_fallback_theme))
+    html_theme = html_fallback_theme
     pass
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {
-    # "source_url": "https://github.com/aarpon/hrm_docs/tree/master", # The option does not exist in the themes 'classic' or 'furo'
-    "globaltoc_maxdepth": 5
-}
+if html_theme == html_fallback_theme:
+    html_theme_options = {}
+elif html_theme == 'furo':
+    html_theme_options = {
+        "source_repository": "https://github.com/aarpon/hrm_docs/",
+        "source_branch": "master",
+        "source_directory": "docs/",
+    }
+
+html_theme_options['globaltoc_maxdepth'] = 5
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = found_html_theme_path
