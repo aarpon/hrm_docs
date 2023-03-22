@@ -38,19 +38,15 @@ Apache2 web server
 
 
 .. tabs::
-   .. tab:: Debian
 
-      .. code-block:: sh
+   .. code-tab:: bash Debian
 
-          sudo apt install apache2
+      sudo apt install apache2
 
-   .. tab:: RHEL
+   .. code-tab:: bash RHEL
 
-      .. code-block:: sh
-
-          sudo dnf install httpd
-
-          sudo systemctl enable httpd
+      sudo dnf install httpd
+      sudo systemctl enable httpd
 
 Web pages can be installed globally or per-user.
 
@@ -93,7 +89,7 @@ Make sure to configure Apache2 to use them by setting the *AllowOverride* and *R
 Please notice that the ``Require`` directive is required from Apache version 2.4. Here is the code snippet for the config
 files
 
-.. code-block:: sh
+.. code-block:: bash
 
     <Directory /var/www/html/hrm>
         Options Indexes FollowSymLinks
@@ -113,31 +109,28 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
 
 
 .. tabs::
-    .. tab:: Debian
 
-        .. code-block:: sh
+    .. code-tab:: bash Debian
 
-            sudo apt install \
-                libapache2-mod-php \
-                php \
-                php-cli \
-                php-common \
-                php-json \
-                php-xml \
-                php-mbstring
+        sudo apt install \
+            libapache2-mod-php \
+            php \
+            php-cli \
+            php-common \
+            php-json \
+            php-xml \
+            php-mbstring
 
-    .. tab:: RHEL
+    .. code-tab:: bash RHEL
 
-        .. code-block:: sh
-
-            sudo dnf install \
-                php \
-                php-cli \
-                php-common \
-                php-process \
-                php-json \
-                php-xml \
-                php-mbstring
+        sudo dnf install \
+            php \
+            php-cli \
+            php-common \
+            php-process \
+            php-json \
+            php-xml \
+            php-mbstring
 
 Production php.ini settings
 ---------------------------
@@ -157,7 +150,7 @@ Please configure the HRM machine for production. Edit the ``php.ini`` configurat
 
 In there set at least the values below (more information can be found in the ``php.ini`` file itself).
 
-.. code-block:: sh
+.. code-block:: bash
 
     display_errors = Off
     display_startup_errors = Off
@@ -172,19 +165,16 @@ MySQL
 -----
 
 .. tabs::
-    .. tab:: Debian
 
-        .. code-block:: sh
+    .. code-tab:: bash Debian
 
-            sudo apt install php-mysql mysql-server
+        sudo apt install php-mysql mysql-server
 
-    .. tab:: RHEL
+    .. code-tab:: bash RHEL
 
-        .. code-block:: sh
+        sudo dnf install php-mysqlnd php-pdo mariadb-server
 
-            sudo dnf install php-mysqlnd php-pdo mariadb-server
-
-            sudo systemctl enable mariadb
+        sudo systemctl enable mariadb
 
 .. note::
 
@@ -194,17 +184,13 @@ PostgreSQL
 ----------
 
 .. tabs::
-    .. tab:: Debian
+    .. code-tab:: bash Debian
 
-        .. code-block:: sh
+        sudo apt install php-pgsql postgresql
 
-            sudo apt install php-pgsql postgresql
+    .. tab:: bash RHEL
 
-    .. tab:: RHEL
-
-        .. code-block:: sh
-
-            sudo dnf install php-pgsql postgresql-server postgresql-contrib
+        sudo dnf install php-pgsql postgresql-server postgresql-contrib
 
 You will need to manually enable PostgreSQL:
 
@@ -229,8 +215,8 @@ HRM needs access to several operations that are blocked by SElinux.
 .. tabs::
     .. tab:: Debian
 
-	By default SElinux **is disabled**. In case SElinux has been enabled
-	edit file ``/etc/selinux/config`` and update the following variable.
+    By default SElinux **is disabled**. In case SElinux has been enabled
+    edit file ``/etc/selinux/config`` and update the following variable.
 
         .. code-block:: sh
 
@@ -238,8 +224,8 @@ HRM needs access to several operations that are blocked by SElinux.
 
     .. tab:: RHEL
 
-	By default SElinux **is enabled**. Edit file ``/etc/selinux/config`` to
-	update the following variable.
+    By default SElinux **is enabled**. Edit file ``/etc/selinux/config`` to
+    update the following variable.
 
         .. code-block:: sh
 
@@ -257,17 +243,13 @@ HRM needs access to several operations that are blocked by SElinux.
 If you plan to configure the HRM to use either :ref:`configure_auth_activedir` or :ref:`configure_auth_ldap`, you will need to install the php-ldap package as well:
 
 .. tabs::
-    .. tab:: Debian
+    .. code-tab:: bash Debian
 
-        .. code-block:: sh
+        sudo apt install php-ldap
 
-            sudo apt install php-ldap
+    .. tab:: bash RHEL
 
-    .. tab:: RHEL
-
-        .. code-block:: sh
-
-            sudo dnf install php-ldap
+        sudo dnf install php-ldap
 
 Sendmail (postfix)
 ==================
@@ -277,17 +259,13 @@ HRM uses the PHP ``mail()`` function to notify the users:
     "For the Mail functions to be available, PHP must have access to the sendmail binary on your system during compile time. If you use another mail program, such as qmail or postfix, be sure to use the appropriate sendmail wrappers that come with them." `More... <http://www.php.net/mail>`_
 
 .. tabs::
-    .. tab:: Debian
+    .. code-tab:: bash Debian
 
-        .. code-block:: sh
+        sudo apt install postfix
 
-            sudo apt install postfix
+    .. code-tab:: bash RHEL
 
-    .. tab:: RHEL
-
-        .. code-block:: sh
-
-            sudo dnf install postfix
+        sudo dnf install postfix
 
 .. note::
 
@@ -332,15 +310,14 @@ Compressors
 The HRM compresses files to be downloaded (such as deconvolution results). Several options are possible (and more can be added in the configuration files), but by default the HRM uses ``zip``.
 
 .. tabs::
-    .. tab:: Debian
+
+    .. code-tab:: bash Debian
 
         .. code-block:: sh
 
             sudo apt install zip
 
-    .. tab:: RHEL
-
-        .. code-block:: sh
+    .. code-tab:: bash RHEL
 
             sudo dnf install zip
 

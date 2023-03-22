@@ -33,15 +33,12 @@ The advantage of using git is that later :ref:`upgrades <upgrade-hrm>` are easy 
 You need to install git on the machine.
 
 .. tabs::
-    .. tab:: Debian
 
-        .. code-block:: sh
+    .. code-tab:: bash Debian
 
             sudo apt install git
 
-    .. tab:: RHEL
-
-        .. code-block:: sh
+    .. code-tab:: bash RHEL
 
             sudo dnf install git
 

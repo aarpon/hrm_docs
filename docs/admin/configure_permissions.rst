@@ -34,9 +34,8 @@ This is done by setting the group ownership of HRM_DATA and HRM_LOG to ``hrm``:
 Add the Apache user to the ``hrm`` group:
 
 .. tabs::
-    .. tab:: Debian
 
-        .. code-block:: sh
+    .. tab:: bash Debian
 
             sudo usermod www-data --append --groups hrm
 
@@ -49,14 +48,11 @@ Add the Apache user to the ``hrm`` group:
 Finally restart your web server for the group changes to be activated.
 
 .. tabs::
-    .. tab:: Debian
 
-        .. code-block:: sh
+    .. tab:: bash Debian
 
             sudo systemctl restart apache2.service
 
-    .. tab:: RHEL
-
-        .. code-block:: sh
+    .. tab:: bash RHEL
 
             sudo systemctl restart httpd.service
