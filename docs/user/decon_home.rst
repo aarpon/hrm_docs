@@ -1,8 +1,8 @@
 .. include:: global_directives.inc
 
-*****************
-The Home panel
-*****************
+**********
+Home panel
+**********
 
 Once logged in HRM, the home panel is displayed:
 

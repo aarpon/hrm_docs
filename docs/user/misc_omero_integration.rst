@@ -2,7 +2,7 @@
 
 .. _omero_integration:
 
-Communication with an OMERO server
+OMERO connector
 ==================================
 
 HRM can import and export images from/to a local or remote  `OMERO

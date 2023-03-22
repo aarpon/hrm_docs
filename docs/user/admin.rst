@@ -1,12 +1,9 @@
 .. include:: global_directives.inc
 
-************************************
-The role of the administrator in HRM
-************************************
 
-
-Technical features
-==================
+*************************
+Administration of the HRM
+*************************
 
 HRM consists of two main components: a **web based interface** and a **queue
 manager**.
@@ -40,7 +37,6 @@ The **queue manager**, running the background, dispatches:
 
 Installation and requirements
 =============================
-
 
 To install HRM the following pre-requisites (at least) must be fulfilled:
 
@@ -100,13 +96,12 @@ only:
   accessible to all users. This is meaningful for lowering the threshold
   for those beginning users who need assistance to start deconvolving their
   raw data. Global templates can be created at any of the states where
-  templates are required: :ref:`step2`, :ref:`step3` and :ref:`step4`.
+  templates are required: :ref:`decon_job_step2`, :ref:`decon_job_step3` and :ref:`decon_job_step3`.
 
 * **Servers & GPUs**: Add and remove processing machines and GPU cards. This
   has an effect on the total number of jobs that can run in parallel.
 
 * **HuCore licenses**: Get an overview of the installed Huygens license. 
-
 
 
 Version upgrade
@@ -134,6 +129,7 @@ home panel and follow the instructions.
 In order for this update to work properly it is advised to upgrade the
 HRM source code before upgrading the database.
 
+
 System configuration
 ====================
 
@@ -147,14 +143,11 @@ settings state that the max upload limit is 200MB, since 200MB is
 lower than 256MB, the HRM configuration does not conflict with the PHP
 configuration and 200MB is the maximum allowed file size.
 
-
-
 .. note::
    
    **The PHP configuration file**: /path/to/php/php.ini
    
    **The HRM configuration file**: /path/to/hrm/config/hrm_config.inc
-
 
 
 How HRM communicates with Huygens Core
@@ -180,7 +173,6 @@ automatically generates a Huygens Batch template for Huygens Core that
 -  and finally writes a tag in the destination directory to inform the
    HRM queue manager that the job is finished.
 
-
 When the job is finished the queue manager optionally sends the user an
 e-mail announcing the end of the job and its status. The administrator
 may configure this.
@@ -188,7 +180,6 @@ may configure this.
 Multiple jobs can be processed in parallel depending on how HRM is
 configured, the multiprocessing capabilities of the server, the
 number of available computation servers and GPU cards.
-
 
 
 Tips & Tricks

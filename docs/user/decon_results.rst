@@ -2,9 +2,9 @@
 
 .. _detailed_view_results:
 
-************************
-Results: detailed view 
-************************
+***********************
+Results - detailed view
+***********************
 
 When the job finishes, the files are placed in the |Results22x22|  **Results**
 folder, accessible via the home panel.
@@ -38,6 +38,7 @@ XY and XZ projections.
 
 |MIPResultScreenshot|
 
+
 Comparing SFPs
 ==============
 
@@ -47,6 +48,7 @@ deconvolution and difference in noise.
 
 |SFPResultScreenshot|
 
+
 Comparing Z Slices
 ==================
 
@@ -55,6 +57,7 @@ slice by slice along the Z direction at any depth.
 
 |ZSlicerResultScreenshot|
 
+
 Comparing T frames
 ==================
 
@@ -62,6 +65,7 @@ The time slicer allows for a comparision of the raw image and the restored image
 frame by frame.
 
 |TSlicerResultScreenshot|
+
 
 Z, T and T-SFP movies
 =====================
@@ -73,6 +77,9 @@ computer.
 
 .. note:: These automatically made movies are quite useful for
           prepraring presentations. 
+
+
+.. _colocalisation_results:
 
 Colocalization
 ==============
@@ -112,6 +119,7 @@ have very limited dynamic ranges) HRM will show the scaling factors for
 further quantification:
 
 |ScalingFactorsScreenshot|
+
 
 Huygens log
 ===========

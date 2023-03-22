@@ -2,9 +2,9 @@
 
 .. _statistics:
 
-**********
-Statistics
-**********
+****************
+Usage Statistics
+****************
 
 The user statistics can be reached from the HRM home panel.
 
@@ -24,4 +24,3 @@ The following reports are possible:
 * **Run time per user**.
 
 |StatisticsScreenshot|
-

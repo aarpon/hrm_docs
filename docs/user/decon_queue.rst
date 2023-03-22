@@ -2,9 +2,9 @@
 
 .. _queue_status:
 
-****************
-The Queue status
-****************
+************
+Queue status
+************
 
 After submitting a job HRM returns to the home panel. The Queue Status button
 shows how many queued jobs you own, as follows:

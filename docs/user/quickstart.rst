@@ -1,5 +1,6 @@
 .. include:: global_directives.inc
 
+
 ***************
 Getting started
 ***************
@@ -24,6 +25,7 @@ The theme selected at the moment of logging in is preserved during the entire
 session. In this manual screenshots from both themes are displayed
 interchangeably. 
 
+
 .. _create_an_account:
 
 Create an account in HRM
@@ -41,6 +43,8 @@ account needs to be validated by the administrator.
 
 |RegistrationLink| |RegistrationForm|
 
+
+.. _upload:
 
 Upload a raw image
 ==================
@@ -154,6 +158,7 @@ clicking |JobQueue22x22|. A typical processing queue looks like the following:
 The queue is handled in an intelligent way,
 allowing jobs from different users to be processed at different times.
 
+
 .. _results:
 
 Results
@@ -183,7 +188,6 @@ download.
 
 Tips & Tricks
 =============
-
 
 * When a deconvolution run gives optimal results download the processed
   data from the detailed view by clicking on |DownloadResults22x22|.

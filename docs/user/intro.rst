@@ -1,14 +1,11 @@
 .. include:: global_directives.inc
 
+
 ************
 Introduction
 ************
 
-
-What is HRM
-===========
-
-HRM is a collaborative open-source interface to Huygens Core for
+The HRM is a collaborative open-source interface to Huygens Core for
 multi-user, web-based, scheduled, batch deconvolution.
 
 The Huygens Remote Manager (HRM) enables large groups of users to work with
@@ -21,6 +18,7 @@ which allows for intelligent use of hardware and fast processing times. It
 features an intelligent queue that switches among the jobs of all users.
 
 |HomePanel|
+
 
 Who makes HRM
 =============
@@ -48,6 +46,7 @@ its experience in deconvolution and software engineering.
 
 |Collaborators|
 
+
 Where to find HRM
 =================
 
@@ -61,5 +60,3 @@ on that page.
 
 Installing HRM on a regular web server is not very difficult. Please consult
 the :ref:`installation_instructions` and the `SVI Wiki <http://www.svi.nl/HrmInstallation>`_.
-
-

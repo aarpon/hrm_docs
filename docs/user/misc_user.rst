@@ -2,12 +2,11 @@
 
 .. _your_account:
 
-*******
-Account
-*******
+*************
+User account
+*************
 
 Click on |Account22x22| in the home panel to change any of the details linked
 to your HRM account.
 
 |AccountScreenshot|
-
