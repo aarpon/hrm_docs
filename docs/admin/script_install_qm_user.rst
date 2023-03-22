@@ -3,8 +3,9 @@
 .. _script_install_qm_user:
 
 
+***********
 System user
-===========
+***********
 
 System user:
 

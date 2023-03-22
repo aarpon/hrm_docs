@@ -1,8 +1,5 @@
 .. include:: global_directives.inc
 
-.. toctree::
-   :maxdepth: 1
-
 .. _configure_permissions:
 
 Set up HRM user and group and set permissions

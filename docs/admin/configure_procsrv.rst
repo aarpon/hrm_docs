@@ -1,8 +1,5 @@
 .. include:: global_directives.inc
 
-.. toctree::
-   :maxdepth: 1
-
 **************************************
 Review processing server configuration 
 **************************************

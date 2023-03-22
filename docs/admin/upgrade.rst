@@ -6,6 +6,7 @@
 
 .. note:: These instructions always explain the steps required to upgrade from **last stable release** to **current stable release**. However, each section also provides links to instructions for older versions.
 
+
 ***************
 Version upgrade
 ***************

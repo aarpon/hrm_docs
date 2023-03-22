@@ -2,9 +2,6 @@
 
 .. _get_hrm:
 
-.. toctree::
-   :maxdepth: 1
-
 ***************
 Get the HRM
 ***************

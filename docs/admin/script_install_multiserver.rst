@@ -3,8 +3,9 @@
 .. _script_install_multiserver:
 
 
+****************
 Multiple servers
-================
+****************
 
 First we ask if the deconvolution will be performed locally.
 

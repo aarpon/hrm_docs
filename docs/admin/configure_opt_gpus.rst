@@ -4,6 +4,10 @@
 Enable GPUs
 *************
 
+Graphics processors significantly reduce computing time (see `SVI page on GPU's <https://svi.nl/HuygensGPU>`_).
+
+Configuration
+=============
 
 Log on to HRM as admin and go to `Servers and GPUs` |ServersGPUs22x22|.
 The form in `Servers and GPUs` allows you to register GPUs (as well as other

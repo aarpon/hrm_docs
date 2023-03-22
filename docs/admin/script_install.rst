@@ -1,6 +1,5 @@
 .. include:: global_directives.inc
 
-
 .. _`script-install`:
 
 *****************************
@@ -48,4 +47,3 @@ Getting help
 ============
 
 If you are interested in this installation method and have any issues you want to discuss, please enquire on the image.sc forum over at https://forum.image.sc/tag/svi-huygens
-

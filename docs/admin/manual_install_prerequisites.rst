@@ -1,7 +1,5 @@
 .. include:: global_directives.inc
 
-.. toctree::
-   :maxdepth: 1
 
 *************************
 Install the prerequisites
