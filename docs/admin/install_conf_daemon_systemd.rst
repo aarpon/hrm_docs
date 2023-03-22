@@ -2,8 +2,8 @@
 
 .. _install_hrmd_systemd:
 
-Install the HRM daemon as a systemd service
-===========================================
+HRM daemon with systemd
+=======================
 
 If your Linux distribution is using the ``systemd`` init system, we recommend to
 **not** using the "classical" init script (described in

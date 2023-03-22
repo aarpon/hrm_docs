@@ -2,9 +2,9 @@
 
 .. _upgrade_clean_previous:
 
-***************************************************
-Clean up previous installations (previous versions)
-***************************************************
+*******************************
+Clean up previous installations
+*******************************
 
 .. warning:: These instructions refer to older versions of HRM!
 

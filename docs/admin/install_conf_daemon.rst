@@ -2,9 +2,9 @@
 
 .. _hrm_daemon:
 
-**********************
-Install the HRM daemon
-**********************
+************
+Daemon setup
+************
 
 The HRM daemon consists of two parts, the actual queue manager (a PHP process)
 and a shell-based wrapper in ``$HRM_BIN/hrm_queuemanager`` that prepares the
@@ -27,5 +27,5 @@ default in recent versions of Debian and RedHat-based systems.
 .. toctree::
    :maxdepth: 1
 
-   configure_daemon_sysv
-   configure_daemon_systemd
+   install_conf_daemon_sysv
+   install_conf_daemon_systemd

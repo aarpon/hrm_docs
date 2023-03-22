@@ -2,9 +2,9 @@
 
 .. _configure_auth:
 
-************************
-Configure authentication
-************************
+**************
+Authentication
+**************
 
 The HRM curently supports three user authentication mechanisms:
 
@@ -36,11 +36,11 @@ The first one is the default for new users. Valid examples are:
     $authenticateAgainst = array("active_dir", "ldap", "integrated");
     ...
 
-The following pages explain the required configuration steps for the support authentication mechanisms.
+The following pages explain the required configuration steps for the support authentication mechanisms:
 
 .. toctree::
    :maxdepth: 1
 
-   configure_auth_activedir
-   configure_auth_ldap
+   install_conf_auth_ad
+   install_conf_auth_ldap
    

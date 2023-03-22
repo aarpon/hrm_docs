@@ -11,7 +11,7 @@ These are the detailed installation and administration instructions for the Huyg
    :maxdepth: 1
 
    conventions
-   manual_install
+   install
    script_install
    upgrade
 
@@ -19,4 +19,3 @@ These are the detailed installation and administration instructions for the Huyg
 .. * :ref:`genindex`
 .. * :ref:`modindex`
 .. * :ref:`search`
-

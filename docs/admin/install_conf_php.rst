@@ -1,8 +1,8 @@
 .. include:: global_directives.inc
 
-*************************************
-Edit hrm_config.inc (web-application)
-*************************************
+************
+Webapp (PHP)
+************
 
 These configurations concern PHP, hence the web-application (front end) itself.
 

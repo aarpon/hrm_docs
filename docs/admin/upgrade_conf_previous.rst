@@ -2,9 +2,9 @@
 
 .. _upgrade_conf_previous:
 
-**************************************************
-Update the configuration files (previous versions)
-**************************************************
+**************************
+Update configuration files
+**************************
 
 .. warning:: These instructions refer to older versions of HRM!
 

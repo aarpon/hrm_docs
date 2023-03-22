@@ -2,9 +2,9 @@
 
 .. _`configure-database`:
 
-***********************
-Set up the HRM database
-***********************
+**************
+Database setup
+**************
 
 Preparing the database for the HRM consists of two steps, first the
 corresponding user needs to be created and configured and then the database

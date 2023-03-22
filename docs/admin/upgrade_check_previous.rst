@@ -2,9 +2,9 @@
 
 .. _upgrade_check_previous:
 
-*************************************************
-Check the configuration files (previous versions)
-*************************************************
+*************************
+Check configuration files
+*************************
 
 .. warning:: These instructions refer to older versions of HRM!
 

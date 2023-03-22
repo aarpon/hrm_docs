@@ -2,9 +2,9 @@
 
 .. _configure_hrm:
 
-*************************
-Edit hrm.conf (webserver)
-*************************
+******
+Server
+******
 
 The ``hrm.conf`` file is used by both the webserver and the queue-manager (back-end).
 

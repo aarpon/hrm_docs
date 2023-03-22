@@ -1,8 +1,8 @@
 .. include:: global_directives.inc
 
-**************************************
-Review processing server configuration 
-**************************************
+**************************
+Processing server (HuCore)
+**************************
 
 In the table ``server`` of the HRM database, two default values are set for the fields name (i.e. the name of the server running Huygens Core) and huscript_path (i.e. the path pointing to the hucore executable).
 

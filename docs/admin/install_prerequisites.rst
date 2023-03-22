@@ -1,6 +1,5 @@
 .. include:: global_directives.inc
 
-
 *************************
 Install the prerequisites
 *************************
@@ -107,7 +106,6 @@ PHP
 
 The HRM is made of two parts, a web interface and a queue manager, both written in PHP but with different requirements. The web interface requires the PHP module for Apache2, the queue manager requires the PHP command line interpreter.
 
-
 .. tabs::
 
     .. code-tab:: bash Debian
@@ -132,6 +130,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
             php-xml \
             php-mbstring
 
+
 Production php.ini settings
 ---------------------------
 
@@ -147,7 +146,6 @@ Please configure the HRM machine for production. Edit the ``php.ini`` configurat
         The corresponding file is ``/etc/php.ini`` but at least as of RHEL 8 all
         default settings are fine, so there shouldn't be anything to change.
 
-
 In there set at least the values below (more information can be found in the ``php.ini`` file itself).
 
 .. code-block:: bash
@@ -156,10 +154,12 @@ In there set at least the values below (more information can be found in the ``p
     display_startup_errors = Off
     error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
 
+
 A relational database
 =====================
 
 The HRM officially supports two relational databases: **MySQL** and **PostgreSQL**.
+
 
 MySQL
 -----
@@ -179,6 +179,7 @@ MySQL
 .. note::
 
     It is recommended to install a database management tool like ``phpmyadmin``.
+
 
 PostgreSQL
 ----------
@@ -236,7 +237,6 @@ HRM needs access to several operations that are blocked by SElinux.
     Restart the machine after changing the value of SElinux.
 
 
-
 (Optional) LDAP support
 =======================
 
@@ -250,6 +250,7 @@ If you plan to configure the HRM to use either :ref:`configure_auth_activedir` o
     .. tab:: bash RHEL
 
         sudo dnf install php-ldap
+
 
 Sendmail (postfix)
 ==================
@@ -299,10 +300,12 @@ Otherwise you will get the following warning every time the PHP function `date()
 
 Click here for the `full list of supported time zones <http://us2.php.net/manual/en/timezones.php>`_.
 
+
 SSH
 ===
 
 If the queue manager and the image processing server are not on the same machine (see installation instructions), HRM transfers files via ssh between the two using ``sudo``. To allow HRM to login and run commands as sudo via remote, it is necessary to comment out the line ``'Defaults requiretty'`` in the ``/etc/sudoers`` file.
+
 
 Compressors
 ===========
@@ -323,6 +326,7 @@ The HRM compresses files to be downloaded (such as deconvolution results). Sever
 
 
 .. _prerequisites-omero:
+
 
 (Optional) OMERO support
 ========================

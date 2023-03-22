@@ -2,15 +2,15 @@
 
 .. _get_hrm:
 
-***************
+***********
 Get the HRM
-***************
+***********
 
 Current version of the HRM is |HRM_VERSION|.
 
 
 From archive
-===================
+============
 
 Download or checkout the HRM from |linux| `Sourceforge <https://sourceforge.net/projects/hrm/files/latest/download>`_
 and unzip it into the ``$WWW_ROOT``.
@@ -27,7 +27,7 @@ Bellow is an command example:
 .. _`install-hrm-git`:
 
 Using Git
-=============
+=========
 
 The advantage of using git is that later :ref:`upgrades <upgrade-hrm>` are easy to perform, and all the modifications are documented this way.
 You need to install git on the machine.

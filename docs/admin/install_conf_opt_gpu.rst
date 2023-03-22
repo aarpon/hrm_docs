@@ -1,8 +1,8 @@
 .. include:: global_directives.inc
 
-*************
-Enable GPUs
-*************
+**********
+GPUs setup
+**********
 
 Graphics processors significantly reduce computing time (see `SVI page on GPU's <https://svi.nl/HuygensGPU>`_).
 
@@ -72,7 +72,6 @@ properly:
 
    Restart Apache.
 
-                
 * Processing machine(s):
 
 .. code-block:: sh
@@ -80,6 +79,4 @@ properly:
    sudo mkdir -p /home/hrm
    sudo chown -R hrm:hrm /home/hrm
 
-
 As a reminder, also notice that each HRM job has a corresponding Huygens log in the HRM ‘Detailed view’. If the system is properly configured then the message ‘Slow GPU initialization’ should not be logged.
-

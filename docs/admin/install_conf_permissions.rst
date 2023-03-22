@@ -2,8 +2,8 @@
 
 .. _configure_permissions:
 
-Set up HRM user and group and set permissions
-=============================================
+User and group permissions
+==========================
 
 In the following instructions, ``HRM_DATA`` points to the data folder that contains all user subfolders (for example: ``/data/hrm_data``) and ``HRM_LOG`` is the log folder for the HRM (for example: ``/var/log/hrm``). Please see also the :ref:`conventions <conventions>`. It is important that those folder have the correct ownership and permissions set for HRM to work properly. Please follow these steps.
 

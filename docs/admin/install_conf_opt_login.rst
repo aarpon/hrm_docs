@@ -1,7 +1,7 @@
 .. include:: global_directives.inc
 
 ************************
-Customize the login page
+Login page customization
 ************************
 
 You can customize the login page by renaming the ``$HRM_USER/login_user.inc.sample file`` into ``$HRM_USER/login_user.inc`` and adding information that you would like to appear on the HRM login page, such as contact information, quick instructions, etc.
