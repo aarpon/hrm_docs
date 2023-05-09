@@ -80,6 +80,7 @@
 .. |CropScreenshot|              image:: images/CropScreenshot.png
 .. |BackgroundScreenshot|        image:: images/BackgroundScreenshot.png
 .. |StopCriteriaScreenshot|      image:: images/StopCriteriaScreenshot.png
+.. |StopCritPerChanScreenshot|   image:: images/StopCritPerChanScreenshot.png
 .. |ZStabilizationScreenshot|    image:: images/ZStabilizationScreenshot.png
 .. |ColocalizationScreenshot|    image:: images/ColocalizationScreenshot.png
 .. |ColocChannelsScreenshot|     image:: images/ColocChannelsScreenshot.png

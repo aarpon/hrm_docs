@@ -189,7 +189,7 @@ PostgreSQL
 
         sudo apt install php-pgsql postgresql
 
-    .. tab:: bash RHEL
+    .. code-tab:: bash RHEL
 
         sudo dnf install php-pgsql postgresql-server postgresql-contrib
 
@@ -216,21 +216,22 @@ HRM needs access to several operations that are blocked by SElinux.
 .. tabs::
     .. tab:: Debian
 
-    By default SElinux **is disabled**. In case SElinux has been enabled
-    edit file ``/etc/selinux/config`` and update the following variable.
+       By default SElinux **is disabled**. In case SElinux has been enabled
+       edit file ``/etc/selinux/config`` and update the following variable.
 
-        .. code-block:: sh
+       .. code-block:: sh
 
-            SELINUX=permissive
+           SELINUX=permissive
 
     .. tab:: RHEL
 
-    By default SElinux **is enabled**. Edit file ``/etc/selinux/config`` to
-    update the following variable.
+       By default SElinux **is enabled**. Edit file ``/etc/selinux/config`` to
+       update the following variable.
 
-        .. code-block:: sh
-
+       .. code-block:: sh
+           
             SELINUX=permissive
+
 
 .. note::
 
@@ -247,7 +248,7 @@ If you plan to configure the HRM to use either :ref:`configure_auth_activedir` o
 
         sudo apt install php-ldap
 
-    .. tab:: bash RHEL
+    .. code-tab:: bash RHEL
 
         sudo dnf install php-ldap
 

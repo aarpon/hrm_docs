@@ -300,6 +300,10 @@ Deconvolution will stop when either of the following two conditions is met.
   If two subsequent results differ less than this factor then convergence has
   been reached.
 
+|StopCritPerChanScreenshot|
+
+As of HRM 3.9 it is possible to set the stopping criteria seperately for each
+channel. Leaving later channels empty will use the last set value.
 
 Chromatic Aberration Correction
 ===============================

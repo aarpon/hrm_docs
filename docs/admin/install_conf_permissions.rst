@@ -35,13 +35,11 @@ Add the Apache user to the ``hrm`` group:
 
 .. tabs::
 
-    .. tab:: bash Debian
+    .. code-tab:: bash Debian
 
             sudo usermod www-data --append --groups hrm
 
-    .. tab:: RHEL
-
-        .. code-block:: sh
+    .. code-tab:: bash RHEL
 
             sudo usermod apache --append --groups hrm
 
@@ -49,10 +47,10 @@ Finally restart your web server for the group changes to be activated.
 
 .. tabs::
 
-    .. tab:: bash Debian
+    .. code-tab:: bash Debian
 
             sudo systemctl restart apache2.service
 
-    .. tab:: bash RHEL
+    .. code-tab:: bash RHEL
 
             sudo systemctl restart httpd.service
