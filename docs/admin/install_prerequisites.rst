@@ -117,6 +117,7 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
             php-common \
             php-json \
             php-xml \
+            php-ldap \
             php-mbstring
 
     .. code-tab:: bash RHEL
@@ -128,8 +129,18 @@ The HRM is made of two parts, a web interface and a queue manager, both written 
             php-process \
             php-json \
             php-xml \
+            php-ldap \
             php-mbstring
 
+.. note::
+
+    When installing a PHP version that is not the default of your system it
+    might be necessary to specify for which PHP version the packages are
+    needed. Change ``php`` to for example ``php8.1`` in the packages to get
+    the packages for PHP 8.1. It might also be necessary to change the PHP
+    version Apache2 uses with the ``a2dismod`` and ``a2enmod`` commands.
+    
+   
 
 Production php.ini settings
 ---------------------------
@@ -236,21 +247,6 @@ HRM needs access to several operations that are blocked by SElinux.
 .. note::
 
     Restart the machine after changing the value of SElinux.
-
-
-(Optional) LDAP support
-=======================
-
-If you plan to configure the HRM to use either :ref:`configure_auth_activedir` or :ref:`configure_auth_ldap`, you will need to install the php-ldap package as well:
-
-.. tabs::
-    .. code-tab:: bash Debian
-
-        sudo apt install php-ldap
-
-    .. code-tab:: bash RHEL
-
-        sudo dnf install php-ldap
 
 
 Sendmail (postfix)
