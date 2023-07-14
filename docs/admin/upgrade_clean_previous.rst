@@ -1,13 +1,10 @@
 .. include:: global_directives.inc
 
-.. toctree::
-   :maxdepth: 1
-
 .. _upgrade_clean_previous:
 
-***************************************************
-Clean up previous installations (previous versions)
-***************************************************
+*******************************
+Clean up previous installations
+*******************************
 
 .. warning:: These instructions refer to older versions of HRM!
 
@@ -67,7 +64,7 @@ Update the data folder permissions
 As of HRM 3.2.0, the system users running the Queue Manager and the web server
 are expected to have full read-write access to ``$HRM_DATA``. The supported way
 of doing this is explained in :ref:`setting up the HRM user and group
-<hrm_user_group_perm>`. Briefly:
+<configure_permissions>`. Briefly:
 
   * a user ``hrm`` and its corresponding group ``hrm`` are created
   * the web server user (|ubuntu| ``www-data``, RHEL ``apache``) is added
@@ -77,7 +74,7 @@ of doing this is explained in :ref:`setting up the HRM user and group
     the ``setgid`` bit set
 
 For detailed instructions, please see :ref:`setting up the HRM user and group
-<hrm_user_group_perm>`.
+<configure_permissions>`.
 
 .. warning:: With **HRM 3.2** it was possible to preserve the old behavior by
              setting a configuration variable ``$change_ownership``. This is

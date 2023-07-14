@@ -13,21 +13,6 @@
 
 import sys, os
 
-# Try importing the sphinx readthedocs.org theme
-# Install it with:
-#    (sudo) pip install sphinx_rtd_theme
-
-found_html_theme = 'classic'
-found_html_theme_path = []
-try:
-    import sphinx_rtd_theme
-    found_html_theme = 'sphinx_rtd_theme'
-    found_html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-    print("Using local sphinx RTD theme.")
-except:
-    print("Could not import sphinx RTD theme. Using default.")
-    pass
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -56,7 +41,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Huygens Remote Manager'
-copyright = u'2013 - 2022, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter, Olivier Burri, Felix Meyenhofer, Egor Zindy, Kevin Namink, Joost Oliemans'
+copyright = u'2013-2023, Aaron Ponti, Daniel Sevilla, Niko Ehrenfeuchter, Torsten Stoeter,' \
+            u' Olivier Burri, Felix Meyenhofer, Egor Zindy, Kevin Namink, Joost Oliemans'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -96,7 +82,7 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+#pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -106,15 +92,34 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = found_html_theme
+html_theme = 'furo'
+html_fallback_theme = 'alabaster'
+
+# Fallback on the classic theme if set theme cannot be imported
+try:
+    import furo
+    print("Using local sphinx '%s' theme." % html_theme)
+except ImportError:
+    print("Could not import sphinx theme '%s', using fallback '%s'." % (html_theme, html_fallback_theme))
+    html_theme = html_fallback_theme
+    pass
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+if html_theme == html_fallback_theme:
+    html_theme_options = {}
+elif html_theme == 'furo':
+    html_theme_options = {
+        "source_repository": "https://github.com/aarpon/hrm_docs/",
+        "source_branch": "master",
+        "source_directory": "docs/",
+    }
+
+html_theme_options['globaltoc_maxdepth'] = 5
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = found_html_theme_path
+# html_theme_path = found_html_theme_path
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -165,10 +170,10 @@ html_theme_path = found_html_theme_path
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the

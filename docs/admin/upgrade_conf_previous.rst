@@ -1,15 +1,35 @@
 .. include:: global_directives.inc
 
-.. toctree::
-   :maxdepth: 1
-
 .. _upgrade_conf_previous:
 
-**************************************************
-Update the configuration files (previous versions)
-**************************************************
+**************************
+Update configuration files
+**************************
 
 .. warning:: These instructions refer to older versions of HRM!
+
+3.7 to 3.8
+----------
+
+HRM 3.8 brings a few simplifications in the configuration files. Please run the following commands:
+
+.. code-block:: sh
+
+   cd $HRM_HOME/config
+   cp -p hrm_server_config.inc hrm_config.inc
+
+.. note:: The following files have become redundant and can be removed:
+
+   ``$HRM_HOME/config/hrm_server_config.inc``
+
+   ``$HRM_HOME/config/hrm_client_config.inc``
+   
+   If you are upgrading from an older version of HRM and both files had the same content, you can simply rename one of them to ``hrm_config.inc``.
+
+3.6 to 3.7
+----------
+
+There were no changes in the configuration files between versions 3.6 and 3.7 of HRM.
 
 3.5 to 3.6
 ----------
@@ -56,7 +76,7 @@ setting from the config file(s).
 Group authentication
 --------------------
 
-As of HRM 3.3, external authentication via :ref:`Active Directory <activedir_auth>` or :ref:`generic LDAP <ldap_auth>` now supports **group authorization**. An additional array ``$AUTHORIZED_GROUPS`` can be set to define the set of :ref:`Active Directory <activedir_auth>` or :ref:`generic LDAP <ldap_auth>` groups that are granted access to HRM.
+As of HRM 3.3, external authentication via :ref:`Active Directory <configure_auth_activedir>` or :ref:`generic LDAP <configure_auth_ldap>` now supports **group authorization**. An additional array ``$AUTHORIZED_GROUPS`` can be set to define the set of :ref:`Active Directory <configure_auth_activedir>` or :ref:`generic LDAP <configure_auth_ldap>` groups that are granted access to HRM.
 
 3.1 to 3.2
 ----------

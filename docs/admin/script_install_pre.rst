@@ -1,9 +1,10 @@
 .. include:: global_directives.inc
 
 .. _script_install_pre:
-   
+
+*************
 Prerequisites
-=============
+*************
 
 What happens if the script is launched by a normal user:
 

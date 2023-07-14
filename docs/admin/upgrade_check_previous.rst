@@ -1,13 +1,10 @@
 .. include:: global_directives.inc
 
-.. toctree::
-   :maxdepth: 1
-
 .. _upgrade_check_previous:
 
-*************************************************
-Check the configuration files (previous versions)
-*************************************************
+*************************
+Check configuration files
+*************************
 
 .. warning:: These instructions refer to older versions of HRM!
 
@@ -17,6 +14,26 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
 
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_config.inc
+
+3.7 to 3.8
+----------
+
+Checking the 3.7 files with the 3.8.x ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+  Checking against HRM v3.8.
+  Check completed successfully! Your configuration file is valid!
+
+3.6 to 3.7
+----------
+
+Checking the 3.6 files with the 3.7.x ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+  Checking against HRM v3.7.
+  Check completed successfully! Your configuration file is valid!
 
 3.5.x to 3.6
 ------------

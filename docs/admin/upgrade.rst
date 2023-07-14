@@ -1,10 +1,11 @@
 .. include:: global_directives.inc
 
-.. _`upgrade-hrm`:
+.. _upgrade-hrm:
 
-.. note:: Version 3.8 introduces a simplification of the configuration. Please see :ref:`update_conf_files` below.
+.. note:: Version 3.9 requires PHP 8.1 to run!
 
 .. note:: These instructions always explain the steps required to upgrade from **last stable release** to **current stable release**. However, each section also provides links to instructions for older versions.
+
 
 ***************
 Version upgrade
@@ -53,12 +54,12 @@ Alternatively, you can use:
 
 that should return empty (nothing).
 
-Download and extract the new HRM release
+Get the new HRM release
 ========================================
 
 To install the new HRM version you need to download the ``.zip`` file from
 the website or github as explained in :ref:`downloading the standard archive
-<download-hrm-standard>`.
+<get_hrm>`.
 
 .. warning::
 
@@ -77,24 +78,6 @@ You might also want to :ref:`reinstall <hrm_daemon>` the ``hrmd`` or ``hrmd.serv
 
 .. _update_conf_files:
 
-Update the configuration file
-=============================
-
-HRM 3.8 brings a few simplifications in these files. Please run the following
-commands:
-
-.. code-block:: sh
-		
-   cd $HRM_HOME/config
-   cp -p hrm_server_config.inc hrm_config.inc
-
-.. note:: The following files have become redundant and can be removed:
-
-   ``$HRM_HOME/config/hrm_server_config.inc```
-
-   ``$HRM_HOME/config/hrm_client_config.inc``
-   
-   If you are upgrading from an older version of HRM and both files had the same content, you can simply rename one of them to ``hrm_config.inc``.
 
 Check the configuration file
 ============================
@@ -106,11 +89,11 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_config.inc
 
-There were no configuration changes between versions 3.6.x and 3.7 of HRM. The output of the ``checkConfig.php`` script should be:
+There were no configuration changes between versions 3.8 and 3.9 of HRM. The output of the ``checkConfig.php`` script should be:
 
 .. code-block:: sh
 
-  Checking against HRM v3.8.
+  Checking against HRM v3.9.
   Check completed successfully! Your configuration file is valid!
 
 Please make sure to fix all problems you might have! The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
@@ -125,6 +108,8 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | HRM version | Database version |
 +=============+==================+
+| 3.9         | 20               |
++-------------+------------------+
 | 3.8         | 19               |
 +-------------+------------------+
 | 3.7         | 18               |
@@ -154,7 +139,7 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 19 in one step.
+.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 20 in one step.
 
 The following describes two possible ways to update the database.
 
@@ -167,11 +152,11 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.8 is number 19.
-    Current database revision is number 18.
+    Needed database revision for HRM v3.9 is number 20.
+    Current database revision is number 19.
     Updating...
 
-    Database successfully updated to revision 19.
+    Database successfully updated to revision 20.
 
 The database is now at the latest revision.
 
@@ -183,10 +168,10 @@ Alternatively, the database can be updated from the console (see :ref:`create or
 Check your HRM-OMERO connector
 ==============================
 
-In case you are using the `HRM-OMERO Connector <https://pypi.org/project/hrm-omero/>`_
-you will need to update that one as well as it has been split into a separate project.
-Please refer to the instructions on the
-`connector's project page <https://pypi.org/project/hrm-omero/>`_for details.
+In case you are using the `HRM-OMERO`_ connector, you will need to update that one as well as it has been split into a separate project.
+Please refer to the instructions on the `HRM-OMERO`_ project page for details.
+
+.. _HRM-OMERO: https://pypi.org/project/hrm-omero/
 
 Re-start the Queue Manager
 ==========================

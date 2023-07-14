@@ -1,10 +1,10 @@
 Huygens Remote Manager documentation
 ====================================
 
-This is the entry point for the Huygens Remote Manager documentation. Please use the links below to browse the :ref:`installation_instructions` and the :ref:`user_manual`.
+This is the user and system administrator documentation for the `Huygens Remote Manager <https://www.huygens-rm.org/>`_ (HRM).
 
-Contents
-========
+Main sections
+=============
 
 .. toctree::
    :maxdepth: 1 

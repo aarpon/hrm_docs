@@ -1,7 +1,7 @@
 .. include:: global_directives.inc
 
-
 .. _`script_install-interactive`:
+
 
 ****************
 Interactive mode

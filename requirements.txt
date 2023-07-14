@@ -1,3 +1,4 @@
-sphinx_rtd_theme
+sphinx
+furo
+docutils
 sphinx_tabs
-

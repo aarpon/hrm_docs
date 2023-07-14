@@ -11,13 +11,11 @@ These are the detailed installation and administration instructions for the Huyg
    :maxdepth: 1
 
    conventions
-   download
+   install
    script_install
-   manual_install
    upgrade
 
 .. The following is temporarily commented out until we fix it.
 .. * :ref:`genindex`
 .. * :ref:`modindex`
 .. * :ref:`search`
-
