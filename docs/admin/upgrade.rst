@@ -108,6 +108,8 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | HRM version | Database version |
 +=============+==================+
+| 3.10        | 21               |
++-------------+------------------+
 | 3.9         | 20               |
 +-------------+------------------+
 | 3.8         | 19               |
