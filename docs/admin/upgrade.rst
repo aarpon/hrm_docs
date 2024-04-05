@@ -2,7 +2,7 @@
 
 .. _upgrade-hrm:
 
-.. note:: Version 3.9 requires PHP 8.1 to run!
+.. note:: Version >=3.9 requires PHP 8.1 to run!
 
 .. note:: These instructions always explain the steps required to upgrade from **last stable release** to **current stable release**. However, each section also provides links to instructions for older versions.
 
@@ -89,11 +89,11 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_config.inc
 
-There were no configuration changes between versions 3.8 and 3.9 of HRM. The output of the ``checkConfig.php`` script should be:
+There were no configuration changes between versions 3.8, 3.9 and 3.10 of HRM. The output of the ``checkConfig.php`` script should be:
 
 .. code-block:: sh
 
-  Checking against HRM v3.9.
+  Checking against HRM v3.10.
   Check completed successfully! Your configuration file is valid!
 
 Please make sure to fix all problems you might have! The sample files and the :ref:`manual_install` instructions will help you set the correct parameters.
@@ -108,6 +108,8 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 +-------------+------------------+
 | HRM version | Database version |
 +=============+==================+
+| 3.10        | 21               |
++-------------+------------------+
 | 3.9         | 20               |
 +-------------+------------------+
 | 3.8         | 19               |
@@ -139,7 +141,7 @@ Newer versions of the HRM might use slightly different/updated versions of the d
 
 For this reason, the first time you run the HRM after an update you will be told that the database must be updated and that you are not allowed to continue until this has been done!
 
-.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 20 in one step.
+.. note:: Database updates are supported across HRM versions, i.e. it is possible to upgrade the database from revision 7 to 21 in one step.
 
 The following describes two possible ways to update the database.
 
@@ -152,18 +154,18 @@ Login to the HRM as the admin user: you will be brought directly to the Database
 
 .. code-block:: sh
 
-    Needed database revision for HRM v3.9 is number 20.
-    Current database revision is number 19.
+    Needed database revision for HRM v3.10 is number 21.
+    Current database revision is number 20.
     Updating...
 
-    Database successfully updated to revision 20.
+    Database successfully updated to revision 21.
 
 The database is now at the latest revision.
 
 Updating from the console
 -------------------------
 
-Alternatively, the database can be updated from the console (see :ref:`create or update database <create-database>`). Please pay attention to what the update process will report! The output should be the same as the one listed in the previous section, but if the update fails, you might want to `report it <http://hrm.svi.nl:8080/redmine/projects/hrmdev/issues/new>`_.
+Alternatively, the database can be updated from the console (see :ref:`create or update database <create-database>`). Please pay attention to what the update process will report! The output should be the same as the one listed in the previous section, but if the update fails, you might want to `report it <https://github.com/aarpon/hrm/issues/new/choose>`_.
 
 Check your HRM-OMERO connector
 ==============================

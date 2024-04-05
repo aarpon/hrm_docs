@@ -15,6 +15,16 @@ An easy way to check for modifications is by running the ``$HRM_HOME/resources/c
     cd $HRM_HOME
     php resources/checkConfig.php config/hrm_config.inc
 
+3.8 to 3.9
+----------
+
+Checking the 3.8 files with the 3.9.x ``checkConfig.php`` script will result in the following output:
+
+.. code-block:: sh
+
+  Checking against HRM v3.9.
+  Check completed successfully! Your configuration file is valid!
+
 3.7 to 3.8
 ----------
 

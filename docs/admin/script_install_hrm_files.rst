@@ -7,7 +7,7 @@ The HRM files
 =============
 
 The different versions are fetched directly from GitHub. You can choose the one you want to
-install. Master will normally be hidden unless ‘--rolling=true’ is specified as a command line
+install. Master will normally be hidden unless `--rolling=true` is specified as a command line
 argument. Normally, you would want a known starting point (a version point), unless some rolling
 fixes need installing. Should you choose to install from a zip file, the option is also given
 in the menu:
