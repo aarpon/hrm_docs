@@ -20,7 +20,7 @@ Bellow is an command example:
 
 .. code-block:: sh
 
-    sudo unzip hrm_3.9.0.zip -d /var/www/html
+    sudo unzip hrm_3.10.0.zip -d /var/www/html
 
 
 

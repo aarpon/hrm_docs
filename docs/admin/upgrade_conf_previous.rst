@@ -8,6 +8,16 @@ Update configuration files
 
 .. warning:: These instructions refer to older versions of HRM!
 
+3.9 to 3.10
+-----------
+
+There were no changes in the configuration files between versions 3.9 and 3.10 of HRM.
+
+3.8 to 3.9
+----------
+
+There were no changes in the configuration files between versions 3.8 and 3.9 of HRM.
+
 3.7 to 3.8
 ----------
 
